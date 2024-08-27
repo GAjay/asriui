@@ -6,11 +6,9 @@ import Link from "next/link";
 import AuthHeader from "../auth-header";
 import AuthImage from "../auth-image";
 import appConstants from "@/app/constants/appConstants";
-import { useState } from "react";
 import LoginCard from "./LoginCard";
 
 export default function SignIn() {
-  
   return (
     <main className="bg-white dark:bg-gray-900">
       <div className="relative md:flex">

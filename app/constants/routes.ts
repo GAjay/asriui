@@ -1,5 +1,5 @@
 const routes = {
-  login: "login",
+  login: "signin",
   dashboard:'dashboard'
 };
 export default routes;
