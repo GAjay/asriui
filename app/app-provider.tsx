@@ -8,7 +8,7 @@ import {
   useState,
 } from "react";
 import { CachePolicies, Provider as HTTPProvider } from "use-http";
-import { cookies } from "next/headers";
+import getCookie from "./utils/getCookie";
 
 interface ContextProps {
   sidebarOpen: boolean;
@@ -26,6 +26,8 @@ export default function AppProvider({
   children: React.ReactNode;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
+  const token = getCookie("session");
+  console.log("token",token)
   return (
     <AppContext.Provider value={{ sidebarOpen, setSidebarOpen }}>
       <HTTPProvider
@@ -33,7 +35,7 @@ export default function AppProvider({
         options={{
           cachePolicy: CachePolicies.NO_CACHE,
           headers: {
-            Authorization: `Bearer b`,
+            Authorization: `Bearer ${token}`,
           },
         }}
       >
