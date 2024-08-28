@@ -1,12 +1,15 @@
+"use client";
 import Footer from "@/components/ui/footer";
 import MobileMenu from "@/components/ui/mobile-menu";
 import Link from "next/link";
-import { redirect } from "next/navigation";
 import ShopCards06 from "./(default)/ecommerce/(shop)/shop-cards-06";
 import ShopCards05 from "./(default)/ecommerce/(shop)/shop-cards-05";
 import ShopCards03 from "./(default)/ecommerce/(shop)/shop-cards-03";
+import routes from "./constants/routes";
+import getCookie from "./utils/getCookie";
 
 export default function Home() {
+  const token = getCookie("session") as any;
   return (
     <>
       <header className="absolute w-full z-30">
@@ -30,22 +33,45 @@ export default function Home() {
             <nav className="hidden md:flex md:grow">
               {/* Desktop sign in links */}
               <ul className="flex grow justify-end flex-wrap items-center">
-                <li>
-                  <Link
-                    href="/signin"
-                    className="font-medium text-violet-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                  >
-                    Sign in
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/signup"
-                    className="btn-sm text-white bg-violet-500 hover:bg-violet-700 ml-3"
-                  >
-                    Sign up
-                  </Link>
-                </li>
+                {token ? (
+                  <>
+                    <li>
+                      <Link
+                        href={routes.blogs}
+                        className="font-medium text-violet-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                      >
+                        Blogs
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={routes.dashboard}
+                        className="btn-sm text-white bg-violet-500 hover:bg-violet-700 ml-3"
+                      >
+                        Dashboard
+                      </Link>
+                    </li>
+                  </>
+                ) : (
+                  <>
+                    <li>
+                      <Link
+                        href={routes.login}
+                        className="font-medium text-violet-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                      >
+                        Sign in
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={routes.login}
+                        className="btn-sm text-white bg-violet-500 hover:bg-violet-700 ml-3"
+                      >
+                        Sign up
+                      </Link>
+                    </li>
+                  </>
+                )}
               </ul>
             </nav>
 
@@ -278,7 +304,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
           <div className="mt-8">
             <h2 className="text-xl leading-snug text-gray-800 dark:text-gray-100 font-bold mb-5">
-             Popular Blogs
+              Popular Blogs
             </h2>
             <div className="grid grid-cols-12 gap-6">
               <ShopCards03 />
@@ -291,7 +317,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
           <div className="">
             <h2 className="text-xl leading-snug text-gray-800 dark:text-gray-100 font-bold mb-5">
-              Trending  Now
+              Trending Now
             </h2>
             <div className="grid grid-cols-12 gap-6">
               <ShopCards06 />
