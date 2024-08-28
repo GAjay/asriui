@@ -274,7 +274,7 @@ export default function Home() {
         </div>
       </section>
       {/* Cards 3 (Online Events) */}
-      <section className="mt-8">
+      <section className="mt-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
           <div className="mt-8">
             <h2 className="text-xl leading-snug text-gray-800 dark:text-gray-100 font-bold mb-5">
@@ -287,7 +287,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-8">
+      <section className="mt-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
           <div className="">
             <h2 className="text-xl leading-snug text-gray-800 dark:text-gray-100 font-bold mb-5">
@@ -299,7 +299,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="mt-8">
+      <section className="mt-10">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 relative">
           <div className="">
             <h2 className="text-xl leading-snug text-gray-800 dark:text-gray-100 font-bold mb-5">

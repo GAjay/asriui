@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import appConstants from '@/app/constants/appConstants'
 
 export default function Footer() {
   return (
@@ -135,7 +136,7 @@ export default function Footer() {
             </ul>
 
             {/* Copyrights note */}
-            <div className="text-gray-400 text-sm mr-4">&copy; Cruip.com. All rights reserved.</div>
+            <div className="text-gray-400 text-sm mr-4">&copy; {appConstants.name}.com. All rights reserved.</div>
 
           </div>
 
