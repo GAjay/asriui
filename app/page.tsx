@@ -9,7 +9,8 @@ import routes from "./constants/routes";
 import getCookie from "./utils/getCookie";
 
 export default function Home() {
-  const token = getCookie("session") as any;
+  // const token = getCookie("session") as any;
+  const token = 'sss'
   return (
     <>
       <header className="absolute w-full z-30">
