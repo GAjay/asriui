@@ -1,11 +1,10 @@
-import Image from 'next/image'
+import Image, {StaticImageData} from 'next/image'
 
 interface Card {
     id: number,
     title:string,
     content: string,
-    rating: string,
-    image: string
+    image: string | StaticImageData;
 }
 
 export default function Card2({ data }: { data: Card }) {
@@ -16,7 +15,7 @@ export default function Card2({ data }: { data: Card }) {
                 <div className="flex flex-col h-full">
                     {/* Image */}
                     <div className="relative">
-                        <Image className="w-full" src={data.image} width={286} height={160} alt="Application 05" />
+                        <Image className="w-full" src={data?.image} width={286} height={160} alt="Application 05" />
                     </div>
                     {/* Card Content */}
                     <div className="grow flex flex-col p-5">

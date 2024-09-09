@@ -1,12 +1,12 @@
 import Link from "next/link";
-import Image from "next/image";
+import Image, {StaticImageData} from "next/image";
 
 interface Card {
     id: number,
     name:string,
     content: string,
-    rating: string,
-    image: string,
+    rating: number,
+    image: string | StaticImageData,
 }
 
 export default function Review({ data }: { data: Card }) {

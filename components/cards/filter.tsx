@@ -1,5 +1,5 @@
 
-export default function Filter({viewUrl}) {
+export default function Filter({ viewUrl }: { viewUrl: any }) {
     return (
         <>
             {/* Filter */}

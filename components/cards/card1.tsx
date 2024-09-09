@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from "next/link";
-export default function Card1({data}) {
+export default function Card1({ data }: { data: any[] }) {
     return (
         <>
             {data?.map(item => {

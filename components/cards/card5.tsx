@@ -1,11 +1,10 @@
-import Image from 'next/image'
+import Image, {StaticImageData} from 'next/image'
 
 interface Card {
     id: number,
     title:string,
     content: string,
-    rating: string,
-    image: string
+    image: string | StaticImageData;
 }
 
 export default function Card5({ data }: { data: Card }) {

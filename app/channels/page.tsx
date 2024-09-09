@@ -3,9 +3,7 @@ import Link from "next/link";
 import Sidebar from "@/components/ui/auth-sidebar";
 import Header from "@/components/ui/auth-header";
 
-export default function Channels({children,}: {
-    children: React.ReactNode
-}) {
+export default function Channels() {
     return (
         <div className="flex h-[100dvh] overflow-hidden">
 

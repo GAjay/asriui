@@ -7,7 +7,7 @@ interface Testimonials {
     category: string
     name: string
     content: string
-    rating: string
+    rating: number
     dates:string
 }
 
