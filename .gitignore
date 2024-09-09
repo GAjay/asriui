@@ -9,7 +9,6 @@
 /coverage
 
 # next.js
-/.next/
 /out/
 
 # production
@@ -38,3 +37,6 @@ next-env.d.ts
 
 # contentlayer
 .contentlayer
+
+yarn.lock
+package-lock.json

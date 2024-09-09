@@ -1,0 +1,19 @@
+{
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/hello/route": "app/api/hello/route.js",
+  "/categories/page": "app/categories/page.js",
+  "/blogs/page": "app/blogs/page.js",
+  "/channels/page": "app/channels/page.js",
+  "/page": "app/page.js",
+  "/(auth)/signin/page": "app/(auth)/signin/page.js",
+  "/(auth)/reset-password/page": "app/(auth)/reset-password/page.js",
+  "/(auth)/signup/page": "app/(auth)/signup/page.js",
+  "/categories/details/page": "app/categories/details/page.js",
+  "/channels/[channel]/plans/page": "app/channels/[channel]/plans/page.js",
+  "/channels/[channel]/dashboard/page": "app/channels/[channel]/dashboard/page.js",
+  "/channels/[channel]/(finance)/payout/page": "app/channels/[channel]/(finance)/payout/page.js",
+  "/channels/[channel]/users/page": "app/channels/[channel]/users/page.js",
+  "/channels/[channel]/offering/page": "app/channels/[channel]/offering/page.js",
+  "/channels/onboarding/page": "app/channels/onboarding/page.js",
+  "/channels/[channel]/workspace/page": "app/channels/[channel]/workspace/page.js"
+}
