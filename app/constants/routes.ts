@@ -1,7 +1,7 @@
 const routes = {
   login: "signin",
   home:'/',
-  dashboard:'dashboard',
-  blogs:'blogs'
+  channels:'/channels',
+  blogs:'/blogs'
 };
 export default routes;

@@ -116,8 +116,8 @@ const LoginCard: React.FC<LoginCardProps> = () => {
               if (payload?.otp) {
                 post(apiEndpoints.verifyOtp, toFormData(payload));
                 toast.success("otp verified");
-                setCookie("session", "sagar");
-                router.refresh();
+                setCookie("auth", "some session value from api");
+                router.replace('/');
               } else {
                 toast.error("please enter valid otp");
               }

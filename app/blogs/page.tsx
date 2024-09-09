@@ -1,87 +1,165 @@
-// "use client";
+"use client";
 import Footer from "@/components/ui/footer";
-import MobileMenu from "@/components/ui/mobile-menu";
-import Link from "next/link";
-import routes from "../constants/routes";
-import Meetups from "../(default)/community/meetups/page";
-import MeetupsPosts from "../(default)/community/meetups/meetups-posts";
+import Header from "@/components/ui/header";
+
+
+import AppImage05 from '@/public/images/applications-image-05.jpg'
+import AppImage06 from '@/public/images/applications-image-06.jpg'
+import AppImage07 from '@/public/images/applications-image-07.jpg'
+import AppImage21 from '@/public/images/applications-image-21.jpg'
+import AppImage22 from '@/public/images/applications-image-22.jpg'
+import AppImage23 from '@/public/images/applications-image-23.jpg'
+
+import TestimonailCard from "@/components/cards/testimonials";
+import Card2 from "@/components/cards/card2";
+import Image from "next/image";
+import Card4 from "@/components/cards/card4";
+import Card5 from "@/components/cards/card5";
 
 export default function Home() {
-  const token = 'lkkk';
-  return (
-    <>
-      <header className=" w-full z-30">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center justify-between h-20">
-            {/* Site branding */}
-            <div className="shrink-0 mr-4">
-              {/* Logo */}
-              <Link href="/" className="block" aria-label="Cruip">
-                <svg
-                  className="w-8 h-8 fill-current text-violet-500"
-                  viewBox="0 0 32 32"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M31.952 14.751a260.51 260.51 0 00-4.359-4.407C23.932 6.734 20.16 3.182 16.171 0c1.634.017 3.21.28 4.692.751 3.487 3.114 6.846 6.398 10.163 9.737.493 1.346.811 2.776.926 4.262zm-1.388 7.883c-2.496-2.597-5.051-5.12-7.737-7.471-3.706-3.246-10.693-9.81-15.736-7.418-4.552 2.158-4.717 10.543-4.96 16.238A15.926 15.926 0 010 16C0 9.799 3.528 4.421 8.686 1.766c1.82.593 3.593 1.675 5.038 2.587 6.569 4.14 12.29 9.71 17.792 15.57-.237.94-.557 1.846-.952 2.711zm-4.505 5.81a56.161 56.161 0 00-1.007-.823c-2.574-2.054-6.087-4.805-9.394-4.044-3.022.695-4.264 4.267-4.97 7.52a15.945 15.945 0 01-3.665-1.85c.366-3.242.89-6.675 2.405-9.364 2.315-4.107 6.287-3.072 9.613-1.132 3.36 1.96 6.417 4.572 9.313 7.417a16.097 16.097 0 01-2.295 2.275z" />
-                </svg>
-              </Link>
-            </div>
+    // const token = getCookie("session") as any;
+    const blogs = [
+        {
+            id: 1,
+            title: '50+ Best Business Ideas for Wom...',
+            content: 'Women-owned businesses represent over 39% of all businesses - are you ready to join them? Find over 50 business ideas in this ...',
+            image: AppImage06
+        },
+        {
+            id: 2,
+            title: 'How to Sell Courses on Udemy: A ...',
+            content: 'With over 220,000 courses on Udemy, it’s no surprise that more and more instructors are flocking to the website. But how do you sell ...',
+            image: AppImage05
+        },
+        {
+            id: 3,
+            title: 'Survey Junkie Review: Can You Re...',
+            content: 'With zero set-up costs, minimal barriers to entry, and no special skills needed, it\'s easy to see why people flock to paid online surveys ...',
+            image: AppImage07
+        },
+    ];
+    const blogs1 = [
+        {
+            id: 1,
+            title: '50+ Best Business Ideas for Wom...',
+            content: 'Women-owned businesses represent over 39% of all businesses - are you ready to join them? Find over 50 business ideas in this ...',
+            image: AppImage21
+        },
+        {
+            id: 2,
+            title: 'How to Sell Courses on Udemy: A ...',
+            content: 'With over 220,000 courses on Udemy, it’s no surprise that more and more instructors are flocking to the website. But how do you sell ...',
+            image: AppImage22
+        },
+        {
+            id: 3,
+            title: 'Survey Junkie Review: Can You Re...',
+            content: 'With zero set-up costs, minimal barriers to entry, and no special skills needed, it\'s easy to see why people flock to paid online surveys ...',
+            image: AppImage23
+        },
+    ];
 
-            {/* Desktop navigation */}
-            <nav className="hidden md:flex md:grow">
-              {/* Desktop sign in links */}
-              <ul className="flex grow justify-end flex-wrap items-center">
-                {token ? (
-                  <>
-                    <li>
-                      <Link
-                        href={routes.home}
-                        className="font-medium text-violet-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                      >
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href={routes.dashboard}
-                        className="btn-sm text-white bg-violet-500 hover:bg-violet-700 ml-3"
-                      >
-                        Dashboard
-                      </Link>
-                    </li>
-                  </>
-                ) : (
-                  <>
-                    <li>
-                      <Link
-                        href={routes.login}
-                        className="font-medium text-violet-500 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
-                      >
-                        Sign in
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href={routes.login}
-                        className="btn-sm text-white bg-violet-500 hover:bg-violet-700 ml-3"
-                      >
-                        Sign up
-                      </Link>
-                    </li>
-                  </>
-                )}
-              </ul>
-            </nav>
+    return (
+        <>
+            <Header/>
 
-            <MobileMenu />
-          </div>
-        </div>
-      </header>
-      <div className="max-w-6xl mt-10 mx-auto px-4 sm:px-6 relative">
-      <MeetupsPosts />
-      </div>
-     
-      <Footer />
-    </>
-  );
+
+            <section>
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 mt-5">
+                    <div className="sm:flex sm:justify-between sm:items-center ">
+                        <nav className="mb-4 sm:mb-0 sm:order-1 pb-2" role="navigation" aria-label="Navigation">
+                            <ul className="flex justify-center">
+                                <li className="ml-3 first:ml-0">
+                                    <a className="btn bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600 text-gray-800 dark:text-gray-300"
+                                       href="#">View All -&gt;</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div className="sm:mb-0">
+                            <h2 className="text-xl leading-snug text-gray-800 dark:text-gray-100 font-bold">Our
+                                Blogs</h2>
+                        </div>
+                    </div>
+                    <div className="sm:flex sm:justify-between sm:items-center mb-8">
+                        <div className="grid grid-cols-12 gap-6 mt-5">
+                            {blogs.map(blog => (
+                                <Card2
+                                    key={blog.id}
+                                    data={blog}/>
+                            ))}
+                            {blogs1.map(blog => (
+                                <Card2
+                                    key={blog.id}
+                                    data={blog}/>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 mt-5">
+                    <div className="sm:flex sm:justify-between sm:items-center ">
+                        <nav className="mb-4 sm:mb-0 sm:order-1 pb-2" role="navigation" aria-label="Navigation">
+                            <ul className="flex justify-center">
+                                <li className="ml-3 first:ml-0">
+                                    <a className="btn bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600 text-gray-800 dark:text-gray-300"
+                                       href="#">View All -&gt;</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div className="sm:mb-0">
+                            <h2 className="text-xl leading-snug text-gray-800 dark:text-gray-100 font-bold">ECommerce</h2>
+                        </div>
+                    </div>
+                    <div className="sm:flex sm:justify-between sm:items-center mb-8">
+                        <div className="grid grid-cols-12 gap-6 mt-5">
+                            {blogs.map(blog => (
+                                <Card4
+                                    key={blog.id}
+                                    data={blog}/>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 mt-5">
+                    <div className="sm:flex sm:justify-between sm:items-center ">
+                        <nav className="mb-4 sm:mb-0 sm:order-1 pb-2" role="navigation" aria-label="Navigation">
+                            <ul className="flex justify-center">
+                                <li className="ml-3 first:ml-0">
+                                    <a className="btn bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600 text-gray-800 dark:text-gray-300"
+                                       href="#">View All -&gt;</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div className="sm:mb-0">
+                            <h2 className="text-xl leading-snug text-gray-800 dark:text-gray-100 font-bold">Recent</h2>
+                        </div>
+                    </div>
+                    <div className="sm:flex sm:justify-between sm:items-center mb-8">
+                        <div className="grid grid-cols-12 gap-6 mt-5">
+                            {blogs1.map(blog => (
+                                <Card5
+                                    key={blog.id}
+                                    data={blog}/>
+                            ))}
+                            {blogs.map(blog => (
+                                <Card5
+                                    key={blog.id}
+                                    data={blog}/>
+                            ))}
+                            {blogs1.map(blog => (
+                                <Card5
+                                    key={blog.id}
+                                    data={blog}/>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <Footer/>
+        </>
+    );
 }
