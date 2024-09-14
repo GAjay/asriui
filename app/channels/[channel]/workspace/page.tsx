@@ -7,10 +7,11 @@ import Link from 'next/link'
 
 export default function OnBoarding() {
     const workspace1 = [
-        {name:'Courses', url:"/channels/1/workspace/course"},
-        {name:'Chats', url:"/channels/1/workspace/chats"},
-        {name:'Forum', url:"/channels/1/workspace/forums"},
-        {name:'Video Calls', url:"/channels/1/workspace/video-calls"},
+        {name:'Courses', url:"/workspace/1/course"},
+        {name:'Chats', url:"/workspace/1/chat"},
+        {name:'Feed', url:"/workspace/1/feed"},
+        {name:'Forum', url:"/workspace/1/forum"},
+        {name:'Video Calls', url:"/workspace/1/video-call"},
     ]
     return (
         <main className="dark:bg-gray-900 ">
