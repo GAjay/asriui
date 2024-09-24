@@ -7,7 +7,7 @@ export default function Card1({ data }: { data: any[] }) {
                 return(
 
                         <div className="col-span-full md:col-span-6 xl:col-span-4 bg-white dark:bg-gray-800 shadow-sm rounded-xl overflow-hidden">
-                            <Link href={'/channels/details'}>
+                            <Link href={'/channel/details'}>
                             <div className="flex flex-col h-full">
                                 {/* Image */}
                                 <div className="relative">

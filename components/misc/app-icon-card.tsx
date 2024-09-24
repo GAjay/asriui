@@ -67,6 +67,10 @@ export default function AppIconCard() {
                                 <h3 className="text-lg text-gray-800 dark:text-gray-100 font-semibold mb-1">Trader Xm</h3>
                             </header>
                         </div>
+                        <div>
+                            <Link className="btn-sm w-full bg-violet-900 text-gray-100 hover:bg-violet-800 dark:bg-violet-100 dark:text-gray-800 dark:hover:bg-white mb-2" href="/workspace/1/dashboard">Admin -&gt;</Link>
+                            {/*<span className="text-sm font-medium text-violet-500 hover:text-violet-600 dark:hover:text-violet-400" href="#">Explore -&gt;</span>*/}
+                        </div>
                         {/* Card footer */}
                         <div>
                             <Link className="btn-sm w-full bg-gray-900 text-gray-100 hover:bg-gray-800 dark:bg-gray-100 dark:text-gray-800 dark:hover:bg-white" href="/channels/1/dashboard">Explore -&gt;</Link>

@@ -92,7 +92,7 @@ export default function Home() {
             <section>
                 <div className="max-w-6xl mx-auto px-4 sm:px-6">
                     {/* Filters */}
-                    <Filter viewUrl={'/categories'}/>
+                    <Filter viewUrl={'/channel'}/>
                 </div>
                 {/* Cards*/}
                 <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -165,7 +165,7 @@ export default function Home() {
                         <nav className="mb-4 sm:mb-0 sm:order-1 pb-2" role="navigation" aria-label="Navigation">
                             <ul className="flex justify-center">
                                 <li className="ml-3 first:ml-0">
-                                    <a className="btn bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600 text-gray-800 dark:text-gray-300" href="#">View All -&gt;</a>
+                                    <a className="btn bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600 text-gray-800 dark:text-gray-300" href="/blogs">View All -&gt;</a>
                                 </li>
                             </ul>
                         </nav>

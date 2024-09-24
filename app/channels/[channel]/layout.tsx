@@ -1,6 +1,6 @@
-import Sidebar from '@/components/ui/auth-sidebar'
+import UserSidebar from '@/components/ui/auth-user-sidebar'
 import Header from '@/components/ui/auth-header'
-import ChannelSidebar from "@/components/ui/auth-channel-sidebar";
+// import ChannelSidebar from "@/components/ui/auth-channel-sidebar";
 
 export default function DefaultLayout({children,}: {
     children: React.ReactNode
@@ -10,7 +10,7 @@ export default function DefaultLayout({children,}: {
 
 
             {/* Sidebar */}
-            <ChannelSidebar />
+            <UserSidebar />
             {/* Content area */}
             <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
 

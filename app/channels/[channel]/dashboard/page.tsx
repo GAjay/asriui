@@ -1,41 +1,27 @@
 export const metadata = {
-    title: "Tell us what's your situation",
+    title: 'Fintech - Mosaic',
     description: 'Page description',
 }
 
-import Link from 'next/link'
-
-export default function OnBoarding() {
-    const workspace1 = [
-        {name:'Courses', url:"/channels/1/workspace/course"},
-        {name:'Chats', url:"/channels/1/workspace/chats"},
-        {name:'Forum', url:"/channels/1/workspace/forums"},
-        {name:'Video Calls', url:"/channels/1/workspace/video-calls"},
-    ]
+export default function Fintech() {
     return (
-        <main className="dark:bg-gray-900 ">
+        <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-[96rem] mx-auto">
 
-            <div className="relative flex justify-center ">
-                <div className="w-full bg-white text-center justify-center">
+            {/* Page header */}
+            <div className="sm:flex sm:justify-between sm:items-center mb-5">
 
-                    <div className="min-h-[90dvh] h-full flex flex-col after:flex-1">
-
-
-
-                        <div className="px-4 py-8">
-                            <div className="max-w-[96rem] mx-auto">
-                                <h1 className="text-3xl text-gray-800 dark:text-gray-100 font-bold mb-6">Dashboard</h1>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-
+                {/* Left: Title */}
+                <div className="mb-4 sm:mb-0">
+                    <h1 className="text-2xl md:text-3xl text-gray-800 dark:text-gray-100 font-bold">Dashboard</h1>
                 </div>
 
             </div>
 
-        </main>
+            {/* Cards */}
+            <div className="grid grid-cols-12 gap-6">
+
+
+            </div>
+        </div>
     )
 }
