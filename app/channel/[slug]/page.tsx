@@ -22,6 +22,9 @@ import User05 from "@/public/images/user-32-05.jpg";
 import User03 from "@/public/images/user-32-03.jpg";
 import User04 from "@/public/images/user-32-04.jpg";
 import Card2 from "@/components/cards/card2";
+import Filter from "@/components/cards/filter";
+import {useState} from "react";
+import ReviewFaqs from "@/components/misc/review-faq";
 
 export default function ChannelDetails() {
     const breadcrumbs = ["Home", "Channels", "Details"];
@@ -31,12 +34,7 @@ export default function ChannelDetails() {
         {id:2,has_offer:false, title:"Form Builder CP 2", description:"Lorem ipsum dolor sit amet adipiscing elit, sed do eiusmod.",rating:4.7,price:"69.99$", image: AppImage22},
         {id:3, has_offer:true, title:"Form Builder CP 3", description:"Lorem ipsum dolor sit amet adipiscing elit, sed do eiusmod.",rating:2.5,price:"39.99$", image: AppImage23}
     ];
-    const reviews  = [
-        {id:1, name:"Danielle Mark", content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",rating:3.7, image: User07},
-        {id:2, name:"Marija Urkjulz", content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",rating:4.7, image: User03},
-        {id:3, name:"Rodrigo Pantoja", content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",rating:4.5, image: User04},
-        {id:4, name:"Juan Johnson", content:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",rating:4.9, image: User05},
-    ];
+
     return (
         <>
             <Header/>
@@ -136,27 +134,8 @@ export default function ChannelDetails() {
                         </div>
 
                         <hr className="my-6 border-t border-gray-100 dark:border-gray-700/60" />
-                        <div className="mb-3">
-                            {/* Reviews */}
-                            <div>
-                                <h2 className="text-xl leading-snug text-gray-800 dark:text-gray-100 font-bold mb-2">Featured Reviews (44)</h2>
-                                <ul className="space-y-5 my-6">
-                                    {/*<Review />*/}
-                                    {reviews?.map(review => {
-                                        return(
-                                            <Review data={review} />
-                                        )
-                                    })}
 
-                                </ul>
-                                {/* Load More */}
-                                <div className="text-center">
-                                    <button className="btn bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700/60 hover:border-gray-300 dark:hover:border-gray-600 text-gray-800 dark:text-gray-300">Load More Reviews</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <hr className="my-6 border-t border-gray-100 dark:border-gray-700/60" />
+                        <ReviewFaqs />
 
                     </div>
 
