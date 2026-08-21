@@ -4,7 +4,7 @@ import dts from "vite-plugin-dts";
 import { VitePWA } from "vite-plugin-pwa";
 import { resolve } from "node:path";
 import { createPwaOptions } from "./site/pwa.config";
-import { normalizeViteBase, resolveSiteOrigin } from "./site/viteBase";
+import { normalizeViteBase, resolveSiteOrigin, SITE_ORIGIN_TEMPLATE } from "./site/viteBase";
 
 const root = resolve(__dirname, "src");
 
@@ -101,7 +101,9 @@ export default defineConfig(({ mode, command }) => {
   const isSiteBuild = mode === "site";
   /** Docs site dev server (`pnpm dev`) — needs PWA virtual module for site/main.tsx */
   const isSiteApp = isSiteBuild || (command === "serve" && !isPackageBuild);
-  const siteBase = normalizeViteBase();
+  const siteBase = isSiteBuild
+    ? normalizeViteBase(process.env.VITE_BASE_PATH || process.env.BASE_PATH)
+    : normalizeViteBase("/");
   const siteUrl = resolveSiteOrigin();
 
   if (isPackageBuild) {
@@ -186,7 +188,7 @@ export default defineConfig(({ mode, command }) => {
       {
         name: "asriui-site-origin",
         transformIndexHtml(html) {
-          let next = html.split("https://asriui.dev").join(siteUrl);
+          let next = html.split(SITE_ORIGIN_TEMPLATE).join(siteUrl);
           if (siteBase !== "/") {
             const prefix = siteBase.replace(/\/$/, "");
             const skipPrefix = prefix.slice(1).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");

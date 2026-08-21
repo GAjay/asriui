@@ -8,22 +8,22 @@ Install with `pnpm add asriui framer-motion`, import `asriui/style.css` once, an
 
 ## Docs
 
-- [Getting started](https://asriui.dev/docs/getting-started): Install, configure AsriUIProvider, and import your first component
-- [Design tokens](https://asriui.dev/docs/tokens): CSS variables for color, spacing, radius, and typography
-- [Branding guide](https://asriui.dev/docs/branding): Logo usage, tone, and visual identity for AsriUI-powered products
-- [Component catalog](https://asriui.dev/docs/components/button): Live examples and API reference for every component
-- [Page templates](https://asriui.dev/templates): Fifteen production page layouts you can copy into your app
-- [Roadmap](https://asriui.dev/docs/roadmap): What shipped, what is in progress, and what is planned next
-- [Releases](https://asriui.dev/docs/releases): Version history and changelog
+- [Getting started](https://gajay.github.io/asriui/docs/getting-started): Install, configure AsriUIProvider, and import your first component
+- [Design tokens](https://gajay.github.io/asriui/docs/tokens): CSS variables for color, spacing, radius, and typography
+- [Branding guide](https://gajay.github.io/asriui/docs/branding): Logo usage, tone, and visual identity for AsriUI-powered products
+- [Component catalog](https://gajay.github.io/asriui/docs/components/button): Live examples and API reference for every component
+- [Page templates](https://gajay.github.io/asriui/templates): Fifteen production page layouts you can copy into your app
+- [Roadmap](https://gajay.github.io/asriui/docs/roadmap): What shipped, what is in progress, and what is planned next
+- [Releases](https://gajay.github.io/asriui/docs/releases): Version history and changelog
 
 ## Project
 
-- [Home](https://asriui.dev/): Landing page with feature overview and design system preview
+- [Home](https://gajay.github.io/asriui/): Landing page with feature overview and design system preview
 - [GitHub repository](https://github.com/GAjay): Source code and issues (gajay)
 - [npm package](https://www.npmjs.com/package/asriui): `asriui` on npm with subpath exports
-- [Sitemap](https://asriui.dev/sitemap.xml): Full list of indexable pages on asriui.dev
+- [Sitemap](https://gajay.github.io/asriui/sitemap.xml): Full list of indexable pages on the docs site
 
 ## Optional
 
-- [Styling guide](https://asriui.dev/docs/styling): CSS Modules conventions and theming patterns
-- [Theme configuration](https://asriui.dev/docs/theme): Light, dark, and system theme modes via AsriUIProvider
+- [Styling guide](https://gajay.github.io/asriui/docs/styling): CSS Modules conventions and theming patterns
+- [Theme configuration](https://gajay.github.io/asriui/docs/theme): Light, dark, and system theme modes via AsriUIProvider

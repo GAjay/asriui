@@ -1,7 +1,7 @@
 /** Public site URL for canonical links and Open Graph. Set VITE_SITE_URL in production. */
 export const SITE_URL =
   (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(/\/$/, "") ||
-  (typeof window !== "undefined" ? window.location.origin : "https://asriui.dev");
+  (typeof window !== "undefined" ? window.location.origin : "https://gajay.github.io/asriui");
 
 export const SITE_NAME = "AsriUI";
 
