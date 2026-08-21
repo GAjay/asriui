@@ -10,9 +10,7 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 jobs:
   build:
@@ -35,8 +33,8 @@ jobs:
             echo "Pages host: ${{ steps.pages.outputs.host }}"
             echo "Pages base path: ${{ steps.pages.outputs.base_path }}"
           else
-            echo "::warning::GitHub Pages metadata unavailable. Using repository defaults (asriui.dev or project Pages URL)."
-            echo "Enable Pages: Settings → Pages → Source: GitHub Actions"
+            echo "::warning::GitHub Pages metadata unavailable. Using repository defaults (asriui.dev)."
+            echo "Enable Pages: Settings → Pages → Deploy from branch gh-pages (root folder)"
           fi
 
       - name: Setup pnpm
@@ -73,22 +71,29 @@ jobs:
           PAGES_HOST: ${{ steps.pages.outputs.host }}
         run: pnpm build:pages
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
         with:
+          name: site-dist
           path: site-dist
+          retention-days: 1
 
   deploy:
-    name: Deploy to GitHub Pages
+    name: Deploy to gh-pages
     needs: build
     runs-on: ubuntu-latest
     permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      contents: write
     steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Download site artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site-dist
+          path: site-dist
+
+      - name: Publish gh-pages branch
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: site-dist
+          branch: gh-pages
+          single-commit: true
