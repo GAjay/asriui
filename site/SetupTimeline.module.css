@@ -1,0 +1,12 @@
+.root {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--lp-border);
+}
+
+.caption {
+  margin: 0 0 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--lp-muted-fg);
+}

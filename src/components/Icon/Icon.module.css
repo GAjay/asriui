@@ -1,0 +1,49 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: currentColor;
+  vertical-align: middle;
+}
+
+.sm {
+  width: 0.95rem;
+  height: 0.95rem;
+}
+
+.md {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.lg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.xl {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.svg,
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.image {
+  display: block;
+  object-fit: contain;
+}
+
+.custom {
+  line-height: 0;
+}
+
+.custom :global(svg) {
+  width: 100%;
+  height: 100%;
+  display: block;
+}

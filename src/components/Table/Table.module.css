@@ -1,0 +1,87 @@
+.wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: var(--axiom-radius-md);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 0.875rem;
+  color: var(--axiom-color-foreground);
+  background: var(--axiom-color-background);
+}
+
+.caption {
+  caption-side: top;
+  padding: 0.65rem 0.85rem;
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.head {
+  background: var(--axiom-color-muted);
+}
+
+.head .cell {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--axiom-color-muted-foreground);
+  border-bottom: 1px solid var(--axiom-color-border);
+}
+
+.body .row:hover .cell {
+  background: color-mix(in srgb, var(--axiom-color-muted) 55%, transparent);
+}
+
+.row[data-selected="true"] .cell {
+  background: color-mix(in srgb, var(--axiom-color-muted) 80%, transparent);
+}
+
+.cell {
+  padding: 0.7rem 0.85rem;
+  border-bottom: 1px solid var(--axiom-color-border);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.cell[data-align="center"] {
+  text-align: center;
+}
+
+.cell[data-align="right"] {
+  text-align: right;
+}
+
+.sizeSm .cell {
+  padding: 0.45rem 0.65rem;
+  font-size: 0.8rem;
+}
+
+.variantStriped .body .row:nth-child(even) .cell {
+  background: color-mix(in srgb, var(--axiom-color-muted) 45%, transparent);
+}
+
+.variantBordered {
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  overflow: hidden;
+}
+
+.variantBordered .cell {
+  border-right: 1px solid var(--axiom-color-border);
+}
+
+.variantBordered .cell:last-child {
+  border-right: 0;
+}
+
+.footer .cell {
+  font-weight: 600;
+  background: var(--axiom-color-muted);
+}

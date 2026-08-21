@@ -1,0 +1,33 @@
+@import "../tokens/index.css";
+@import "./theme-transitions.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.axiom-root {
+  font-family: var(--axiom-font-family);
+  color: var(--axiom-color-foreground);
+  background-color: var(--axiom-color-background);
+  line-height: var(--axiom-line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.axiom-root :focus-visible:not(:where(input, textarea, select)) {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+}
+
+.axiom-root a[href],
+.axiom-root button:not(:disabled),
+.axiom-root [role="button"]:not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+
+.axiom-root button:disabled,
+.axiom-root [aria-disabled="true"] {
+  cursor: not-allowed;
+}

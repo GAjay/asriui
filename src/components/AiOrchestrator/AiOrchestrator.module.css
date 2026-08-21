@@ -1,0 +1,45 @@
+.root {
+  gap: 0.75rem;
+}
+
+.panel {
+  margin-top: 0.75rem;
+}
+
+.pipeline {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pipelineStep {
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  padding: 0.65rem 0.75rem;
+  display: grid;
+  gap: 0.25rem;
+  font-size: var(--axiom-font-size-sm);
+}
+
+.pipelineStatus {
+  font-size: var(--axiom-font-size-xs);
+  color: var(--axiom-color-muted-foreground);
+  text-transform: capitalize;
+}
+
+.pipelineOutput {
+  margin: 0;
+  color: var(--axiom-color-muted-foreground);
+  font-size: var(--axiom-font-size-xs);
+}
+
+.pipelineStep[data-status="done"] {
+  border-color: color-mix(in srgb, var(--axiom-color-success, #059669) 40%, var(--axiom-color-border));
+}
+
+.pipelineStep[data-status="running"] {
+  border-color: var(--axiom-color-primary);
+}

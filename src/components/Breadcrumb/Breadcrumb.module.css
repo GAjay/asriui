@@ -1,0 +1,124 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--axiom-space-3);
+  font-family: var(--axiom-font-family);
+}
+
+.back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  font-size: var(--axiom-font-size-sm);
+  font-weight: var(--axiom-font-weight-medium);
+  line-height: 1;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color var(--axiom-duration-fast) var(--axiom-easing-standard),
+    border-color var(--axiom-duration-fast) var(--axiom-easing-standard),
+    transform var(--axiom-duration-fast) var(--axiom-easing-standard);
+}
+
+.back:hover {
+  background: var(--axiom-color-muted);
+  border-color: color-mix(in srgb, var(--axiom-color-border) 70%, var(--axiom-color-foreground));
+  transform: translateX(-1px);
+}
+
+.back:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+}
+
+.backIcon {
+  width: 0.9rem;
+  height: 0.9rem;
+  flex-shrink: 0;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.link,
+.current {
+  font-size: var(--axiom-font-size-sm);
+  line-height: var(--axiom-line-height-tight);
+}
+
+.link {
+  color: var(--axiom-color-muted-foreground);
+  text-decoration: none;
+  transition: color var(--axiom-duration-fast) var(--axiom-easing-standard);
+}
+
+.link:hover {
+  color: var(--axiom-color-foreground);
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+  border-radius: var(--axiom-radius-sm);
+}
+
+.current {
+  color: var(--axiom-color-foreground);
+  font-weight: var(--axiom-font-weight-medium);
+}
+
+.separatorItem {
+  display: inline-flex;
+  align-items: center;
+  list-style: none;
+}
+
+.separator {
+  display: inline-flex;
+  align-items: center;
+  color: var(--axiom-color-muted-foreground);
+  opacity: 0.7;
+  user-select: none;
+}
+
+.separatorSlash {
+  display: inline-block;
+  font-size: 0.85em;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.separatorIcon {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back {
+    transition: none;
+  }
+
+  .back:hover {
+    transform: none;
+  }
+}

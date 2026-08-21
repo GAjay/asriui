@@ -1,0 +1,29 @@
+# AxiomUI
+
+> Open-source React 18+ UI component library with TypeScript, accessibility, CSS Modules, Framer Motion, live docs, and page templates.
+
+AxiomUI helps teams ship accessible web interfaces with tree-shakable npm imports (`axiom-ui/button`), design tokens, compound components, data grids, auth forms, and a PWA-ready documentation site.
+
+Install with `pnpm add axiom-ui framer-motion`, import `axiom-ui/style.css` once, and wrap your app with `AxiomProvider` from `axiom-ui/config`.
+
+## Docs
+
+- [Getting started](https://axiom-ui.dev/docs/getting-started): Install, configure AxiomProvider, and import your first component
+- [Design tokens](https://axiom-ui.dev/docs/tokens): CSS variables for color, spacing, radius, and typography
+- [Branding guide](https://axiom-ui.dev/docs/branding): Logo usage, tone, and visual identity for AxiomUI-powered products
+- [Component catalog](https://axiom-ui.dev/docs/components/button): Live examples and API reference for every component
+- [Page templates](https://axiom-ui.dev/templates): Fifteen production page layouts you can copy into your app
+- [Roadmap](https://axiom-ui.dev/docs/roadmap): What shipped, what is in progress, and what is planned next
+- [Releases](https://axiom-ui.dev/docs/releases): Version history and changelog
+
+## Project
+
+- [Home](https://axiom-ui.dev/): Landing page with feature overview and design system preview
+- [GitHub repository](https://github.com/gajay): Source code, issues, and contributions
+- [npm package](https://www.npmjs.com/package/axiom-ui): `axiom-ui` on npm with subpath exports
+- [Sitemap](https://axiom-ui.dev/sitemap.xml): Full list of indexable pages on axiom-ui.dev
+
+## Optional
+
+- [Styling guide](https://axiom-ui.dev/docs/styling): CSS Modules conventions and theming patterns
+- [Theme configuration](https://axiom-ui.dev/docs/theme): Light, dark, and system theme modes via AxiomProvider

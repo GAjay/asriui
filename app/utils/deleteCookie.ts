@@ -1,6 +1,0 @@
-export async function deleteCookie(name:string) {
-  if (typeof window === "undefined") return null
-  document.cookie = name + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-  }
-
-  

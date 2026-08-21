@@ -1,0 +1,15 @@
+.root {
+  gap: 0.75rem;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.summary {
+  font-size: var(--axiom-font-size-sm);
+  color: var(--axiom-color-muted-foreground);
+  margin: 0;
+}

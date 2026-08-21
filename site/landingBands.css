@@ -1,0 +1,65 @@
+/**
+ * Landing page bands — white ↔ black alternation in light theme.
+ * Apply via data-band on sections inside [data-landing-page].
+ */
+[data-landing-page] [data-band="white"] {
+  background: var(--lp-band-white);
+  color: var(--lp-fg);
+  border-color: var(--lp-border);
+  --lp-bg: var(--lp-on-band-white-surface);
+  --lp-card: var(--lp-on-band-white-surface);
+  --lp-muted: var(--lp-on-band-white-muted);
+  --lp-carousel-fade: var(--lp-band-white);
+  --lp-carousel-card-bg: var(--lp-on-band-white-surface);
+  --lp-carousel-hover-bg: var(--lp-fg);
+  --lp-carousel-hover-fg: #ffffff;
+  --lp-accent-fg: #ffffff;
+}
+
+[data-landing-page] [data-band="black"] {
+  background: var(--lp-band-black);
+  color: var(--lp-band-black-fg);
+  border-color: var(--lp-on-band-black-border);
+  --lp-fg: var(--lp-band-black-fg);
+  --lp-muted-fg: var(--lp-band-black-muted);
+  --lp-bg: var(--lp-on-band-black-surface);
+  --lp-card: var(--lp-on-band-black-surface);
+  --lp-muted: var(--lp-on-band-black-muted);
+  --lp-border: var(--lp-on-band-black-border);
+  --lp-border-strong: var(--lp-on-band-black-border-strong);
+  --lp-accent: var(--lp-band-black-fg);
+  --lp-accent-fg: var(--lp-band-black);
+  --lp-accent-soft: var(--lp-on-band-black-muted);
+  --lp-carousel-fade: var(--lp-band-black);
+  --lp-carousel-card-bg: var(--lp-on-band-black-surface);
+  --lp-carousel-hover-bg: #ffffff;
+  --lp-carousel-hover-fg: #09090b;
+}
+
+/* Dark theme: keep readable contrast on alternating zinc bands */
+[data-theme="dark"] [data-landing-page] [data-band="white"] {
+  --lp-carousel-hover-fg: #111113;
+  --lp-accent-fg: #111113;
+}
+
+[data-theme="dark"] [data-landing-page] [data-band="black"] {
+  --lp-carousel-hover-bg: #fafafa;
+  --lp-carousel-hover-fg: #09090b;
+  --lp-accent-fg: #09090b;
+}
+
+[data-landing-page] [data-band="white"],
+[data-landing-page] [data-band="black"] {
+  --axiom-color-foreground: var(--lp-fg);
+  --axiom-color-background: var(--lp-card);
+  --axiom-color-muted: var(--lp-muted);
+  --axiom-color-muted-foreground: var(--lp-muted-fg);
+  --axiom-color-border: var(--lp-border);
+  --axiom-color-ring: var(--lp-fg);
+  --axiom-color-primary: var(--lp-fg);
+  --axiom-color-primary-hover: color-mix(in srgb, var(--lp-fg) 88%, transparent);
+  --axiom-color-primary-active: color-mix(in srgb, var(--lp-fg) 76%, transparent);
+  --axiom-color-primary-foreground: var(--lp-accent-fg);
+  --axiom-color-secondary: var(--lp-muted);
+  --axiom-color-secondary-foreground: var(--lp-fg);
+}

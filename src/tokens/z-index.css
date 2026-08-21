@@ -1,0 +1,10 @@
+:root {
+  --axiom-z-base: 0;
+  --axiom-z-dropdown: 1000;
+  --axiom-z-sticky: 1100;
+  --axiom-z-overlay: 1200;
+  --axiom-z-modal: 1300;
+  --axiom-z-popover: 1400;
+  --axiom-z-toast: 1500;
+  --axiom-z-tooltip: 1600;
+}

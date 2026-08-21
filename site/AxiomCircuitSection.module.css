@@ -1,0 +1,617 @@
+.section {
+  position: relative;
+  overflow: clip;
+  border-top: 1px solid var(--lp-border);
+  scroll-margin-top: var(--lp-header-height, 4rem);
+  box-sizing: border-box;
+  min-height: 100svh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: safe center;
+  background: var(--lp-band-white, #ffffff);
+  color: var(--lp-fg);
+}
+
+.inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1.75rem;
+  width: min(100% - 2rem, 72rem);
+  margin-inline: auto;
+  padding: clamp(3rem, 7vh, 4.5rem) 0;
+}
+
+.header {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 34rem;
+  justify-items: start;
+  text-align: left;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.55rem, 4vw, 2.55rem);
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  color: var(--lp-fg);
+}
+
+.lead {
+  margin: 0;
+  max-width: 46ch;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--lp-muted-fg);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.15rem;
+}
+
+.primaryAction,
+.ghostAction {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--lp-btn-radius, 8px);
+  font-size: 0.86rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+
+.primaryAction {
+  background: var(--lp-fg);
+  color: var(--lp-accent-fg, var(--lp-bg));
+}
+
+.primaryAction:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.ghostAction {
+  color: var(--lp-fg);
+  border: 1px solid var(--lp-border);
+  background: transparent;
+}
+
+.ghostAction:hover {
+  border-color: var(--lp-fg);
+  transform: translateY(-1px);
+}
+
+.mapWrap {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  z-index: 2;
+}
+
+.mapDesktop {
+  display: none;
+}
+
+.mindMap {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  color: var(--lp-fg);
+}
+
+.colLabel {
+  fill: var(--lp-muted-fg);
+  font-family: var(--lp-font-sans, system-ui, sans-serif);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.branchTrack {
+  fill: none;
+  stroke: var(--lp-border);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  opacity: 0.7;
+  transition: opacity 260ms ease, stroke-width 260ms ease;
+}
+
+.branchEnergyIn,
+.branchEnergyOut {
+  fill: none;
+  stroke-width: 2.25;
+  stroke-linecap: round;
+  stroke-dasharray: 5 95;
+  animation: energy-packet 3.4s cubic-bezier(0.42, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+.branchEnergyIn {
+  stroke: var(--lp-fg);
+  filter: url(#energy-glow-in);
+}
+
+.branchEnergyOut {
+  stroke: var(--lp-muted-fg);
+  filter: url(#energy-glow-out);
+}
+
+.branchActive .branchTrack {
+  opacity: 1;
+  stroke-width: 2;
+  stroke: color-mix(in srgb, var(--lp-fg) 70%, var(--lp-border));
+}
+
+.branchActive .branchEnergyIn,
+.branchActive .branchEnergyOut {
+  stroke-width: 3;
+  opacity: 1;
+}
+
+.branchDimmed {
+  opacity: 0.22;
+  transition: opacity 280ms ease;
+}
+
+.branchActive.branchDimmed {
+  opacity: 1;
+}
+
+.branchActive .nodeDotStack,
+.branchActive .nodeDotShip {
+  stroke-width: 2;
+  filter: drop-shadow(0 0 2px color-mix(in srgb, var(--lp-fg) 40%, transparent));
+}
+
+.nodeDotStack,
+.nodeDotShip {
+  stroke: var(--lp-card, var(--lp-band-white, #ffffff));
+  stroke-width: 1.5;
+}
+
+.nodeDotStack {
+  fill: var(--lp-fg);
+}
+
+.nodeDotShip {
+  fill: var(--lp-muted-fg);
+}
+
+.hubRect {
+  fill: transparent;
+  stroke: var(--lp-border);
+  stroke-width: 1.5;
+}
+
+.mapLive .hubRect {
+  animation: hub-process 3.4s ease-in-out infinite;
+  animation-delay: 0.55s;
+}
+
+.hubPort {
+  fill: var(--lp-fg);
+  stroke: var(--lp-card, var(--lp-band-white, #ffffff));
+  stroke-width: 2;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.mapLive .hubPortIn {
+  animation: hub-port-in 3.4s ease-in-out infinite;
+}
+
+.mapLive .hubPortOut {
+  animation: hub-port-out 3.4s ease-in-out infinite;
+}
+
+.hubInner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.hubBrand {
+  flex-shrink: 0;
+}
+
+.hubTrigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: 100%;
+  cursor: default;
+}
+
+.hubName {
+  font-family: var(--lp-font-sans, system-ui, sans-serif);
+  font-size: 12px;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--lp-fg);
+  line-height: 1;
+}
+
+.chipWrap {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.chipTooltip {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.chipTooltipTrigger {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+}
+
+.chipTooltipTrigger > a,
+.chipTooltipTrigger > span {
+  flex: 1;
+  min-width: 0;
+}
+
+.chipTooltipContent {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.55rem 0.7rem;
+  text-align: left;
+}
+
+.tooltipKicker {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.tooltipText {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+
+.tooltipAction {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.68rem;
+  font-weight: 650;
+  opacity: 0.85;
+}
+
+.stackChip,
+.templateChip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 30px;
+  height: 100%;
+  margin: 0;
+  padding: 0 0.6rem;
+  border-radius: 999px;
+  font-family: var(--lp-font-sans, system-ui, sans-serif);
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  text-decoration: none;
+  box-sizing: border-box;
+  background: transparent;
+  border-width: 1.5px;
+  border-style: dashed;
+  transition:
+    border-color 200ms ease,
+    color 200ms ease,
+    opacity 200ms ease;
+}
+
+.stackChip {
+  border-color: var(--lp-fg);
+  color: var(--lp-fg);
+}
+
+.templateChip {
+  border-color: var(--lp-muted-fg);
+  color: var(--lp-muted-fg);
+}
+
+.stackChip:hover,
+.stackChip:focus-visible,
+.chipActive.stackChip {
+  border-style: solid;
+  border-color: var(--lp-fg);
+  opacity: 1;
+  outline: none;
+}
+
+.templateChip:hover,
+.templateChip:focus-visible,
+.chipActive.templateChip {
+  border-style: solid;
+  border-color: var(--lp-fg);
+  color: var(--lp-fg);
+  opacity: 1;
+  outline: none;
+}
+
+.chipDimmed {
+  opacity: 0.4;
+}
+
+.chipActive {
+  opacity: 1;
+  z-index: 2;
+  position: relative;
+}
+
+/* ── Mobile vertical flow ── */
+.mobileMap {
+  display: grid;
+  gap: 0.65rem;
+  width: 100%;
+}
+
+.mobileZone {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.mobileZoneLabel {
+  margin: 0;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+  text-align: center;
+}
+
+.mobileChipGrid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.mobileStackChip,
+.mobileTemplateChip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 2.1rem;
+  padding: 0.4rem 0.55rem;
+  border-radius: 999px;
+  font-family: var(--lp-font-sans, system-ui, sans-serif);
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  text-align: center;
+  text-decoration: none;
+  background: transparent;
+  box-sizing: border-box;
+  border-width: 1.5px;
+  border-style: dashed;
+  transition:
+    border-color 180ms ease,
+    color 180ms ease,
+    opacity 180ms ease;
+}
+
+.mobileStackChip {
+  border-color: var(--lp-fg);
+  color: var(--lp-fg);
+}
+
+.mobileTemplateChip {
+  border-color: var(--lp-muted-fg);
+  color: var(--lp-muted-fg);
+}
+
+.mobileStackChip:hover,
+.mobileStackChip:focus-visible,
+.chipActive.mobileStackChip,
+.mobileTemplateChip:hover,
+.mobileTemplateChip:focus-visible,
+.chipActive.mobileTemplateChip {
+  border-style: solid;
+  border-color: var(--lp-fg);
+  color: var(--lp-fg);
+  opacity: 1;
+  outline: none;
+}
+
+.mobileFlow {
+  display: flex;
+  justify-content: center;
+  height: 1.25rem;
+}
+
+.mobileFlowLine {
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--lp-border) 20%,
+    var(--lp-fg) 50%,
+    var(--lp-border) 80%,
+    transparent
+  );
+  opacity: 0.65;
+}
+
+.mobileHub {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-inline: auto;
+  padding: 0.65rem 1.1rem;
+  border: 1.5px solid var(--lp-border);
+  border-radius: 999px;
+  background: transparent;
+  width: fit-content;
+  max-width: 100%;
+  cursor: default;
+}
+
+.mobileHubName {
+  font-family: var(--lp-font-sans, system-ui, sans-serif);
+  font-size: 0.82rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--lp-fg);
+}
+
+.srList {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@keyframes energy-packet {
+  0% {
+    stroke-dashoffset: 100;
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  86% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes hub-process {
+  0%,
+  36%,
+  100% {
+    stroke: var(--lp-border);
+  }
+  48%,
+  54% {
+    stroke: color-mix(in srgb, var(--lp-fg) 45%, var(--lp-border));
+  }
+}
+
+@keyframes hub-port-in {
+  0%,
+  32%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  42%,
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+@keyframes hub-port-out {
+  0%,
+  46%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  56%,
+  64% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+@media (min-width: 768px) {
+  .mapDesktop {
+    display: block;
+  }
+
+  .mobileMap {
+    display: none;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .inner {
+    grid-template-columns: minmax(0, 20rem) minmax(0, 1fr);
+    align-items: center;
+    gap: clamp(2rem, 4vw, 3rem);
+    padding: clamp(3rem, 7vh, 4.5rem) 0;
+  }
+
+  .header {
+    position: sticky;
+    top: calc(var(--lp-header-height, 4rem) + 1.25rem);
+  }
+}
+
+@media (max-width: 380px) {
+  .mobileChipGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .branchEnergyIn,
+  .branchEnergyOut,
+  .hubPortIn,
+  .hubPortOut,
+  .hubRect {
+    animation: none;
+  }
+
+  .primaryAction:hover,
+  .ghostAction:hover {
+    transform: none;
+  }
+}

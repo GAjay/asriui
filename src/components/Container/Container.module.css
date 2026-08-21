@@ -1,0 +1,54 @@
+.root {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.centered {
+  margin-inline: auto;
+}
+
+.sizeSm {
+  max-width: 40rem;
+}
+
+.sizeMd {
+  max-width: 48rem;
+}
+
+.sizeLg {
+  max-width: 64rem;
+}
+
+.sizeXl {
+  max-width: 80rem;
+}
+
+.sizeFull {
+  max-width: none;
+}
+
+.padNone {
+  padding-inline: 0;
+}
+
+.padSm {
+  padding-inline: var(--axiom-space-3);
+}
+
+.padMd {
+  padding-inline: var(--axiom-space-4);
+}
+
+.padLg {
+  padding-inline: var(--axiom-space-6);
+}
+
+@media (min-width: 768px) {
+  .padMd {
+    padding-inline: var(--axiom-space-6);
+  }
+
+  .padLg {
+    padding-inline: var(--axiom-space-8);
+  }
+}

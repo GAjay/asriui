@@ -1,0 +1,242 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--axiom-color-foreground);
+}
+
+.required {
+  margin-left: 0.15rem;
+  color: var(--axiom-color-destructive, #dc2626);
+}
+
+.field {
+  position: relative;
+}
+
+.control {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  transition: border-color 140ms ease;
+}
+
+.control:focus-within {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+}
+
+.controlError {
+  border-color: var(--axiom-color-destructive, #dc2626);
+}
+
+.controlDisabled {
+  opacity: 0.55;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.55rem 0.75rem;
+  border: 0;
+  background: transparent;
+  font-size: 0.875rem;
+  color: var(--axiom-color-foreground);
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--axiom-color-muted-foreground);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  border: 0;
+  border-left: 1px solid var(--axiom-color-border);
+  background: var(--axiom-color-muted);
+  color: var(--axiom-color-foreground);
+  cursor: pointer;
+}
+
+.trigger:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--axiom-color-foreground) 6%, var(--axiom-color-muted));
+}
+
+.trigger:disabled {
+  cursor: not-allowed;
+}
+
+.popover {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  z-index: 60;
+  width: min(20rem, calc(100vw - 1.5rem));
+  padding: 0.75rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  box-shadow: var(--axiom-shadow-lg, 0 12px 32px color-mix(in srgb, var(--axiom-color-foreground) 12%, transparent));
+}
+
+.calendar {
+  display: block;
+}
+
+.calendarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+}
+
+.monthLabel {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.navButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-sm);
+  background: var(--axiom-color-muted);
+  color: var(--axiom-color-foreground);
+  cursor: pointer;
+}
+
+.navButton:hover {
+  background: color-mix(in srgb, var(--axiom-color-foreground) 6%, var(--axiom-color-muted));
+}
+
+.weekdays,
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.15rem;
+}
+
+.weekday {
+  padding: 0.2rem 0;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.day {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  border: 0;
+  border-radius: var(--axiom-radius-sm);
+  background: transparent;
+  font-size: 0.82rem;
+  color: var(--axiom-color-foreground);
+  cursor: pointer;
+}
+
+.day:hover:not(:disabled) {
+  background: var(--axiom-color-muted);
+}
+
+.dayOutside {
+  color: var(--axiom-color-muted-foreground);
+  opacity: 0.55;
+}
+
+.daySelected {
+  background: var(--axiom-color-foreground);
+  color: var(--axiom-color-background);
+}
+
+.daySelected:hover:not(:disabled) {
+  background: var(--axiom-color-foreground);
+}
+
+.dayInRange {
+  background: color-mix(in srgb, var(--axiom-color-foreground) 10%, var(--axiom-color-muted));
+}
+
+.dayRangeStart,
+.dayRangeEnd {
+  background: var(--axiom-color-foreground);
+  color: var(--axiom-color-background);
+}
+
+.dayDisabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.timeRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--axiom-color-border);
+}
+
+.timeField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.timeLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.timeInput {
+  width: 100%;
+  min-height: 2.25rem;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-sm);
+  background: var(--axiom-color-background);
+  font-size: 0.82rem;
+}
+
+.message {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.error {
+  color: var(--axiom-color-destructive, #dc2626);
+}
+
+.hint {
+  margin: 0.5rem 0 0;
+  font-size: 0.72rem;
+  color: var(--axiom-color-muted-foreground);
+}

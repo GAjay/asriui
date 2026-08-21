@@ -1,0 +1,131 @@
+.root {
+  position: relative;
+  min-width: 0;
+  margin-bottom: 0.85rem;
+}
+
+.form {
+  position: relative;
+  min-width: 0;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 0.65rem;
+  width: 0.95rem;
+  height: 0.95rem;
+  transform: translateY(-50%);
+  color: var(--lp-muted-fg);
+  pointer-events: none;
+}
+
+.input {
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: 0.5rem 0.7rem 0.5rem 2rem;
+  border: 1px solid var(--lp-border);
+  border-radius: var(--lp-radius, 8px);
+  background: var(--lp-card);
+  color: var(--lp-fg);
+  font: inherit;
+  font-size: 0.84rem;
+  line-height: 1.35;
+  transition:
+    border-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+.input::placeholder {
+  color: var(--lp-muted-fg);
+}
+
+.input::-webkit-search-cancel-button,
+.input::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input:focus-visible {
+  border-color: var(--lp-primary);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--lp-primary) 22%, transparent);
+}
+
+.root[data-open] .input {
+  border-color: color-mix(in srgb, var(--lp-primary) 55%, var(--lp-border));
+}
+
+.results {
+  display: grid;
+  gap: 0.15rem;
+  max-height: min(16rem, calc(100vh - 6rem));
+  overflow: auto;
+  padding: 0.35rem;
+  border: 1px solid var(--lp-border);
+  border-radius: var(--lp-radius, 8px);
+  background: var(--lp-card);
+  box-shadow:
+    0 10px 28px color-mix(in srgb, var(--lp-fg) 10%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--lp-border) 80%, transparent);
+}
+
+.result {
+  display: grid;
+  gap: 0.15rem;
+  width: 100%;
+  padding: 0.5rem 0.55rem;
+  border: 0;
+  border-radius: calc(var(--lp-radius, 8px) - 2px);
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.result:hover {
+  background: var(--lp-muted);
+}
+
+.result:focus {
+  outline: none;
+}
+
+.result:focus-visible {
+  background: var(--lp-muted);
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--lp-primary) 35%, transparent);
+}
+
+.resultTitle {
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.resultMeta {
+  font-size: 0.72rem;
+  line-height: 1.35;
+  color: var(--lp-muted-fg);
+}
+
+.empty {
+  margin: 0;
+  padding: 0.55rem 0.6rem;
+  font-size: 0.8rem;
+  color: var(--lp-muted-fg);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

@@ -1,0 +1,32 @@
+.root {
+  display: grid;
+  width: 100%;
+}
+
+.gapNone {
+  gap: 0;
+}
+
+.gapSm {
+  gap: var(--axiom-space-2);
+}
+
+.gapMd {
+  gap: var(--axiom-space-4);
+}
+
+.gapLg {
+  gap: var(--axiom-space-6);
+}
+
+.fixed {
+  grid-template-columns: repeat(var(--grid-columns, 2), minmax(0, 1fr));
+}
+
+.auto {
+  grid-template-columns: repeat(auto-fill, minmax(var(--grid-min-col, 16rem), 1fr));
+}
+
+.item {
+  min-width: 0;
+}

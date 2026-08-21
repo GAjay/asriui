@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="AxiomUI">
+  <style>
+    .plate-left {
+      fill: #09090b;
+    }
+    .plate-right {
+      fill: #18181b;
+    }
+    .letter {
+      fill: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      .plate-left {
+        fill: #ffffff;
+      }
+      .plate-right {
+        fill: #e4e4e7;
+      }
+      .letter {
+        fill: #09090b;
+      }
+    }
+  </style>
+  <rect class="plate-left" width="24" height="48" />
+  <rect class="plate-right" x="24" width="24" height="48" />
+  <path
+    class="letter"
+    shape-rendering="geometricPrecision"
+    d="M24 11 14.5 37 18.25 37 21 29.5 24 11 27 29.5 29.75 37 33.5 37Z"
+  />
+</svg>

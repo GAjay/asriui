@@ -1,0 +1,54 @@
+.content {
+  min-width: 0;
+}
+
+.toc {
+  min-width: 0;
+}
+
+.tocLabel {
+  margin: 0 0 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+}
+
+.tocList {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  border-left: 1px solid var(--lp-border);
+}
+
+.tocLink {
+  display: block;
+  padding: 0.25rem 0 0.25rem 0.65rem;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--lp-muted-fg);
+  text-decoration: none;
+  transition: color 120ms ease;
+}
+
+.tocLink:hover {
+  color: var(--lp-fg);
+}
+
+.tocLink:focus {
+  outline: none;
+}
+
+.tocLink:focus-visible {
+  color: var(--lp-fg);
+  box-shadow: none;
+}
+
+.tocLinkActive {
+  color: var(--lp-fg);
+  font-weight: 600;
+}

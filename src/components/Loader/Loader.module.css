@@ -1,0 +1,124 @@
+.root {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--axiom-color-foreground);
+}
+
+.indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  margin: 0;
+  font-size: var(--axiom-font-size-sm);
+  color: var(--axiom-color-muted-foreground);
+}
+
+/* Sizes */
+.sm .spinner,
+.sm .ring {
+  width: 1rem;
+  height: 1rem;
+  border-width: 2px;
+}
+
+.md .spinner,
+.md .ring {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-width: 2px;
+}
+
+.lg .spinner,
+.lg .ring {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-width: 3px;
+}
+
+.sm .dot {
+  width: 0.35rem;
+  height: 0.35rem;
+}
+
+.md .dot {
+  width: 0.45rem;
+  height: 0.45rem;
+}
+
+.lg .dot {
+  width: 0.55rem;
+  height: 0.55rem;
+}
+
+/* Spinner */
+.spinner,
+.ring {
+  border-radius: var(--axiom-radius-full);
+  border-style: solid;
+  border-color: currentColor;
+  border-right-color: transparent;
+  animation: axiom-loader-spin var(--axiom-duration-slow) linear infinite;
+}
+
+.ring {
+  border-top-color: transparent;
+}
+
+.dots {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.dot {
+  border-radius: var(--axiom-radius-full);
+  background: currentColor;
+  animation: axiom-loader-bounce 1s ease-in-out infinite;
+}
+
+.dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes axiom-loader-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes axiom-loader-bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.65);
+    opacity: 0.45;
+  }
+
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner,
+  .ring,
+  .dot {
+    animation: none;
+  }
+
+  .spinner,
+  .ring {
+    border-right-color: currentColor;
+    opacity: 0.65;
+  }
+}

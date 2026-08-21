@@ -1,0 +1,149 @@
+.frame {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid var(--lp-border);
+  border-radius: var(--lp-radius-lg);
+  background: var(--lp-card);
+  box-shadow: var(--lp-shadow-xl);
+  overflow: hidden;
+}
+
+.chrome {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid var(--lp-border);
+  background: var(--lp-muted);
+}
+
+.chrome span {
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 999px;
+  background: var(--lp-border-strong);
+}
+
+.chrome span:nth-child(1) {
+  background: #ef4444;
+}
+
+.chrome span:nth-child(2) {
+  background: #f59e0b;
+}
+
+.chrome span:nth-child(3) {
+  background: #22c55e;
+}
+
+.chrome p {
+  margin: 0 0 0 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--lp-muted-fg);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 168px minmax(0, 1fr);
+  min-height: 280px;
+}
+
+.sidebar {
+  padding: 0.85rem 0.65rem;
+  border-right: 1px solid var(--lp-border);
+  background: var(--lp-muted);
+}
+
+.sidebarBrand {
+  margin: 0 0 0.85rem;
+  padding: 0 0.45rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.sidebarGroup + .sidebarGroup {
+  margin-top: 0.75rem;
+}
+
+.sidebarLabel {
+  margin: 0 0 0.35rem;
+  padding: 0 0.45rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--lp-muted-fg);
+}
+
+.sidebarList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebarLink,
+.sidebarLinkActive {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0.38rem 0.45rem;
+  border: 0;
+  border-radius: calc(var(--lp-radius) - 2px);
+  background: transparent;
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--lp-muted-fg);
+  cursor: pointer;
+}
+
+.sidebarLink:hover {
+  background: var(--lp-accent-soft);
+  color: var(--lp-fg);
+}
+
+.sidebarLinkActive {
+  background: var(--lp-accent-soft);
+  color: var(--lp-fg);
+}
+
+.main {
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: var(--lp-bg);
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.panel {
+  flex: 1;
+}
+
+.list {
+  margin-top: 0.85rem;
+}
+
+@media (max-width: 720px) {
+  .layout {
+    grid-template-columns: 1fr;
+    min-height: 220px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+}

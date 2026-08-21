@@ -1,0 +1,16 @@
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  flex-shrink: 0;
+  line-height: 0;
+  overflow: visible;
+}
+
+.mark svg {
+  display: block;
+  flex: none;
+  overflow: visible;
+  shape-rendering: geometricPrecision;
+}

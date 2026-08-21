@@ -1,0 +1,73 @@
+.root {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(var(--palette-columns, 4), minmax(0, 1fr));
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  overflow: hidden;
+  background: var(--axiom-color-background);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.swatch:hover {
+  border-color: var(--axiom-color-foreground);
+  box-shadow: var(--axiom-shadow-sm, 0 1px 3px rgb(0 0 0 / 0.08));
+}
+
+.swatch:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.meta {
+  padding: 0.55rem 0.65rem 0.7rem;
+}
+
+.name {
+  display: block;
+  margin: 0 0 0.15rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--axiom-color-foreground);
+}
+
+.value {
+  display: block;
+  margin: 0;
+  font-family: var(--axiom-font-family-mono);
+  font-size: 0.72rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.token {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.68rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+@media (max-width: 720px) {
+  .root {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

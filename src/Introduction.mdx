@@ -1,0 +1,34 @@
+import { Meta, Markdown } from "@storybook/blocks";
+
+<Meta title="Introduction" />
+
+# AxiomUI
+
+Production-ready React UI components. Accessible, themeable, type-safe, and tree-shakable.
+
+## Install
+
+```bash
+pnpm add axiom-ui
+```
+
+## Usage
+
+```tsx
+import { Button } from "axiom-ui";
+import "axiom-ui/style.css";
+
+export function App() {
+  return <Button>Get Started</Button>;
+}
+```
+
+## Theming
+
+Set `data-theme="dark"` or `data-theme="light"` on a root element. Components consume CSS
+variables and do not depend on a global theme provider.
+
+## Components
+
+Browse **Components** in the sidebar for Button, Input, and Card stories with controls,
+accessibility checks, and documentation.

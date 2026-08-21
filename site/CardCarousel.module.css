@@ -1,0 +1,274 @@
+.wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow: visible;
+  /* Reserve hover room above cards without adding visible layout gap */
+  margin-top: -0.75rem;
+  padding-top: 0.75rem;
+}
+
+.track {
+  display: flex;
+  align-items: stretch;
+  gap: 0.75rem;
+  overflow-x: auto;
+  /* overflow-x: auto forces overflow-y to clip — pad inside for hover lift + shadow */
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding: 1.35rem 0.2rem 1.1rem;
+  scroll-padding-inline: 0.2rem;
+  scrollbar-width: none;
+}
+
+.track:focus {
+  outline: none;
+}
+
+.track:focus-visible {
+  outline: 2px solid var(--lp-fg);
+  outline-offset: 4px;
+  border-radius: 0.5rem;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  flex: 0 0 auto;
+  display: flex;
+  align-self: stretch;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  perspective: 1200px;
+}
+
+.card {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 0.55rem;
+  width: min(78vw, 15.5rem);
+  min-height: 12.5rem;
+  height: 100%;
+  padding: 1rem 1.05rem 1.1rem;
+  border: 1px solid color-mix(in srgb, var(--lp-border) 70%, transparent);
+  border-radius: 0.8rem;
+  background: var(--lp-carousel-card-bg, var(--lp-card));
+  color: var(--lp-fg);
+  text-decoration: none;
+  text-align: left;
+  transform-style: preserve-3d;
+  transform-origin: center center;
+  transform: translateZ(0);
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 280ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover,
+.card:focus-visible {
+  background: var(--lp-carousel-hover-bg, var(--lp-fg));
+  color: var(--lp-carousel-hover-fg, var(--lp-accent-fg));
+  border-color: var(--lp-carousel-hover-bg, var(--lp-fg));
+  box-shadow:
+    0 18px 36px color-mix(in srgb, var(--lp-fg) 14%, transparent),
+    0 8px 16px color-mix(in srgb, var(--lp-fg) 8%, transparent);
+  transform: rotateY(-8deg) rotateX(4deg) translateY(-6px) translateZ(10px) scale(1.015);
+  outline: none;
+}
+
+.card:hover .cardMuted,
+.card:focus-visible .cardMuted {
+  color: color-mix(in srgb, var(--lp-carousel-hover-fg, var(--lp-accent-fg)) 72%, transparent);
+}
+
+.card:hover .cardTag,
+.card:focus-visible .cardTag {
+  background: color-mix(in srgb, var(--lp-carousel-hover-fg, var(--lp-accent-fg)) 14%, transparent);
+  border-color: color-mix(in srgb, var(--lp-carousel-hover-fg, var(--lp-accent-fg)) 28%, transparent);
+  color: var(--lp-carousel-hover-fg, var(--lp-accent-fg));
+}
+
+.card:hover .cardIcon,
+.card:focus-visible .cardIcon {
+  background: color-mix(in srgb, var(--lp-carousel-hover-fg, var(--lp-accent-fg)) 14%, transparent);
+  color: var(--lp-carousel-hover-fg, var(--lp-accent-fg));
+}
+
+.card:hover .cardArrow,
+.card:focus-visible .cardArrow {
+  color: var(--lp-carousel-hover-fg, var(--lp-accent-fg));
+  transform: translateX(3px);
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.cardIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  border-radius: 0.5rem;
+  background: var(--lp-muted);
+  color: var(--lp-fg);
+  flex-shrink: 0;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.cardTag {
+  padding: 0.15rem 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--lp-border) 80%, transparent);
+  border-radius: 999px;
+  background: var(--lp-muted);
+  font-size: 0.64rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+}
+
+.cardMuted {
+  margin: 0;
+  flex: 1 1 auto;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: var(--lp-muted-fg);
+  overflow-wrap: anywhere;
+  transition: color 180ms ease;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.35rem;
+}
+
+.cardMeta {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.cardArrow {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--lp-muted-fg);
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.cardSketch {
+  display: grid;
+  grid-template-columns: 0.32fr 1fr;
+  gap: 0.35rem;
+  min-height: 3.75rem;
+  margin-bottom: 0.15rem;
+  padding: 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--lp-border) 75%, transparent);
+  border-radius: 0.45rem;
+  background: var(--lp-muted);
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.card:hover .cardSketch,
+.card:focus-visible .cardSketch {
+  background: color-mix(in srgb, var(--lp-carousel-hover-fg, var(--lp-accent-fg)) 10%, transparent);
+  border-color: color-mix(in srgb, var(--lp-carousel-hover-fg, var(--lp-accent-fg)) 22%, transparent);
+}
+
+.sketchRail {
+  border-radius: 0.25rem;
+  background: color-mix(in srgb, var(--lp-fg) 10%, var(--lp-carousel-card-bg, var(--lp-card)));
+}
+
+.card:hover .sketchRail,
+.card:focus-visible .sketchRail {
+  background: color-mix(in srgb, var(--lp-carousel-hover-fg, var(--lp-accent-fg)) 18%, transparent);
+}
+
+.sketchStack {
+  display: grid;
+  gap: 0.28rem;
+  align-content: start;
+}
+
+.sketchStack span {
+  height: 0.45rem;
+  border-radius: 0.2rem;
+  background: color-mix(in srgb, var(--lp-fg) 8%, var(--lp-carousel-card-bg, var(--lp-card)));
+}
+
+.card:hover .sketchStack span,
+.card:focus-visible .sketchStack span {
+  background: color-mix(in srgb, var(--lp-carousel-hover-fg, var(--lp-accent-fg)) 22%, transparent);
+}
+
+.sketchStack span:first-child {
+  height: 0.7rem;
+  width: 75%;
+}
+
+@media (min-width: 900px) {
+  .card {
+    width: 16.5rem;
+    min-height: 13rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item {
+    perspective: none;
+  }
+
+  .card,
+  .cardArrow {
+    transition: none;
+  }
+
+  .card:hover,
+  .card:focus-visible {
+    transform: none;
+  }
+
+  .card:hover .cardArrow,
+  .card:focus-visible .cardArrow {
+    transform: none;
+  }
+}

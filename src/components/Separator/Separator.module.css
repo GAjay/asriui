@@ -1,0 +1,16 @@
+.root {
+  flex-shrink: 0;
+  border: 0;
+  background: var(--axiom-color-border);
+}
+
+.horizontal {
+  width: 100%;
+  height: 1px;
+}
+
+.vertical {
+  width: 1px;
+  align-self: stretch;
+  min-height: 1rem;
+}

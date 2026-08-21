@@ -1,0 +1,9 @@
+export { Breadcrumb } from "./Breadcrumb";
+export type {
+  BreadcrumbProps,
+  BreadcrumbItemConfig,
+  BreadcrumbBackProps,
+  BreadcrumbListProps,
+  BreadcrumbItemProps,
+  BreadcrumbSeparatorProps,
+} from "./Breadcrumb.types";

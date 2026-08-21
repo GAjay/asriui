@@ -1,0 +1,105 @@
+.root {
+  display: flex;
+  min-width: 0;
+}
+
+.inline {
+  display: inline-flex;
+  width: auto;
+}
+
+.dirRow {
+  flex-direction: row;
+}
+
+.dirColumn {
+  flex-direction: column;
+}
+
+.dirRowReverse {
+  flex-direction: row-reverse;
+}
+
+.dirColumnReverse {
+  flex-direction: column-reverse;
+}
+
+.alignStart {
+  align-items: flex-start;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.alignEnd {
+  align-items: flex-end;
+}
+
+.alignStretch {
+  align-items: stretch;
+}
+
+.alignBaseline {
+  align-items: baseline;
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.justifyAround {
+  justify-content: space-around;
+}
+
+.justifyEvenly {
+  justify-content: space-evenly;
+}
+
+.wrapNowrap {
+  flex-wrap: nowrap;
+}
+
+.wrapWrap {
+  flex-wrap: wrap;
+}
+
+.wrapReverse {
+  flex-wrap: wrap-reverse;
+}
+
+.gapNone {
+  gap: 0;
+}
+
+.gapXs {
+  gap: var(--axiom-space-1);
+}
+
+.gapSm {
+  gap: var(--axiom-space-2);
+}
+
+.gapMd {
+  gap: var(--axiom-space-4);
+}
+
+.gapLg {
+  gap: var(--axiom-space-6);
+}
+
+.gapXl {
+  gap: var(--axiom-space-8);
+}

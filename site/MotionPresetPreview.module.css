@@ -1,0 +1,64 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  width: 100%;
+  max-width: 20rem;
+  margin-inline: auto;
+  color: var(--qs-fg, var(--lp-fg));
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.label {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--qs-fg, var(--lp-fg));
+}
+
+.desc {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--qs-muted-fg, var(--lp-muted-fg));
+}
+
+.demoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1rem;
+  border: 1px solid var(--qs-border, var(--lp-border));
+  border-radius: var(--lp-radius-lg, 0.75rem);
+  background: var(--qs-card, var(--lp-card));
+  color: var(--qs-fg, var(--lp-fg));
+}
+
+.demoRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.demoChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  border: 1px solid var(--qs-border, var(--lp-border));
+  background: var(--qs-muted, var(--lp-muted));
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--qs-fg, var(--lp-fg));
+}
+
+.demoActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

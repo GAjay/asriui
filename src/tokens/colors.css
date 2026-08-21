@@ -1,0 +1,33 @@
+:root,
+[data-theme="light"] {
+  /* Brand — monochrome zinc (matches product / landing design) */
+  --axiom-color-primary: #000000;
+  --axiom-color-primary-hover: #1a1a1a;
+  --axiom-color-primary-active: #333333;
+  --axiom-color-primary-foreground: #ffffff;
+
+  --axiom-color-secondary: #71717a;
+  --axiom-color-secondary-hover: #52525b;
+  --axiom-color-secondary-active: #3f3f46;
+  --axiom-color-secondary-foreground: #ffffff;
+
+  --axiom-color-danger: #dc2626;
+  --axiom-color-danger-hover: #b91c1c;
+  --axiom-color-danger-active: #991b1b;
+  --axiom-color-danger-foreground: #ffffff;
+
+  /* Surfaces */
+  --axiom-color-background: #ffffff;
+  --axiom-color-foreground: #09090b;
+  --axiom-color-muted: #f4f4f5;
+  --axiom-color-muted-foreground: #52525b;
+  --axiom-color-border: #e4e4e7;
+  --axiom-color-ring: #09090b;
+  --axiom-color-overlay: rgb(9 9 11 / 0.5);
+
+  /* Feedback */
+  --axiom-color-error: #dc2626;
+  --axiom-color-error-muted: #fef2f2;
+  --axiom-color-success: #16a34a;
+  --axiom-color-warning: #ca8a04;
+}

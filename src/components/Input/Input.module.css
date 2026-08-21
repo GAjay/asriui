@@ -1,0 +1,104 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: var(--axiom-space-2);
+  width: 100%;
+  font-family: var(--axiom-font-family);
+}
+
+.label {
+  font-size: var(--axiom-font-size-sm);
+  font-weight: var(--axiom-font-weight-medium);
+  color: var(--axiom-color-foreground);
+  line-height: var(--axiom-line-height-tight);
+}
+
+.required {
+  margin-inline-start: var(--axiom-space-1);
+  color: var(--axiom-color-error);
+}
+
+.control {
+  display: flex;
+  align-items: center;
+  gap: var(--axiom-space-2);
+  min-height: 40px;
+  padding: 0 var(--axiom-space-3);
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background-color: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  transition:
+    border-color var(--axiom-duration-fast) var(--axiom-easing-standard),
+    box-shadow var(--axiom-duration-fast) var(--axiom-easing-standard);
+}
+
+.control:focus-within {
+  border-color: var(--axiom-color-ring);
+  box-shadow: var(--axiom-shadow-focus);
+  outline: none;
+}
+
+.controlError {
+  border-color: var(--axiom-color-error);
+}
+
+.controlError:focus-within {
+  border-color: var(--axiom-color-error);
+  box-shadow: 0 0 0 3px rgb(220 38 38 / 0.25);
+}
+
+.controlDisabled {
+  background-color: var(--axiom-color-muted);
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.affix {
+  display: inline-flex;
+  align-items: center;
+  color: var(--axiom-color-muted-foreground);
+  font-size: var(--axiom-font-size-sm);
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  margin: 0;
+  padding: var(--axiom-space-2) 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: var(--axiom-font-size-md);
+  line-height: var(--axiom-line-height-normal);
+  outline: none;
+  box-shadow: none;
+}
+
+.input:focus,
+.input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.input::placeholder {
+  color: var(--axiom-color-muted-foreground);
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}
+
+.message {
+  margin: 0;
+  font-size: var(--axiom-font-size-sm);
+  line-height: var(--axiom-line-height-normal);
+  color: var(--axiom-color-muted-foreground);
+}
+
+.error {
+  color: var(--axiom-color-error);
+}

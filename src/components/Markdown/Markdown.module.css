@@ -1,0 +1,134 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  color: var(--axiom-color-foreground);
+  font-size: var(--axiom-font-size-md);
+  line-height: var(--axiom-line-height-relaxed);
+}
+
+.h1 {
+  margin: 0.35rem 0 0;
+  font-size: clamp(1.85rem, 3.5vw, 2.35rem);
+  font-weight: var(--axiom-font-weight-bold);
+  line-height: var(--axiom-line-height-tight);
+  letter-spacing: -0.03em;
+  color: var(--axiom-color-foreground);
+}
+
+.h2 {
+  margin: 0.85rem 0 0;
+  font-size: clamp(1.4rem, 2.5vw, 1.75rem);
+  font-weight: var(--axiom-font-weight-bold);
+  line-height: var(--axiom-line-height-tight);
+  letter-spacing: -0.02em;
+  color: var(--axiom-color-foreground);
+}
+
+.h3 {
+  margin: 0.65rem 0 0;
+  font-size: var(--axiom-font-size-xl);
+  font-weight: var(--axiom-font-weight-semibold);
+  line-height: var(--axiom-line-height-tight);
+  color: var(--axiom-color-foreground);
+}
+
+.h4 {
+  margin: 0.5rem 0 0;
+  font-size: var(--axiom-font-size-lg);
+  font-weight: var(--axiom-font-weight-semibold);
+  line-height: var(--axiom-line-height-tight);
+  color: var(--axiom-color-foreground);
+}
+
+.p {
+  margin: 0;
+  color: var(--axiom-color-foreground);
+}
+
+.link {
+  color: var(--axiom-color-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.link:hover {
+  text-decoration-thickness: 2px;
+}
+
+.inlineCode {
+  font-family: var(--axiom-font-family-mono);
+  font-size: 0.9em;
+  padding: 0.1rem 0.35rem;
+  border-radius: calc(var(--axiom-radius-sm) - 1px);
+  background: var(--axiom-color-muted);
+  color: var(--axiom-color-foreground);
+}
+
+.ul,
+.ol {
+  margin: 0;
+  padding-left: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.li {
+  margin: 0;
+}
+
+.blockquote {
+  margin: 0;
+  padding: 0.65rem 0.9rem;
+  border-left: 3px solid var(--axiom-color-primary);
+  background: color-mix(in srgb, var(--axiom-color-muted) 70%, transparent);
+  border-radius: 0 var(--axiom-radius-sm) var(--axiom-radius-sm) 0;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.hr {
+  margin: 0.5rem 0;
+  border: none;
+  border-top: 1px solid var(--axiom-color-border);
+}
+
+.codeBlock {
+  margin: 0.15rem 0;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--axiom-radius-md);
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--axiom-font-size-sm);
+}
+
+.th,
+.td {
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--axiom-color-border);
+  vertical-align: top;
+}
+
+.th {
+  font-weight: var(--axiom-font-weight-semibold);
+  background: var(--axiom-color-muted);
+}
+
+.table tbody tr:last-child .td {
+  border-bottom: none;
+}

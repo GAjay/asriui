@@ -1,0 +1,114 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--axiom-space-1);
+  font-family: var(--axiom-font-family);
+}
+
+.item {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--axiom-space-3);
+  width: 100%;
+  min-height: 48px;
+  padding: var(--axiom-space-2) var(--axiom-space-3);
+  border: 1px solid transparent;
+  border-radius: var(--axiom-radius-md);
+  background: transparent;
+  color: var(--axiom-color-foreground);
+  text-align: left;
+}
+
+.staticRow {
+  cursor: default;
+}
+
+.interactive {
+  cursor: pointer;
+  transition:
+    background-color var(--axiom-duration-fast) var(--axiom-easing-standard),
+    border-color var(--axiom-duration-fast) var(--axiom-easing-standard);
+}
+
+.interactive:hover:not(:disabled) {
+  background-color: var(--axiom-color-muted);
+}
+
+.interactive:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+}
+
+.selected {
+  background-color: var(--axiom-color-muted);
+  border-color: var(--axiom-color-border);
+}
+
+.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.media {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-muted);
+  color: var(--axiom-color-muted-foreground);
+  font-size: var(--axiom-font-size-sm);
+  font-weight: var(--axiom-font-weight-semibold);
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--axiom-font-size-md);
+  font-weight: var(--axiom-font-weight-medium);
+  line-height: var(--axiom-line-height-tight);
+  color: var(--axiom-color-foreground);
+}
+
+.description {
+  margin: var(--axiom-space-1) 0 0;
+  font-size: var(--axiom-font-size-sm);
+  line-height: var(--axiom-line-height-normal);
+  color: var(--axiom-color-muted-foreground);
+}
+
+.trailing {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--axiom-color-muted-foreground);
+  font-size: var(--axiom-font-size-sm);
+}
+
+.interactiveButton {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: var(--axiom-space-3);
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 48px;
+  padding: var(--axiom-space-2) var(--axiom-space-3);
+  border: 1px solid transparent;
+  border-radius: var(--axiom-radius-md);
+  overflow: hidden;
+}

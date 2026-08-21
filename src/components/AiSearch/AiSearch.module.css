@@ -1,0 +1,33 @@
+.root {
+  gap: 0.75rem;
+}
+
+.resultTitleRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.resultLink {
+  color: var(--axiom-color-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.resultLink:hover {
+  text-decoration: underline;
+}
+
+.snippet {
+  margin: 0;
+  font-size: var(--axiom-font-size-sm);
+  color: var(--axiom-color-muted-foreground);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}

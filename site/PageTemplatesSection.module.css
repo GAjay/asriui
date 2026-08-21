@@ -1,0 +1,130 @@
+.root {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  max-width: 64rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1rem;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem 1.1rem;
+}
+
+.stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--lp-muted-fg);
+}
+
+.stat strong {
+  font-size: 1rem;
+  font-weight: 750;
+  color: var(--lp-fg);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.primaryLink,
+.ghostLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  min-height: 2.35rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.84rem;
+  font-weight: 650;
+  text-decoration: none;
+  border-radius: var(--lp-btn-radius, 0.5rem);
+}
+
+.primaryLink {
+  background: var(--lp-fg);
+  color: var(--lp-accent-fg);
+}
+
+.primaryLink:hover {
+  opacity: 0.92;
+}
+
+.ghostLink {
+  border: 1px solid var(--lp-border);
+  background: var(--lp-card);
+  color: var(--lp-fg);
+}
+
+.ghostLink:hover {
+  border-color: var(--lp-fg);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.4rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 0.1rem;
+  scrollbar-width: thin;
+}
+
+.filter,
+.filterActive {
+  flex: 0 0 auto;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 999px;
+  background: var(--lp-card);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--lp-muted-fg);
+  cursor: pointer;
+  white-space: nowrap;
+  transition:
+    background-color 140ms ease,
+    color 140ms ease,
+    border-color 140ms ease;
+}
+
+.filter:hover {
+  color: var(--lp-fg);
+  border-color: var(--lp-fg);
+}
+
+.filterActive {
+  background: var(--lp-fg);
+  border-color: var(--lp-fg);
+  color: var(--lp-accent-fg);
+}
+
+@media (max-width: 720px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .primaryLink,
+  .ghostLink {
+    flex: 1 1 auto;
+    justify-content: center;
+  }
+}

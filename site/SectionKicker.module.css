@@ -1,0 +1,48 @@
+.kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+  padding: 0.38rem 0.85rem 0.38rem 0.65rem;
+  border: 1px solid var(--lp-border-strong);
+  border-radius: 999px;
+  background: var(--lp-card);
+  box-shadow: 0 1px 0 color-mix(in srgb, var(--lp-fg) 4%, transparent);
+  color: var(--lp-fg);
+}
+
+.label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--lp-fg);
+}
+
+.labelNormal {
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-weight: 600;
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 999px;
+  flex-shrink: 0;
+  background: var(--lp-fg);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--lp-fg) 14%, transparent);
+}
+
+/* Accents kept for API compatibility — all resolve to page foreground. */
+.accentEmerald,
+.accentSky,
+.accentAmber,
+.accentViolet,
+.accentRose,
+.accentCyan {
+  --section-accent-dot: var(--lp-fg);
+  --section-accent-ring: color-mix(in srgb, var(--lp-fg) 14%, transparent);
+}

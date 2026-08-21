@@ -1,0 +1,276 @@
+.root {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  gap: clamp(1.5rem, 3vw, 2.75rem);
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: clamp(1.25rem, 4vw, 2.75rem);
+  color: var(--axiom-color-foreground, #09090b);
+}
+
+.full {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.split {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.sizeMd {
+  padding-block: clamp(2rem, 5vw, 3.5rem);
+}
+
+.sizeLg {
+  padding-block: clamp(3rem, 8vw, 6rem);
+}
+
+.copy {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: 0.85rem;
+}
+
+.alignCenter .copy {
+  text-align: center;
+  align-items: center;
+}
+
+.alignStart .copy {
+  text-align: start;
+  align-items: flex-start;
+}
+
+.full.alignCenter .copy {
+  max-width: 42rem;
+  margin-inline: auto;
+}
+
+.full.alignStart .copy {
+  max-width: 44rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--axiom-color-muted-foreground, #71717a);
+}
+
+.title {
+  margin: 0;
+  font-weight: 750;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+
+.sizeMd .title {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+.sizeLg .title {
+  font-size: clamp(2.25rem, 6vw, 3.75rem);
+}
+
+.description {
+  margin: 0;
+  max-width: 38rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--axiom-color-muted-foreground, #52525b);
+}
+
+.alignCenter .description {
+  max-width: 36rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.35rem;
+}
+
+.alignCenter .actions {
+  justify-content: center;
+}
+
+.media {
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.backdropCustom {
+  pointer-events: none;
+}
+
+.backdropCustom > * {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.muted {
+  background: var(--axiom-color-muted, #f4f4f5);
+}
+
+.dotted {
+  background-color: var(--axiom-color-background, #ffffff);
+  background-image: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--axiom-color-foreground, #09090b) 18%, transparent) 1.15px,
+    transparent 1.2px
+  );
+  background-size: 22px 22px;
+}
+
+.grid {
+  background-color: var(--axiom-color-background, #ffffff);
+  background-image:
+    linear-gradient(color-mix(in srgb, var(--axiom-color-foreground, #09090b) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--axiom-color-foreground, #09090b) 8%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.glow {
+  background:
+    radial-gradient(ellipse 70% 55% at 50% -10%, color-mix(in srgb, var(--axiom-color-foreground, #09090b) 12%, transparent), transparent 60%),
+    radial-gradient(ellipse 40% 32% at 8% 22%, color-mix(in srgb, var(--axiom-color-foreground, #09090b) 7%, transparent), transparent 55%),
+    radial-gradient(ellipse 38% 30% at 92% 18%, color-mix(in srgb, var(--axiom-color-foreground, #09090b) 7%, transparent), transparent 55%),
+    var(--axiom-color-background, #ffffff);
+}
+
+.aurora {
+  background: linear-gradient(
+    120deg,
+    color-mix(in srgb, var(--axiom-color-foreground, #09090b) 8%, var(--axiom-color-background, #fff)),
+    color-mix(in srgb, #22c55e 16%, var(--axiom-color-background, #fff)),
+    color-mix(in srgb, #38bdf8 14%, var(--axiom-color-background, #fff)),
+    color-mix(in srgb, var(--axiom-color-foreground, #09090b) 6%, var(--axiom-color-background, #fff))
+  );
+  background-size: 220% 220%;
+}
+
+.mesh {
+  background-color: var(--axiom-color-background, #ffffff);
+  background-image:
+    radial-gradient(at 18% 22%, color-mix(in srgb, #22c55e 22%, transparent) 0, transparent 42%),
+    radial-gradient(at 82% 18%, color-mix(in srgb, #38bdf8 20%, transparent) 0, transparent 40%),
+    radial-gradient(at 48% 88%, color-mix(in srgb, var(--axiom-color-foreground, #09090b) 10%, transparent) 0, transparent 46%);
+}
+
+.animatedBackdrop.dotted {
+  animation: heroDots 22s linear infinite;
+}
+
+.animatedBackdrop.grid {
+  animation: heroGrid 28s linear infinite;
+}
+
+.animatedBackdrop.glow {
+  animation: heroGlow 10s ease-in-out infinite alternate;
+}
+
+.animatedBackdrop.aurora {
+  animation: heroAurora 16s ease-in-out infinite;
+}
+
+.animatedBackdrop.mesh {
+  animation: heroMesh 14s ease-in-out infinite alternate;
+}
+
+@keyframes heroDots {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 22px 22px;
+  }
+}
+
+@keyframes heroGrid {
+  from {
+    background-position: 0 0, 0 0;
+  }
+  to {
+    background-position: 48px 48px, 48px 48px;
+  }
+}
+
+@keyframes heroGlow {
+  from {
+    opacity: 0.82;
+    transform: scale(1);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes heroAurora {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes heroMesh {
+  from {
+    filter: hue-rotate(0deg);
+    transform: scale(1);
+  }
+  to {
+    filter: hue-rotate(18deg);
+    transform: scale(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animatedBackdrop {
+    animation: none;
+    transform: none;
+    filter: none;
+  }
+}
+
+@media (min-width: 56rem) {
+  .split {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  }
+
+  .split[data-text-side="right"] .copy {
+    order: 2;
+  }
+
+  .split[data-text-side="right"] .media {
+    order: 1;
+  }
+
+  .split.alignCenter .copy,
+  .split.alignStart .copy {
+    max-width: none;
+    margin-inline: 0;
+  }
+}

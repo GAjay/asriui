@@ -1,0 +1,49 @@
+.skeleton {
+  display: block;
+  background: linear-gradient(
+    90deg,
+    var(--axiom-color-muted) 0%,
+    var(--axiom-color-border) 50%,
+    var(--axiom-color-muted) 100%
+  );
+  background-size: 200% 100%;
+  animation: axiom-skeleton-pulse 1.4s ease-in-out infinite;
+}
+
+.text {
+  height: 1em;
+  border-radius: var(--axiom-radius-sm);
+}
+
+.circular {
+  border-radius: var(--axiom-radius-full);
+}
+
+.rectangular {
+  border-radius: 0;
+}
+
+.rounded {
+  border-radius: var(--axiom-radius-md);
+}
+
+.static {
+  animation: none;
+  background: var(--axiom-color-muted);
+}
+
+@keyframes axiom-skeleton-pulse {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+    background: var(--axiom-color-muted);
+  }
+}

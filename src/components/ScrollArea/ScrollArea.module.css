@@ -1,0 +1,141 @@
+.root {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  --scroll-area-thumb: color-mix(in srgb, var(--axiom-color-foreground) 28%, transparent);
+  --scroll-area-thumb-hover: color-mix(in srgb, var(--axiom-color-foreground) 42%, transparent);
+  --scroll-area-track: transparent;
+}
+
+.page {
+  display: block;
+}
+
+.viewport {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.viewport::-webkit-scrollbar {
+  display: none;
+}
+
+.pageViewport {
+  overflow: visible;
+}
+
+.scrollbar {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  padding: 2px;
+  opacity: 0;
+  transition: opacity 160ms ease;
+  pointer-events: none;
+}
+
+.root[data-type="always"] .scrollbar,
+.root[data-type="scroll"] .scrollbar,
+.root[data-type="hover"]:hover .scrollbar,
+.root[data-type="hover"]:focus-within .scrollbar,
+.root[data-type="auto"][data-overflow="true"]:hover .scrollbar,
+.root[data-type="auto"][data-overflow="true"]:focus-within .scrollbar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.root[data-type="scroll"] .scrollbar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.root[data-type="auto"]:not([data-overflow="true"]) .scrollbar,
+.root[data-type="hover"]:not([data-overflow="true"]) .scrollbar {
+  display: none;
+}
+
+.vertical {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0.85rem;
+  justify-content: center;
+}
+
+.horizontal {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0.85rem;
+  align-items: center;
+}
+
+.pageVertical {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.35rem;
+  bottom: 0.75rem;
+  width: 0.85rem;
+  z-index: 40;
+}
+
+.track {
+  position: relative;
+  flex: 1;
+  border-radius: 999px;
+  background: var(--scroll-area-track);
+}
+
+.vertical .track {
+  width: 0.35rem;
+}
+
+.horizontal .track {
+  height: 0.35rem;
+}
+
+.thumb {
+  position: absolute;
+  border-radius: 999px;
+  background: var(--scroll-area-thumb);
+  cursor: grab;
+  touch-action: none;
+}
+
+.thumb:hover,
+.thumb[data-dragging="true"] {
+  background: var(--scroll-area-thumb-hover);
+}
+
+.thumb[data-dragging="true"] {
+  cursor: grabbing;
+}
+
+.vertical .thumb {
+  left: 0;
+  right: 0;
+  min-height: 1.5rem;
+}
+
+.horizontal .thumb {
+  top: 0;
+  bottom: 0;
+  min-width: 1.5rem;
+}
+
+.sentinel {
+  width: 100%;
+  height: 1px;
+  flex-shrink: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollbar {
+    transition: none;
+  }
+}

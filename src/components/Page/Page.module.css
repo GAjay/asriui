@@ -1,0 +1,138 @@
+.root {
+  width: 100%;
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.headerCopy {
+  display: grid;
+  gap: 0.4rem;
+  min-width: 0;
+}
+
+.headerActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.blocks {
+  display: grid;
+  gap: 1.15rem;
+  min-width: 0;
+}
+
+.block {
+  min-width: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  align-items: center;
+}
+
+.actionsStart {
+  justify-content: flex-start;
+}
+
+.actionsCenter {
+  justify-content: center;
+}
+
+.actionsEnd {
+  justify-content: flex-end;
+}
+
+.spacerSm {
+  height: 0.5rem;
+}
+
+.spacerMd {
+  height: 1rem;
+}
+
+.spacerLg {
+  height: 1.75rem;
+}
+
+.divider {
+  height: 1px;
+  border: 0;
+  margin: 0;
+  background: var(--axiom-color-border);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(var(--page-stats-cols, 2), minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.stat {
+  display: grid;
+  gap: 0.25rem;
+  padding: 0.95rem 1rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md, 0.5rem);
+  background: var(--axiom-color-background);
+}
+
+.statLabel {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.statValue {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  color: var(--axiom-color-foreground);
+  line-height: 1.1;
+}
+
+.statHint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.cardBody {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.tabPanel {
+  display: grid;
+  gap: 0.85rem;
+  padding-top: 0.85rem;
+}
+
+.missingSlot {
+  padding: 0.85rem 1rem;
+  border: 1px dashed var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md, 0.5rem);
+  font-size: 0.85rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+@media (max-width: 720px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}

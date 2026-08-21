@@ -1,0 +1,234 @@
+.root {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+  max-width: 42rem;
+  padding: 1rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-lg);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+}
+
+.shell {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 720px) {
+  .shellWithPanel {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    align-items: start;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.monthLabel {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.navButton {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-sm);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  cursor: pointer;
+}
+
+.navButton:hover:not(:disabled) {
+  background: var(--axiom-color-muted);
+}
+
+.navButton:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.weekday {
+  text-align: center;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 0.25rem;
+}
+
+.dayButton {
+  position: relative;
+  display: grid;
+  gap: 0.15rem;
+  place-items: center;
+  min-height: 2.6rem;
+  padding: 0.35rem 0.2rem;
+  border: 1px solid transparent;
+  border-radius: var(--axiom-radius-sm);
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 0.86rem;
+  cursor: pointer;
+}
+
+.dayButton:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--axiom-color-muted) 65%, transparent);
+}
+
+.dayButton:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 1px;
+}
+
+.dayOutside {
+  color: var(--axiom-color-muted-foreground);
+  opacity: 0.55;
+}
+
+.dayToday {
+  border-color: var(--axiom-color-primary);
+}
+
+.dayActive {
+  background: color-mix(in srgb, var(--axiom-color-primary) 14%, transparent);
+  border-color: color-mix(in srgb, var(--axiom-color-primary) 45%, transparent);
+}
+
+.dayDisabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.dayCount {
+  min-width: 1rem;
+  padding: 0 0.25rem;
+  border-radius: 999px;
+  background: var(--axiom-color-primary);
+  color: var(--axiom-color-primary-foreground, #fff);
+  font-size: 0.62rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.slotPanel {
+  display: grid;
+  gap: 0.75rem;
+  padding: 0.85rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: color-mix(in srgb, var(--axiom-color-muted) 30%, var(--axiom-color-background));
+}
+
+.slotPanelTitle {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.slotPanelHint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.slotGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr));
+  gap: 0.45rem;
+}
+
+.slotButton {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.45rem 0.5rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-sm);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  font: inherit;
+  font-size: 0.78rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.slotButton:hover:not(:disabled) {
+  border-color: var(--axiom-color-primary);
+}
+
+.slotButton:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 1px;
+}
+
+.slotSelected {
+  border-color: var(--axiom-color-primary);
+  background: color-mix(in srgb, var(--axiom-color-primary) 12%, var(--axiom-color-background));
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--axiom-color-primary) 35%, transparent);
+}
+
+.slotBooked,
+.slotDisabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.slotMeta {
+  font-size: 0.68rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.summary {
+  display: grid;
+  gap: 0.45rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px dashed var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: color-mix(in srgb, var(--axiom-color-muted) 25%, transparent);
+}
+
+.summaryTitle {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.summaryList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.summaryEmpty {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--axiom-color-muted-foreground);
+}

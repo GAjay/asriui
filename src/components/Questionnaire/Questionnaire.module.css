@@ -1,0 +1,42 @@
+.root {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.progress {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.prompt {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+
+.stack {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.error {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--axiom-color-destructive, #dc2626);
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.empty {
+  margin: 0;
+  color: var(--axiom-color-muted-foreground);
+}

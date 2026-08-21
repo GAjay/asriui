@@ -1,0 +1,236 @@
+.root {
+  display: grid;
+  gap: 0.85rem;
+  width: 100%;
+  max-width: 64rem;
+  margin-inline: auto;
+}
+
+.panel {
+  display: grid;
+  gap: 1.15rem;
+  padding: 1.4rem 1.45rem;
+  border: 1px solid var(--lp-border);
+  border-radius: var(--lp-radius-lg, 0.75rem);
+  background:
+    radial-gradient(ellipse 85% 70% at 100% 0%, color-mix(in srgb, var(--lp-fg) 6%, transparent), transparent 58%),
+    var(--lp-card);
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.identity {
+  display: grid;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.licensePill {
+  width: fit-content;
+  padding: 0.22rem 0.6rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+}
+
+.byline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--lp-muted-fg);
+}
+
+.byline a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.byline a:hover strong {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.stats {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.stats li {
+  display: grid;
+  gap: 0.08rem;
+  min-width: 5.5rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--lp-border);
+  border-radius: var(--lp-radius);
+  background: color-mix(in srgb, var(--lp-bg) 55%, transparent);
+}
+
+.statValue {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--lp-fg);
+}
+
+.stats li > span:last-child {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--lp-muted-fg);
+}
+
+.lead {
+  margin: 0;
+  max-width: 42rem;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--lp-muted-fg);
+}
+
+.actions {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.githubCta {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--lp-fg);
+  border-radius: var(--lp-radius-lg, 0.75rem);
+  background: var(--lp-fg);
+  color: var(--lp-accent-fg);
+  text-decoration: none;
+  transition: opacity 160ms ease;
+}
+
+.githubCta:hover {
+  opacity: 0.94;
+}
+
+.githubCopy {
+  display: grid;
+  gap: 0.1rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.githubCopy strong {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.githubCopy span {
+  font-size: 0.78rem;
+  opacity: 0.82;
+}
+
+.connect {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.connectLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--lp-muted) 72%, transparent);
+  color: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease;
+}
+
+.connectLink:hover {
+  border-color: var(--lp-fg);
+  background: var(--lp-muted);
+}
+
+.funding {
+  list-style: none;
+  margin: 0;
+  padding: 0.8rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.2rem;
+  border: 1px dashed var(--lp-border);
+  border-radius: var(--lp-radius-lg, 0.75rem);
+  background: color-mix(in srgb, var(--lp-card) 88%, transparent);
+}
+
+.funding li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--lp-muted-fg);
+}
+
+.funding li svg {
+  flex-shrink: 0;
+  color: var(--lp-fg);
+}
+
+@media (max-width: 640px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .stats {
+    width: 100%;
+  }
+
+  .stats li {
+    flex: 1 1 calc(33.333% - 0.45rem);
+    min-width: 0;
+  }
+
+  .connect {
+    flex-direction: column;
+  }
+
+  .connectLink {
+    justify-content: center;
+    width: 100%;
+    border-radius: var(--lp-radius);
+  }
+
+  .funding {
+    flex-direction: column;
+    gap: 0.45rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .githubCta,
+  .connectLink {
+    transition: none;
+  }
+}

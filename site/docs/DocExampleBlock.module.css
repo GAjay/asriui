@@ -1,0 +1,90 @@
+.section {
+  scroll-margin-top: 5rem;
+  margin-bottom: 2.5rem;
+}
+
+.header {
+  margin-bottom: 0.85rem;
+}
+
+.title {
+  margin: 0 0 0.35rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.description {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--lp-muted-fg);
+}
+
+.panel {
+  border: 1px solid var(--lp-border);
+  border-radius: var(--lp-radius-lg);
+  overflow: hidden;
+  background: var(--lp-card);
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.45rem;
+  border-bottom: 1px solid var(--lp-border);
+  background: var(--lp-muted);
+}
+
+.tab,
+.tabActive {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid transparent;
+  border-radius: calc(var(--lp-radius) - 2px);
+  background: transparent;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--lp-muted-fg);
+  cursor: pointer;
+}
+
+.tab:hover {
+  color: var(--lp-fg);
+}
+
+.tabActive {
+  color: var(--lp-fg);
+  background: var(--lp-card);
+  border-color: var(--lp-border);
+}
+
+.preview {
+  padding: 1.75rem;
+  min-height: 6.5rem;
+  max-height: min(28rem, 70vh);
+  overflow: auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--lp-border) 50%, transparent) 1px, transparent 0)
+    0 0 / 14px 14px,
+    var(--lp-bg);
+
+  --axiom-color-primary: var(--lp-primary);
+  --axiom-color-primary-hover: #1a1a1a;
+  --axiom-color-primary-foreground: var(--lp-primary-fg);
+  --axiom-color-ring: var(--lp-fg);
+}
+
+.preview > * {
+  width: 100%;
+}
+
+.codeWrap {
+  border-radius: 0;
+}
+
+.codeWrap :global(pre) {
+  border-radius: 0;
+}

@@ -1,0 +1,87 @@
+.group {
+  display: grid;
+  gap: var(--axiom-space-3);
+}
+
+.root {
+  position: relative;
+  display: grid;
+  gap: var(--axiom-space-2);
+  padding: var(--axiom-space-4);
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-lg);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  font-family: var(--axiom-font-family);
+  cursor: pointer;
+  transition:
+    border-color var(--axiom-duration-fast) var(--axiom-easing-standard),
+    box-shadow var(--axiom-duration-fast) var(--axiom-easing-standard),
+    background-color var(--axiom-duration-fast) var(--axiom-easing-standard);
+}
+
+.root:hover {
+  border-color: color-mix(in srgb, var(--axiom-color-primary) 35%, var(--axiom-color-border));
+}
+
+.checked {
+  border-color: var(--axiom-color-primary);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--axiom-color-primary) 25%, transparent);
+  background: color-mix(in srgb, var(--axiom-color-primary) 6%, var(--axiom-color-background));
+}
+
+.disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--axiom-space-3);
+}
+
+.title {
+  margin: 0;
+  font-size: var(--axiom-font-size-sm);
+  font-weight: var(--axiom-font-weight-semibold);
+}
+
+.description {
+  margin: 0;
+  font-size: var(--axiom-font-size-xs);
+  line-height: 1.5;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.indicator {
+  width: 1.125rem;
+  height: 1.125rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-full);
+  background: var(--axiom-color-background);
+  flex-shrink: 0;
+}
+
+.checked .indicator {
+  border-color: var(--axiom-color-primary);
+  background:
+    radial-gradient(circle at center, var(--axiom-color-primary) 0 0.22rem, transparent 0.23rem),
+    var(--axiom-color-background);
+}
+
+.badge {
+  font-size: var(--axiom-font-size-xs);
+}
+
+.content {
+  font-size: var(--axiom-font-size-sm);
+  color: var(--axiom-color-muted-foreground);
+}

@@ -1,0 +1,220 @@
+.shell {
+  background: var(--lp-bg);
+  color: var(--lp-fg);
+}
+
+.sidebarHead {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.65rem;
+}
+
+.sidebarHeadActions {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-shrink: 0;
+}
+
+.themeToggle {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.closeNav {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.15rem;
+  height: 2.15rem;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--lp-border);
+  border-radius: 0.45rem;
+  background: var(--lp-muted);
+  color: var(--lp-fg);
+  cursor: pointer;
+}
+
+.closeNav:hover {
+  background: var(--lp-fg);
+  color: var(--lp-bg);
+}
+
+.closeNav:focus-visible {
+  outline: 2px solid var(--lp-fg);
+  outline-offset: 2px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--lp-fg);
+  text-decoration: none;
+}
+
+.brand:hover {
+  opacity: 0.85;
+}
+
+.sidebarLabel {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+[data-theme="dark"] .sidebarLabel {
+  color: #ffffff;
+}
+
+.docGroup > button,
+.docGroup > p {
+  color: #09090b;
+}
+
+.docGroup > button:hover {
+  color: #09090b;
+}
+
+[data-theme="dark"] .docGroup > button,
+[data-theme="dark"] .docGroup > p {
+  color: #fafafa;
+}
+
+[data-theme="dark"] .docGroup > button:hover {
+  color: #fafafa;
+}
+
+.main {
+  min-width: 0;
+  width: 100%;
+}
+
+.searchSlot {
+  min-width: 0;
+  padding: 0 0.15rem;
+}
+
+.mobileBar {
+  display: none;
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  height: 2.25rem;
+  padding: 0 0.75rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 0.5rem;
+  background: var(--lp-muted);
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: var(--lp-fg);
+  cursor: pointer;
+}
+
+.menuButton:hover {
+  background: var(--lp-fg);
+  color: var(--lp-bg);
+}
+
+.menuButton:focus-visible {
+  outline: 2px solid var(--lp-fg);
+  outline-offset: 2px;
+}
+
+.backdrop {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .shell {
+    /* Break out of sidebar grid so content is first and drawer doesn't leave a blank row. */
+    display: block !important;
+  }
+
+  .docsSidebar {
+    display: none;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 220;
+    width: min(19.5rem, 88vw);
+    height: 100dvh !important;
+    max-height: 100dvh;
+    overflow: auto;
+    padding-bottom: 1.5rem;
+    border-right: 1px solid var(--lp-border);
+    border-bottom: none !important;
+    background: var(--lp-bg);
+    box-shadow: 0 18px 48px color-mix(in srgb, #000 22%, transparent);
+  }
+
+  .docsSidebarOpen {
+    display: block;
+  }
+
+  .closeNav {
+    display: inline-flex;
+  }
+
+  .sidebarHead .themeToggle {
+    display: none;
+  }
+
+  .mobileBar {
+    position: sticky;
+    top: 0;
+    z-index: 40;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin: 0 0 1rem;
+    padding: 0.65rem 0;
+    background: color-mix(in srgb, var(--lp-bg) 92%, transparent);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--lp-border);
+  }
+
+  .backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 210;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: color-mix(in srgb, #000 42%, transparent);
+    cursor: pointer;
+  }
+
+  .shell :global(.docGroup ul) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .main {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.85rem 1rem 2rem !important;
+  }
+}
+
+@media (min-width: 861px) {
+  .closeNav {
+    display: none;
+  }
+}

@@ -1,0 +1,69 @@
+.root {
+  display: contents;
+}
+
+.trigger {
+  display: contents;
+}
+
+.parentAnchor {
+  display: none;
+}
+
+.content {
+  position: fixed;
+  z-index: 80;
+  min-width: 13.5rem;
+  padding: 0.35rem;
+  border: 1px solid var(--axiom-color-border, #e4e4e7);
+  border-radius: var(--axiom-radius-md, 0.5rem);
+  background: var(--axiom-color-background, #ffffff);
+  color: var(--axiom-color-foreground, #09090b);
+  box-shadow: var(--axiom-shadow-lg, 0 16px 40px color-mix(in srgb, #09090b 14%, transparent));
+}
+
+.item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.6rem;
+  border: none;
+  border-radius: calc(var(--axiom-radius-md, 0.5rem) - 2px);
+  background: transparent;
+  font-size: 0.875rem;
+  font-weight: 550;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.item:hover:not(:disabled),
+.item:focus-visible {
+  background: var(--axiom-color-muted, #f4f4f5);
+  outline: none;
+}
+
+.item:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.separator {
+  height: 1px;
+  margin: 0.3rem 0.25rem;
+  border: 0;
+  background: var(--axiom-color-border, #e4e4e7);
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

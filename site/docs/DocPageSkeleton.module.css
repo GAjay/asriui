@@ -1,0 +1,17 @@
+.wrap {
+  max-width: 48rem;
+}
+
+.gap {
+  margin-top: 0.5rem;
+}
+
+.gapLg {
+  margin-top: 1.75rem;
+}
+
+.badges {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}

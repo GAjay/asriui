@@ -1,0 +1,347 @@
+.paletteWrap {
+  margin: 1rem 0 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 0.75rem;
+  background: var(--lp-card);
+}
+
+.previewLabel {
+  margin: 0 0 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+}
+
+.fileList {
+  display: grid;
+  gap: 0.55rem;
+  margin-top: 1rem;
+}
+
+.fileCard {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 0.6rem;
+  background: var(--lp-card);
+}
+
+.fileHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 0.75rem;
+}
+
+.fileHead code {
+  font-size: 0.82rem;
+  color: var(--lp-fg);
+}
+
+.fileScope {
+  font-size: 0.72rem;
+  color: var(--lp-muted-fg);
+  font-family: var(--axiom-font-family-mono, ui-monospace, monospace);
+}
+
+.fileCard p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--lp-muted-fg);
+}
+
+.tableWrap {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.tableBlock {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.tableHeading {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+}
+
+.table {
+  border: 1px solid var(--lp-border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--lp-card);
+}
+
+.tableHead,
+.tableRow,
+.tableRowShadow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.65rem 0.85rem;
+}
+
+.tableHead {
+  border-bottom: 1px solid var(--lp-border);
+  background: var(--lp-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+}
+
+.tableRow + .tableRow,
+.tableRowShadow + .tableRowShadow {
+  border-top: 1px solid var(--lp-border);
+}
+
+.tableRow code,
+.tableRowShadow code {
+  font-size: 0.75rem;
+  color: var(--lp-fg);
+  overflow-wrap: anywhere;
+}
+
+.valueCell {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--lp-muted-fg);
+  min-width: 0;
+}
+
+.valueCell span {
+  overflow-wrap: anywhere;
+}
+
+.valueCell i {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 0.25rem;
+  border: 1px solid color-mix(in srgb, var(--lp-fg) 14%, transparent);
+  flex-shrink: 0;
+}
+
+.shadowValue {
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--lp-muted-fg);
+  overflow-wrap: anywhere;
+}
+
+.spaceList {
+  display: grid;
+  gap: 0.45rem;
+  margin: 1rem 0 0.25rem;
+}
+
+.spaceRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) 3.25rem 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 0.55rem;
+  background: var(--lp-card);
+  font-size: 0.8rem;
+}
+
+.spaceRow code {
+  color: var(--lp-muted-fg);
+  overflow-wrap: anywhere;
+}
+
+.meta {
+  font-size: 0.78rem;
+  font-weight: 650;
+  color: var(--lp-fg);
+  font-variant-numeric: tabular-nums;
+}
+
+.spaceBar {
+  display: block;
+  height: 0.5rem;
+  border-radius: 999px;
+  background: var(--axiom-color-primary, var(--lp-fg));
+  min-width: 0;
+}
+
+.radiusGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr));
+  gap: 0.65rem;
+  margin: 1rem 0 0.25rem;
+}
+
+.radiusCard {
+  display: grid;
+  justify-items: center;
+  gap: 0.4rem;
+  padding: 0.9rem 0.7rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 0.65rem;
+  background: var(--lp-card);
+  text-align: center;
+}
+
+.radiusShape {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--lp-border);
+  background: var(--lp-muted);
+}
+
+.radiusCard code {
+  font-size: 0.68rem;
+  color: var(--lp-muted-fg);
+  overflow-wrap: anywhere;
+}
+
+.shadowGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 0.25rem;
+}
+
+.shadowCard {
+  display: grid;
+  gap: 0.35rem;
+  padding: 1.1rem 1rem;
+  border-radius: 0.75rem;
+  background: var(--lp-card);
+  border: 1px solid var(--lp-border);
+}
+
+.shadowCard strong {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.shadowCard code {
+  font-size: 0.7rem;
+  color: var(--lp-muted-fg);
+  overflow-wrap: anywhere;
+}
+
+.kvList {
+  display: grid;
+  gap: 0.4rem;
+  margin: 1rem 0 0.25rem;
+}
+
+.kvRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: baseline;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 0.55rem;
+  background: var(--lp-card);
+  font-size: 0.8rem;
+}
+
+.kvRow code {
+  color: var(--lp-muted-fg);
+  overflow-wrap: anywhere;
+}
+
+.kvRow span {
+  color: var(--lp-fg);
+  overflow-wrap: anywhere;
+}
+
+.zStack {
+  display: grid;
+  gap: 0.4rem;
+  margin: 1rem 0 0.25rem;
+}
+
+.zRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) 3.5rem 1fr;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 0.55rem;
+  background: var(--lp-card);
+  font-size: 0.8rem;
+}
+
+.zRow code {
+  color: var(--lp-muted-fg);
+  overflow-wrap: anywhere;
+}
+
+.zBar {
+  display: block;
+  height: 0.45rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--axiom-color-primary, var(--lp-fg)) 75%, transparent);
+  min-width: 0;
+}
+
+.breakpointList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 0.55rem;
+  margin: 1rem 0 1rem;
+}
+
+.breakpointRow {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 0.55rem;
+  background: var(--lp-card);
+}
+
+.breakpointRow code {
+  font-size: 0.78rem;
+  color: var(--lp-muted-fg);
+  overflow-wrap: anywhere;
+}
+
+.codeStack {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (max-width: 720px) {
+  .tableHead,
+  .tableRow,
+  .tableRowShadow {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .tableHead span:not(:first-child) {
+    display: none;
+  }
+
+  .spaceRow,
+  .kvRow,
+  .zRow {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+}

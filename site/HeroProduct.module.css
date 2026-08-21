@@ -1,0 +1,76 @@
+.root {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.frame {
+  position: relative;
+  z-index: 1;
+  border-radius: calc(var(--lp-radius-lg) + 6px);
+  padding: 1px;
+  background: linear-gradient(
+    145deg,
+    color-mix(in srgb, var(--lp-fg) 18%, transparent),
+    color-mix(in srgb, var(--lp-fg) 4%, transparent) 45%,
+    color-mix(in srgb, var(--lp-fg) 12%, transparent)
+  );
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--lp-border) 80%, transparent),
+    var(--lp-shadow-xl);
+}
+
+.frameGlow {
+  position: absolute;
+  inset: -40% -10% auto;
+  height: 70%;
+  background: radial-gradient(ellipse at center, color-mix(in srgb, var(--lp-fg) 8%, transparent), transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.float {
+  position: absolute;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.48rem 0.8rem;
+  border: 1px solid color-mix(in srgb, #ffffff 16%, #000000);
+  border-radius: 999px;
+  background: #000000;
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  box-shadow: 0 10px 28px color-mix(in srgb, #000000 16%, transparent);
+}
+
+.floatA {
+  top: 8%;
+  left: -2%;
+}
+
+.floatB {
+  top: 42%;
+  right: -4%;
+}
+
+.floatC {
+  bottom: 6%;
+  left: 6%;
+}
+
+@media (max-width: 899px) {
+  .float {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float {
+    position: static;
+    display: none;
+  }
+}

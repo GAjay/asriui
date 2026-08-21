@@ -1,0 +1,26 @@
+.root {
+  min-width: 0;
+}
+
+.fallback {
+  display: grid;
+  gap: 0.65rem;
+  justify-items: start;
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+}
+
+.errorTitle {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.errorMessage {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--axiom-color-muted-foreground);
+}

@@ -1,0 +1,354 @@
+.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--axiom-color-foreground);
+}
+
+.required {
+  margin-left: 0.15rem;
+  color: var(--axiom-color-destructive, #dc2626);
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  min-height: 2.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  font-size: 0.875rem;
+  color: var(--axiom-color-foreground);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color 140ms ease,
+    background-color 140ms ease,
+    color 140ms ease;
+}
+
+.combobox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 2.5rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  overflow: hidden;
+}
+
+.comboboxMultiple {
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0 0.3rem 0.4rem;
+}
+
+.comboboxMultiple .comboboxInput {
+  flex: 1 1 6rem;
+  min-width: 6rem;
+  height: 1.85rem;
+  padding: 0 0.4rem;
+}
+
+.chipList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.15rem;
+  max-width: 100%;
+  padding: 0.1rem 0.2rem 0.1rem 0.4rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-full);
+  background: var(--axiom-color-muted);
+  font-size: 0.75rem;
+  line-height: 1.2;
+  color: var(--axiom-color-foreground);
+}
+
+.chipLabel {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chipRemove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.1rem;
+  height: 1.1rem;
+  padding: 0;
+  border: 0;
+  border-radius: var(--axiom-radius-full);
+  background: transparent;
+  color: var(--axiom-color-muted-foreground);
+  cursor: pointer;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.chipRemove:hover:not(:disabled) {
+  color: var(--axiom-color-foreground);
+}
+
+.triggerMultiple {
+  align-items: flex-start;
+  min-height: 2.5rem;
+  height: auto;
+}
+
+.combobox:focus-within {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+}
+
+.comboboxError {
+  border-color: var(--axiom-color-destructive, #dc2626);
+}
+
+.comboboxDisabled {
+  opacity: 0.55;
+}
+
+.comboboxInput {
+  flex: 1;
+  min-width: 0;
+  height: 2.5rem;
+  padding: 0 0.75rem;
+  border: 0;
+  background: transparent;
+  font-size: 0.875rem;
+  line-height: 1.25;
+  color: var(--axiom-color-foreground);
+}
+
+.comboboxInput:focus {
+  outline: none;
+}
+
+.comboboxInput::placeholder {
+  color: var(--axiom-color-muted-foreground);
+}
+
+.comboboxToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.5rem;
+  border: 0;
+  border-left: 1px solid var(--axiom-color-border);
+  background: transparent;
+  color: var(--axiom-color-foreground);
+  cursor: pointer;
+}
+
+.comboboxToggle:hover:not(:disabled) {
+  color: var(--axiom-color-foreground);
+}
+
+.trigger:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--axiom-color-foreground) 25%, var(--axiom-color-border));
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+}
+
+.trigger:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.triggerError {
+  border-color: var(--axiom-color-destructive, #dc2626);
+}
+
+.triggerPlaceholder {
+  color: var(--axiom-color-muted-foreground);
+}
+
+.triggerValue {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chevron {
+  flex-shrink: 0;
+  width: 0.9rem;
+  height: 0.9rem;
+  opacity: 0.65;
+}
+
+.content {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  min-width: 11rem;
+  width: max-content;
+  max-width: min(24rem, calc(100vw - 1.5rem));
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  box-shadow: var(--axiom-shadow-lg, 0 12px 32px color-mix(in srgb, var(--axiom-color-foreground) 12%, transparent));
+  overflow: hidden;
+}
+
+.contentInline {
+  position: absolute;
+}
+
+.contentPortal {
+  position: fixed;
+}
+
+.contentInline[data-placement="bottom-start"] {
+  top: calc(100% + 0.35rem);
+  left: 0;
+}
+
+.contentInline[data-placement="bottom-end"] {
+  top: calc(100% + 0.35rem);
+  right: 0;
+}
+
+.contentInline[data-placement="top-start"] {
+  bottom: calc(100% + 0.35rem);
+  left: 0;
+}
+
+.contentInline[data-placement="top-end"] {
+  bottom: calc(100% + 0.35rem);
+  right: 0;
+}
+
+.listViewport {
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0.35rem;
+  overscroll-behavior: contain;
+}
+
+.group {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.labelHeading {
+  padding: 0.35rem 0.55rem 0.2rem;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  width: 100%;
+  padding: 0.45rem 0.55rem;
+  border: 0;
+  border-radius: var(--axiom-radius-sm);
+  background: transparent;
+  font-size: 0.875rem;
+  color: var(--axiom-color-foreground);
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.item:hover:not(:disabled) {
+  background: var(--axiom-color-muted);
+}
+
+.item:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: -2px;
+}
+
+.item:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.itemSelected {
+  background: color-mix(in srgb, var(--axiom-color-foreground) 6%, var(--axiom-color-muted));
+  font-weight: 600;
+}
+
+.check {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+}
+
+.separator {
+  margin: 0.35rem 0;
+  border: 0;
+  border-top: 1px solid var(--axiom-color-border);
+}
+
+.emptyState {
+  padding: 0.65rem 0.75rem;
+  font-size: 0.82rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.message {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.error {
+  color: var(--axiom-color-destructive, #dc2626);
+}
+
+.sizeSm.trigger {
+  min-height: 2.125rem;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.8125rem;
+}
+
+.sizeSm.combobox {
+  min-height: 2.125rem;
+}
+
+.sizeSm .comboboxInput {
+  height: 2.125rem;
+  padding: 0 0.65rem;
+  font-size: 0.8125rem;
+}
+
+.sizeSm .comboboxToggle {
+  width: 2rem;
+  height: 2.125rem;
+}

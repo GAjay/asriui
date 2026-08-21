@@ -1,0 +1,29 @@
+.root {
+  gap: 0.75rem;
+}
+
+.previewList {
+  margin: 0.5rem 0 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.previewRow {
+  display: grid;
+  grid-template-columns: minmax(120px, 35%) 1fr;
+  gap: 0.5rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  font-size: var(--axiom-font-size-sm);
+}
+
+.previewRow dt {
+  font-weight: 600;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.previewRow dd {
+  margin: 0;
+  color: var(--axiom-color-foreground);
+}

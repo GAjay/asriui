@@ -1,0 +1,33 @@
+.root {
+  margin: 0;
+  padding: var(--axiom-space-4) var(--axiom-space-5);
+  border-left: 3px solid var(--axiom-color-primary);
+  border-radius: 0 var(--axiom-radius-md) var(--axiom-radius-md) 0;
+  background: color-mix(in srgb, var(--axiom-color-muted) 45%, transparent);
+  color: var(--axiom-color-foreground);
+  font-family: var(--axiom-font-family);
+}
+
+.content {
+  margin: 0;
+  font-size: var(--axiom-font-size-md);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.large .content {
+  font-size: var(--axiom-font-size-lg);
+}
+
+.footer {
+  margin: var(--axiom-space-3) 0 0;
+  font-size: var(--axiom-font-size-sm);
+  font-style: normal;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.cite {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: var(--axiom-font-size-xs);
+}

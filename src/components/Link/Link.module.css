@@ -1,0 +1,62 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--axiom-color-foreground);
+  transition: color 140ms ease, opacity 140ms ease;
+}
+
+.root:hover {
+  color: color-mix(in srgb, var(--axiom-color-foreground) 75%, transparent);
+}
+
+.muted {
+  color: var(--axiom-color-muted-foreground);
+}
+
+.muted:hover {
+  color: var(--axiom-color-foreground);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  padding: 0 0.85rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+}
+
+.button:hover {
+  background: var(--axiom-color-muted);
+  color: var(--axiom-color-foreground);
+}
+
+.externalIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  opacity: 0.75;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.root:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+  border-radius: 2px;
+}

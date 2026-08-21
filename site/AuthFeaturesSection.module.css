@@ -1,0 +1,328 @@
+.section {
+  position: relative;
+  overflow: clip;
+  border-top: 1px solid var(--lp-border);
+  scroll-margin-top: var(--lp-header-height, 4rem);
+  box-sizing: border-box;
+  min-height: 100svh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: safe center;
+}
+
+.inner {
+  display: grid;
+  gap: 2rem;
+  width: min(100% - 2rem, 64rem);
+  margin-inline: auto;
+  padding: clamp(3rem, 7vh, 4.5rem) 0;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.heroEmbedded {
+  gap: 1rem;
+  padding-top: 0;
+  align-items: start;
+}
+
+.heroEmbedded .left {
+  gap: 0.85rem;
+  align-self: start;
+}
+
+.heroEmbedded .copy {
+  gap: 0.55rem;
+}
+
+.heroEmbedded .previewWrap {
+  align-self: start;
+}
+
+.heroEmbedded .previewCard {
+  padding: 1rem 1.15rem 1.2rem;
+}
+
+:global([data-landing-page][data-theme="light"]) .heroEmbedded .previewCard {
+  background: #ffffff;
+  border-color: #09090b;
+  box-shadow:
+    0 16px 32px color-mix(in srgb, #09090b 8%, transparent),
+    0 1px 0 color-mix(in srgb, #09090b 6%, transparent);
+}
+
+.heroEmbedded .compactLogin {
+  gap: 0.5rem !important;
+}
+
+.heroEmbedded .compactLogin > header {
+  gap: 0.15rem;
+}
+
+.heroEmbedded .compactLogin h1 {
+  line-height: 1.15 !important;
+}
+
+.left {
+  display: grid;
+  gap: 1.35rem;
+  justify-items: start;
+  min-width: 0;
+}
+
+.copy {
+  display: grid;
+  gap: 0.75rem;
+  justify-items: start;
+  text-align: left;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--lp-muted-fg);
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(1.65rem, 5vw, 2.5rem);
+  font-weight: 750;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+  color: var(--lp-fg);
+}
+
+.lead {
+  margin: 0;
+  max-width: 42ch;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: var(--lp-muted-fg);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-top: 0.15rem;
+}
+
+.primaryAction,
+.ghostAction {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.primaryAction {
+  background: var(--lp-fg);
+  color: var(--lp-accent-fg);
+}
+
+.primaryAction:hover {
+  opacity: 0.92;
+}
+
+.ghostAction {
+  color: var(--lp-fg);
+  border: 1px solid var(--lp-border);
+  background: var(--lp-muted);
+}
+
+.ghostAction:hover {
+  border-color: var(--lp-fg);
+}
+
+.featureList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+  width: 100%;
+  max-width: 28rem;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem;
+  align-items: start;
+  text-align: left;
+}
+
+.featureIcon {
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 0.65rem;
+  background: var(--lp-muted);
+  color: var(--lp-fg);
+}
+
+.featureTitle {
+  margin: 0 0 0.2rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--lp-fg);
+}
+
+.featureBody {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--lp-muted-fg);
+}
+
+.previewWrap {
+  width: 100%;
+  max-width: 20.5rem;
+  margin-inline: auto;
+}
+
+.previewTilt {
+  transform: none;
+}
+
+.previewCard {
+  padding: 0.9rem 0.95rem 1rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 0.9rem;
+  background: var(--lp-card);
+  box-shadow:
+    0 14px 28px color-mix(in srgb, var(--lp-fg) 8%, transparent),
+    0 1px 0 color-mix(in srgb, var(--lp-fg) 4%, transparent);
+}
+
+.compactLogin {
+  gap: 0.65rem !important;
+  max-width: none !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.compactLogin h1 {
+  font-size: 1.05rem !important;
+  margin: 0 !important;
+}
+
+.compactLogin button {
+  min-height: 2.15rem !important;
+  padding-block: 0.4rem !important;
+  font-size: 0.84rem !important;
+}
+
+.compactLogin input {
+  min-height: 2.15rem !important;
+  font-size: 0.88rem !important;
+}
+
+@media (min-width: 900px) {
+  .inner {
+    width: min(100% - 2.5rem, 64rem);
+    padding: 4rem 0 3.5rem;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.85fr);
+    gap: 2.25rem;
+    align-items: center;
+  }
+
+  .heroEmbedded {
+    gap: 1.35rem;
+    align-items: start;
+  }
+
+  .heroEmbedded .previewWrap {
+    perspective: 1400px;
+    margin-inline: 0;
+    justify-self: end;
+    max-width: 21rem;
+  }
+
+  .heroEmbedded .previewTilt {
+    transform: rotateY(-14deg) rotateX(6deg) rotateZ(-1deg);
+    transform-style: preserve-3d;
+    transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .heroEmbedded .previewWrap:hover .previewTilt {
+    transform: rotateY(-8deg) rotateX(2deg) rotateZ(-0.4deg) translateY(-4px);
+  }
+
+  .previewWrap {
+    perspective: 1400px;
+    margin-inline: 0;
+    justify-self: end;
+    max-width: 21rem;
+  }
+
+  .previewTilt {
+    transform: rotateY(-16deg) rotateX(7deg) rotateZ(-1deg);
+    transform-style: preserve-3d;
+    transition: transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .previewWrap:hover .previewTilt {
+    transform: rotateY(-9deg) rotateX(3deg) rotateZ(-0.4deg) translateY(-3px);
+  }
+
+  .previewCard {
+    box-shadow:
+      0 22px 40px color-mix(in srgb, var(--lp-fg) 12%, transparent),
+      0 8px 16px color-mix(in srgb, var(--lp-fg) 6%, transparent),
+      10px 14px 0 color-mix(in srgb, var(--lp-fg) 4%, transparent);
+    transform: translateZ(20px);
+  }
+
+  .heroEmbedded .previewCard {
+    transform: translateZ(20px);
+  }
+
+  :global([data-landing-page][data-theme="light"]) .heroEmbedded .previewCard {
+    box-shadow:
+      0 20px 38px color-mix(in srgb, #09090b 10%, transparent),
+      0 8px 16px color-mix(in srgb, #09090b 6%, transparent),
+      8px 12px 0 color-mix(in srgb, #09090b 5%, transparent);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .previewWrap,
+  .heroEmbedded .previewWrap {
+    perspective: none;
+  }
+
+  .previewTilt,
+  .previewWrap:hover .previewTilt,
+  .heroEmbedded .previewTilt,
+  .heroEmbedded .previewWrap:hover .previewTilt {
+    transform: none;
+    transition: none;
+  }
+
+  .previewCard,
+  .heroEmbedded .previewCard {
+    transform: none;
+  }
+}

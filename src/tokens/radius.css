@@ -1,0 +1,8 @@
+:root {
+  --axiom-radius-none: 0;
+  --axiom-radius-sm: 4px;
+  --axiom-radius-md: 8px;
+  --axiom-radius-lg: 12px;
+  --axiom-radius-xl: 16px;
+  --axiom-radius-full: 9999px;
+}

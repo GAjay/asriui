@@ -1,0 +1,49 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  max-width: 100%;
+}
+
+.content {
+  min-width: 0;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-full);
+  background: var(--axiom-color-muted);
+  color: var(--axiom-color-foreground);
+  cursor: pointer;
+  transition:
+    background-color 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease;
+}
+
+.button:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--axiom-color-primary) 10%, var(--axiom-color-muted));
+  border-color: color-mix(in srgb, var(--axiom-color-primary) 25%, var(--axiom-color-border));
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.buttonActive {
+  color: var(--axiom-color-primary);
+  border-color: color-mix(in srgb, var(--axiom-color-primary) 35%, var(--axiom-color-border));
+}

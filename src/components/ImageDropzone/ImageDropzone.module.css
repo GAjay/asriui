@@ -1,0 +1,113 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.zone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 8rem;
+  padding: 1rem;
+  border: 1px dashed var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: color-mix(in srgb, var(--axiom-color-muted) 40%, transparent);
+  cursor: pointer;
+  transition:
+    border-color 140ms ease,
+    background-color 140ms ease;
+}
+
+.zone:hover:not(.zoneDisabled) {
+  border-color: color-mix(in srgb, var(--axiom-color-primary) 35%, var(--axiom-color-border));
+  background: color-mix(in srgb, var(--axiom-color-primary) 6%, var(--axiom-color-muted));
+}
+
+.zoneActive {
+  border-color: var(--axiom-color-primary);
+  background: color-mix(in srgb, var(--axiom-color-primary) 10%, var(--axiom-color-muted));
+}
+
+.zoneDisabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.zoneError {
+  border-color: var(--axiom-color-destructive, #dc2626);
+}
+
+.icon {
+  color: var(--axiom-color-muted-foreground);
+}
+
+.label {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--axiom-color-foreground);
+}
+
+.hint {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.input {
+  display: none;
+}
+
+.previewList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.previewItem {
+  position: relative;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.previewImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--axiom-radius-sm);
+  border: 1px solid var(--axiom-color-border);
+}
+
+.removeButton {
+  position: absolute;
+  top: -0.35rem;
+  right: -0.35rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-full);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  cursor: pointer;
+}
+
+.helper {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.error {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--axiom-color-destructive, #dc2626);
+}

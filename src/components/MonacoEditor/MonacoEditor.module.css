@@ -1,0 +1,15 @@
+.shell {
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  overflow: hidden;
+}
+
+.fallback {
+  display: grid;
+  place-items: center;
+  min-height: 12rem;
+  padding: var(--axiom-space-4);
+  background: var(--axiom-color-muted);
+  color: var(--axiom-color-muted-foreground);
+  font-size: var(--axiom-font-size-sm);
+}

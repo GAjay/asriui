@@ -1,0 +1,138 @@
+.button {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 999px;
+  background: var(--lp-bg);
+  color: var(--lp-fg);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--lp-fg) 12%, transparent);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px) scale(0.92);
+  transition:
+    opacity 220ms ease,
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    visibility 220ms ease;
+}
+
+.button[data-visible="true"] {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+.button:hover {
+  background: var(--lp-primary);
+  color: var(--lp-primary-fg);
+  border-color: var(--lp-primary);
+  box-shadow: 0 14px 32px color-mix(in srgb, var(--lp-primary) 28%, transparent);
+  transform: translateY(-4px) scale(1.06);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--lp-primary);
+  outline-offset: 3px;
+}
+
+.iconShell {
+  position: relative;
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.iconChevron,
+.iconArrow {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transition:
+    opacity 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.iconChevron {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.iconArrow {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.72);
+}
+
+.button[data-visible="true"] .iconChevron {
+  animation: backToTopChevronIn 420ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.button:hover .iconChevron {
+  opacity: 0;
+  transform: rotate(180deg) scale(0.72);
+  transition-delay: 0ms;
+}
+
+.button:hover .iconArrow {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+  transition-delay: 120ms;
+}
+
+.button:not(:hover) .iconArrow {
+  transition-delay: 0ms;
+}
+
+@keyframes backToTopChevronIn {
+  0% {
+    opacity: 0;
+    transform: rotate(-120deg) scale(0.7);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button,
+  .iconChevron,
+  .iconArrow {
+    transition: none;
+    animation: none;
+  }
+
+  .button:hover {
+    transform: none;
+  }
+
+  .button:hover .iconChevron {
+    opacity: 0;
+    transform: none;
+  }
+
+  .button:hover .iconArrow {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .button {
+    right: 1rem;
+    bottom: 1rem;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}

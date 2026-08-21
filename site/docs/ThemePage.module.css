@@ -1,0 +1,101 @@
+.previewShell {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 0.5rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 0.85rem;
+  overflow: hidden;
+  background: var(--lp-card);
+}
+
+.previewToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--lp-border);
+  background: var(--lp-muted);
+}
+
+.previewLabel {
+  font-size: 0.8rem;
+  font-weight: 650;
+  color: var(--lp-muted-fg);
+}
+
+.previewStage {
+  padding: 1.1rem;
+  background: var(--axiom-color-background, var(--lp-bg));
+  color: var(--axiom-color-foreground, var(--lp-fg));
+}
+
+.previewCard {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 22rem;
+  padding: 1rem;
+  border: 1px solid var(--axiom-color-border, var(--lp-border));
+  border-radius: 0.75rem;
+  background: var(--axiom-color-background, var(--lp-card));
+}
+
+.previewCardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--lp-muted-fg);
+}
+
+.previewActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.animGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11.5rem, 1fr));
+  gap: 0.65rem;
+  margin: 1rem 0;
+}
+
+.animCard {
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.85rem 0.9rem;
+  text-align: left;
+  border: 1px solid var(--lp-border);
+  border-radius: 0.75rem;
+  background: var(--lp-card);
+  color: var(--lp-fg);
+  cursor: pointer;
+}
+
+.animCard strong {
+  font-size: 0.9rem;
+}
+
+.animCard span {
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: var(--lp-muted-fg);
+}
+
+.animCardActive {
+  border-color: var(--lp-fg);
+  box-shadow: inset 0 0 0 1px var(--lp-fg);
+}
+
+.animDemo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px dashed var(--lp-border);
+  border-radius: 0.75rem;
+  background: var(--lp-muted);
+}

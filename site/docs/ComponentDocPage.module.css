@@ -1,0 +1,173 @@
+.breadcrumb {
+  margin-bottom: 1.25rem;
+}
+
+.page {
+  min-width: 0;
+}
+
+.header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--lp-border);
+}
+
+.kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--lp-muted-fg);
+}
+
+.title {
+  margin: 0 0 0.65rem;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.lead {
+  margin: 0;
+  max-width: 52ch;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--lp-muted-fg);
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.metaBadge {
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--lp-muted-fg);
+}
+
+.importBadge {
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--lp-accent-soft);
+  font-family: var(--lp-font-mono);
+  font-size: 0.72rem;
+  color: var(--lp-fg);
+}
+
+.section {
+  scroll-margin-top: 5rem;
+  margin-bottom: 2.5rem;
+}
+
+.sectionTitle {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--lp-border);
+}
+
+.prose {
+  margin: 0 0 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--lp-fg);
+}
+
+.installCode {
+  margin: 0;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--lp-border);
+  border-radius: var(--lp-radius-lg);
+  background: var(--lp-muted);
+  font-family: var(--lp-font-mono);
+  font-size: 0.82rem;
+  line-height: 1.65;
+  overflow-x: auto;
+}
+
+.installCode code {
+  white-space: pre;
+}
+
+.callout,
+.a11yBlock {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--lp-radius);
+  border: 1px solid var(--lp-border);
+  background: var(--lp-muted);
+}
+
+.a11yBlock {
+  border-left: 3px solid var(--lp-primary);
+}
+
+.calloutLabel {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+}
+
+.calloutText {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--lp-fg);
+}
+
+.related {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.relatedLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--lp-muted-fg);
+}
+
+.relatedLink {
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--lp-border);
+  border-radius: var(--lp-radius);
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.relatedLink:hover {
+  background: var(--lp-accent-soft);
+}
+
+@media (max-width: 860px) {
+  .page {
+    overflow-x: clip;
+  }
+
+  .title {
+    font-size: clamp(1.65rem, 7vw, 2.15rem);
+  }
+
+  .lead {
+    font-size: 0.98rem;
+  }
+
+  .header {
+    margin-bottom: 1.35rem;
+    padding-bottom: 1.1rem;
+  }
+}

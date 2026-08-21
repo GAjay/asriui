@@ -1,0 +1,193 @@
+.root {
+  position: fixed;
+  z-index: var(--axiom-z-toast, 1200);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  width: min(24rem, calc(100vw - 2rem));
+  pointer-events: none;
+}
+
+.topRight {
+  top: 1rem;
+  right: 1rem;
+  align-items: flex-end;
+}
+
+.topLeft {
+  top: 1rem;
+  left: 1rem;
+  align-items: flex-start;
+}
+
+.topCenter {
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+.bottomRight {
+  bottom: 1rem;
+  right: 1rem;
+  align-items: flex-end;
+}
+
+.bottomLeft {
+  bottom: 1rem;
+  left: 1rem;
+  align-items: flex-start;
+}
+
+.bottomCenter {
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+.toast {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 0.75rem;
+  align-items: start;
+  width: 100%;
+  padding: 0.85rem 0.9rem 0.9rem;
+  border: 1px solid color-mix(in srgb, var(--toast-accent) 24%, var(--axiom-color-border));
+  border-radius: var(--axiom-radius-md);
+  background: var(--toast-surface, var(--axiom-color-background));
+  color: var(--axiom-color-foreground);
+  box-shadow: var(--axiom-shadow-lg, 0 12px 32px color-mix(in srgb, var(--toast-accent) 14%, transparent));
+  pointer-events: auto;
+  overflow: hidden;
+}
+
+.toast::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--toast-accent, var(--axiom-color-primary));
+}
+
+.default {
+  --toast-accent: var(--axiom-color-primary);
+  --toast-surface: var(--axiom-color-background);
+}
+
+.success {
+  --toast-accent: var(--axiom-color-success, #059669);
+  --toast-surface: color-mix(in srgb, var(--axiom-color-success, #059669) 12%, var(--axiom-color-background));
+}
+
+.error {
+  --toast-accent: var(--axiom-color-destructive, #dc2626);
+  --toast-surface: color-mix(in srgb, var(--axiom-color-destructive, #dc2626) 12%, var(--axiom-color-background));
+}
+
+.warning {
+  --toast-accent: var(--axiom-color-warning, #d97706);
+  --toast-surface: color-mix(in srgb, var(--axiom-color-warning, #d97706) 14%, var(--axiom-color-background));
+}
+
+.info {
+  --toast-accent: var(--axiom-color-info, #2563eb);
+  --toast-surface: color-mix(in srgb, var(--axiom-color-info, #2563eb) 12%, var(--axiom-color-background));
+}
+
+.iconWrap {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.02rem;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--toast-accent) 16%, transparent);
+  color: var(--toast-accent);
+  flex-shrink: 0;
+}
+
+.icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+}
+
+.body {
+  min-width: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.description {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.45;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.actionButton {
+  justify-self: start;
+  margin-top: 0.15rem;
+  padding-inline: 0.35rem;
+  color: var(--toast-accent);
+}
+
+.actionButton:hover {
+  color: var(--toast-accent);
+  background: color-mix(in srgb, var(--toast-accent) 12%, transparent);
+}
+
+.closeButton {
+  display: grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 0;
+  border: 0;
+  border-radius: var(--axiom-radius-sm);
+  background: transparent;
+  color: var(--axiom-color-muted-foreground);
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background: var(--axiom-color-muted);
+  color: var(--axiom-color-foreground);
+}
+
+.progress {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  transform-origin: left center;
+  background: var(--toast-accent);
+  opacity: 0.65;
+  animation: toastProgress var(--toast-duration, 5s) linear forwards;
+}
+
+@keyframes toastProgress {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress {
+    display: none;
+  }
+}

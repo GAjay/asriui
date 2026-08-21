@@ -1,0 +1,136 @@
+@import "./landingBands.css";
+
+:root,
+[data-theme="light"] {
+  --lp-bg: #ffffff;
+  --lp-fg: #09090b;
+  --lp-muted: #f4f4f5;
+  --lp-muted-fg: #52525b;
+  --lp-card: #ffffff;
+  --lp-border: #e4e4e7;
+  --lp-border-strong: #d4d4d8;
+  --lp-accent: #18181b;
+  --lp-accent-fg: #fafafa;
+  --lp-accent-soft: #f4f4f5;
+  --lp-primary: #000000;
+  --lp-primary-fg: #ffffff;
+  --lp-radius: 0.5rem;
+  --lp-radius-lg: 0.75rem;
+  --lp-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --lp-font-sans: "Work Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --lp-font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --lp-band-white: #ffffff;
+  --lp-band-black: #09090b;
+  --lp-band-black-fg: #fafafa;
+  --lp-band-black-muted: #b4b4bb;
+  --lp-on-band-white-surface: #f4f4f5;
+  --lp-on-band-white-muted: #ececef;
+  --lp-on-band-black-surface: #18181b;
+  --lp-on-band-black-muted: #27272a;
+  --lp-on-band-black-border: color-mix(in srgb, var(--lp-band-black-fg) 16%, transparent);
+  --lp-on-band-black-border-strong: color-mix(in srgb, var(--lp-band-black-fg) 24%, transparent);
+  --lp-header-bg: #ffffff;
+  --lp-header-border: #e4e4e7;
+  --lp-header-nav: #52525b;
+  --lp-header-nav-hover: #09090b;
+  --lp-header-surface: #f4f4f5;
+  --lp-header-surface-focus: #ffffff;
+  --lp-hero-grid-dot: #d4d4d8;
+}
+
+[data-theme="dark"] {
+  --lp-bg: #09090b;
+  --lp-fg: #fafafa;
+  --lp-muted: #18181b;
+  --lp-muted-fg: #b4b4bb;
+  --lp-card: #111113;
+  --lp-border: #27272a;
+  --lp-border-strong: #3f3f46;
+  --lp-accent: #fafafa;
+  --lp-accent-fg: #09090b;
+  --lp-accent-soft: #1f1f23;
+  --lp-primary: #000000;
+  --lp-primary-fg: #ffffff;
+  --lp-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.45), 0 8px 10px -6px rgb(0 0 0 / 0.35);
+  --lp-band-white: #111113;
+  --lp-band-black: #000000;
+  --lp-band-black-fg: #fafafa;
+  --lp-band-black-muted: #b4b4bb;
+  --lp-on-band-white-surface: #18181b;
+  --lp-on-band-white-muted: #1c1c1f;
+  --lp-on-band-black-surface: #111113;
+  --lp-on-band-black-muted: #18181b;
+  --lp-on-band-black-border: color-mix(in srgb, var(--lp-band-black-fg) 16%, transparent);
+  --lp-on-band-black-border-strong: color-mix(in srgb, var(--lp-band-black-fg) 24%, transparent);
+  --lp-header-bg: #0c0c0e;
+  --lp-header-border: #3f3f46;
+  --lp-header-nav: #d4d4d8;
+  --lp-header-nav-hover: #ffffff;
+  --lp-header-surface: #18181b;
+  --lp-header-surface-focus: #111113;
+  --lp-hero-grid-dot: #3f3f46;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--lp-font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--lp-fg);
+  background: var(--lp-bg);
+  -webkit-font-smoothing: antialiased;
+  transition:
+    background-color 320ms ease,
+    color 320ms ease;
+}
+
+button,
+input,
+a {
+  font: inherit;
+}
+
+a[href],
+button:not(:disabled),
+label[for],
+[role="button"] {
+  cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--lp-fg);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    transition: none;
+  }
+}
+
+/* Theme view transitions live in src/styles/theme-transitions.css (imported via globals). */

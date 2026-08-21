@@ -1,0 +1,24 @@
+:root {
+  --axiom-font-family: "Work Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --axiom-font-family-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+
+  --axiom-font-size-xs: 0.75rem;
+  --axiom-font-size-sm: 0.875rem;
+  --axiom-font-size-md: 1rem;
+  --axiom-font-size-lg: 1.125rem;
+  --axiom-font-size-xl: 1.25rem;
+  --axiom-font-size-2xl: 1.5rem;
+
+  --axiom-font-weight-regular: 400;
+  --axiom-font-weight-medium: 500;
+  --axiom-font-weight-semibold: 600;
+  --axiom-font-weight-bold: 700;
+
+  --axiom-line-height-tight: 1.25;
+  --axiom-line-height-normal: 1.5;
+  --axiom-line-height-relaxed: 1.625;
+
+  --axiom-letter-spacing-tight: -0.01em;
+  --axiom-letter-spacing-normal: 0;
+}

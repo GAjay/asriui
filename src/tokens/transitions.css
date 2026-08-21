@@ -1,0 +1,7 @@
+:root {
+  --axiom-duration-fast: 120ms;
+  --axiom-duration-normal: 200ms;
+  --axiom-duration-slow: 300ms;
+  --axiom-easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --axiom-easing-emphasized: cubic-bezier(0.2, 0, 0, 1.2);
+}

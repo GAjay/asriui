@@ -1,0 +1,147 @@
+.microsoft {
+  --oauth-accent: #000000;
+  --oauth-bg: #ffffff;
+  --oauth-fg: #1f2937;
+}
+
+.google {
+  --oauth-accent: #ea4335;
+  --oauth-bg: #ffffff;
+  --oauth-fg: #1f2937;
+}
+
+.github {
+  --oauth-accent: #24292f;
+  --oauth-bg: #24292f;
+  --oauth-fg: #ffffff;
+}
+
+.apple {
+  --oauth-accent: #111827;
+  --oauth-bg: #111827;
+  --oauth-fg: #ffffff;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  width: auto;
+  min-height: 2.5rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--oauth-bg, var(--axiom-color-background));
+  color: var(--oauth-fg, var(--axiom-color-foreground));
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.button:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--oauth-accent) 45%, var(--axiom-color-border));
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--oauth-accent) 12%, transparent);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.block {
+  width: 100%;
+}
+
+.icon {
+  width: 1.05rem;
+  height: 1.05rem;
+  flex-shrink: 0;
+}
+
+.loginCard {
+  width: 100%;
+  max-width: 26rem;
+  display: grid;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-lg);
+  background: var(--axiom-color-background);
+  box-shadow: var(--axiom-shadow-md, 0 10px 28px color-mix(in srgb, var(--axiom-color-foreground) 8%, transparent));
+}
+
+.header {
+  display: grid;
+  gap: 0.35rem;
+  text-align: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.description {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.form {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.oauthStack {
+  display: grid;
+  gap: 0.55rem;
+}
+
+.divider {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--axiom-color-muted-foreground);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  background: var(--axiom-color-border);
+}
+
+.rememberRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.86rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.footer {
+  text-align: center;
+  font-size: 0.86rem;
+  color: var(--axiom-color-muted-foreground);
+}

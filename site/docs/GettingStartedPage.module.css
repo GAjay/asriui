@@ -1,0 +1,254 @@
+.page {
+  min-width: 0;
+}
+
+.breadcrumb {
+  margin-bottom: 1.25rem;
+}
+
+.header {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--lp-border);
+}
+
+.kicker {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--lp-muted-fg);
+}
+
+.title {
+  margin: 0 0 0.65rem;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.lead {
+  margin: 0;
+  max-width: 58ch;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--lp-muted-fg);
+}
+
+.lead code {
+  font-family: var(--lp-font-mono);
+  font-size: 0.9em;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+
+.metaBadge {
+  padding: 0.2rem 0.55rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--lp-muted-fg);
+}
+
+.section {
+  scroll-margin-top: 5rem;
+  margin-bottom: 2.5rem;
+}
+
+.codeSpacer {
+  height: 1rem;
+}
+
+.sectionTitle {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--lp-border);
+}
+
+.prose {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--lp-fg);
+}
+
+.prose code {
+  font-family: var(--lp-font-mono);
+  font-size: 0.88em;
+}
+
+.configShell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: 1.5rem;
+  background: transparent;
+}
+
+.codePane,
+.previewPane {
+  min-width: 0;
+  border: 1px solid var(--lp-border);
+  border-radius: var(--lp-radius-lg);
+  overflow: hidden;
+  background: var(--lp-card);
+}
+
+.codeBody {
+  padding: 1rem 1.15rem 1.35rem;
+}
+
+.codePane :global(pre),
+.codePane :global([class*="root"]) {
+  border-radius: var(--lp-btn-radius, 8px) !important;
+  border: none;
+}
+
+.paneLabel {
+  display: block;
+  padding: 0.55rem 0.85rem;
+  border-bottom: 1px solid var(--lp-border);
+  background: var(--lp-muted);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+}
+
+.previewToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-right: 0.65rem;
+  border-bottom: 1px solid var(--lp-border);
+  background: var(--lp-muted);
+}
+
+.previewToolbar .paneLabel {
+  border-bottom: none;
+  background: transparent;
+}
+
+.themeSwitch {
+  display: flex;
+  gap: 0.25rem;
+  padding: 0.2rem;
+  border: 1px solid var(--lp-border);
+  border-radius: 999px;
+  background: var(--lp-card);
+}
+
+.themeBtn,
+.themeBtnActive {
+  padding: 0.25rem 0.55rem;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--lp-muted-fg);
+  cursor: pointer;
+}
+
+.themeBtn:hover {
+  color: var(--lp-fg);
+}
+
+.themeBtnActive {
+  background: var(--lp-fg);
+  color: var(--lp-bg);
+  border-radius: var(--lp-btn-radius, 8px);
+}
+
+.previewStage {
+  min-height: 17rem;
+  padding: 2rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--lp-border) 55%, transparent) 1px, transparent 0)
+    0 0 / 16px 16px,
+    var(--lp-bg);
+}
+
+.previewCard {
+  width: 100%;
+  max-width: 18rem;
+  display: grid;
+  gap: 1rem;
+  padding: 1.15rem;
+  border: 1px solid var(--lp-border);
+  border-radius: var(--lp-btn-radius, 8px);
+  background: var(--lp-card);
+  box-shadow: 0 12px 32px color-mix(in srgb, var(--lp-fg) 6%, transparent);
+}
+
+.previewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.previewThemeLabel {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: var(--lp-muted-fg);
+  text-transform: capitalize;
+}
+
+.previewActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.callout {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--lp-radius);
+  border: 1px solid var(--lp-border);
+  background: var(--lp-muted);
+}
+
+.calloutLabel {
+  margin: 0 0 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+}
+
+.optionList {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--lp-fg);
+}
+
+.optionList code {
+  font-family: var(--lp-font-mono);
+  font-size: 0.88em;
+}
+
+@media (max-width: 900px) {
+  .configShell {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}

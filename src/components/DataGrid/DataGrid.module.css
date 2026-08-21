@@ -1,0 +1,369 @@
+.filterBar {
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--axiom-color-border);
+  background: var(--axiom-color-background);
+}
+
+.columnFilterCell {
+  padding: 0.35rem 0.5rem;
+  vertical-align: middle;
+  background: color-mix(in srgb, var(--axiom-color-muted) 35%, var(--axiom-color-background));
+}
+
+.columnFilterInput,
+.columnFilterSelect {
+  width: 100%;
+  min-width: 0;
+  height: 1.85rem;
+  padding: 0 0.45rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-sm);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  font: inherit;
+  font-size: 0.75rem;
+}
+
+.columnFilterInput:focus-visible,
+.columnFilterSelect:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 1px;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--axiom-color-border);
+  background: color-mix(in srgb, var(--axiom-color-muted) 45%, transparent);
+}
+
+.root {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  overflow: hidden;
+}
+
+.viewport {
+  width: 100%;
+  overflow: auto;
+}
+
+.stickyHead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.sortButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-weight: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+  cursor: pointer;
+}
+
+.sortButton:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+}
+
+.sortIcon {
+  width: 0.85rem;
+  height: 0.85rem;
+  opacity: 0.45;
+}
+
+.sortIcon[data-active="true"] {
+  opacity: 1;
+}
+
+.empty,
+.loading {
+  display: grid;
+  place-items: center;
+  min-height: 8rem;
+  padding: 1.5rem;
+  font-size: 0.875rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.fallback {
+  display: grid;
+  gap: 0.65rem;
+  place-items: center;
+  min-height: 12rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.fallback code {
+  font-size: 0.82rem;
+}
+
+.agShell {
+  width: 100%;
+  height: 100%;
+}
+
+.ag-theme-axiom {
+  --ag-background-color: var(--axiom-color-background);
+  --ag-foreground-color: var(--axiom-color-foreground);
+  --ag-border-color: var(--axiom-color-border);
+  --ag-header-background-color: var(--axiom-color-muted);
+  --ag-header-foreground-color: var(--axiom-color-muted-foreground);
+  --ag-row-hover-color: color-mix(in srgb, var(--axiom-color-muted) 70%, transparent);
+  --ag-selected-row-background-color: color-mix(in srgb, var(--axiom-color-muted) 90%, transparent);
+  --ag-font-family: var(--axiom-font-family, inherit);
+  --ag-font-size: 13px;
+  --ag-grid-size: 6px;
+}
+
+.cellEditor {
+  display: grid;
+  gap: 0.2rem;
+  min-width: 0;
+}
+
+.cellInputWrap {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  min-width: 0;
+}
+
+.cellInputWrap .cellInput,
+.cellInputWrap select {
+  flex: 1;
+  min-width: 0;
+}
+
+.cellInput {
+  width: 100%;
+  min-width: 0;
+  padding: 0.35rem 0.45rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-sm);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  font: inherit;
+  font-size: 0.84rem;
+}
+
+.cellInput:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 1px;
+}
+
+.cellInputError {
+  border-color: var(--axiom-color-destructive, #dc2626);
+}
+
+.cellError {
+  font-size: 0.72rem;
+  line-height: 1.3;
+  color: var(--axiom-color-destructive, #dc2626);
+}
+
+.cellErrorIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--axiom-color-destructive, #dc2626);
+  cursor: help;
+}
+
+.expandHead {
+  width: 2.5rem;
+}
+
+.expandCell {
+  width: 2.5rem;
+  padding-inline: 0.35rem;
+}
+
+.expandButton {
+  display: grid;
+  place-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0;
+  border: 0;
+  border-radius: var(--axiom-radius-sm);
+  background: transparent;
+  color: var(--axiom-color-muted-foreground);
+  cursor: pointer;
+}
+
+.expandButton:hover {
+  background: var(--axiom-color-muted);
+  color: var(--axiom-color-foreground);
+}
+
+.expandButton:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 1px;
+}
+
+.expandIcon {
+  transition: transform 0.15s ease;
+}
+
+.expandIconOpen {
+  transform: rotate(90deg);
+}
+
+.expandedRow td {
+  padding: 0;
+  background: color-mix(in srgb, var(--axiom-color-muted) 40%, var(--axiom-color-background));
+  border-bottom: 1px solid var(--axiom-color-border);
+}
+
+.expandedRow > td > * {
+  padding: 0.85rem 1rem;
+}
+
+.cellValue {
+  display: block;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border-top: 1px solid var(--axiom-color-border);
+  background: color-mix(in srgb, var(--axiom-color-muted) 35%, transparent);
+}
+
+.paginationMeta {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.paginationControls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pageIndicator {
+  font-size: 0.82rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.pageSizeLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.pageSizeSelect {
+  padding: 0.25rem 0.4rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-sm);
+  background: var(--axiom-color-background);
+  font: inherit;
+  font-size: 0.82rem;
+}
+
+.virtualViewport {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 0;
+}
+
+.virtualHeader {
+  display: grid;
+  gap: 0;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--axiom-color-border);
+  background: var(--axiom-color-muted);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.virtualHeadCell {
+  min-width: 0;
+  padding-right: 0.5rem;
+}
+
+.virtualHeadCell[data-align="center"] {
+  text-align: center;
+}
+
+.virtualHeadCell[data-align="right"] {
+  text-align: right;
+}
+
+.virtualShell {
+  min-height: 0;
+}
+
+.virtualRow {
+  display: grid;
+  gap: 0;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 0.75rem;
+  border-bottom: 1px solid var(--axiom-color-border);
+  background: var(--axiom-color-background);
+  overflow: hidden;
+}
+
+.virtualRowStriped {
+  background: color-mix(in srgb, var(--axiom-color-muted) 35%, var(--axiom-color-background));
+}
+
+.virtualCell {
+  min-width: 0;
+  padding: 0.35rem 0.5rem 0.35rem 0;
+  font-size: 0.86rem;
+}
+
+.virtualCell[data-align="center"] {
+  text-align: center;
+}
+
+.virtualCell[data-align="right"] {
+  text-align: right;
+}
+
+.srOnly {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

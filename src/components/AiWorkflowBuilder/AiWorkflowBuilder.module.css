@@ -1,0 +1,452 @@
+.root {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr) 260px;
+  min-height: 0;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-lg);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  font-family: var(--axiom-font-family);
+  overflow: hidden;
+  box-shadow: var(--axiom-shadow-sm);
+}
+
+.compact {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.toolbar {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--axiom-space-3);
+  padding: var(--axiom-space-3) var(--axiom-space-4);
+  border-bottom: 1px solid var(--axiom-color-border);
+  background: color-mix(in srgb, var(--axiom-color-muted) 35%, var(--axiom-color-background));
+}
+
+.toolbarTitle {
+  margin: 0;
+  font-size: var(--axiom-font-size-sm);
+  font-weight: var(--axiom-font-weight-semibold);
+}
+
+.toolbarMeta {
+  margin: 0;
+  font-size: var(--axiom-font-size-xs);
+  color: var(--axiom-color-muted-foreground);
+}
+
+.toolbarActions {
+  display: inline-flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.toolbarActions .templatePicker {
+  min-width: 11rem;
+}
+
+.toolbarActions .button {
+  min-height: 2.15rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  font-size: var(--axiom-font-size-xs);
+  font-weight: var(--axiom-font-weight-medium);
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--axiom-color-muted);
+}
+
+.buttonPrimary {
+  border-color: var(--axiom-color-primary);
+  background: var(--axiom-color-primary);
+  color: var(--axiom-color-primary-foreground);
+}
+
+.buttonPrimary:hover {
+  background: var(--axiom-color-primary-hover);
+}
+
+.templatePicker {
+  min-width: 11rem;
+}
+
+.templateDropdown {
+  min-width: 11rem;
+}
+
+.templateGallery {
+  display: grid;
+  gap: var(--axiom-space-2);
+}
+
+.templateGalleryLead {
+  margin: 0;
+  font-size: var(--axiom-font-size-xs);
+  line-height: 1.5;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.templateCard {
+  display: grid;
+  gap: 0.3rem;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  text-align: left;
+  cursor: pointer;
+  transition:
+    border-color var(--axiom-duration-fast) var(--axiom-easing-standard),
+    background-color var(--axiom-duration-fast) var(--axiom-easing-standard);
+}
+
+.templateCard:hover {
+  border-color: color-mix(in srgb, var(--axiom-color-primary) 35%, var(--axiom-color-border));
+  background: color-mix(in srgb, var(--axiom-color-primary) 5%, var(--axiom-color-background));
+}
+
+.templateCardActive {
+  border-color: var(--axiom-color-primary);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--axiom-color-primary) 20%, transparent);
+}
+
+.templateCardMeta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.templateCardCategory {
+  font-size: 0.62rem;
+  font-weight: var(--axiom-font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--axiom-color-primary);
+}
+
+.templateCardCount {
+  font-size: 0.62rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.templateCardTitle {
+  font-size: var(--axiom-font-size-sm);
+  font-weight: var(--axiom-font-weight-semibold);
+}
+
+.templateCardDescription {
+  font-size: var(--axiom-font-size-xs);
+  line-height: 1.45;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.palette {
+  display: grid;
+  align-content: start;
+  gap: var(--axiom-space-2);
+  padding: var(--axiom-space-3);
+  border-right: 1px solid var(--axiom-color-border);
+  background: color-mix(in srgb, var(--axiom-color-muted) 20%, var(--axiom-color-background));
+  max-height: 100%;
+  overflow: auto;
+}
+
+.paletteTabs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.35rem;
+  margin-bottom: 0.25rem;
+}
+
+.paletteTab {
+  padding: 0.4rem 0.5rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-muted-foreground);
+  font-size: var(--axiom-font-size-xs);
+  font-weight: var(--axiom-font-weight-semibold);
+  cursor: pointer;
+}
+
+.paletteTabActive {
+  color: var(--axiom-color-foreground);
+  border-color: color-mix(in srgb, var(--axiom-color-primary) 35%, var(--axiom-color-border));
+  background: color-mix(in srgb, var(--axiom-color-primary) 8%, var(--axiom-color-background));
+}
+
+.paletteSection {
+  display: grid;
+  gap: var(--axiom-space-2);
+}
+
+.paletteSearch {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.paletteEmpty {
+  margin: 0;
+  font-size: var(--axiom-font-size-xs);
+  color: var(--axiom-color-muted-foreground);
+}
+
+.paletteMeta {
+  font-size: 0.62rem;
+  font-weight: var(--axiom-font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.customBlockForm {
+  display: grid;
+  gap: var(--axiom-space-2);
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--axiom-color-border);
+}
+
+.customBlockTitle {
+  margin: 0;
+  font-size: var(--axiom-font-size-xs);
+  font-weight: var(--axiom-font-weight-semibold);
+  color: var(--axiom-color-foreground);
+}
+
+.paletteTitle {
+  margin: 0 0 0.25rem;
+  font-size: var(--axiom-font-size-xs);
+  font-weight: var(--axiom-font-weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.paletteItem {
+  display: grid;
+  gap: 0.2rem;
+  width: 100%;
+  padding: 0.7rem 0.75rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  text-align: left;
+  cursor: grab;
+  transition:
+    border-color var(--axiom-duration-fast) var(--axiom-easing-standard),
+    transform var(--axiom-duration-fast) var(--axiom-easing-standard);
+}
+
+.paletteItem:active {
+  cursor: grabbing;
+}
+
+.paletteItem:hover {
+  border-color: color-mix(in srgb, var(--axiom-color-primary) 35%, var(--axiom-color-border));
+  transform: translateY(-1px);
+}
+
+.paletteLabel {
+  font-size: var(--axiom-font-size-sm);
+  font-weight: var(--axiom-font-weight-semibold);
+}
+
+.paletteDescription {
+  font-size: var(--axiom-font-size-xs);
+  line-height: 1.45;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.canvas {
+  min-width: 0;
+  min-height: 0;
+  background:
+    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--axiom-color-border) 70%, transparent) 1px, transparent 0)
+    0 0 / 18px 18px;
+}
+
+.fallback {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: var(--axiom-color-muted-foreground);
+  font-size: var(--axiom-font-size-sm);
+}
+
+.inspector {
+  display: grid;
+  align-content: start;
+  gap: var(--axiom-space-3);
+  padding: var(--axiom-space-4);
+  border-left: 1px solid var(--axiom-color-border);
+  background: color-mix(in srgb, var(--axiom-color-muted) 20%, var(--axiom-color-background));
+}
+
+.inspectorTitle {
+  margin: 0;
+  font-size: var(--axiom-font-size-xs);
+  font-weight: var(--axiom-font-weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.inspectorEmpty {
+  margin: 0;
+  font-size: var(--axiom-font-size-sm);
+  line-height: 1.5;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.inspectorMeta {
+  margin: 0;
+  font-size: var(--axiom-font-size-xs);
+  color: var(--axiom-color-muted-foreground);
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.fieldLabel {
+  font-size: var(--axiom-font-size-xs);
+  font-weight: var(--axiom-font-weight-medium);
+  color: var(--axiom-color-muted-foreground);
+}
+
+.fieldInput,
+.fieldTextarea,
+.fieldSelect {
+  width: 100%;
+  padding: 0.55rem 0.65rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  font: inherit;
+  font-size: var(--axiom-font-size-sm);
+}
+
+.fieldTextarea {
+  min-height: 5.5rem;
+  resize: vertical;
+}
+
+.fieldScript {
+  min-height: 8rem;
+  resize: vertical;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.node {
+  min-width: 11rem;
+  max-width: 13rem;
+  padding: 0.75rem 0.85rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-lg);
+  background: var(--axiom-color-background);
+  box-shadow: var(--axiom-shadow-sm);
+  font-size: var(--axiom-font-size-xs);
+}
+
+.nodeSelected {
+  border-color: var(--axiom-color-primary);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--axiom-color-primary) 25%, transparent);
+}
+
+.nodeKind {
+  display: inline-flex;
+  margin-bottom: 0.35rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: var(--axiom-radius-full);
+  font-size: 0.62rem;
+  font-weight: var(--axiom-font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.nodeTitle {
+  margin: 0;
+  font-size: var(--axiom-font-size-sm);
+  font-weight: var(--axiom-font-weight-semibold);
+}
+
+.nodeDescription {
+  margin: 0.35rem 0 0;
+  line-height: 1.45;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.trigger .nodeKind {
+  background: color-mix(in srgb, var(--axiom-color-success) 14%, transparent);
+  color: var(--axiom-color-success);
+}
+
+.prompt .nodeKind {
+  background: color-mix(in srgb, var(--axiom-color-primary) 14%, transparent);
+  color: var(--axiom-color-primary);
+}
+
+.model .nodeKind {
+  background: color-mix(in srgb, var(--axiom-color-warning) 14%, transparent);
+  color: var(--axiom-color-warning);
+}
+
+.tool .nodeKind {
+  background: color-mix(in srgb, var(--axiom-color-muted) 70%, transparent);
+  color: var(--axiom-color-foreground);
+}
+
+.condition .nodeKind {
+  background: color-mix(in srgb, var(--axiom-color-danger) 12%, transparent);
+  color: var(--axiom-color-danger);
+}
+
+.output .nodeKind {
+  background: color-mix(in srgb, var(--axiom-color-success) 14%, transparent);
+  color: var(--axiom-color-success);
+}
+
+.component .nodeKind {
+  background: color-mix(in srgb, var(--axiom-color-primary) 14%, transparent);
+  color: var(--axiom-color-primary);
+}
+
+.block .nodeKind {
+  background: color-mix(in srgb, #25d366 14%, transparent);
+  color: color-mix(in srgb, #128c7e 80%, var(--axiom-color-foreground));
+}
+
+@media (max-width: 960px) {
+  .root {
+    grid-template-columns: 1fr;
+  }
+
+  .palette,
+  .inspector {
+    border: 0;
+    border-top: 1px solid var(--axiom-color-border);
+  }
+}

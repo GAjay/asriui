@@ -1,0 +1,127 @@
+.root {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.measure {
+  visibility: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+}
+
+.track {
+  position: absolute;
+  inset: 0;
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.text {
+  color: var(--lp-fg);
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 0.12rem;
+  font-weight: 400;
+  color: var(--lp-fg);
+  animation: blink 1s step-end infinite;
+}
+
+/* Rotating accent gradients per phrase */
+.accentA .text {
+  background: linear-gradient(135deg, #09090b 0%, #52525b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.accentB .text {
+  background: linear-gradient(135deg, #000000 0%, #3f3f46 55%, #09090b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.accentC .text {
+  background: linear-gradient(120deg, #18181b 0%, #71717a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.accentD .text {
+  background: linear-gradient(135deg, #27272a 0%, #09090b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.accentE .text {
+  background: linear-gradient(135deg, #000000 0%, #52525b 50%, #18181b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+[data-theme="dark"] .accentA .text {
+  background: linear-gradient(135deg, #fafafa 0%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+[data-theme="dark"] .accentB .text {
+  background: linear-gradient(135deg, #ffffff 0%, #71717a 55%, #e4e4e7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+[data-theme="dark"] .accentC .text {
+  background: linear-gradient(120deg, #e4e4e7 0%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+[data-theme="dark"] .accentD .text {
+  background: linear-gradient(135deg, #d4d4d8 0%, #fafafa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+[data-theme="dark"] .accentE .text {
+  background: linear-gradient(135deg, #ffffff 0%, #a1a1aa 50%, #e4e4e7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+[data-band="black"] .accentA .text,
+[data-band="black"] .accentB .text,
+[data-band="black"] .accentC .text,
+[data-band="black"] .accentD .text,
+[data-band="black"] .accentE .text {
+  background: linear-gradient(135deg, #fafafa 0%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+  }
+}

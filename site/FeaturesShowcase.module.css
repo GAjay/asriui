@@ -1,0 +1,337 @@
+.root {
+  display: grid;
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 64rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 1.25rem;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.stat {
+  display: grid;
+  gap: 0.1rem;
+  min-width: 4.75rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--lp-border);
+  background: var(--lp-card);
+  text-align: center;
+}
+
+.stat strong {
+  font-size: 0.95rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  color: var(--lp-fg);
+  line-height: 1.1;
+}
+
+.stat span {
+  font-size: 0.62rem;
+  font-weight: 650;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.primaryLink,
+.ghostLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 2.35rem;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 650;
+  text-decoration: none;
+  transition:
+    background 140ms ease,
+    color 140ms ease,
+    border-color 140ms ease;
+}
+
+.primaryLink {
+  border: 1px solid var(--lp-fg);
+  background: var(--lp-fg);
+  color: var(--lp-accent-fg);
+}
+
+.primaryLink:hover {
+  opacity: 0.92;
+}
+
+.ghostLink {
+  border: 1px solid var(--lp-border);
+  background: var(--lp-card);
+  color: var(--lp-fg);
+}
+
+.ghostLink:hover {
+  border-color: var(--lp-fg);
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.card {
+  min-width: 0;
+  grid-column: span 2;
+}
+
+.heroCard {
+  grid-column: span 4;
+}
+
+.ctaWrap {
+  grid-column: span 2;
+  min-width: 0;
+}
+
+.cardInner {
+  display: grid;
+  gap: 0.65rem;
+  height: 100%;
+  min-height: 10.5rem;
+  padding: 1.15rem 1.2rem 1.25rem;
+  border: 1px solid var(--lp-border);
+  background: var(--lp-carousel-card-bg, var(--lp-card));
+  color: var(--lp-fg);
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.card:hover .cardInner,
+.ctaCard:hover {
+  background: var(--lp-carousel-hover-bg, var(--lp-fg));
+  color: var(--lp-carousel-hover-fg, #ffffff);
+  border-color: var(--lp-carousel-hover-bg, var(--lp-fg));
+  transform: translateY(-2px);
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  background: var(--lp-muted);
+  flex-shrink: 0;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.card:hover .iconWrap {
+  background: color-mix(in srgb, var(--lp-carousel-hover-fg, #fff) 14%, transparent);
+  color: var(--lp-carousel-hover-fg, #fff);
+}
+
+.tag {
+  padding: 0.28rem 0.62rem;
+  border: 1px solid var(--lp-border);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+  transition:
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.card:hover .tag {
+  border-color: color-mix(in srgb, var(--lp-carousel-hover-fg, #fff) 28%, transparent);
+  color: color-mix(in srgb, var(--lp-carousel-hover-fg, #fff) 78%, transparent);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: clamp(1rem, 1.8vw, 1.12rem);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.heroCard .cardTitle {
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+}
+
+.cardDesc {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.62;
+  color: var(--lp-muted-fg);
+  transition: color 180ms ease;
+}
+
+.card:hover .cardDesc {
+  color: color-mix(in srgb, var(--lp-carousel-hover-fg, #fff) 76%, transparent);
+}
+
+.cardHighlight {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--lp-muted-fg);
+  transition: color 180ms ease;
+}
+
+.card:hover .cardHighlight {
+  color: color-mix(in srgb, var(--lp-carousel-hover-fg, #fff) 68%, transparent);
+}
+
+.checkList {
+  list-style: none;
+  margin: 0.25rem 0 0;
+  padding: 0.75rem 0 0;
+  border-top: 1px solid var(--lp-border);
+  display: grid;
+  gap: 0.45rem;
+  transition: border-color 180ms ease;
+}
+
+.card:hover .checkList {
+  border-top-color: color-mix(in srgb, var(--lp-carousel-hover-fg, #fff) 22%, transparent);
+}
+
+.checkList li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+.ctaCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  height: 100%;
+  min-height: 10.5rem;
+  padding: 1.2rem;
+  border: 1px solid var(--lp-border);
+  background: var(--lp-fg);
+  color: var(--lp-accent-fg);
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.ctaCard:hover {
+  background: var(--lp-muted);
+  color: var(--lp-fg);
+  border-color: var(--lp-border-strong);
+}
+
+.ctaIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: var(--lp-accent-fg);
+  color: var(--lp-fg);
+  transition:
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.ctaCard:hover .ctaIcon {
+  background: var(--lp-fg);
+  color: var(--lp-accent-fg);
+}
+
+.ctaTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.ctaMeta {
+  font-size: 0.8rem;
+  opacity: 0.78;
+  transition: opacity 180ms ease;
+}
+
+.ctaCard:hover .ctaMeta {
+  opacity: 0.9;
+}
+
+@media (max-width: 1024px) {
+  .bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .heroCard,
+  .card,
+  .ctaWrap {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .primaryLink,
+  .ghostLink {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .bento {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover .cardInner,
+  .ctaCard:hover {
+    transform: none;
+  }
+}

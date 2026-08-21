@@ -1,0 +1,2 @@
+# Keep empty — Vite library builds set publicDir: false.
+# Reserved for static Storybook assets if needed later.

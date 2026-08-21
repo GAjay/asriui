@@ -1,0 +1,130 @@
+.section {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-block: 1px solid var(--lp-border);
+  background: var(--lp-band-white);
+  padding: 1rem 0;
+}
+
+.section[data-band="black"] {
+  background: var(--lp-band-black);
+  border-block-color: var(--lp-on-band-black-border);
+}
+
+.section[data-band="black"] .item {
+  color: var(--lp-band-black-muted);
+}
+
+.section[data-band="black"] .fadeLeft {
+  background: linear-gradient(to right, var(--lp-band-black), transparent);
+}
+
+.section[data-band="black"] .fadeRight {
+  background: linear-gradient(to left, var(--lp-band-black), transparent);
+}
+
+.section[data-band="white"] .fadeLeft {
+  background: linear-gradient(to right, var(--lp-band-white), transparent);
+}
+
+.section[data-band="white"] .fadeRight {
+  background: linear-gradient(to left, var(--lp-band-white), transparent);
+}
+
+.viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+  will-change: transform;
+}
+
+.section:hover .track {
+  animation-play-state: paused;
+}
+
+.group {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.item {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+  white-space: nowrap;
+}
+
+.item::before {
+  content: "◆";
+  margin-right: 0.65rem;
+  color: var(--lp-primary);
+  font-size: 0.55rem;
+  vertical-align: middle;
+}
+
+.section[data-band="black"] .item::before {
+  color: var(--lp-band-black-fg);
+}
+
+.fadeLeft,
+.fadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(2rem, 8vw, 5rem);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.fadeLeft {
+  left: 0;
+}
+
+.fadeRight {
+  right: 0;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem 2rem;
+    padding: 0 1rem;
+  }
+
+  .group {
+    display: contents;
+    padding-right: 0;
+  }
+
+  .fadeLeft,
+  .fadeRight {
+    display: none;
+  }
+
+  .group[aria-hidden="true"] {
+    display: none;
+  }
+}

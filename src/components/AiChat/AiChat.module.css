@@ -1,0 +1,327 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-lg);
+  background: var(--axiom-color-background);
+  overflow: hidden;
+  min-height: 280px;
+}
+
+.messages {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  overflow-y: auto;
+  max-height: 360px;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  max-width: 88%;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--axiom-radius-md);
+  font-size: var(--axiom-font-size-sm);
+  line-height: var(--axiom-line-height-normal);
+}
+
+.user {
+  align-self: flex-end;
+  background: var(--axiom-color-primary);
+  color: var(--axiom-color-primary-foreground);
+}
+
+.assistant {
+  align-self: flex-start;
+  background: var(--axiom-color-muted);
+  color: var(--axiom-color-foreground);
+}
+
+.system {
+  align-self: center;
+  max-width: 100%;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.72rem;
+  color: var(--axiom-color-muted-foreground);
+  background: transparent;
+  border: 1px dashed var(--axiom-color-border);
+}
+
+.meta {
+  font-size: 0.68rem;
+  opacity: 0.75;
+}
+
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  padding: 0 1rem 0.75rem;
+}
+
+.suggestion {
+  padding: 0.35rem 0.65rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: 999px;
+  background: var(--axiom-color-background);
+  font-size: 0.78rem;
+  color: var(--axiom-color-foreground);
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.suggestion:hover {
+  background: var(--axiom-color-muted);
+  border-color: var(--axiom-color-foreground);
+}
+
+.suggestion:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+}
+
+.prompt {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid var(--axiom-color-border);
+  background: color-mix(in srgb, var(--axiom-color-muted) 35%, transparent);
+}
+
+.promptRow {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-end;
+}
+
+.queueHint {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.queue {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.65rem 1rem;
+  border-top: 1px solid var(--axiom-color-border);
+  background: color-mix(in srgb, var(--axiom-color-muted) 22%, transparent);
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+.queueHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.queueTitle {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.queueCount {
+  font-size: 0.68rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.queueList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.queueItem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.55rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-sm);
+  background: var(--axiom-color-background);
+}
+
+.queueQueued {
+  border-style: dashed;
+}
+
+.queueRunning {
+  border-color: var(--axiom-color-primary);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--axiom-color-primary) 25%, transparent);
+  animation: queuePulse 1.4s ease-in-out infinite;
+}
+
+.queueDone {
+  opacity: 0.72;
+}
+
+.queueFailed {
+  border-color: var(--axiom-color-destructive, #dc2626);
+}
+
+@keyframes queuePulse {
+  0%,
+  100% {
+    background: var(--axiom-color-background);
+  }
+
+  50% {
+    background: color-mix(in srgb, var(--axiom-color-primary) 8%, var(--axiom-color-background));
+  }
+}
+
+.queueBody {
+  min-width: 0;
+  display: grid;
+  gap: 0.2rem;
+}
+
+.queueStatus {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.statusQueued {
+  color: var(--axiom-color-muted-foreground);
+}
+
+.statusRunning {
+  color: var(--axiom-color-primary);
+}
+
+.statusDone {
+  color: var(--axiom-color-success, #16a34a);
+}
+
+.statusFailed {
+  color: var(--axiom-color-destructive, #dc2626);
+}
+
+.queueText {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.queueActions {
+  display: flex;
+  flex-shrink: 0;
+  gap: 0.25rem;
+}
+
+.queueAction {
+  padding: 0.15rem 0.4rem;
+  border: 0;
+  border-radius: var(--axiom-radius-sm);
+  background: transparent;
+  font-size: 0.68rem;
+  color: var(--axiom-color-primary);
+  cursor: pointer;
+}
+
+.queueAction:hover {
+  background: var(--axiom-color-muted);
+}
+
+.queueAction:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 1px;
+}
+
+.queueEmpty {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--axiom-color-muted-foreground);
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 2.5rem;
+  max-height: 8rem;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  font: inherit;
+  font-size: var(--axiom-font-size-sm);
+  resize: vertical;
+}
+
+.textarea:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 1px;
+}
+
+.textarea:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.send {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border: none;
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-primary);
+  color: var(--axiom-color-primary-foreground);
+  cursor: pointer;
+}
+
+.send:hover:not(:disabled) {
+  background: var(--axiom-color-primary-hover, var(--axiom-color-primary));
+}
+
+.send:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.send:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+}

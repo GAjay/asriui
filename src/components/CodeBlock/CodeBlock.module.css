@@ -1,0 +1,114 @@
+.root {
+  margin: 0;
+  border-radius: var(--axiom-radius-md);
+  overflow: hidden;
+  background: #1e1e1e;
+  color: #d4d4d4;
+  font-family: var(--axiom-font-family-mono, ui-monospace, Menlo, Consolas, monospace);
+  font-size: 0.8125rem;
+  line-height: 1.65;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  border-bottom: 1px solid #2d2d2d;
+  background: #252526;
+}
+
+.filename {
+  font-size: 0.75rem;
+  color: #cccccc;
+}
+
+.copyBtn {
+  padding: 0.2rem 0.5rem;
+  border: 1px solid #3c3c3c;
+  border-radius: var(--axiom-radius-sm);
+  background: transparent;
+  color: #cccccc;
+  font-size: 0.72rem;
+  cursor: pointer;
+}
+
+.copyBtn:hover {
+  background: #2a2d2e;
+  color: #ffffff;
+}
+
+.pre {
+  margin: 0;
+  padding: 1rem 1.15rem;
+  overflow-x: auto;
+}
+
+.code {
+  display: block;
+  white-space: pre;
+}
+
+/* VS Code Dark+ token colors */
+.keyword {
+  color: #569cd6;
+}
+
+.string {
+  color: #ce9178;
+}
+
+.comment {
+  color: #6a9955;
+  font-style: italic;
+}
+
+.tag {
+  color: #4ec9b0;
+}
+
+.attr {
+  color: #9cdcfe;
+}
+
+.function {
+  color: #dcdcaa;
+}
+
+.number {
+  color: #b5cea8;
+}
+
+.operator {
+  color: #d4d4d4;
+}
+
+.plain {
+  color: #d4d4d4;
+}
+
+.withLines {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 1rem;
+}
+
+.lineNumbers {
+  margin: 0;
+  padding: 1rem 0 1rem 0.85rem;
+  text-align: right;
+  user-select: none;
+  color: #858585;
+  border-right: 1px solid #2d2d2d;
+  list-style: none;
+}
+
+.lineNumbers li {
+  line-height: 1.65;
+}
+
+.codeCol {
+  padding: 1rem 1.15rem 1rem 0;
+  overflow-x: auto;
+}

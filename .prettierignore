@@ -1,0 +1,7 @@
+dist
+site-dist
+storybook-static
+coverage
+pnpm-lock.yaml
+node_modules
+*.tgz

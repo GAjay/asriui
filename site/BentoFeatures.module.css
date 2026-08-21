@@ -1,0 +1,138 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.card {
+  grid-column: span 2;
+}
+
+.wide {
+  grid-column: span 3;
+}
+
+.tall {
+  grid-row: span 2;
+}
+
+.cardInner {
+  height: 100%;
+  border-color: var(--lp-border);
+  background: var(--lp-card);
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.cardInner:hover {
+  border-color: var(--lp-border-strong);
+  box-shadow: var(--lp-shadow-xl);
+  transform: translateY(-2px);
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 1.1rem 1.15rem 0;
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: var(--lp-radius);
+  background: var(--lp-muted);
+}
+
+.tag {
+  padding: 0.25rem 0.55rem;
+  border: none;
+  border-radius: 0;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--lp-muted-fg);
+  background: var(--lp-muted);
+}
+
+.description {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--lp-muted-fg);
+}
+
+.exploreCard {
+  grid-column: span 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 9rem;
+  padding: 1.35rem 1.5rem;
+  border: none;
+  border-radius: 0;
+  background: #000000;
+  color: #ffffff;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.exploreCard:hover {
+  background: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.exploreIcon {
+  display: inline-flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  background: #ffffff;
+  color: #000000;
+}
+
+.exploreTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.exploreMeta {
+  font-size: 0.85rem;
+  color: color-mix(in srgb, #ffffff 70%, transparent);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card,
+  .wide,
+  .exploreCard {
+    grid-column: span 1;
+  }
+
+  .tall {
+    grid-row: span 1;
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cardInner:hover,
+  .exploreCard:hover {
+    transform: none;
+  }
+}

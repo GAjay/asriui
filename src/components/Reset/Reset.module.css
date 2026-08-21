@@ -1,0 +1,36 @@
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+  color: var(--axiom-color-foreground);
+  font-family: var(--axiom-font-family);
+  font-size: var(--axiom-font-size-sm);
+  font-weight: var(--axiom-font-weight-medium);
+  cursor: pointer;
+  transition:
+    background-color var(--axiom-duration-fast) var(--axiom-easing-standard),
+    border-color var(--axiom-duration-fast) var(--axiom-easing-standard);
+}
+
+.trigger:hover {
+  background: var(--axiom-color-muted);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid var(--axiom-color-ring);
+  outline-offset: 2px;
+}
+
+.target {
+  display: contents;
+}
+
+.root {
+  display: grid;
+  gap: var(--axiom-space-4);
+}

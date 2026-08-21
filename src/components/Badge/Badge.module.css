@@ -1,0 +1,37 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  border-radius: var(--axiom-radius-full);
+  border: 1px solid transparent;
+  padding: 0.125rem 0.625rem;
+  font-family: var(--axiom-font-family);
+  font-size: var(--axiom-font-size-xs);
+  font-weight: var(--axiom-font-weight-medium);
+  line-height: 1.25;
+  white-space: nowrap;
+  transition:
+    background-color var(--axiom-duration-fast) var(--axiom-easing-standard),
+    color var(--axiom-duration-fast) var(--axiom-easing-standard),
+    border-color var(--axiom-duration-fast) var(--axiom-easing-standard);
+}
+
+.default {
+  background-color: var(--axiom-color-primary);
+  color: var(--axiom-color-primary-foreground);
+}
+
+.secondary {
+  background-color: var(--axiom-color-muted);
+  color: var(--axiom-color-foreground);
+}
+
+.outline {
+  background-color: transparent;
+  border-color: var(--axiom-color-border);
+  color: var(--axiom-color-foreground);
+}
+
+.destructive {
+  background-color: var(--axiom-color-danger);
+  color: var(--axiom-color-danger-foreground);
+}

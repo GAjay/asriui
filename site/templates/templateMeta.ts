@@ -1,0 +1,139 @@
+/** Shared catalog of live page templates (landing, index, docs). */
+
+export type TemplateMeta = {
+  slug: string;
+  title: string;
+  description: string;
+  layout: "centered" | "sidebar";
+  /** Short use-case label for cards */
+  useCase: string;
+};
+
+export const PAGE_TEMPLATES: TemplateMeta[] = [
+  {
+    slug: "watch-landing",
+    title: "Watches landing",
+    description: "Luxury product hero, animated collection grid, craft features, and conversion CTA.",
+    layout: "centered",
+    useCase: "Ecommerce",
+  },
+  {
+    slug: "about",
+    title: "About",
+    description: "Mission, values, and team grid on a centered marketing layout.",
+    layout: "centered",
+    useCase: "Marketing",
+  },
+  {
+    slug: "contact",
+    title: "Contact",
+    description: "JSON-driven form with info cards and validation.",
+    layout: "centered",
+    useCase: "Support",
+  },
+  {
+    slug: "pricing",
+    title: "Pricing",
+    description: "Three-tier pricing cards with FAQ accordion.",
+    layout: "centered",
+    useCase: "SaaS",
+  },
+  {
+    slug: "dashboard",
+    title: "Dashboard",
+    description: "Sidebar shell with stats, DataGrid, and activity timeline.",
+    layout: "sidebar",
+    useCase: "Admin",
+  },
+  {
+    slug: "analytics",
+    title: "Analytics",
+    description: "KPI cards, trend bars, and channel breakdown for product ops.",
+    layout: "sidebar",
+    useCase: "Admin",
+  },
+  {
+    slug: "billing",
+    title: "Billing",
+    description: "Current plan, payment method, and invoice history table.",
+    layout: "sidebar",
+    useCase: "Account",
+  },
+  {
+    slug: "team",
+    title: "Team",
+    description: "Member directory with roles, invites, and status badges.",
+    layout: "sidebar",
+    useCase: "Admin",
+  },
+  {
+    slug: "login",
+    title: "Login",
+    description: "OAuth sign-in with Microsoft, Google, GitHub, and Apple.",
+    layout: "centered",
+    useCase: "Auth",
+  },
+  {
+    slug: "onboarding",
+    title: "Onboarding",
+    description: "Multi-step setup wizard with progress, workspace, and invite.",
+    layout: "centered",
+    useCase: "Auth",
+  },
+  {
+    slug: "shop",
+    title: "Shop",
+    description: "Product catalog with filters, cards, badges, and add-to-cart actions.",
+    layout: "centered",
+    useCase: "Ecommerce",
+  },
+  {
+    slug: "cart",
+    title: "Cart",
+    description: "Line items, quantity controls, promo code, and order summary.",
+    layout: "centered",
+    useCase: "Ecommerce",
+  },
+  {
+    slug: "checkout",
+    title: "Checkout",
+    description: "Shipping form, payment summary, and place-order flow.",
+    layout: "centered",
+    useCase: "Ecommerce",
+  },
+  {
+    slug: "settings",
+    title: "Settings",
+    description: "Account tabs with profile form, notification switches, and danger zone.",
+    layout: "sidebar",
+    useCase: "Account",
+  },
+  {
+    slug: "inbox",
+    title: "Inbox",
+    description: "Message list with badges, filters, and read/unread states.",
+    layout: "sidebar",
+    useCase: "Productivity",
+  },
+  {
+    slug: "json-page",
+    title: "JSON Page",
+    description: "Entire screen rendered from a PageConfig JSON schema.",
+    layout: "sidebar",
+    useCase: "Builders",
+  },
+  {
+    slug: "ai-workflow",
+    title: "AI workflow",
+    description: "Visual n8n-style builder with templates, UI blocks, scripts, and run preview.",
+    layout: "centered",
+    useCase: "Builders",
+  },
+  {
+    slug: "ai-orchestrator",
+    title: "AI orchestrator",
+    description: "Summarizer, data analyst, form filler, semantic search, and multi-step pipeline.",
+    layout: "centered",
+    useCase: "Builders",
+  },
+];

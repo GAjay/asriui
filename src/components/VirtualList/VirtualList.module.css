@@ -1,0 +1,40 @@
+.list {
+  position: relative;
+  overflow: auto;
+  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--axiom-radius-md);
+  background: var(--axiom-color-background);
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+}
+
+.row {
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.rowContent {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--axiom-space-4);
+  border-bottom: 1px solid var(--axiom-color-border);
+  font-size: var(--axiom-font-size-sm);
+}
+
+.rowContent:hover {
+  background: var(--axiom-color-muted);
+}
+
+.empty {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: var(--axiom-color-muted-foreground);
+  font-size: var(--axiom-font-size-sm);
+}
