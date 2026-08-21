@@ -57,6 +57,14 @@ if (!siteUrl && pagesBaseUrl && !hasExplicitUrl) {
   siteUrl = pagesBaseUrl;
 }
 
+if (!domain && !hasExplicitDomain && repo === "asriui") {
+  domain = "asriui.dev";
+}
+
+if (domain && !siteUrl) {
+  siteUrl = `https://${domain}`;
+}
+
 if (!siteUrl) {
   if (repo && repo === `${owner}.github.io`) {
     siteUrl = `https://${owner}.github.io`;

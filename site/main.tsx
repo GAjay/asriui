@@ -8,7 +8,7 @@ import "./landing.css";
 applySiteTheme(readSiteTheme());
 
 function registerServiceWorker() {
-  if (!import.meta.env.PROD) return;
+  if (!import.meta.env.PROD || import.meta.env.MODE !== "site") return;
 
   void import("virtual:pwa-register").then(({ registerSW }) => {
     registerSW({ immediate: true });

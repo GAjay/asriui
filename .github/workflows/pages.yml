@@ -26,17 +26,18 @@ jobs:
       - name: Configure GitHub Pages
         id: pages
         uses: actions/configure-pages@v4
+        continue-on-error: true
 
-      - name: Verify GitHub Pages is enabled
+      - name: Log Pages metadata
         run: |
-          if [ -z "${{ steps.pages.outputs.base_url }}" ]; then
-            echo "::error::GitHub Pages is not enabled for this repository."
-            echo "Open Settings → Pages → Build and deployment → Source: GitHub Actions, then re-run this workflow."
-            exit 1
+          if [ -n "${{ steps.pages.outputs.base_url }}" ]; then
+            echo "Pages base URL: ${{ steps.pages.outputs.base_url }}"
+            echo "Pages host: ${{ steps.pages.outputs.host }}"
+            echo "Pages base path: ${{ steps.pages.outputs.base_path }}"
+          else
+            echo "::warning::GitHub Pages metadata unavailable. Using repository defaults (asriui.dev or project Pages URL)."
+            echo "Enable Pages: Settings → Pages → Source: GitHub Actions"
           fi
-          echo "Pages base URL: ${{ steps.pages.outputs.base_url }}"
-          echo "Pages host: ${{ steps.pages.outputs.host }}"
-          echo "Pages base path: ${{ steps.pages.outputs.base_path }}"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4

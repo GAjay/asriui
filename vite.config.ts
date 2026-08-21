@@ -96,9 +96,11 @@ function entryFileName(chunkName: string): string {
   return `${chunkName}.js`;
 }
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(({ mode, command }) => {
   const isPackageBuild = mode === "lib";
   const isSiteBuild = mode === "site";
+  /** Docs site dev server (`pnpm dev`) — needs PWA virtual module for site/main.tsx */
+  const isSiteApp = isSiteBuild || (command === "serve" && !isPackageBuild);
   const siteBase = normalizeViteBase();
   const siteUrl = resolveSiteOrigin();
 
@@ -180,7 +182,7 @@ export default defineConfig(({ mode }) => {
     publicDir: "public",
     plugins: [
       react(),
-      ...(isSiteBuild ? [VitePWA(createPwaOptions(siteBase))] : []),
+      ...(isSiteApp ? [VitePWA(createPwaOptions(siteBase))] : []),
       {
         name: "asriui-site-origin",
         transformIndexHtml(html) {
@@ -205,6 +207,12 @@ export default defineConfig(({ mode }) => {
     server: {
       port: 5173,
       open: false,
+      fs: {
+        deny: ["storybook-static", "site-dist", "dist"],
+      },
+    },
+    optimizeDeps: {
+      entries: ["index.html"],
     },
     build: isSiteBuild
       ? {
