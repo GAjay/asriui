@@ -41,7 +41,7 @@ function resolveCustomDomain() {
   return "";
 }
 
-const siteUrl = (process.env.VITE_SITE_URL || process.env.SITE_URL || "https://asriui.dev").replace(
+const siteUrl = (process.env.VITE_SITE_URL || process.env.SITE_URL || "https://gajay.github.io/asriui").replace(
   /\/$/,
   "",
 );

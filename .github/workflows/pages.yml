@@ -33,7 +33,7 @@ jobs:
             echo "Pages host: ${{ steps.pages.outputs.host }}"
             echo "Pages base path: ${{ steps.pages.outputs.base_path }}"
           else
-            echo "::warning::GitHub Pages metadata unavailable. Using repository defaults (asriui.dev)."
+            echo "::warning::GitHub Pages metadata unavailable. Using repository defaults (gajay.github.io/asriui)."
             echo "Enable Pages: Settings → Pages → Deploy from branch gh-pages (root folder)"
           fi
 

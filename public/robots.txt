@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://asriui.dev/sitemap.xml
+Sitemap: https://gajay.github.io/asriui/sitemap.xml

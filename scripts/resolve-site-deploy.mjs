@@ -57,10 +57,6 @@ if (!siteUrl && pagesBaseUrl && !hasExplicitUrl) {
   siteUrl = pagesBaseUrl;
 }
 
-if (!domain && !hasExplicitDomain && repo === "asriui") {
-  domain = "asriui.dev";
-}
-
 if (domain && !siteUrl) {
   siteUrl = `https://${domain}`;
 }
@@ -73,8 +69,8 @@ if (!siteUrl) {
     siteUrl = `https://${owner}.github.io/${repo}`;
     if (!hasExplicitBase) basePath = basePath || `/${repo}/`;
   } else {
-    siteUrl = "https://asriui.dev";
-    if (!hasExplicitBase) basePath = basePath || "/";
+    siteUrl = "https://gajay.github.io/asriui";
+    if (!hasExplicitBase) basePath = basePath || "/asriui/";
   }
 }
 

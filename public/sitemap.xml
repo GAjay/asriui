@@ -1,507 +1,507 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://asriui.dev/</loc>
+    <loc>https://gajay.github.io/asriui/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/about</loc>
+    <loc>https://gajay.github.io/asriui/about</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/llms.txt</loc>
+    <loc>https://gajay.github.io/asriui/llms.txt</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/getting-started</loc>
+    <loc>https://gajay.github.io/asriui/docs/getting-started</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/styling</loc>
+    <loc>https://gajay.github.io/asriui/docs/styling</loc>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/theme</loc>
+    <loc>https://gajay.github.io/asriui/docs/theme</loc>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/typography</loc>
+    <loc>https://gajay.github.io/asriui/docs/typography</loc>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/tokens</loc>
+    <loc>https://gajay.github.io/asriui/docs/tokens</loc>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/branding</loc>
+    <loc>https://gajay.github.io/asriui/docs/branding</loc>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/templates</loc>
+    <loc>https://gajay.github.io/asriui/docs/templates</loc>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/roadmap</loc>
+    <loc>https://gajay.github.io/asriui/docs/roadmap</loc>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/releases</loc>
+    <loc>https://gajay.github.io/asriui/docs/releases</loc>
     <changefreq>weekly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/button</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/button</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/link</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/link</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/breadcrumb</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/breadcrumb</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/menu</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/menu</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/tooltip</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/tooltip</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/dropdown</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/dropdown</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/date-picker</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/date-picker</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/input</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/input</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/label</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/label</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/switch</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/switch</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/form</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/form</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/page</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/page</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/card-validation</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/card-validation</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/card</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/card</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/widget</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/widget</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/metric</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/metric</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/separator</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/separator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/callout</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/callout</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/quote</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/quote</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/text-to-speech</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/text-to-speech</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/checkbox</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/checkbox</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/radio</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/radio</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/checkbox-card</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/checkbox-card</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/radio-card</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/radio-card</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/reset</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/reset</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/visible</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/visible</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/list-item</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/list-item</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/grid</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/grid</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/container</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/container</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/flex</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/flex</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/theme-switch</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/theme-switch</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/table</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/table</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/data-grid</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/data-grid</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/aspect-ratio</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/aspect-ratio</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/image</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/image</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/scroll-area</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/scroll-area</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/page-layout</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/page-layout</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/hero</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/hero</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/slider</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/slider</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/side-nav</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/side-nav</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/code-block</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/code-block</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/markdown</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/markdown</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/badge</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/badge</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/dialog</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/dialog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/toast</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/toast</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/auth</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/auth</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/calendar</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/calendar</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/skeleton</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/skeleton</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/loader</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/loader</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/timeline</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/timeline</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/tabs</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/tabs</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/accordion</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/accordion</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/virtual-list</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/virtual-list</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/error-boundary</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/error-boundary</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/monaco-editor</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/monaco-editor</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/flow-chart</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/flow-chart</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/icon</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/icon</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/typography</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/typography</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/color-palette</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/color-palette</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/ai-chat</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/ai-chat</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/ai-workflow-builder</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/ai-workflow-builder</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/ai-summarizer</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/ai-summarizer</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/ai-data-analyst</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/ai-data-analyst</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/ai-form-filler</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/ai-form-filler</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/ai-search</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/ai-search</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/ai-orchestrator</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/ai-orchestrator</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/context-menu</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/context-menu</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/feature-request</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/feature-request</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/questionnaire</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/questionnaire</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/docs/components/server-query</loc>
+    <loc>https://gajay.github.io/asriui/docs/components/server-query</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates</loc>
+    <loc>https://gajay.github.io/asriui/templates</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/watch-landing</loc>
+    <loc>https://gajay.github.io/asriui/templates/watch-landing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/about</loc>
+    <loc>https://gajay.github.io/asriui/templates/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/contact</loc>
+    <loc>https://gajay.github.io/asriui/templates/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/pricing</loc>
+    <loc>https://gajay.github.io/asriui/templates/pricing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/dashboard</loc>
+    <loc>https://gajay.github.io/asriui/templates/dashboard</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/analytics</loc>
+    <loc>https://gajay.github.io/asriui/templates/analytics</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/billing</loc>
+    <loc>https://gajay.github.io/asriui/templates/billing</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/team</loc>
+    <loc>https://gajay.github.io/asriui/templates/team</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/login</loc>
+    <loc>https://gajay.github.io/asriui/templates/login</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/onboarding</loc>
+    <loc>https://gajay.github.io/asriui/templates/onboarding</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/shop</loc>
+    <loc>https://gajay.github.io/asriui/templates/shop</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/cart</loc>
+    <loc>https://gajay.github.io/asriui/templates/cart</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/checkout</loc>
+    <loc>https://gajay.github.io/asriui/templates/checkout</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/settings</loc>
+    <loc>https://gajay.github.io/asriui/templates/settings</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/inbox</loc>
+    <loc>https://gajay.github.io/asriui/templates/inbox</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/json-page</loc>
+    <loc>https://gajay.github.io/asriui/templates/json-page</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/ai-workflow</loc>
+    <loc>https://gajay.github.io/asriui/templates/ai-workflow</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
   <url>
-    <loc>https://asriui.dev/templates/ai-orchestrator</loc>
+    <loc>https://gajay.github.io/asriui/templates/ai-orchestrator</loc>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
   </url>
