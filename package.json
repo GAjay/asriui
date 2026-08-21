@@ -5,6 +5,14 @@
   "license": "MIT",
   "type": "module",
   "author": "gajay",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GAjay/asriui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GAjay/asriui/issues"
+  },
+  "homepage": "https://asriui.dev",
   "keywords": [
     "react",
     "react-components",
