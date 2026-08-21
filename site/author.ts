@@ -1,9 +1,9 @@
-/** Site author — sourced from public LinkedIn + GitHub profiles. */
+/** Site author — gajay (https://github.com/GAjay). */
 export const SITE_AUTHOR = {
-  name: "Ajay Kumar Maheshwari",
-  shortName: "Ajay",
+  name: "gajay",
+  shortName: "gajay",
   role: "Full Stack Engineer",
-  headline: "Full Stack Engineer at Publicis Sapient · Creator of AxiomUI",
+  headline: "Full Stack Engineer · Creator of AsriUI",
   location: "India",
   email: "ajay.maheshwari095@gmail.com",
   linkedIn: "https://www.linkedin.com/in/ajaymaheshwari24/",
@@ -14,7 +14,7 @@ export const SITE_AUTHOR = {
   avatar: "/ajay-maheshwari.jpg",
   linkedInPhoto: `https://unavatar.io/linkedin/ajaymaheshwari24?fallback=${encodeURIComponent("https://avatars.githubusercontent.com/u/6947656?s=800")}`,
   summary:
-    "I build scalable products across the stack — React, TypeScript, Node.js, Django, Python, and GraphQL — and ship the interface layer teams actually reuse. AxiomUI is the open-source component library I maintain so product teams can start from accessible, typed primitives instead of a blank canvas.",
+    "I build scalable products across the stack — React, TypeScript, Node.js, Django, Python, and GraphQL — and ship the interface layer teams actually reuse. AsriUI is the open-source component library I maintain so product teams can start from accessible, typed primitives instead of a blank canvas.",
   focus: [
     "Accessible React component systems",
     "Product UI at consulting and SaaS scale",

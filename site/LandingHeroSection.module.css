@@ -22,21 +22,21 @@
   display: block;
 }
 
-/* Shared axiom remaps so nested components stay readable on every band + theme. */
+/* Shared asriui remaps so nested components stay readable on every band + theme. */
 .toneWhite,
 .toneBlack {
-  --axiom-color-foreground: var(--lp-fg);
-  --axiom-color-background: var(--lp-card);
-  --axiom-color-muted: var(--lp-muted);
-  --axiom-color-muted-foreground: var(--lp-muted-fg);
-  --axiom-color-border: var(--lp-border);
-  --axiom-color-ring: var(--lp-fg);
-  --axiom-color-primary: var(--lp-fg);
-  --axiom-color-primary-hover: color-mix(in srgb, var(--lp-fg) 88%, transparent);
-  --axiom-color-primary-active: color-mix(in srgb, var(--lp-fg) 76%, transparent);
-  --axiom-color-primary-foreground: var(--lp-accent-fg);
-  --axiom-color-secondary: var(--lp-muted);
-  --axiom-color-secondary-foreground: var(--lp-fg);
+  --asriui-color-foreground: var(--lp-fg);
+  --asriui-color-background: var(--lp-card);
+  --asriui-color-muted: var(--lp-muted);
+  --asriui-color-muted-foreground: var(--lp-muted-fg);
+  --asriui-color-border: var(--lp-border);
+  --asriui-color-ring: var(--lp-fg);
+  --asriui-color-primary: var(--lp-fg);
+  --asriui-color-primary-hover: color-mix(in srgb, var(--lp-fg) 88%, transparent);
+  --asriui-color-primary-active: color-mix(in srgb, var(--lp-fg) 76%, transparent);
+  --asriui-color-primary-foreground: var(--lp-accent-fg);
+  --asriui-color-secondary: var(--lp-muted);
+  --asriui-color-secondary-foreground: var(--lp-fg);
 }
 
 .toneWhite {

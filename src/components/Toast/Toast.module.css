@@ -1,6 +1,6 @@
 .root {
   position: fixed;
-  z-index: var(--axiom-z-toast, 1200);
+  z-index: var(--asriui-z-toast, 1200);
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
@@ -54,11 +54,11 @@
   align-items: start;
   width: 100%;
   padding: 0.85rem 0.9rem 0.9rem;
-  border: 1px solid color-mix(in srgb, var(--toast-accent) 24%, var(--axiom-color-border));
-  border-radius: var(--axiom-radius-md);
-  background: var(--toast-surface, var(--axiom-color-background));
-  color: var(--axiom-color-foreground);
-  box-shadow: var(--axiom-shadow-lg, 0 12px 32px color-mix(in srgb, var(--toast-accent) 14%, transparent));
+  border: 1px solid color-mix(in srgb, var(--toast-accent) 24%, var(--asriui-color-border));
+  border-radius: var(--asriui-radius-md);
+  background: var(--toast-surface, var(--asriui-color-background));
+  color: var(--asriui-color-foreground);
+  box-shadow: var(--asriui-shadow-lg, 0 12px 32px color-mix(in srgb, var(--toast-accent) 14%, transparent));
   pointer-events: auto;
   overflow: hidden;
 }
@@ -68,32 +68,32 @@
   position: absolute;
   inset: 0 auto 0 0;
   width: 3px;
-  background: var(--toast-accent, var(--axiom-color-primary));
+  background: var(--toast-accent, var(--asriui-color-primary));
 }
 
 .default {
-  --toast-accent: var(--axiom-color-primary);
-  --toast-surface: var(--axiom-color-background);
+  --toast-accent: var(--asriui-color-primary);
+  --toast-surface: var(--asriui-color-background);
 }
 
 .success {
-  --toast-accent: var(--axiom-color-success, #059669);
-  --toast-surface: color-mix(in srgb, var(--axiom-color-success, #059669) 12%, var(--axiom-color-background));
+  --toast-accent: var(--asriui-color-success, #059669);
+  --toast-surface: color-mix(in srgb, var(--asriui-color-success, #059669) 12%, var(--asriui-color-background));
 }
 
 .error {
-  --toast-accent: var(--axiom-color-destructive, #dc2626);
-  --toast-surface: color-mix(in srgb, var(--axiom-color-destructive, #dc2626) 12%, var(--axiom-color-background));
+  --toast-accent: var(--asriui-color-destructive, #dc2626);
+  --toast-surface: color-mix(in srgb, var(--asriui-color-destructive, #dc2626) 12%, var(--asriui-color-background));
 }
 
 .warning {
-  --toast-accent: var(--axiom-color-warning, #d97706);
-  --toast-surface: color-mix(in srgb, var(--axiom-color-warning, #d97706) 14%, var(--axiom-color-background));
+  --toast-accent: var(--asriui-color-warning, #d97706);
+  --toast-surface: color-mix(in srgb, var(--asriui-color-warning, #d97706) 14%, var(--asriui-color-background));
 }
 
 .info {
-  --toast-accent: var(--axiom-color-info, #2563eb);
-  --toast-surface: color-mix(in srgb, var(--axiom-color-info, #2563eb) 12%, var(--axiom-color-background));
+  --toast-accent: var(--asriui-color-info, #2563eb);
+  --toast-surface: color-mix(in srgb, var(--asriui-color-info, #2563eb) 12%, var(--asriui-color-background));
 }
 
 .iconWrap {
@@ -131,7 +131,7 @@
   margin: 0;
   font-size: 0.84rem;
   line-height: 1.45;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .actionButton {
@@ -153,15 +153,15 @@
   height: 1.5rem;
   padding: 0;
   border: 0;
-  border-radius: var(--axiom-radius-sm);
+  border-radius: var(--asriui-radius-sm);
   background: transparent;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
   cursor: pointer;
 }
 
 .closeButton:hover {
-  background: var(--axiom-color-muted);
-  color: var(--axiom-color-foreground);
+  background: var(--asriui-color-muted);
+  color: var(--asriui-color-foreground);
 }
 
 .progress {

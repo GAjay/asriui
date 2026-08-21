@@ -70,7 +70,7 @@
   height: 1px;
   border: 0;
   margin: 0;
-  background: var(--axiom-color-border);
+  background: var(--asriui-color-border);
 }
 
 .stats {
@@ -83,9 +83,9 @@
   display: grid;
   gap: 0.25rem;
   padding: 0.95rem 1rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md, 0.5rem);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md, 0.5rem);
+  background: var(--asriui-color-background);
 }
 
 .statLabel {
@@ -94,7 +94,7 @@
   font-weight: 650;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .statValue {
@@ -102,14 +102,14 @@
   font-size: 1.35rem;
   font-weight: 750;
   letter-spacing: -0.03em;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
   line-height: 1.1;
 }
 
 .statHint {
   margin: 0;
   font-size: 0.8rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .cardBody {
@@ -125,10 +125,10 @@
 
 .missingSlot {
   padding: 0.85rem 1rem;
-  border: 1px dashed var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md, 0.5rem);
+  border: 1px dashed var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md, 0.5rem);
   font-size: 0.85rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 @media (max-width: 720px) {

@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { Breadcrumb, Icon } from "axiom-ui";
+import { Breadcrumb, Icon } from "asriui";
 import { PAGE_TEMPLATES } from "./templateMeta";
 import styles from "./templates.module.css";
 

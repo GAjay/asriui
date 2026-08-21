@@ -1,9 +1,9 @@
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { AxiomProvider } from "../src/config";
+import { AsriUIProvider } from "../src/config";
 import { ToastProvider } from "../src/components/Toast";
 import { getRouterBasename } from "./routerBasename";
-import { siteAxiomConfig } from "./axiomSiteConfig";
+import { siteAsriUIConfig } from "./asriuiSiteConfig";
 import { SiteThemeProvider } from "./useSiteTheme";
 import { LandingPage } from "./LandingPage";
 import { ScrollToTop } from "./ScrollToTop";
@@ -121,7 +121,7 @@ function RouteFallback() {
 
 export function App() {
   return (
-    <AxiomProvider config={siteAxiomConfig}>
+    <AsriUIProvider config={siteAsriUIConfig}>
       <ToastProvider position="top-right">
         <SiteThemeProvider>
         <BrowserRouter basename={getRouterBasename()}>
@@ -175,6 +175,6 @@ export function App() {
       </BrowserRouter>
         </SiteThemeProvider>
       </ToastProvider>
-    </AxiomProvider>
+    </AsriUIProvider>
   );
 }

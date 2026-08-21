@@ -13,7 +13,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: () => (
     <TextToSpeech>
-      Axiom UI ships accessible components with motion, theming, and builder-ready workflows.
+      AsriUI ships accessible components with motion, theming, and builder-ready workflows.
     </TextToSpeech>
   ),
 };

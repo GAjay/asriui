@@ -7,8 +7,8 @@ export const pwaOptions = {
   injectRegister: "auto",
   includeAssets: ["favicon.svg", "apple-touch-icon.svg", "mask-icon.svg"],
   manifest: {
-    name: "AxiomUI",
-    short_name: "AxiomUI",
+    name: "AsriUI",
+    short_name: "AsriUI",
     description: "Production-ready React UI components with docs and live demos.",
     theme_color: "#000000",
     background_color: "#ffffff",
@@ -28,7 +28,7 @@ export const pwaOptions = {
         urlPattern: /\\.(?:png|gif|jpg|jpeg|svg|webp|avif|ico)$/i,
         handler: "CacheFirst",
         options: {
-          cacheName: "axiom-images",
+          cacheName: "asriui-images",
           expiration: { maxEntries: 100, maxAgeSeconds: 60 * 60 * 24 * 7 },
           cacheableResponse: { statuses: [0, 200] },
         },
@@ -37,7 +37,7 @@ export const pwaOptions = {
         urlPattern: /\\.(?:woff2?|ttf|otf)$/i,
         handler: "CacheFirst",
         options: {
-          cacheName: "axiom-fonts",
+          cacheName: "asriui-fonts",
           expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 * 365 },
         },
       },

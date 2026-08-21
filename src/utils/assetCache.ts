@@ -1,12 +1,12 @@
-const FETCHED_AT_HEADER = "X-Axiom-Fetched-At";
+const FETCHED_AT_HEADER = "X-AsriUI-Fetched-At";
 
-export const DEFAULT_ASSET_CACHE_NAME = "axiom-assets-v1";
+export const DEFAULT_ASSET_CACHE_NAME = "asriui-assets-v1";
 /** 24 hours — cached assets stay local until this interval elapses. */
 export const DEFAULT_ASSET_REFETCH_INTERVAL = 24 * 60 * 60 * 1000;
 export const DEFAULT_ASSET_CACHE_MAX_ENTRIES = 120;
 
 export type AssetCacheOptions = {
-  /** Cache Storage bucket. @default "axiom-assets-v1" */
+  /** Cache Storage bucket. @default "asriui-assets-v1" */
   cacheName?: string;
   /**
    * Milliseconds a cached asset stays fresh. After this, a background refetch

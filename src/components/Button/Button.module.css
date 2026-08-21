@@ -3,29 +3,29 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--axiom-space-2);
+  gap: var(--asriui-space-2);
   margin: 0;
   border: 1px solid transparent;
-  border-radius: var(--axiom-radius-md);
-  font-family: var(--axiom-font-family);
-  font-weight: var(--axiom-font-weight-medium);
-  line-height: var(--axiom-line-height-tight);
+  border-radius: var(--asriui-radius-md);
+  font-family: var(--asriui-font-family);
+  font-weight: var(--asriui-font-weight-medium);
+  line-height: var(--asriui-line-height-tight);
   text-decoration: none;
   white-space: nowrap;
   cursor: pointer;
   user-select: none;
   transition:
-    background-color var(--axiom-duration-fast) var(--axiom-easing-standard),
-    border-color var(--axiom-duration-fast) var(--axiom-easing-standard),
-    color var(--axiom-duration-fast) var(--axiom-easing-standard),
-    box-shadow var(--axiom-duration-fast) var(--axiom-easing-standard),
-    opacity var(--axiom-duration-fast) var(--axiom-easing-standard);
+    background-color var(--asriui-duration-fast) var(--asriui-easing-standard),
+    border-color var(--asriui-duration-fast) var(--asriui-easing-standard),
+    color var(--asriui-duration-fast) var(--asriui-easing-standard),
+    box-shadow var(--asriui-duration-fast) var(--asriui-easing-standard),
+    opacity var(--asriui-duration-fast) var(--asriui-easing-standard);
 }
 
 .button:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
-  box-shadow: var(--axiom-shadow-focus);
+  box-shadow: var(--asriui-shadow-focus);
 }
 
 .button:disabled,
@@ -38,99 +38,99 @@
 /* Sizes */
 .sm {
   min-height: 32px;
-  padding: var(--axiom-space-1) var(--axiom-space-3);
-  font-size: var(--axiom-font-size-sm);
+  padding: var(--asriui-space-1) var(--asriui-space-3);
+  font-size: var(--asriui-font-size-sm);
 }
 
 .md {
   min-height: 40px;
-  padding: var(--axiom-space-2) var(--axiom-space-4);
-  font-size: var(--axiom-font-size-md);
+  padding: var(--asriui-space-2) var(--asriui-space-4);
+  font-size: var(--asriui-font-size-md);
 }
 
 .lg {
   min-height: 48px;
-  padding: var(--axiom-space-3) var(--axiom-space-6);
-  font-size: var(--axiom-font-size-lg);
+  padding: var(--asriui-space-3) var(--asriui-space-6);
+  font-size: var(--asriui-font-size-lg);
 }
 
 .radiusNone {
-  border-radius: var(--axiom-radius-none);
+  border-radius: var(--asriui-radius-none);
 }
 
 .radiusSm {
-  border-radius: var(--axiom-radius-sm);
+  border-radius: var(--asriui-radius-sm);
 }
 
 .radiusMd {
-  border-radius: var(--axiom-radius-md);
+  border-radius: var(--asriui-radius-md);
 }
 
 .radiusLg {
-  border-radius: var(--axiom-radius-lg);
+  border-radius: var(--asriui-radius-lg);
 }
 
 .radiusFull {
-  border-radius: var(--axiom-radius-full);
+  border-radius: var(--asriui-radius-full);
 }
 
 /* Variants */
 .primary {
-  background-color: var(--axiom-color-primary);
-  color: var(--axiom-color-primary-foreground);
+  background-color: var(--asriui-color-primary);
+  color: var(--asriui-color-primary-foreground);
 }
 
 .primary:hover:not(:disabled):not([aria-disabled="true"]) {
-  background-color: var(--axiom-color-primary-hover);
+  background-color: var(--asriui-color-primary-hover);
 }
 
 .primary:active:not(:disabled):not([aria-disabled="true"]) {
-  background-color: var(--axiom-color-primary-active);
+  background-color: var(--asriui-color-primary-active);
 }
 
 .secondary {
-  background-color: var(--axiom-color-secondary);
-  color: var(--axiom-color-secondary-foreground);
+  background-color: var(--asriui-color-secondary);
+  color: var(--asriui-color-secondary-foreground);
 }
 
 .secondary:hover:not(:disabled):not([aria-disabled="true"]) {
-  background-color: var(--axiom-color-secondary-hover);
+  background-color: var(--asriui-color-secondary-hover);
 }
 
 .secondary:active:not(:disabled):not([aria-disabled="true"]) {
-  background-color: var(--axiom-color-secondary-active);
+  background-color: var(--asriui-color-secondary-active);
 }
 
 .outline {
   background-color: transparent;
-  border-color: var(--axiom-color-border);
-  color: var(--axiom-color-foreground);
+  border-color: var(--asriui-color-border);
+  color: var(--asriui-color-foreground);
 }
 
 .outline:hover:not(:disabled):not([aria-disabled="true"]) {
-  background-color: var(--axiom-color-muted);
+  background-color: var(--asriui-color-muted);
 }
 
 .ghost {
   background-color: transparent;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .ghost:hover:not(:disabled):not([aria-disabled="true"]) {
-  background-color: var(--axiom-color-muted);
+  background-color: var(--asriui-color-muted);
 }
 
 .danger {
-  background-color: var(--axiom-color-danger);
-  color: var(--axiom-color-danger-foreground);
+  background-color: var(--asriui-color-danger);
+  color: var(--asriui-color-danger-foreground);
 }
 
 .danger:hover:not(:disabled):not([aria-disabled="true"]) {
-  background-color: var(--axiom-color-danger-hover);
+  background-color: var(--asriui-color-danger-hover);
 }
 
 .danger:active:not(:disabled):not([aria-disabled="true"]) {
-  background-color: var(--axiom-color-danger-active);
+  background-color: var(--asriui-color-danger-active);
 }
 
 .loading {
@@ -154,11 +154,11 @@
   height: 1em;
   border: 2px solid currentColor;
   border-right-color: transparent;
-  border-radius: var(--axiom-radius-full);
-  animation: axiom-spin var(--axiom-duration-slow) linear infinite;
+  border-radius: var(--asriui-radius-full);
+  animation: asriui-spin var(--asriui-duration-slow) linear infinite;
 }
 
-@keyframes axiom-spin {
+@keyframes asriui-spin {
   to {
     transform: rotate(360deg);
   }

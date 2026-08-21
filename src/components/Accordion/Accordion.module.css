@@ -11,13 +11,13 @@
 }
 
 .item[data-variant="default"] {
-  border-radius: var(--axiom-radius-md);
+  border-radius: var(--asriui-radius-md);
 }
 
 .item[data-variant="bordered"] {
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
   overflow: hidden;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .item[data-variant="ghost"] .trigger:hover {
-  background: var(--axiom-color-muted);
+  background: var(--asriui-color-muted);
 }
 
 .trigger {
@@ -37,9 +37,9 @@
   width: 100%;
   padding: 0.65rem 0.75rem;
   border: 0;
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-muted);
-  color: var(--axiom-color-foreground);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-muted);
+  color: var(--asriui-color-foreground);
   font-size: 0.9rem;
   font-weight: 600;
   text-align: left;
@@ -55,11 +55,11 @@
 }
 
 .item[data-variant="bordered"] .trigger:hover {
-  background: var(--axiom-color-muted);
+  background: var(--asriui-color-muted);
 }
 
 .trigger:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
@@ -69,7 +69,7 @@
 }
 
 .trigger[data-open="true"] {
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .startContent,
@@ -83,7 +83,7 @@
 .startContent {
   width: 1.1rem;
   height: 1.1rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .startContent svg {
@@ -100,7 +100,7 @@
 }
 
 .endContent {
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
   font-size: 0.8rem;
   font-weight: 500;
 }
@@ -112,7 +112,7 @@
   flex-shrink: 0;
   width: 1rem;
   height: 1rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
   transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -144,12 +144,12 @@
   padding: 0.35rem 0.75rem 0.85rem;
   font-size: 0.875rem;
   line-height: 1.55;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .item[data-variant="bordered"] .content {
   padding: 0.5rem 0.85rem 0.95rem;
-  border-top: 1px solid var(--axiom-color-border);
+  border-top: 1px solid var(--asriui-color-border);
 }
 
 .item[data-variant="default"] .content {

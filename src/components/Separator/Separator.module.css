@@ -1,7 +1,7 @@
 .root {
   flex-shrink: 0;
   border: 0;
-  background: var(--axiom-color-border);
+  background: var(--asriui-color-border);
 }
 
 .horizontal {

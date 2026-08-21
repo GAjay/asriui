@@ -1,9 +1,9 @@
 import { addons } from "@storybook/manager-api";
 import { create } from "@storybook/theming/create";
 
-const axiomTheme = create({
+const asriuiTheme = create({
   base: "light",
-  brandTitle: "AxiomUI",
+  brandTitle: "AsriUI",
   brandUrl: "./",
   brandTarget: "_self",
   colorPrimary: "#2563eb",
@@ -20,7 +20,7 @@ const axiomTheme = create({
 });
 
 addons.setConfig({
-  theme: axiomTheme,
+  theme: asriuiTheme,
   sidebar: {
     showRoots: true,
   },

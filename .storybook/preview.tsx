@@ -16,12 +16,12 @@ function ThemeDecorator({
   return (
     <div
       data-theme={theme}
-      className="axiom-root"
+      className="asriui-root"
       style={{
         minHeight: "100vh",
         padding: 24,
-        background: "var(--axiom-color-background)",
-        color: "var(--axiom-color-foreground)",
+        background: "var(--asriui-color-background)",
+        color: "var(--asriui-color-foreground)",
       }}
     >
       {children}
@@ -53,7 +53,7 @@ const preview: Preview = {
   },
   globalTypes: {
     theme: {
-      description: "AxiomUI color theme",
+      description: "AsriUI color theme",
       defaultValue: "light",
       toolbar: {
         title: "Theme",

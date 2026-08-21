@@ -1,6 +1,6 @@
 export function DataGridAgGridFallback() {
   return (
-    <div className="axiom-datagrid-fallback" role="status">
+    <div className="asriui-datagrid-fallback" role="status">
       <p>
         Install AG Grid to use <code>engine=&quot;ag-grid&quot;</code>:
       </p>

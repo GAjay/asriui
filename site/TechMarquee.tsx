@@ -17,7 +17,7 @@ const TECH = [
   "Monaco",
   "React Flow",
   "Work Sans",
-  "AxiomUI",
+  "AsriUI",
 ] as const;
 
 export type { LandingBand } from "./landingBandTypes";

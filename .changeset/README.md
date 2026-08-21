@@ -1,6 +1,6 @@
 # Changesets
 
-This folder stores changeset files that describe package version bumps for **axiom-ui**.
+This folder stores changeset files that describe package version bumps for **asriui**.
 
 ## Workflow
 

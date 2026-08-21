@@ -1,7 +1,7 @@
 .wrapper {
   width: 100%;
   overflow-x: auto;
-  border-radius: var(--axiom-radius-md);
+  border-radius: var(--asriui-radius-md);
 }
 
 .table {
@@ -9,8 +9,8 @@
   border-collapse: collapse;
   border-spacing: 0;
   font-size: 0.875rem;
-  color: var(--axiom-color-foreground);
-  background: var(--axiom-color-background);
+  color: var(--asriui-color-foreground);
+  background: var(--asriui-color-background);
 }
 
 .caption {
@@ -19,11 +19,11 @@
   text-align: left;
   font-size: 0.8rem;
   font-weight: 600;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .head {
-  background: var(--axiom-color-muted);
+  background: var(--asriui-color-muted);
 }
 
 .head .cell {
@@ -31,21 +31,21 @@
   font-weight: 600;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--axiom-color-muted-foreground);
-  border-bottom: 1px solid var(--axiom-color-border);
+  color: var(--asriui-color-muted-foreground);
+  border-bottom: 1px solid var(--asriui-color-border);
 }
 
 .body .row:hover .cell {
-  background: color-mix(in srgb, var(--axiom-color-muted) 55%, transparent);
+  background: color-mix(in srgb, var(--asriui-color-muted) 55%, transparent);
 }
 
 .row[data-selected="true"] .cell {
-  background: color-mix(in srgb, var(--axiom-color-muted) 80%, transparent);
+  background: color-mix(in srgb, var(--asriui-color-muted) 80%, transparent);
 }
 
 .cell {
   padding: 0.7rem 0.85rem;
-  border-bottom: 1px solid var(--axiom-color-border);
+  border-bottom: 1px solid var(--asriui-color-border);
   text-align: left;
   vertical-align: middle;
 }
@@ -64,17 +64,17 @@
 }
 
 .variantStriped .body .row:nth-child(even) .cell {
-  background: color-mix(in srgb, var(--axiom-color-muted) 45%, transparent);
+  background: color-mix(in srgb, var(--asriui-color-muted) 45%, transparent);
 }
 
 .variantBordered {
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
   overflow: hidden;
 }
 
 .variantBordered .cell {
-  border-right: 1px solid var(--axiom-color-border);
+  border-right: 1px solid var(--asriui-color-border);
 }
 
 .variantBordered .cell:last-child {
@@ -83,5 +83,5 @@
 
 .footer .cell {
   font-weight: 600;
-  background: var(--axiom-color-muted);
+  background: var(--asriui-color-muted);
 }

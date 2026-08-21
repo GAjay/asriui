@@ -17,7 +17,7 @@ export const Default: Story = {
       <Tooltip.Trigger>
         <Button variant="outline">Hover me</Button>
       </Tooltip.Trigger>
-      <Tooltip.Content>Install with pnpm add axiom-ui</Tooltip.Content>
+      <Tooltip.Content>Install with pnpm add asriui</Tooltip.Content>
     </Tooltip>
   ),
 };

@@ -1,4 +1,4 @@
-import { Badge, Button, Icon, PageLayout, SideNav, Timeline, Typography } from "axiom-ui";
+import { Badge, Button, Icon, PageLayout, SideNav, Timeline, Typography } from "asriui";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./templates.module.css";
 
@@ -43,7 +43,7 @@ export function AnalyticsPage() {
       <PageLayout.Sidebar>
         <SideNav aria-label="Analytics navigation">
           <SideNav.Header>
-            <Typography variant="h4">Axiom Console</Typography>
+            <Typography variant="h4">AsriUI Console</Typography>
             <Typography variant="muted">Insights</Typography>
           </SideNav.Header>
           <SideNav.List>

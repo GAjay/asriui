@@ -4,10 +4,10 @@
   width: 100%;
   min-width: 0;
   overflow: hidden;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
 }
 
 .frame {
@@ -35,16 +35,16 @@
 
 .stateTitle {
   margin: 0;
-  font-size: var(--axiom-font-size-sm);
-  font-weight: var(--axiom-font-weight-semibold);
+  font-size: var(--asriui-font-size-sm);
+  font-weight: var(--asriui-font-weight-semibold);
 }
 
 .stateMessage {
   margin: 0;
   max-width: 36ch;
-  font-size: var(--axiom-font-size-xs);
+  font-size: var(--asriui-font-size-xs);
   line-height: 1.5;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .skeleton {
@@ -52,9 +52,9 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    color-mix(in srgb, var(--axiom-color-muted) 80%, transparent) 0%,
-    color-mix(in srgb, var(--axiom-color-muted) 40%, transparent) 50%,
-    color-mix(in srgb, var(--axiom-color-muted) 80%, transparent) 100%
+    color-mix(in srgb, var(--asriui-color-muted) 80%, transparent) 0%,
+    color-mix(in srgb, var(--asriui-color-muted) 40%, transparent) 50%,
+    color-mix(in srgb, var(--asriui-color-muted) 80%, transparent) 100%
   );
   background-size: 200% 100%;
   animation: widget-shimmer 1.2s ease-in-out infinite;

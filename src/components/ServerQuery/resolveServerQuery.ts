@@ -37,7 +37,7 @@ export async function executeDatabaseQuery<T>(
 ): Promise<T> {
   if (!database.baseUrl) {
     throw new Error(
-      "[axiom-ui] database.baseUrl is required for direct SQL queries. Set it on AxiomProvider config.",
+      "[asriui] database.baseUrl is required for direct SQL queries. Set it on AsriUIProvider config.",
     );
   }
 
@@ -60,7 +60,7 @@ function resolveNamedQuery(
 ): () => Promise<unknown> {
   const definition = database.queries?.[key];
   if (!definition) {
-    throw new Error(`[axiom-ui] Unknown database query key "${key}". Add it to config.database.queries.`);
+    throw new Error(`[asriui] Unknown database query key "${key}". Add it to config.database.queries.`);
   }
 
   if (typeof definition === "string") {
@@ -102,7 +102,7 @@ function resolveNamedQueryObject(
       );
   }
 
-  throw new Error("[axiom-ui] Named database query must include sql or path.");
+  throw new Error("[asriui] Named database query must include sql or path.");
 }
 
 export function resolveServerQueryFn<T>(
@@ -119,7 +119,7 @@ export function resolveServerQueryFn<T>(
       return () => {
         if (!database?.baseUrl) {
           throw new Error(
-            "[axiom-ui] database.baseUrl is required for SQL queries. Set it on AxiomProvider config.",
+            "[asriui] database.baseUrl is required for SQL queries. Set it on AsriUIProvider config.",
           );
         }
         return executeDatabaseQuery<T>(database, request);
@@ -130,7 +130,7 @@ export function resolveServerQueryFn<T>(
       const keyed = query as { key: string; params?: Record<string, unknown> };
       if (!database) {
         throw new Error(
-          `[axiom-ui] database config is required for query key "${keyed.key}". Set config.database on AxiomProvider.`,
+          `[asriui] database config is required for query key "${keyed.key}". Set config.database on AsriUIProvider.`,
         );
       }
       return resolveNamedQuery(database, keyed.key, keyed.params) as () => Promise<T>;
@@ -142,7 +142,7 @@ export function resolveServerQueryFn<T>(
       const sql = query.slice(4).trim();
       return () => {
         if (!database?.baseUrl) {
-          throw new Error("[axiom-ui] database.baseUrl is required for sql: queries.");
+          throw new Error("[asriui] database.baseUrl is required for sql: queries.");
         }
         return executeDatabaseQuery<T>(database, { sql });
       };
@@ -165,5 +165,5 @@ export function resolveServerQueryFn<T>(
     return () => fetchJson<T>(query);
   }
 
-  throw new Error("[axiom-ui] Invalid ServerQuery input.");
+  throw new Error("[asriui] Invalid ServerQuery input.");
 }

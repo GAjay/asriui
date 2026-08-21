@@ -20,8 +20,8 @@ export const TEMPLATE_SNIPPETS: TemplateSnippet[] = [
     layout: "centered",
     demoPath: "/templates/watch-landing",
     filename: "WatchLandingPage.tsx",
-    code: `import { Badge, Button, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+    code: `import { Badge, Button, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 export function WatchLandingPage() {
   return (
@@ -49,8 +49,8 @@ export function WatchLandingPage() {
     layout: "centered",
     demoPath: "/templates/about",
     filename: "AboutPage.tsx",
-    code: `import { Badge, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+    code: `import { Badge, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 const VALUES = [
   { title: "Accessible first", description: "Semantic landmarks and readable type scale." },
@@ -67,7 +67,7 @@ export function AboutPage() {
             <Badge variant="secondary">Company</Badge>
             <Typography variant="h1">We build tools developers love</Typography>
             <Typography variant="lead">
-              AxiomUI helps teams ship polished interfaces faster with accessible components.
+              AsriUI helps teams ship polished interfaces faster with accessible components.
             </Typography>
           </header>
 
@@ -75,7 +75,7 @@ export function AboutPage() {
             <Typography variant="h2">What we value</Typography>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1rem" }}>
               {VALUES.map((value) => (
-                <article key={value.title} style={{ padding: "1rem", border: "1px solid var(--axiom-color-border)", borderRadius: 8 }}>
+                <article key={value.title} style={{ padding: "1rem", border: "1px solid var(--asriui-color-border)", borderRadius: 8 }}>
                   <Typography variant="h3">{value.title}</Typography>
                   <Typography variant="muted">{value.description}</Typography>
                 </article>
@@ -95,8 +95,8 @@ export function AboutPage() {
     layout: "centered",
     demoPath: "/templates/contact",
     filename: "ContactPage.tsx",
-    code: `import { Form, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+    code: `import { Form, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 const CONTACT_FORM = {
   fields: [
@@ -126,7 +126,7 @@ export function ContactPage() {
             <Form config={CONTACT_FORM} onSubmit={async (values) => console.log(values)} />
             <aside>
               <Typography variant="h3">Email</Typography>
-              <Typography variant="muted">hello@axiom-ui.dev</Typography>
+              <Typography variant="muted">hello@asriui.dev</Typography>
             </aside>
           </div>
         </PageLayout.Content>
@@ -142,8 +142,8 @@ export function ContactPage() {
     layout: "centered",
     demoPath: "/templates/pricing",
     filename: "PricingPage.tsx",
-    code: `import { Accordion, Button, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+    code: `import { Accordion, Button, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 const PLANS = [
   { name: "Starter", price: "$0", features: ["MIT license", "Core components"] },
@@ -159,7 +159,7 @@ export function PricingPage() {
           <Typography variant="h1">Simple plans that scale</Typography>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1rem" }}>
             {PLANS.map((plan) => (
-              <article key={plan.name} style={{ padding: "1.25rem", border: "1px solid var(--axiom-color-border)", borderRadius: 8 }}>
+              <article key={plan.name} style={{ padding: "1.25rem", border: "1px solid var(--asriui-color-border)", borderRadius: 8 }}>
                 <Typography variant="h3">{plan.name}</Typography>
                 <Typography variant="h2">{plan.price}</Typography>
                 <ul>{plan.features.map((f) => <li key={f}>{f}</li>)}</ul>
@@ -186,8 +186,8 @@ export function PricingPage() {
     layout: "sidebar",
     demoPath: "/templates/dashboard",
     filename: "DashboardPage.tsx",
-    code: `import { Badge, Button, DataGrid, Icon, PageLayout, SideNav, Timeline, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+    code: `import { Badge, Button, DataGrid, Icon, PageLayout, SideNav, Timeline, Typography } from "asriui";
+import "asriui/style.css";
 
 const ORDERS = [
   { id: "1", customer: "Northwind", plan: "Pro", amount: "$24", status: "Paid" },
@@ -241,8 +241,8 @@ export function DashboardPage() {
     layout: "centered",
     demoPath: "/templates/login",
     filename: "LoginPage.tsx",
-    code: `import { LoginForm, PageLayout, toast } from "axiom-ui";
-import "axiom-ui/style.css";
+    code: `import { LoginForm, PageLayout, toast } from "asriui";
+import "asriui/style.css";
 
 export function LoginPage() {
   return (
@@ -268,8 +268,8 @@ export function LoginPage() {
     layout: "centered",
     demoPath: "/templates/shop",
     filename: "ShopPage.tsx",
-    code: `import { Badge, Button, PageLayout, Typography, toast } from "axiom-ui";
-import "axiom-ui/style.css";
+    code: `import { Badge, Button, PageLayout, Typography, toast } from "asriui";
+import "asriui/style.css";
 
 const PRODUCTS = [
   { id: "1", name: "Soft Tee", price: "$32", category: "Apparel" },
@@ -282,10 +282,10 @@ export function ShopPage() {
       <PageLayout.Main>
         <PageLayout.Content>
           <Badge variant="secondary">Ecommerce</Badge>
-          <Typography variant="h1">Axiom Store</Typography>
+          <Typography variant="h1">AsriUI Store</Typography>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "1rem" }}>
             {PRODUCTS.map((product) => (
-              <article key={product.id} style={{ border: "1px solid var(--axiom-color-border)", borderRadius: 8, padding: 16 }}>
+              <article key={product.id} style={{ border: "1px solid var(--asriui-color-border)", borderRadius: 8, padding: 16 }}>
                 <Typography variant="muted">{product.category}</Typography>
                 <Typography variant="h3">{product.name}</Typography>
                 <Typography variant="h4">{product.price}</Typography>
@@ -309,8 +309,8 @@ export function ShopPage() {
     demoPath: "/templates/cart",
     filename: "CartPage.tsx",
     code: `import { useState } from "react";
-import { Button, Input, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+import { Button, Input, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 export function CartPage() {
   const [qty, setQty] = useState(1);
@@ -322,18 +322,18 @@ export function CartPage() {
         <PageLayout.Content>
           <Typography variant="h1">Your cart</Typography>
           <div style={{ display: "grid", gridTemplateColumns: "1.3fr 0.9fr", gap: 16 }}>
-            <article style={{ border: "1px solid var(--axiom-color-border)", borderRadius: 8, padding: 16 }}>
-              <Typography variant="h3">Axiom Soft Tee</Typography>
+            <article style={{ border: "1px solid var(--asriui-color-border)", borderRadius: 8, padding: 16 }}>
+              <Typography variant="h3">AsriUI Soft Tee</Typography>
               <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
                 <Button size="sm" variant="outline" onClick={() => setQty((q) => Math.max(1, q - 1))}>−</Button>
                 <span>{qty}</span>
                 <Button size="sm" variant="outline" onClick={() => setQty((q) => q + 1)}>+</Button>
               </div>
             </article>
-            <aside style={{ border: "1px solid var(--axiom-color-border)", borderRadius: 8, padding: 16 }}>
+            <aside style={{ border: "1px solid var(--asriui-color-border)", borderRadius: 8, padding: 16 }}>
               <Typography variant="h3">Order summary</Typography>
               <p>Subtotal \${subtotal}</p>
-              <Input label="Promo code" placeholder="AXIOM10" />
+              <Input label="Promo code" placeholder="ASRIUI10" />
               <Button style={{ width: "100%" }}>Checkout</Button>
             </aside>
           </div>
@@ -350,8 +350,8 @@ export function CartPage() {
     layout: "centered",
     demoPath: "/templates/checkout",
     filename: "CheckoutPage.tsx",
-    code: `import { Form, PageLayout, Typography, toast } from "axiom-ui";
-import "axiom-ui/style.css";
+    code: `import { Form, PageLayout, Typography, toast } from "asriui";
+import "asriui/style.css";
 
 const CHECKOUT_FORM = {
   submitLabel: "Place order",
@@ -395,8 +395,8 @@ export function CheckoutPage() {
     layout: "sidebar",
     demoPath: "/templates/settings",
     filename: "SettingsPage.tsx",
-    code: `import { Form, Icon, PageLayout, SideNav, Switch, Tabs, Typography, toast } from "axiom-ui";
-import "axiom-ui/style.css";
+    code: `import { Form, Icon, PageLayout, SideNav, Switch, Tabs, Typography, toast } from "asriui";
+import "asriui/style.css";
 
 export function SettingsPage() {
   return (
@@ -451,8 +451,8 @@ export function SettingsPage() {
     demoPath: "/templates/inbox",
     filename: "InboxPage.tsx",
     code: `import { useState } from "react";
-import { Badge, List, ListItem, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+import { Badge, List, ListItem, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 const MESSAGES = [
   { id: "1", subject: "Invoice ready", preview: "March Pro plan invoice", unread: true },
@@ -482,7 +482,7 @@ export function InboxPage() {
                 />
               ))}
             </List>
-            <article style={{ border: "1px solid var(--axiom-color-border)", borderRadius: 8, padding: 16 }}>
+            <article style={{ border: "1px solid var(--asriui-color-border)", borderRadius: 8, padding: 16 }}>
               <Typography variant="h3">{selected.subject}</Typography>
               <Typography variant="muted">{selected.preview}</Typography>
             </article>
@@ -500,8 +500,8 @@ export function InboxPage() {
     layout: "sidebar",
     demoPath: "/templates/analytics",
     filename: "AnalyticsPage.tsx",
-    code: `import { Badge, PageLayout, Timeline, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+    code: `import { Badge, PageLayout, Timeline, Typography } from "asriui";
+import "asriui/style.css";
 
 export function AnalyticsPage() {
   return (
@@ -516,7 +516,7 @@ export function AnalyticsPage() {
               ["Retention D7", "44%"],
               ["NPS", "62"],
             ].map(([label, value]) => (
-              <article key={label} style={{ border: "1px solid var(--axiom-color-border)", borderRadius: 8, padding: 12 }}>
+              <article key={label} style={{ border: "1px solid var(--asriui-color-border)", borderRadius: 8, padding: 12 }}>
                 <Badge variant="secondary">{label}</Badge>
                 <Typography variant="h3">{value}</Typography>
               </article>
@@ -539,8 +539,8 @@ export function AnalyticsPage() {
     layout: "sidebar",
     demoPath: "/templates/billing",
     filename: "BillingPage.tsx",
-    code: `import { Badge, Button, DataGrid, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+    code: `import { Badge, Button, DataGrid, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 const INVOICES = [
   { id: "inv_204", date: "Mar 1, 2026", amount: "$49.00", status: "Paid" },
@@ -553,7 +553,7 @@ export function BillingPage() {
       <PageLayout.Main>
         <PageLayout.Content maxWidth="56rem">
           <Typography variant="h2">Billing</Typography>
-          <article style={{ border: "1px solid var(--axiom-color-border)", borderRadius: 8, padding: 16, marginBottom: 16 }}>
+          <article style={{ border: "1px solid var(--asriui-color-border)", borderRadius: 8, padding: 16, marginBottom: 16 }}>
             <Badge>Pro</Badge>
             <Typography variant="h3">$49 / month</Typography>
             <Button size="sm">Upgrade plan</Button>
@@ -582,8 +582,8 @@ export function BillingPage() {
     layout: "sidebar",
     demoPath: "/templates/team",
     filename: "TeamPage.tsx",
-    code: `import { Badge, Button, List, ListItem, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+    code: `import { Badge, Button, List, ListItem, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 const MEMBERS = [
   { id: "1", name: "Ava Chen", role: "Owner", status: "Active" },
@@ -623,8 +623,8 @@ export function TeamPage() {
     demoPath: "/templates/onboarding",
     filename: "OnboardingPage.tsx",
     code: `import { useState } from "react";
-import { Badge, Form, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+import { Badge, Form, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 const STEPS = ["Workspace", "Profile", "Invite"];
 
@@ -657,8 +657,8 @@ export function OnboardingPage() {
     layout: "sidebar",
     demoPath: "/templates/json-page",
     filename: "JsonPageDemo.tsx",
-    code: `import { Page } from "axiom-ui/page";
-import "axiom-ui/style.css";
+    code: `import { Page } from "asriui/page";
+import "asriui/style.css";
 
 const config = {
   layout: { variant: "sidebar", sidebarWidth: 248 },
@@ -686,13 +686,13 @@ export function JsonPageDemo() {
   {
     slug: "ai-workflow",
     title: "AI workflow builder",
-    description: "n8n-style canvas with templates, Axiom UI blocks, scripts, and run preview.",
+    description: "n8n-style canvas with templates, AsriUI blocks, scripts, and run preview.",
     layout: "centered",
     demoPath: "/templates/ai-workflow",
     filename: "AiWorkflowPage.tsx",
-    code: `import { AiWorkflowBuilder } from "axiom-ui/ai-workflow-builder";
-import { PageLayout } from "axiom-ui/page-layout";
-import "axiom-ui/style.css";
+    code: `import { AiWorkflowBuilder } from "asriui/ai-workflow-builder";
+import { PageLayout } from "asriui/page-layout";
+import "asriui/style.css";
 
 export function AiWorkflowPage() {
   return (
@@ -721,9 +721,9 @@ export function AiWorkflowPage() {
     layout: "centered",
     demoPath: "/templates/ai-orchestrator",
     filename: "AiOrchestratorPage.tsx",
-    code: `import { AiOrchestrator } from "axiom-ui/ai-orchestrator";
-import { PageLayout } from "axiom-ui/page-layout";
-import "axiom-ui/style.css";
+    code: `import { AiOrchestrator } from "asriui/ai-orchestrator";
+import { PageLayout } from "asriui/page-layout";
+import "asriui/style.css";
 
 const CORPUS = [
   { id: "1", title: "Theming", description: "CSS variables and dark mode", tags: ["docs"] },

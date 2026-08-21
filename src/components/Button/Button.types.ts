@@ -14,7 +14,7 @@ export type ButtonRadius = "none" | "sm" | "md" | "lg" | "full";
 /**
  * Props for the {@link Button} component.
  *
- * Extends native `<button>` attributes. When wrapped in `AxiomProvider` with
+ * Extends native `<button>` attributes. When wrapped in `AsriUIProvider` with
  * analytics enabled, click events are automatically pushed to GTM dataLayer.
  *
  * @example

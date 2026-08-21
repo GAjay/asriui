@@ -1,7 +1,7 @@
-import type { AxiomConfig } from "../src/config";
+import type { AsriUIConfig } from "../src/config";
 
 /** Site-wide plug-and-play configuration for the docs + landing app. */
-export const siteAxiomConfig: AxiomConfig = {
+export const siteAsriUIConfig: AsriUIConfig = {
   theme: "light",
   fontFamily: '"Work Sans", ui-sans-serif, system-ui, sans-serif',
   analytics: {

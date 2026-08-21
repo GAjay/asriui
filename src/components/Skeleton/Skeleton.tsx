@@ -68,8 +68,8 @@ function SkeletonCard({ className }: { className?: string }) {
         display: "grid",
         gap: "0.75rem",
         padding: "1rem",
-        border: "1px solid var(--axiom-color-border)",
-        borderRadius: "var(--axiom-radius-md)",
+        border: "1px solid var(--asriui-color-border)",
+        borderRadius: "var(--asriui-radius-md)",
       }}
     >
       <SkeletonRoot variant="text" width="35%" />

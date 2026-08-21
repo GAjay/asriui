@@ -85,21 +85,21 @@
 }
 
 .gapXs {
-  gap: var(--axiom-space-1);
+  gap: var(--asriui-space-1);
 }
 
 .gapSm {
-  gap: var(--axiom-space-2);
+  gap: var(--asriui-space-2);
 }
 
 .gapMd {
-  gap: var(--axiom-space-4);
+  gap: var(--asriui-space-4);
 }
 
 .gapLg {
-  gap: var(--axiom-space-6);
+  gap: var(--asriui-space-6);
 }
 
 .gapXl {
-  gap: var(--axiom-space-8);
+  gap: var(--asriui-space-8);
 }

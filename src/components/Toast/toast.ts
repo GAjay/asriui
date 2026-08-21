@@ -17,7 +17,7 @@ export function registerToastApi(api: { publish: ToastPublisher; dismiss: ToastD
 export function toast(input: ToastInput): string {
   if (!publishToast) {
     if (process.env.NODE_ENV !== "production") {
-      console.warn("[axiom-ui] toast() called without ToastProvider — notification skipped.");
+      console.warn("[asriui] toast() called without ToastProvider — notification skipped.");
     }
     return "";
   }

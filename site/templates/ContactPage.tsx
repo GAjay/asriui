@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Badge, Form, PageLayout, Typography } from "axiom-ui";
+import { Badge, Form, PageLayout, Typography } from "asriui";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./templates.module.css";
 
@@ -30,7 +30,7 @@ const CONTACT_FORM = {
 };
 
 const CONTACT_INFO = [
-  { title: "Email", body: "hello@axiom-ui.dev" },
+  { title: "Email", body: "hello@asriui.dev" },
   { title: "Office", body: "221B Builder Street, San Francisco" },
   { title: "Hours", body: "Mon–Fri, 9am–6pm PT" },
 ];

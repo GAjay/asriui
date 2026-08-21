@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Breadcrumb, CodeBlock } from "axiom-ui";
+import { Breadcrumb, CodeBlock } from "asriui";
 import { DocPageShell } from "./DocPageShell";
 import styles from "./GuidesPage.module.css";
 
@@ -14,18 +14,18 @@ const TOC = [
 
 const TOKEN_CODE = `:root,
 [data-theme="light"] {
-  --axiom-color-background: #ffffff;
-  --axiom-color-foreground: #09090b;
-  --axiom-color-primary: #18181b;
-  --axiom-radius-md: 0.5rem;
+  --asriui-color-background: #ffffff;
+  --asriui-color-foreground: #09090b;
+  --asriui-color-primary: #18181b;
+  --asriui-radius-md: 0.5rem;
 }
 
 [data-theme="dark"] {
-  --axiom-color-background: #09090b;
-  --axiom-color-foreground: #fafafa;
+  --asriui-color-background: #09090b;
+  --asriui-color-foreground: #fafafa;
 }`;
 
-const OVERRIDE_CODE = `import { Button } from "axiom-ui/button";
+const OVERRIDE_CODE = `import { Button } from "asriui/button";
 import styles from "./SaveBar.module.css";
 
 export function SaveBar() {
@@ -38,20 +38,20 @@ export function SaveBar() {
   );
 }`;
 
-const CUSTOM_CODE = `import { cn } from "axiom-ui/utils";
+const CUSTOM_CODE = `import { cn } from "asriui/utils";
 import styles from "./Panel.module.css";
 
 export function Panel({ className, children }: { className?: string; children: React.ReactNode }) {
   return <section className={cn(styles.panel, className)}>{children}</section>;
 }
 
-/* Panel.module.css — reuse Axiom tokens */
+/* Panel.module.css — reuse AsriUI tokens */
 .panel {
-  padding: var(--axiom-space-4);
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-lg);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
+  padding: var(--asriui-space-4);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-lg);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
 }`;
 
 /**
@@ -79,7 +79,7 @@ export function StylingPage() {
           <p className={styles.kicker}>Guides</p>
           <h1 className={styles.title}>Styling</h1>
           <p className={styles.lead}>
-            How to approach styling with AxiomUI — CSS Modules, design tokens, and when to build
+            How to approach styling with AsriUI — CSS Modules, design tokens, and when to build
             custom components instead of fighting overrides.
           </p>
           <div className={styles.metaRow}>
@@ -92,12 +92,12 @@ export function StylingPage() {
         <section className={styles.section} id="introduction">
           <h2 className={styles.sectionTitle}>Introduction</h2>
           <p className={styles.prose}>
-            AxiomUI does not ship a <code>css</code> or <code>sx</code> prop and does not depend on a styling
+            AsriUI does not ship a <code>css</code> or <code>sx</code> prop and does not depend on a styling
             library at runtime. Components are built with vanilla CSS Modules. You pick the styling
             stack for your app — Tailwind, plain CSS, or Modules — without fighting an embedded system.
           </p>
           <p className={styles.prose}>
-            Import styles once at your app entry: <code>import &quot;axiom-ui/style.css&quot;</code>.
+            Import styles once at your app entry: <code>import &quot;asriui/style.css&quot;</code>.
           </p>
         </section>
 
@@ -106,7 +106,7 @@ export function StylingPage() {
           <p className={styles.prose}>
             Components are intentionally closed: they expose props and theme tokens rather than every
             internal class. You also get the same CSS custom properties that power the kit, so custom
-            UI can feel native to Axiom.
+            UI can feel native to AsriUI.
           </p>
           <ul className={styles.changeList}>
             <li>Tokenized color, space, radius, shadow, and typography variables</li>
@@ -142,7 +142,7 @@ export function StylingPage() {
         <section className={styles.section} id="custom-components">
           <h2 className={styles.sectionTitle}>Custom components</h2>
           <p className={styles.prose}>
-            Build product-specific UI with the same building blocks Axiom uses: tokens,{" "}
+            Build product-specific UI with the same building blocks AsriUI uses: tokens,{" "}
             <code>cn()</code> for class merges, and layout primitives like{" "}
             <code>Container</code>, <code>Flex</code>, and <code>Grid</code>.
           </p>
@@ -157,13 +157,13 @@ export function StylingPage() {
           <p className={styles.prose}>
             Content rendered in a portal still inherits <code>data-theme</code> from{" "}
             <code>document.documentElement</code>. Keep theme on the root (via{" "}
-            <code>AxiomProvider</code> or <code>ThemeSwitch</code>) so overlays stay consistent.
+            <code>AsriUIProvider</code> or <code>ThemeSwitch</code>) so overlays stay consistent.
           </p>
           <h3 className={styles.releaseVersion} style={{ fontSize: "1.05rem" }}>
             CSS import order
           </h3>
           <p className={styles.prose}>
-            Import <code>axiom-ui/style.css</code> before your app CSS so your rules can override
+            Import <code>asriui/style.css</code> before your app CSS so your rules can override
             tokens and utility classes predictably. If a framework reorders CSS in production, merge
             imports or use layers.
           </p>
@@ -172,7 +172,7 @@ export function StylingPage() {
           </h3>
           <p className={styles.prose}>
             Tailwind base resets can strip button backgrounds. Prefer separate CSS layers, skip{" "}
-            <code>@tailwind base</code> where it conflicts, or re-assert Axiom button tokens after
+            <code>@tailwind base</code> where it conflicts, or re-assert AsriUI button tokens after
             preflight.
           </p>
         </section>

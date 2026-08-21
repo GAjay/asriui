@@ -68,8 +68,8 @@ const initialRows: ProductRow[] = Array.from({ length: 80 }, (_, index) => ({
 }));
 
 export const EDITABLE_DATA_GRID_CODE = `import { useState } from "react";
-import { DataGrid, type DataGridColumn } from "axiom-ui/data-grid";
-import { ToastProvider, toast } from "axiom-ui/toast";
+import { DataGrid, type DataGridColumn } from "asriui/data-grid";
+import { ToastProvider, toast } from "asriui/toast";
 
 type ProductRow = {
   id: string;

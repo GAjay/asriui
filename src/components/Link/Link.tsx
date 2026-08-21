@@ -1,5 +1,5 @@
 import { forwardRef, useMemo } from "react";
-import { useAxiomConfigOptional } from "../../config/AxiomContext";
+import { useAsriUIConfigOptional } from "../../config/AsriUIContext";
 import { trackLinkClick } from "../../config/analytics";
 import { cn } from "../../utils/cn";
 import type { LinkProps } from "./Link.types";
@@ -59,7 +59,7 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
   },
   ref,
 ) {
-  const axiomConfig = useAxiomConfigOptional();
+  const asriuiConfig = useAsriUIConfigOptional();
   const isExternal = resolveExternal(href, target, external);
   const opensNewTab = target === "_blank" || (isExternal && target !== "_self");
   const showIcon = showExternalIcon ?? isExternal;
@@ -79,9 +79,9 @@ export const Link = forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 
   const handleClick: LinkProps["onClick"] = (event) => {
     onClick?.(event);
-    if (!event.defaultPrevented && axiomConfig) {
+    if (!event.defaultPrevented && asriuiConfig) {
       trackLinkClick(
-        axiomConfig.analytics,
+        asriuiConfig.analytics,
         {
           href,
           label: trackLabel ?? (typeof children === "string" ? children : undefined),

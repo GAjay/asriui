@@ -1,10 +1,10 @@
 {
-  "name": "axiom-ui",
+  "name": "asriui",
   "version": "0.0.0",
   "description": "Production-ready React UI components",
   "license": "MIT",
   "type": "module",
-  "author": "AxiomUI Contributors",
+  "author": "gajay",
   "keywords": [
     "react",
     "react-components",
@@ -14,7 +14,7 @@
     "accessible",
     "typescript",
     "css-modules",
-    "axiom-ui",
+    "asriui",
     "tree-shaking"
   ],
   "sideEffects": [

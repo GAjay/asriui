@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useAxiomConfigOptional } from "../config/AxiomContext";
+import { useAsriUIConfigOptional } from "../config/AsriUIContext";
 import {
   DEFAULT_ASSET_CACHE_NAME,
   getCachedAsset,
@@ -44,7 +44,7 @@ function resolveDisplaySrc(
  * device; stale hits still render locally while a refetch runs in the background.
  */
 export function useCachedAsset(url: string | undefined, options?: UseCachedAssetOptions): UseCachedAssetResult {
-  const assetsConfig = useAxiomConfigOptional()?.assets;
+  const assetsConfig = useAsriUIConfigOptional()?.assets;
   const enabled = (options?.enabled ?? assetsConfig?.cache ?? true) && Boolean(url);
   const cacheOptions = useMemo<AssetCacheOptions>(
     () => ({

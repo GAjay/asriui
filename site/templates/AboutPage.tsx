@@ -1,4 +1,4 @@
-import { Badge, PageLayout, Typography } from "axiom-ui";
+import { Badge, PageLayout, Typography } from "asriui";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./templates.module.css";
 
@@ -34,7 +34,7 @@ export function AboutPage() {
               <Badge variant="secondary">Company</Badge>
               <h1 className={styles.heroTitle}>We build tools developers love</h1>
               <p className={styles.heroLead}>
-                AxiomUI helps teams ship polished interfaces faster with accessible components, flexible layouts,
+                AsriUI helps teams ship polished interfaces faster with accessible components, flexible layouts,
                 and copy-paste page templates.
               </p>
             </header>

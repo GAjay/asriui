@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CodeBlock } from "axiom-ui";
+import { CodeBlock } from "asriui";
 import styles from "./DocExampleBlock.module.css";
 
 type Props = {

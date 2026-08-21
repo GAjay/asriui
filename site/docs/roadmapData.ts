@@ -127,7 +127,7 @@ export const ROADMAP_MILESTONES: RoadmapMilestone[] = [
     title: "Developer experience",
     date: "Q3 2026",
     status: "default",
-    description: "Tooling so teams adopt AxiomUI faster across repos and design handoffs.",
+    description: "Tooling so teams adopt AsriUI faster across repos and design handoffs.",
     highlights: ["CLI scaffold", "Figma kit", "Theme presets gallery", "Migration guides from MUI/Chakra"],
   },
   {
@@ -170,7 +170,7 @@ export const ROADMAP_PHASES: RoadmapPhase[] = [
     items: [
       "Chart primitives for dashboards",
       "Official Figma ↔ code token sync",
-      "create-axiom-app CLI",
+      "create-asriui-app CLI",
       "Vue/Svelte adapters (community RFC)",
     ],
   },

@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Badge, Breadcrumb, Button } from "axiom-ui";
+import { Badge, Breadcrumb, Button } from "asriui";
 import { DocPageShell } from "./DocPageShell";
 import { ThemeDocPreview } from "./ThemeDocPreview";
 import { TEMPLATE_SNIPPETS } from "./templateSnippets";
@@ -55,7 +55,7 @@ export function TemplatesPage() {
         <section id="theming" className={styles.section}>
           <h2 className={styles.sectionTitle}>Theming templates</h2>
           <p className={styles.prose}>
-            Page templates respect the same <code>data-theme</code> attribute as the rest of AxiomUI. Toggle light or
+            Page templates respect the same <code>data-theme</code> attribute as the rest of AsriUI. Toggle light or
             dark from the docs sidebar, live demo header, or your own app shell — layouts use semantic tokens so
             borders, surfaces, and text adapt automatically.
           </p>
@@ -78,8 +78,8 @@ export function TemplatesPage() {
               <li
                 key={template.slug}
                 style={{
-                  border: "1px solid var(--axiom-color-border)",
-                  borderRadius: "var(--axiom-radius-md)",
+                  border: "1px solid var(--asriui-color-border)",
+                  borderRadius: "var(--asriui-radius-md)",
                   padding: "1rem",
                 }}
               >
@@ -88,7 +88,7 @@ export function TemplatesPage() {
                   style={{ textDecoration: "none", color: "inherit" }}
                 >
                   <strong style={{ display: "block", marginBottom: "0.35rem" }}>{template.title}</strong>
-                  <p style={{ margin: "0 0 0.65rem", fontSize: "0.875rem", color: "var(--axiom-color-muted-foreground)" }}>
+                  <p style={{ margin: "0 0 0.65rem", fontSize: "0.875rem", color: "var(--asriui-color-muted-foreground)" }}>
                     {template.description}
                   </p>
                   <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap" }}>

@@ -23,6 +23,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Configure GitHub Pages
+        id: pages
+        uses: actions/configure-pages@v4
+
+      - name: Verify GitHub Pages is enabled
+        run: |
+          if [ -z "${{ steps.pages.outputs.base_url }}" ]; then
+            echo "::error::GitHub Pages is not enabled for this repository."
+            echo "Open Settings → Pages → Build and deployment → Source: GitHub Actions, then re-run this workflow."
+            exit 1
+          fi
+          echo "Pages base URL: ${{ steps.pages.outputs.base_url }}"
+          echo "Pages host: ${{ steps.pages.outputs.host }}"
+          echo "Pages base path: ${{ steps.pages.outputs.base_path }}"
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
@@ -43,6 +58,9 @@ jobs:
           SITE_URL: ${{ vars.SITE_URL }}
           SITE_DOMAIN: ${{ vars.SITE_DOMAIN }}
           BASE_PATH: ${{ vars.BASE_PATH }}
+          PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          PAGES_HOST: ${{ steps.pages.outputs.host }}
         run: node scripts/resolve-site-deploy.mjs
 
       - name: Build docs site
@@ -51,6 +69,7 @@ jobs:
           VITE_BASE_PATH: ${{ steps.site.outputs.base_path }}
           SITE_URL: ${{ steps.site.outputs.site_url }}
           SITE_DOMAIN: ${{ steps.site.outputs.site_domain }}
+          PAGES_HOST: ${{ steps.pages.outputs.host }}
         run: pnpm build:pages
 
       - name: Upload Pages artifact
@@ -62,6 +81,9 @@ jobs:
     name: Deploy to GitHub Pages
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

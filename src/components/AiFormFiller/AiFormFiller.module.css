@@ -13,17 +13,17 @@
   grid-template-columns: minmax(120px, 35%) 1fr;
   gap: 0.5rem;
   padding: 0.5rem 0.65rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  font-size: var(--axiom-font-size-sm);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  font-size: var(--asriui-font-size-sm);
 }
 
 .previewRow dt {
   font-weight: 600;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .previewRow dd {
   margin: 0;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }

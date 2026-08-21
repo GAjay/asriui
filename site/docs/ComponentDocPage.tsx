@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
-import { Breadcrumb, CodeBlock } from "axiom-ui";
+import { Breadcrumb, CodeBlock } from "asriui";
 import { ComponentApiTable } from "./ComponentApiTable";
 import { ComponentPerformanceMetrics } from "./ComponentPerformanceMetrics";
 import { DocExampleBlock } from "./DocExampleBlock";
@@ -86,10 +86,10 @@ export function ComponentDocPage() {
         <section id="installation" className={styles.section}>
           <h2 className={styles.sectionTitle}>Installation</h2>
           <CodeBlock
-            code={`pnpm add axiom-ui framer-motion
+            code={`pnpm add asriui framer-motion
 
-import { ${api?.exportName ?? doc.name} } from "${api?.importPath ?? `axiom-ui/${doc.slug}`}";
-import "axiom-ui/style.css";`}
+import { ${api?.exportName ?? doc.name} } from "${api?.importPath ?? `asriui/${doc.slug}`}";
+import "asriui/style.css";`}
             language="bash"
             showCopy
             filename="terminal"

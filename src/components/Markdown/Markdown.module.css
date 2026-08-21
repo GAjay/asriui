@@ -2,52 +2,52 @@
   display: flex;
   flex-direction: column;
   gap: 0.85rem;
-  color: var(--axiom-color-foreground);
-  font-size: var(--axiom-font-size-md);
-  line-height: var(--axiom-line-height-relaxed);
+  color: var(--asriui-color-foreground);
+  font-size: var(--asriui-font-size-md);
+  line-height: var(--asriui-line-height-relaxed);
 }
 
 .h1 {
   margin: 0.35rem 0 0;
   font-size: clamp(1.85rem, 3.5vw, 2.35rem);
-  font-weight: var(--axiom-font-weight-bold);
-  line-height: var(--axiom-line-height-tight);
+  font-weight: var(--asriui-font-weight-bold);
+  line-height: var(--asriui-line-height-tight);
   letter-spacing: -0.03em;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .h2 {
   margin: 0.85rem 0 0;
   font-size: clamp(1.4rem, 2.5vw, 1.75rem);
-  font-weight: var(--axiom-font-weight-bold);
-  line-height: var(--axiom-line-height-tight);
+  font-weight: var(--asriui-font-weight-bold);
+  line-height: var(--asriui-line-height-tight);
   letter-spacing: -0.02em;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .h3 {
   margin: 0.65rem 0 0;
-  font-size: var(--axiom-font-size-xl);
-  font-weight: var(--axiom-font-weight-semibold);
-  line-height: var(--axiom-line-height-tight);
-  color: var(--axiom-color-foreground);
+  font-size: var(--asriui-font-size-xl);
+  font-weight: var(--asriui-font-weight-semibold);
+  line-height: var(--asriui-line-height-tight);
+  color: var(--asriui-color-foreground);
 }
 
 .h4 {
   margin: 0.5rem 0 0;
-  font-size: var(--axiom-font-size-lg);
-  font-weight: var(--axiom-font-weight-semibold);
-  line-height: var(--axiom-line-height-tight);
-  color: var(--axiom-color-foreground);
+  font-size: var(--asriui-font-size-lg);
+  font-weight: var(--asriui-font-weight-semibold);
+  line-height: var(--asriui-line-height-tight);
+  color: var(--asriui-color-foreground);
 }
 
 .p {
   margin: 0;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .link {
-  color: var(--axiom-color-primary);
+  color: var(--asriui-color-primary);
   text-decoration: underline;
   text-underline-offset: 0.15em;
 }
@@ -57,12 +57,12 @@
 }
 
 .inlineCode {
-  font-family: var(--axiom-font-family-mono);
+  font-family: var(--asriui-font-family-mono);
   font-size: 0.9em;
   padding: 0.1rem 0.35rem;
-  border-radius: calc(var(--axiom-radius-sm) - 1px);
-  background: var(--axiom-color-muted);
-  color: var(--axiom-color-foreground);
+  border-radius: calc(var(--asriui-radius-sm) - 1px);
+  background: var(--asriui-color-muted);
+  color: var(--asriui-color-foreground);
 }
 
 .ul,
@@ -81,16 +81,16 @@
 .blockquote {
   margin: 0;
   padding: 0.65rem 0.9rem;
-  border-left: 3px solid var(--axiom-color-primary);
-  background: color-mix(in srgb, var(--axiom-color-muted) 70%, transparent);
-  border-radius: 0 var(--axiom-radius-sm) var(--axiom-radius-sm) 0;
-  color: var(--axiom-color-muted-foreground);
+  border-left: 3px solid var(--asriui-color-primary);
+  background: color-mix(in srgb, var(--asriui-color-muted) 70%, transparent);
+  border-radius: 0 var(--asriui-radius-sm) var(--asriui-radius-sm) 0;
+  color: var(--asriui-color-muted-foreground);
 }
 
 .hr {
   margin: 0.5rem 0;
   border: none;
-  border-top: 1px solid var(--axiom-color-border);
+  border-top: 1px solid var(--asriui-color-border);
 }
 
 .codeBlock {
@@ -101,32 +101,32 @@
   display: block;
   max-width: 100%;
   height: auto;
-  border-radius: var(--axiom-radius-md);
+  border-radius: var(--asriui-radius-md);
 }
 
 .tableWrap {
   overflow-x: auto;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
-  font-size: var(--axiom-font-size-sm);
+  font-size: var(--asriui-font-size-sm);
 }
 
 .th,
 .td {
   padding: 0.55rem 0.75rem;
   text-align: left;
-  border-bottom: 1px solid var(--axiom-color-border);
+  border-bottom: 1px solid var(--asriui-color-border);
   vertical-align: top;
 }
 
 .th {
-  font-weight: var(--axiom-font-weight-semibold);
-  background: var(--axiom-color-muted);
+  font-weight: var(--asriui-font-weight-semibold);
+  background: var(--asriui-color-muted);
 }
 
 .table tbody tr:last-child .td {

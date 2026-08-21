@@ -7,7 +7,7 @@ import {
   type MouseEvent,
 } from "react";
 import { createPortal } from "react-dom";
-import { useAxiomId } from "../../hooks/useAxiomId";
+import { useAsriUIId } from "../../hooks/useAsriUIId";
 import { cn } from "../../utils/cn";
 import { createSlotClassNames } from "../../utils/slotClassNames";
 import { DialogContext, useDialogContext } from "./DialogContext";
@@ -78,8 +78,8 @@ function DialogRoot({
   classNames,
   children,
 }: DialogProps) {
-  const titleId = useAxiomId("dialog-title");
-  const descriptionId = useAxiomId("dialog-description");
+  const titleId = useAsriUIId("dialog-title");
+  const descriptionId = useAsriUIId("dialog-description");
   const triggerRef = useRef<HTMLElement | null>(null);
   const [uncontrolled, setUncontrolled] = useState(defaultOpen);
   const isOpen = open ?? uncontrolled;

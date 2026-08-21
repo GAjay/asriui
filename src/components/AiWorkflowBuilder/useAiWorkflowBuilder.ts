@@ -11,13 +11,13 @@ import {
   type AiWorkflowEdge,
   type AiWorkflowNode,
 } from "./workflowDefaults";
-import { AXIOM_UI_COMPONENT_PALETTE, DEFAULT_INTEGRATION_BLOCKS } from "./workflowCatalog";
+import { ASRIUI_COMPONENT_PALETTE, DEFAULT_INTEGRATION_BLOCKS } from "./workflowCatalog";
 
 export function useAiWorkflowBuilder({
   initialNodes,
   initialEdges,
   templateId = DEFAULT_WORKFLOW_TEMPLATE_ID,
-  components = AXIOM_UI_COMPONENT_PALETTE,
+  components = ASRIUI_COMPONENT_PALETTE,
   customComponents = [],
   blocks = DEFAULT_INTEGRATION_BLOCKS,
   customBlocks = [],

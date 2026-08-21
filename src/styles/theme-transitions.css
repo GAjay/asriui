@@ -9,78 +9,78 @@
   }
 
   /* Ripple (default) */
-  :root:not([data-axiom-theme-animation])::view-transition-old(root),
-  :root[data-axiom-theme-animation="ripple"]::view-transition-old(root) {
+  :root:not([data-asriui-theme-animation])::view-transition-old(root),
+  :root[data-asriui-theme-animation="ripple"]::view-transition-old(root) {
     animation: none;
     z-index: 1;
   }
 
-  :root:not([data-axiom-theme-animation])::view-transition-new(root),
-  :root[data-axiom-theme-animation="ripple"]::view-transition-new(root) {
+  :root:not([data-asriui-theme-animation])::view-transition-new(root),
+  :root[data-asriui-theme-animation="ripple"]::view-transition-new(root) {
     z-index: 2;
-    animation-name: axiom-theme-ripple-in;
+    animation-name: asriui-theme-ripple-in;
   }
 
-  :root[data-axiom-theme-animation="fade"]::view-transition-old(root) {
-    animation-name: axiom-theme-fade-out;
+  :root[data-asriui-theme-animation="fade"]::view-transition-old(root) {
+    animation-name: asriui-theme-fade-out;
     z-index: 1;
   }
 
-  :root[data-axiom-theme-animation="fade"]::view-transition-new(root) {
-    animation-name: axiom-theme-fade-in;
+  :root[data-asriui-theme-animation="fade"]::view-transition-new(root) {
+    animation-name: asriui-theme-fade-in;
     z-index: 2;
   }
 
-  :root[data-axiom-theme-animation="wipe"]::view-transition-old(root) {
+  :root[data-asriui-theme-animation="wipe"]::view-transition-old(root) {
     animation: none;
     z-index: 1;
   }
 
-  :root[data-axiom-theme-animation="wipe"]::view-transition-new(root) {
+  :root[data-asriui-theme-animation="wipe"]::view-transition-new(root) {
     z-index: 2;
-    animation-name: axiom-theme-wipe-in;
+    animation-name: asriui-theme-wipe-in;
   }
 
-  :root[data-axiom-theme-animation="blur"]::view-transition-old(root) {
-    animation-name: axiom-theme-blur-out;
+  :root[data-asriui-theme-animation="blur"]::view-transition-old(root) {
+    animation-name: asriui-theme-blur-out;
     z-index: 1;
   }
 
-  :root[data-axiom-theme-animation="blur"]::view-transition-new(root) {
-    animation-name: axiom-theme-blur-in;
+  :root[data-asriui-theme-animation="blur"]::view-transition-new(root) {
+    animation-name: asriui-theme-blur-in;
     z-index: 2;
   }
 
-  :root[data-axiom-theme-animation="slide"]::view-transition-old(root) {
-    animation-name: axiom-theme-slide-out;
+  :root[data-asriui-theme-animation="slide"]::view-transition-old(root) {
+    animation-name: asriui-theme-slide-out;
     z-index: 1;
   }
 
-  :root[data-axiom-theme-animation="slide"]::view-transition-new(root) {
-    animation-name: axiom-theme-slide-in;
+  :root[data-asriui-theme-animation="slide"]::view-transition-new(root) {
+    animation-name: asriui-theme-slide-in;
     z-index: 2;
   }
 }
 
-@keyframes axiom-theme-ripple-in {
+@keyframes asriui-theme-ripple-in {
   from {
-    clip-path: circle(0 at var(--axiom-theme-x, var(--theme-x, 50%)) var(--axiom-theme-y, var(--theme-y, 50%)));
+    clip-path: circle(0 at var(--asriui-theme-x, var(--theme-x, 50%)) var(--asriui-theme-y, var(--theme-y, 50%)));
   }
   to {
     clip-path: circle(
-      var(--axiom-theme-r, var(--theme-r, 100%)) at var(--axiom-theme-x, var(--theme-x, 50%))
-        var(--axiom-theme-y, var(--theme-y, 50%))
+      var(--asriui-theme-r, var(--theme-r, 100%)) at var(--asriui-theme-x, var(--theme-x, 50%))
+        var(--asriui-theme-y, var(--theme-y, 50%))
     );
   }
 }
 
-@keyframes axiom-theme-fade-out {
+@keyframes asriui-theme-fade-out {
   to {
     opacity: 0;
   }
 }
 
-@keyframes axiom-theme-fade-in {
+@keyframes asriui-theme-fade-in {
   from {
     opacity: 0;
   }
@@ -89,7 +89,7 @@
   }
 }
 
-@keyframes axiom-theme-wipe-in {
+@keyframes asriui-theme-wipe-in {
   from {
     clip-path: inset(0 100% 0 0);
   }
@@ -98,7 +98,7 @@
   }
 }
 
-@keyframes axiom-theme-blur-out {
+@keyframes asriui-theme-blur-out {
   to {
     opacity: 0;
     filter: blur(12px);
@@ -106,7 +106,7 @@
   }
 }
 
-@keyframes axiom-theme-blur-in {
+@keyframes asriui-theme-blur-in {
   from {
     opacity: 0;
     filter: blur(12px);
@@ -119,14 +119,14 @@
   }
 }
 
-@keyframes axiom-theme-slide-out {
+@keyframes asriui-theme-slide-out {
   to {
     opacity: 0;
     transform: translateY(-1.25rem);
   }
 }
 
-@keyframes axiom-theme-slide-in {
+@keyframes asriui-theme-slide-in {
   from {
     opacity: 0;
     transform: translateY(1.25rem);

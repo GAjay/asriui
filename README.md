@@ -1,8 +1,8 @@
-# AxiomUI
+# AsriUI
 
 Production-ready React UI components.
 
-**axiom-ui** is an accessible, type-safe, tree-shakable component library built for React 18+, Vite, and Next.js (SSR-friendly).
+**asriui** is an accessible, type-safe, tree-shakable component library built for React 18+, Vite, and Next.js (SSR-friendly).
 
 ## Documentation
 
@@ -30,7 +30,7 @@ Production-ready React UI components.
 ## Installation
 
 ```bash
-pnpm add axiom-ui framer-motion
+pnpm add asriui framer-motion
 ```
 
 Also works with npm and yarn. Peer dependencies: `react`, `react-dom` (≥18), and `framer-motion` (≥11).
@@ -38,21 +38,21 @@ Also works with npm and yarn. Peer dependencies: `react`, `react-dom` (≥18), a
 Import styles once in your application:
 
 ```tsx
-import "axiom-ui/style.css";
+import "asriui/style.css";
 ```
 
 ## Configuration
 
-Wrap your app with `AxiomProvider` to configure theme, fonts, analytics, and error monitoring from a single object:
+Wrap your app with `AsriUIProvider` to configure theme, fonts, analytics, and error monitoring from a single object:
 
 ```tsx
-import { AxiomProvider } from "axiom-ui/config";
-import { Button } from "axiom-ui";
-import "axiom-ui/style.css";
+import { AsriUIProvider } from "asriui/config";
+import { Button } from "asriui";
+import "asriui/style.css";
 
 export function App() {
   return (
-    <AxiomProvider
+    <AsriUIProvider
       config={{
         theme: "light", // "light" | "dark" | "system"
         fontFamily: '"Work Sans", ui-sans-serif, sans-serif',
@@ -68,7 +68,7 @@ export function App() {
       }}
     >
       <Button>Get Started</Button>
-    </AxiomProvider>
+    </AsriUIProvider>
   );
 }
 ```
@@ -76,22 +76,22 @@ export function App() {
 | Option | Description |
 | --- | --- |
 | `theme` | `light`, `dark`, or `system` (follows OS preference) |
-| `fontFamily` | Sets `--axiom-font-family` on the document root |
-| `analytics.gtmId` | Injects GTM; `Button` and `Link` emit `axiom_button_click` / `axiom_link_click`. Override per instance with `trackEvent`, `trackLabel`, and `trackPayload`. |
+| `fontFamily` | Sets `--asriui-font-family` on the document root |
+| `analytics.gtmId` | Injects GTM; `Button` and `Link` emit `asriui_button_click` / `asriui_link_click`. Override per instance with `trackEvent`, `trackLabel`, and `trackPayload`. |
 | `monitoring.reportUrl` | `ErrorBoundary` POSTs caught errors to this endpoint |
 
 ## Getting Started
 
 ```tsx
-import { AxiomProvider } from "axiom-ui/config";
-import { Button } from "axiom-ui";
-import "axiom-ui/style.css";
+import { AsriUIProvider } from "asriui/config";
+import { Button } from "asriui";
+import "asriui/style.css";
 
 export default function App() {
   return (
-    <AxiomProvider config={{ theme: "light" }}>
+    <AsriUIProvider config={{ theme: "light" }}>
       <Button>Get Started</Button>
-    </AxiomProvider>
+    </AsriUIProvider>
   );
 }
 ```
@@ -99,22 +99,22 @@ export default function App() {
 Subpath imports load only that component chunk (recommended for the smallest bundles):
 
 ```tsx
-import { Button } from "axiom-ui/button";
-import { Input } from "axiom-ui/input";
-import { Menu } from "axiom-ui/menu";
-import { Dropdown } from "axiom-ui/dropdown";
-import { DatePicker } from "axiom-ui/date-picker";
-import { Tooltip } from "axiom-ui/tooltip";
-import { Markdown } from "axiom-ui/markdown";
-import { cn } from "axiom-ui/utils";
-import { useAxiomId } from "axiom-ui/hooks";
-import "axiom-ui/style.css";
+import { Button } from "asriui/button";
+import { Input } from "asriui/input";
+import { Menu } from "asriui/menu";
+import { Dropdown } from "asriui/dropdown";
+import { DatePicker } from "asriui/date-picker";
+import { Tooltip } from "asriui/tooltip";
+import { Markdown } from "asriui/markdown";
+import { cn } from "asriui/utils";
+import { useAsriUIId } from "asriui/hooks";
+import "asriui/style.css";
 ```
 
 The main barrel also tree-shakes unused exports when your bundler supports ESM dead-code elimination:
 
 ```tsx
-import { Button } from "axiom-ui";
+import { Button } from "asriui";
 ```
 
 ## Components
@@ -164,7 +164,7 @@ Sizes: `sm` | `md` | `lg`
 Action menus with portal positioning and keyboard navigation:
 
 ```tsx
-import { Menu } from "axiom-ui/menu";
+import { Menu } from "asriui/menu";
 
 <Menu>
   <Menu.Trigger>Actions</Menu.Trigger>
@@ -180,7 +180,7 @@ import { Menu } from "axiom-ui/menu";
 Searchable select-style control:
 
 ```tsx
-import { Dropdown } from "axiom-ui/dropdown";
+import { Dropdown } from "asriui/dropdown";
 
 <Dropdown
   options={[
@@ -199,7 +199,7 @@ import { Dropdown } from "axiom-ui/dropdown";
 Single or range date/datetime with typed formats (`dateFormat`: `iso` | `us` | `eu`):
 
 ```tsx
-import { DatePicker } from "axiom-ui/date-picker";
+import { DatePicker } from "asriui/date-picker";
 
 <DatePicker
   value={date}
@@ -218,7 +218,7 @@ import { DatePicker } from "axiom-ui/date-picker";
 ### Tooltip
 
 ```tsx
-import { Tooltip } from "axiom-ui/tooltip";
+import { Tooltip } from "asriui/tooltip";
 
 <Tooltip>
   <Tooltip.Trigger>
@@ -233,12 +233,12 @@ import { Tooltip } from "axiom-ui/tooltip";
 Render docs, changelogs, and CMS snippets (fenced code uses `CodeBlock`):
 
 ```tsx
-import { Markdown } from "axiom-ui/markdown";
+import { Markdown } from "asriui/markdown";
 
 <Markdown
   source={`# Hello
 
-Install with \`pnpm add axiom-ui\`.
+Install with \`pnpm add asriui\`.
 
 - Accessible
 - Themeable
@@ -252,7 +252,7 @@ Also available via subpath exports: Accordion, Badge, Breadcrumb, Calendar, Data
 
 ## Theming
 
-AxiomUI uses CSS custom properties. Toggle themes with a root attribute — no React context required:
+AsriUI uses CSS custom properties. Toggle themes with a root attribute — no React context required:
 
 ```tsx
 <div data-theme="dark">
@@ -264,7 +264,7 @@ Override tokens in your app:
 
 ```css
 :root {
-  --axiom-color-primary: #0ea5e9;
+  --asriui-color-primary: #0ea5e9;
 }
 ```
 

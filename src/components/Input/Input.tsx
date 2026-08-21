@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 import { motion } from "framer-motion";
 import { useMotionPresetsOptional } from "../../motion/MotionContext";
 import { useReducedMotion } from "../../motion/useReducedMotion";
-import { useAxiomId } from "../../hooks/useAxiomId";
+import { useAsriUIId } from "../../hooks/useAsriUIId";
 import { cn } from "../../utils/cn";
 import type { InputProps } from "./Input.types";
 import styles from "./Input.module.css";
@@ -29,7 +29,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(function Input(
   const reducedMotion = useReducedMotion();
   const { pack, enabled: globalMotion } = useMotionPresetsOptional();
   const animate = motionEnabled && globalMotion && !reducedMotion;
-  const generatedId = useAxiomId("input");
+  const generatedId = useAsriUIId("input");
   const inputId = id ?? generatedId;
   const helperId = `${inputId}-helper`;
   const errorId = `${inputId}-error`;

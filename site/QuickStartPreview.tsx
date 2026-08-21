@@ -14,8 +14,8 @@ const THEME_OPTIONS: Array<{ id: ThemeMode; label: string }> = [
 ];
 
 const STEPS = [
-  { title: "Install", body: "Add axiom-ui and framer-motion." },
-  { title: "Configure", body: "Wrap with AxiomProvider + motion preset." },
+  { title: "Install", body: "Add asriui and framer-motion." },
+  { title: "Configure", body: "Wrap with AsriUIProvider + motion preset." },
   { title: "Compose", body: "Import components and ship." },
 ] as const;
 
@@ -145,7 +145,7 @@ export function QuickStartPreview() {
           <div>
             <p className={styles.noteTitle}>Motion-ready</p>
             <p className={styles.noteDesc}>
-              Set <code>config.motion</code> on <code>AxiomProvider</code> — apple, snappy, soft, playful, or minimal.
+              Set <code>config.motion</code> on <code>AsriUIProvider</code> — apple, snappy, soft, playful, or minimal.
             </p>
           </div>
         </div>
@@ -154,7 +154,7 @@ export function QuickStartPreview() {
             <Icon name="package" size="sm" />
           </span>
           <div>
-            <p className={styles.noteTitle}>AxiomProvider</p>
+            <p className={styles.noteTitle}>AsriUIProvider</p>
             <p className={styles.noteDesc}>
               Theme, fonts, motion, analytics, and monitoring from one config object.
             </p>

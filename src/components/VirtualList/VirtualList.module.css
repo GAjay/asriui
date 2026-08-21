@@ -1,9 +1,9 @@
 .list {
   position: relative;
   overflow: auto;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
 }
 
 .inner {
@@ -22,19 +22,19 @@
   height: 100%;
   display: flex;
   align-items: center;
-  padding: 0 var(--axiom-space-4);
-  border-bottom: 1px solid var(--axiom-color-border);
-  font-size: var(--axiom-font-size-sm);
+  padding: 0 var(--asriui-space-4);
+  border-bottom: 1px solid var(--asriui-color-border);
+  font-size: var(--asriui-font-size-sm);
 }
 
 .rowContent:hover {
-  background: var(--axiom-color-muted);
+  background: var(--asriui-color-muted);
 }
 
 .empty {
   display: grid;
   place-items: center;
   height: 100%;
-  color: var(--axiom-color-muted-foreground);
-  font-size: var(--axiom-font-size-sm);
+  color: var(--asriui-color-muted-foreground);
+  font-size: var(--asriui-font-size-sm);
 }

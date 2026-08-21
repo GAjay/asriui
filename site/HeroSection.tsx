@@ -57,7 +57,7 @@ export function HeroSection() {
             <div className={styles.heroTags}>
               <p className={styles.heroBrandTag}>
                 <BrandMark size={24} />
-                <span>AxiomUI</span>
+                <span>AsriUI</span>
               </p>
               <ul className={styles.heroTagList} aria-label="Product highlights">
                 <li>Open source</li>

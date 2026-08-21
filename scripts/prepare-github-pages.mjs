@@ -3,7 +3,7 @@
  * Prepare site-dist for GitHub Pages or any static host:
  * - .nojekyll so GitHub does not run Jekyll
  * - 404.html SPA fallback for client-side routes
- * - CNAME when SITE_DOMAIN is set (custom domain)
+ * - CNAME when a custom domain is configured
  * - robots.txt sitemap URL aligned with VITE_SITE_URL
  */
 import { copyFile, readFile, writeFile } from "node:fs/promises";
@@ -12,11 +12,40 @@ import { fileURLToPath } from "node:url";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const dist = resolve(root, "site-dist");
-const siteUrl = (process.env.VITE_SITE_URL || process.env.SITE_URL || "https://axiom-ui.dev").replace(
+
+function parseHost(value) {
+  return (value || "").replace(/^https?:\/\//, "").replace(/\/$/, "");
+}
+
+function isGitHubPagesHost(host) {
+  return !host || host === "github.io" || host.endsWith(".github.io");
+}
+
+function resolveCustomDomain() {
+  const fromDomain = parseHost(process.env.SITE_DOMAIN);
+  if (fromDomain && !isGitHubPagesHost(fromDomain)) return fromDomain;
+
+  const fromPagesHost = parseHost(process.env.PAGES_HOST);
+  if (fromPagesHost && !isGitHubPagesHost(fromPagesHost)) return fromPagesHost;
+
+  const siteUrl = (process.env.VITE_SITE_URL || process.env.SITE_URL || "").replace(/\/$/, "");
+  if (siteUrl) {
+    try {
+      const host = new URL(siteUrl.includes("://") ? siteUrl : `https://${siteUrl}`).hostname;
+      if (!isGitHubPagesHost(host)) return host;
+    } catch {
+      // ignore invalid URL
+    }
+  }
+
+  return "";
+}
+
+const siteUrl = (process.env.VITE_SITE_URL || process.env.SITE_URL || "https://asriui.dev").replace(
   /\/$/,
   "",
 );
-const domain = (process.env.SITE_DOMAIN || "").replace(/^https?:\/\//, "").replace(/\/$/, "");
+const domain = resolveCustomDomain();
 
 async function main() {
   try {
@@ -31,7 +60,7 @@ async function main() {
 
   await copyFile(resolve(dist, "index.html"), resolve(dist, "404.html"));
 
-  if (domain && !domain.endsWith(".github.io")) {
+  if (domain) {
     await writeFile(resolve(dist, "CNAME"), `${domain}\n`, "utf8");
     console.log(`Wrote CNAME → ${domain}`);
   }
@@ -45,7 +74,11 @@ async function main() {
     }
     await writeFile(robotsPath, robots, "utf8");
   } catch {
-    await writeFile(resolve(dist, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`, "utf8");
+    await writeFile(
+      resolve(dist, "robots.txt"),
+      `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`,
+      "utf8",
+    );
   }
 
   console.log("Prepared site-dist for GitHub Pages (404.html, .nojekyll)");

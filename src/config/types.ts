@@ -34,8 +34,8 @@ export type MonitoringConfig = {
   reportUrl?: string;
 };
 
-/** Global AxiomUI plug-and-play configuration. */
-export type AxiomConfig = {
+/** Global AsriUI plug-and-play configuration. */
+export type AsriUIConfig = {
   /** Color theme mode. @default "light" */
   theme?: ThemeMode;
   /** CSS font-family stack applied to the app root. @default "Work Sans" */
@@ -73,14 +73,14 @@ export type AssetsConfig = {
   cache?: boolean;
   /** Revalidate cached assets after this many milliseconds. @default 86400000 (24 hours) */
   refetchInterval?: number;
-  /** Cache Storage bucket name. @default "axiom-assets-v1" */
+  /** Cache Storage bucket name. @default "asriui-assets-v1" */
   cacheName?: string;
   /** Max cached entries before eviction. @default 120 */
   maxEntries?: number;
 };
 
-export type AxiomConfigContextValue = Required<
-  Pick<AxiomConfig, "theme" | "fontFamily">
+export type AsriUIConfigContextValue = Required<
+  Pick<AsriUIConfig, "theme" | "fontFamily">
 > & {
   motion: Required<MotionConfig>;
   analytics: Required<AnalyticsConfig>;

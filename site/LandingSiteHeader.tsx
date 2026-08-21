@@ -29,7 +29,7 @@ export function LandingSiteHeader({ animated: _animated = false }: LandingSiteHe
       <div className={styles.headerInner}>
         <Link className={styles.logo} to="/">
           <BrandMark size={28} />
-          AxiomUI
+          AsriUI
         </Link>
 
         <nav className={styles.headerNav} aria-label="Primary">

@@ -5,7 +5,7 @@ import { ServerQuery } from "./ServerQuery";
 
 describe("ServerQuery", () => {
   it("renders children with fetched data", async () => {
-    const query = vi.fn().mockResolvedValue({ name: "AxiomUI" });
+    const query = vi.fn().mockResolvedValue({ name: "AsriUI" });
 
     render(
       <ServerQuery<{ name: string }> query={query}>
@@ -13,7 +13,7 @@ describe("ServerQuery", () => {
       </ServerQuery>,
     );
 
-    expect(await screen.findByText("Hello AxiomUI")).toBeInTheDocument();
+    expect(await screen.findByText("Hello AsriUI")).toBeInTheDocument();
     expect(query).toHaveBeenCalledTimes(1);
   });
 

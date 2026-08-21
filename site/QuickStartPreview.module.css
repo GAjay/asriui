@@ -224,20 +224,20 @@
   --lp-border: var(--qs-border);
   --lp-border-strong: var(--qs-border-strong);
 
-  --axiom-color-background: var(--qs-card);
-  --axiom-color-foreground: var(--qs-fg);
-  --axiom-color-muted: var(--qs-muted);
-  --axiom-color-muted-foreground: var(--qs-muted-fg);
-  --axiom-color-border: var(--qs-border);
-  --axiom-color-ring: var(--qs-fg);
-  --axiom-color-primary: #000000;
-  --axiom-color-primary-hover: #1a1a1a;
-  --axiom-color-primary-foreground: #ffffff;
-  --axiom-color-secondary: var(--qs-muted);
-  --axiom-color-secondary-hover: var(--qs-border);
-  --axiom-color-secondary-foreground: var(--qs-fg);
-  --axiom-color-card: var(--qs-card);
-  --axiom-color-card-foreground: var(--qs-fg);
+  --asriui-color-background: var(--qs-card);
+  --asriui-color-foreground: var(--qs-fg);
+  --asriui-color-muted: var(--qs-muted);
+  --asriui-color-muted-foreground: var(--qs-muted-fg);
+  --asriui-color-border: var(--qs-border);
+  --asriui-color-ring: var(--qs-fg);
+  --asriui-color-primary: #000000;
+  --asriui-color-primary-hover: #1a1a1a;
+  --asriui-color-primary-foreground: #ffffff;
+  --asriui-color-secondary: var(--qs-muted);
+  --asriui-color-secondary-hover: var(--qs-border);
+  --asriui-color-secondary-foreground: var(--qs-fg);
+  --asriui-color-card: var(--qs-card);
+  --asriui-color-card-foreground: var(--qs-fg);
 
   min-height: 18rem;
   padding: 1.35rem 1.15rem 1.5rem;
@@ -262,12 +262,12 @@
   --qs-border: #3f3f46;
   --qs-border-strong: #52525b;
 
-  --axiom-color-primary: #ffffff;
-  --axiom-color-primary-hover: #e4e4e7;
-  --axiom-color-primary-foreground: #09090b;
-  --axiom-color-secondary: #18181b;
-  --axiom-color-secondary-hover: #27272a;
-  --axiom-color-secondary-foreground: #fafafa;
+  --asriui-color-primary: #ffffff;
+  --asriui-color-primary-hover: #e4e4e7;
+  --asriui-color-primary-foreground: #09090b;
+  --asriui-color-secondary: #18181b;
+  --asriui-color-secondary-hover: #27272a;
+  --asriui-color-secondary-foreground: #fafafa;
 }
 
 .previewCard {

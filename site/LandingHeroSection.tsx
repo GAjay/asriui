@@ -20,7 +20,7 @@ export type LandingHeroSectionProps = {
   /** Full viewport height sections. Use compact for short bands. */
   size?: "hero" | "compact";
   delay?: number;
-  /** AxiomUI snippet copied from this section. */
+  /** AsriUI snippet copied from this section. */
   layoutCode?: string;
 };
 

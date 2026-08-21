@@ -1,14 +1,14 @@
 .shell {
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
   overflow: hidden;
-  background: var(--axiom-color-background);
+  background: var(--asriui-color-background);
 }
 
 .fallback {
   display: grid;
   place-items: center;
   min-height: 12rem;
-  color: var(--axiom-color-muted-foreground);
-  font-size: var(--axiom-font-size-sm);
+  color: var(--asriui-color-muted-foreground);
+  font-size: var(--asriui-font-size-sm);
 }

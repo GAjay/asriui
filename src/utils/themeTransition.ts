@@ -35,10 +35,10 @@ export function runThemeTransition(
   const y = event.clientY;
   const radius = getThemeRevealRadius(x, y);
 
-  root.dataset.axiomThemeAnimation = animation;
-  root.style.setProperty("--axiom-theme-x", `${x}px`);
-  root.style.setProperty("--axiom-theme-y", `${y}px`);
-  root.style.setProperty("--axiom-theme-r", `${radius}px`);
+  root.dataset.asriuiThemeAnimation = animation;
+  root.style.setProperty("--asriui-theme-x", `${x}px`);
+  root.style.setProperty("--asriui-theme-y", `${y}px`);
+  root.style.setProperty("--asriui-theme-r", `${radius}px`);
   /* Back-compat with site landing.css */
   root.style.setProperty("--theme-x", `${x}px`);
   root.style.setProperty("--theme-y", `${y}px`);
@@ -49,12 +49,12 @@ export function runThemeTransition(
   });
 
   return transition.finished.finally(() => {
-    root.style.removeProperty("--axiom-theme-x");
-    root.style.removeProperty("--axiom-theme-y");
-    root.style.removeProperty("--axiom-theme-r");
+    root.style.removeProperty("--asriui-theme-x");
+    root.style.removeProperty("--asriui-theme-y");
+    root.style.removeProperty("--asriui-theme-r");
     root.style.removeProperty("--theme-x");
     root.style.removeProperty("--theme-y");
     root.style.removeProperty("--theme-r");
-    delete root.dataset.axiomThemeAnimation;
+    delete root.dataset.asriuiThemeAnimation;
   });
 }

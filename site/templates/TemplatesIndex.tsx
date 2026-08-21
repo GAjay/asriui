@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Breadcrumb, PageLayout, Typography } from "axiom-ui";
+import { Breadcrumb, PageLayout, Typography } from "asriui";
 import { PAGE_TEMPLATES } from "./templateMeta";
 import styles from "./templates.module.css";
 

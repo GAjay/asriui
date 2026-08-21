@@ -16,30 +16,30 @@
 }
 
 .pipelineStep {
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
   padding: 0.65rem 0.75rem;
   display: grid;
   gap: 0.25rem;
-  font-size: var(--axiom-font-size-sm);
+  font-size: var(--asriui-font-size-sm);
 }
 
 .pipelineStatus {
-  font-size: var(--axiom-font-size-xs);
-  color: var(--axiom-color-muted-foreground);
+  font-size: var(--asriui-font-size-xs);
+  color: var(--asriui-color-muted-foreground);
   text-transform: capitalize;
 }
 
 .pipelineOutput {
   margin: 0;
-  color: var(--axiom-color-muted-foreground);
-  font-size: var(--axiom-font-size-xs);
+  color: var(--asriui-color-muted-foreground);
+  font-size: var(--asriui-font-size-xs);
 }
 
 .pipelineStep[data-status="done"] {
-  border-color: color-mix(in srgb, var(--axiom-color-success, #059669) 40%, var(--axiom-color-border));
+  border-color: color-mix(in srgb, var(--asriui-color-success, #059669) 40%, var(--asriui-color-border));
 }
 
 .pipelineStep[data-status="running"] {
-  border-color: var(--axiom-color-primary);
+  border-color: var(--asriui-color-primary);
 }

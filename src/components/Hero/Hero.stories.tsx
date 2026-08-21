@@ -19,7 +19,7 @@ export const FullText: Story = {
   render: () => (
     <Hero variant="full" align="center" background="dotted" animated>
       <Hero.Copy>
-        <Hero.Eyebrow>AxiomUI</Hero.Eyebrow>
+        <Hero.Eyebrow>AsriUI</Hero.Eyebrow>
         <Hero.Title>The React kit for product teams</Hero.Title>
         <Hero.Description>
           Accessible components, page templates, and docs you can own — typed and tree-shakable.

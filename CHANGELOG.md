@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to AxiomUI are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/).
+All notable changes to AsriUI are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]
 
@@ -26,7 +26,7 @@ All notable changes to AxiomUI are documented here. Format follows [Keep a Chang
 ### Changed
 
 - Landing hero height is content-driven with viewport `min-height` (no fixed `100dvh` clipping)
-- Landing “Why AxiomUI” and “Page templates” bands use band-aware surface tokens for contrast
+- Landing “Why AsriUI” and “Page templates” bands use band-aware surface tokens for contrast
 - Menu / Dropdown panels portal to `document.body` with viewport-aware positioning
 - Docs category group labels use high-contrast title colors
 - Docs pages scroll to top on route change
@@ -48,8 +48,8 @@ All notable changes to AxiomUI are documented here. Format follows [Keep a Chang
 - Table and DataGrid (native engine) with sorting and export
 - Toast provider with imperative toast() API
 - LoginForm and OAuthButton (Microsoft, Google, GitHub, Apple)
-- AxiomProvider for theme, motion presets, GTM analytics, and error monitoring
-- Tree-shakable subpath exports (axiom-ui/button, axiom-ui/data-grid, etc.)
+- AsriUIProvider for theme, motion presets, GTM analytics, and error monitoring
+- Tree-shakable subpath exports (asriui/button, asriui/data-grid, etc.)
 - CSS variable theming with light/dark modes
 
 ### Changed
@@ -66,6 +66,6 @@ All notable changes to AxiomUI are documented here. Format follows [Keep a Chang
 - Changesets for versioning and releases
 - ESLint, Prettier, and GitHub Actions CI
 
-[Unreleased]: https://github.com/axiom-ui/axiom-ui/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/axiom-ui/axiom-ui/compare/v0.0.1...v0.1.0
-[0.0.1]: https://github.com/axiom-ui/axiom-ui/releases/tag/v0.0.1
+[Unreleased]: https://github.com/asriui/asriui/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/asriui/asriui/compare/v0.0.1...v0.1.0
+[0.0.1]: https://github.com/asriui/asriui/releases/tag/v0.0.1

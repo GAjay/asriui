@@ -1,11 +1,11 @@
 import { useCallback, useMemo } from "react";
-import { useAxiomConfigOptional } from "./AxiomContext";
+import { useAsriUIConfigOptional } from "./AsriUIContext";
 import { captureDebugError, clearDebugLogs, getDebugLogs } from "./debug";
 import type { DebugCaptureMeta } from "./debug.types";
 
-/** Inspect and report errors when AxiomProvider debug mode is enabled. */
-export function useAxiomDebug() {
-  const config = useAxiomConfigOptional();
+/** Inspect and report errors when AsriUIProvider debug mode is enabled. */
+export function useAsriUIDebug() {
+  const config = useAsriUIConfigOptional();
   const enabled = config?.debug.enabled ?? false;
 
   const logError = useCallback(

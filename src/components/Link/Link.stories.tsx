@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { AxiomProvider } from "../../config/AxiomProvider";
+import { AsriUIProvider } from "../../config/AsriUIProvider";
 import { Link } from "./Link";
 
 const meta: Meta<typeof Link> = {
@@ -9,9 +9,9 @@ const meta: Meta<typeof Link> = {
   parameters: { layout: "centered" },
   decorators: [
     (Story) => (
-      <AxiomProvider config={{ analytics: { enabled: true, gtmId: "GTM-DEMO" } }}>
+      <AsriUIProvider config={{ analytics: { enabled: true, gtmId: "GTM-DEMO" } }}>
         <Story />
-      </AxiomProvider>
+      </AsriUIProvider>
     ),
   ],
 };

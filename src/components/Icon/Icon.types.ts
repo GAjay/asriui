@@ -16,7 +16,7 @@ type IconBaseProps = Omit<HTMLAttributes<HTMLSpanElement>, "children"> & {
   label?: string;
 };
 
-/** Built-in named SVG from the AxiomUI icon set. */
+/** Built-in named SVG from the AsriUI icon set. */
 export type BuiltinIconProps = IconBaseProps & {
   name: IconName;
   src?: never;

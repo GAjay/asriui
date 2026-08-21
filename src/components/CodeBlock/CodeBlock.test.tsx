@@ -15,9 +15,9 @@ describe("CodeBlock", () => {
     const writeText = vi.fn().mockResolvedValue(undefined);
     vi.stubGlobal("navigator", { clipboard: { writeText } });
 
-    render(<CodeBlock code="import { Button } from 'axiom-ui';" showCopy />);
+    render(<CodeBlock code="import { Button } from 'asriui';" showCopy />);
     await user.click(screen.getByRole("button", { name: "Copy" }));
-    expect(writeText).toHaveBeenCalledWith("import { Button } from 'axiom-ui';");
+    expect(writeText).toHaveBeenCalledWith("import { Button } from 'asriui';");
 
     vi.unstubAllGlobals();
   });

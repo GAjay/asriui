@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
-import { Badge, Button, PageLayout, Typography } from "axiom-ui";
+import { Badge, Button, PageLayout, Typography } from "asriui";
 import { SCROLL_REPLAY_VIEWPORT } from "../scrollReplay";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./WatchLandingPage.module.css";
@@ -8,7 +8,7 @@ import styles from "./WatchLandingPage.module.css";
 const ease = [0.22, 1, 0.36, 1] as const;
 
 const COLLECTION = [
-  { name: "Axiom Chrono", price: "$2,480", material: "Grade-5 titanium", size: "42mm", featured: true },
+  { name: "AsriUI Chrono", price: "$2,480", material: "Grade-5 titanium", size: "42mm", featured: true },
   { name: "Midnight GMT", price: "$3,120", material: "Ceramic bezel", size: "40mm", featured: false },
   { name: "Heritage Auto", price: "$1,890", material: "Brushed steel", size: "38mm", featured: false },
   { name: "Summit Diver", price: "$2,650", material: "Sapphire crystal", size: "41mm", featured: false },

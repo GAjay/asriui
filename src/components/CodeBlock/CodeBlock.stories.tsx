@@ -10,7 +10,7 @@ const meta: Meta<typeof CodeBlock> = {
 export default meta;
 type Story = StoryObj<typeof CodeBlock>;
 
-const sample = `import { Button } from "axiom-ui/button";
+const sample = `import { Button } from "asriui/button";
 
 export function App() {
   return <Button variant="primary">Click me</Button>;

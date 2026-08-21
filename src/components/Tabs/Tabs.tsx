@@ -1,6 +1,6 @@
 import { forwardRef, useCallback, useId, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { useAxiomId } from "../../hooks/useAxiomId";
+import { useAsriUIId } from "../../hooks/useAsriUIId";
 import { appleGentle } from "../../motion/presets";
 import { useReducedMotion } from "../../motion/useReducedMotion";
 import { cn } from "../../utils/cn";
@@ -56,7 +56,7 @@ const TabsRoot = forwardRef<HTMLDivElement, TabsProps>(function Tabs(
   ref,
 ) {
   const reactId = useId();
-  const idPrefix = useAxiomId(`tabs-${reactId.replace(/:/g, "")}`);
+  const idPrefix = useAsriUIId(`tabs-${reactId.replace(/:/g, "")}`);
   const [uncontrolled, setUncontrolled] = useState(defaultValue);
   const activeValue = value ?? uncontrolled;
 

@@ -1,6 +1,6 @@
-export { AxiomProvider } from "./AxiomProvider";
-export type { AxiomProviderProps } from "./AxiomProvider";
-export { AxiomContext, useAxiomConfig, useAxiomConfigOptional } from "./AxiomContext";
+export { AsriUIProvider } from "./AsriUIProvider";
+export type { AsriUIProviderProps } from "./AsriUIProvider";
+export { AsriUIContext, useAsriUIConfig, useAsriUIConfigOptional } from "./AsriUIContext";
 export { pushAnalyticsEvent, trackComponentEvent, trackButtonClick, trackLinkClick, initGtm } from "./analytics";
 export type { AnalyticsTrackProps } from "./analytics.types";
 export { reportError } from "./monitoring";
@@ -15,11 +15,11 @@ export {
   resolveDebugConfig,
   setDebugRuntime,
 } from "./debug";
-export { useAxiomDebug } from "./useAxiomDebug";
-export { resolveAxiomConfig, DEFAULT_AXIOM_CONFIG } from "./defaults";
+export { useAsriUIDebug } from "./useAsriUIDebug";
+export { resolveAsriUIConfig, DEFAULT_ASRIUI_CONFIG } from "./defaults";
 export type {
-  AxiomConfig,
-  AxiomConfigContextValue,
+  AsriUIConfig,
+  AsriUIConfigContextValue,
   AnalyticsConfig,
   AssetsConfig,
   MonitoringConfig,

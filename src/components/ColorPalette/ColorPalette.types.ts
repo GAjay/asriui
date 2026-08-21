@@ -10,7 +10,7 @@ export type ColorSwatch = {
 };
 
 export interface ColorPaletteProps extends React.HTMLAttributes<HTMLDivElement> {
-  /** Swatches to display. Uses Axiom defaults when omitted. */
+  /** Swatches to display. Uses AsriUI defaults when omitted. */
   colors?: ColorSwatch[];
   /** Show copy-to-clipboard button. @default true */
   copyable?: boolean;

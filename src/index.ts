@@ -414,7 +414,7 @@ export type {
   LoginCredentials,
 } from "./components/Auth";
 
-export { ServerQuery, useServerQuery, useAxiomDatabase, executeDatabaseQuery, resolveServerQueryFn } from "./components/ServerQuery";
+export { ServerQuery, useServerQuery, useAsriUIDatabase, executeDatabaseQuery, resolveServerQueryFn } from "./components/ServerQuery";
 export type {
   ServerQueryFn,
   ServerQueryInput,
@@ -546,7 +546,7 @@ export type {
 export { AiWorkflowBuilder, useAiWorkflowBuilder } from "./components/AiWorkflowBuilder";
 export {
   AI_WORKFLOW_PALETTE,
-  AXIOM_UI_COMPONENT_PALETTE,
+  ASRIUI_COMPONENT_PALETTE,
   DEFAULT_AI_WORKFLOW_EDGES,
   DEFAULT_AI_WORKFLOW_NODES,
   DEFAULT_INTEGRATION_BLOCKS,
@@ -583,10 +583,10 @@ export type {
 } from "./components/AiWorkflowBuilder";
 
 export {
-  AxiomProvider,
-  useAxiomConfig,
-  useAxiomConfigOptional,
-  useAxiomDebug,
+  AsriUIProvider,
+  useAsriUIConfig,
+  useAsriUIConfigOptional,
+  useAsriUIDebug,
   pushAnalyticsEvent,
   trackButtonClick,
   trackLinkClick,
@@ -597,8 +597,8 @@ export {
   getDebugLogs,
 } from "./config";
 export type {
-  AxiomConfig,
-  AxiomConfigContextValue,
+  AsriUIConfig,
+  AsriUIConfigContextValue,
   AnalyticsConfig,
   AssetsConfig,
   MonitoringConfig,
@@ -610,13 +610,13 @@ export type {
   DatabaseQueryRequest,
   DatabaseQueryByKey,
   ThemeMode,
-  AxiomProviderProps,
+  AsriUIProviderProps,
   ErrorReportPayload,
   AnalyticsTrackProps,
 } from "./config";
 
 export { cn, createSlotClassNames } from "./utils";
 export type { SlotClassNames } from "./utils";
-export { useAxiomId, useThemeAttribute, useCachedAsset } from "./hooks";
+export { useAsriUIId, useThemeAttribute, useCachedAsset } from "./hooks";
 export type { UseCachedAssetOptions, UseCachedAssetResult } from "./hooks";
 export * from "./motion";

@@ -4,14 +4,14 @@ import type { ColorPaletteProps, ColorSwatch, ColorSwatchProps } from "./ColorPa
 import styles from "./ColorPalette.module.css";
 
 export const DEFAULT_PALETTE: ColorSwatch[] = [
-  { name: "Primary", value: "var(--axiom-color-primary)", token: "--axiom-color-primary", foreground: "var(--axiom-color-primary-foreground)" },
-  { name: "Foreground", value: "var(--axiom-color-foreground)", token: "--axiom-color-foreground", foreground: "var(--axiom-color-background)" },
-  { name: "Background", value: "var(--axiom-color-background)", token: "--axiom-color-background", foreground: "var(--axiom-color-foreground)" },
-  { name: "Muted", value: "var(--axiom-color-muted)", token: "--axiom-color-muted", foreground: "var(--axiom-color-foreground)" },
-  { name: "Border", value: "var(--axiom-color-border)", token: "--axiom-color-border", foreground: "var(--axiom-color-foreground)" },
-  { name: "Danger", value: "var(--axiom-color-danger)", token: "--axiom-color-danger", foreground: "var(--axiom-color-danger-foreground)" },
-  { name: "Success", value: "var(--axiom-color-success)", token: "--axiom-color-success", foreground: "#ffffff" },
-  { name: "Warning", value: "var(--axiom-color-warning)", token: "--axiom-color-warning", foreground: "#111111" },
+  { name: "Primary", value: "var(--asriui-color-primary)", token: "--asriui-color-primary", foreground: "var(--asriui-color-primary-foreground)" },
+  { name: "Foreground", value: "var(--asriui-color-foreground)", token: "--asriui-color-foreground", foreground: "var(--asriui-color-background)" },
+  { name: "Background", value: "var(--asriui-color-background)", token: "--asriui-color-background", foreground: "var(--asriui-color-foreground)" },
+  { name: "Muted", value: "var(--asriui-color-muted)", token: "--asriui-color-muted", foreground: "var(--asriui-color-foreground)" },
+  { name: "Border", value: "var(--asriui-color-border)", token: "--asriui-color-border", foreground: "var(--asriui-color-foreground)" },
+  { name: "Danger", value: "var(--asriui-color-danger)", token: "--asriui-color-danger", foreground: "var(--asriui-color-danger-foreground)" },
+  { name: "Success", value: "var(--asriui-color-success)", token: "--asriui-color-success", foreground: "#ffffff" },
+  { name: "Warning", value: "var(--asriui-color-warning)", token: "--asriui-color-warning", foreground: "#111111" },
 ];
 
 const ColorSwatchButton = forwardRef<HTMLButtonElement, ColorSwatchProps>(function ColorSwatchButton(

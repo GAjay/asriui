@@ -73,7 +73,7 @@ export function LandingFooter({ band = "white" }: { band?: LandingBand }) {
           <div className={styles.brandCol}>
             <Link className={styles.brand} to="/">
               <BrandMark size={42} className={styles.brandMark} />
-              <span className={styles.brandName}>AxiomUI</span>
+              <span className={styles.brandName}>AsriUI</span>
             </Link>
             <p className={styles.tagline}>
               Accessible React components you own — typed, tree-shakable, and ready to ship.

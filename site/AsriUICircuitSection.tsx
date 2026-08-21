@@ -6,7 +6,7 @@ import { BrandMark } from "./BrandMark";
 import { SectionContextMenu } from "./SectionContextMenu";
 import { SCROLL_REPLAY_VIEWPORT } from "./scrollReplay";
 import { SECTION_LAYOUTS } from "./sectionLayouts";
-import styles from "./AxiomCircuitSection.module.css";
+import styles from "./AsriUICircuitSection.module.css";
 
 import type { LandingBand } from "./landingBandTypes";
 
@@ -32,7 +32,7 @@ const STACK_LEAVES: Leaf[] = [
     id: "react",
     label: "React",
     hint: "UI runtime",
-    detail: "Hooks and components power every AxiomUI primitive.",
+    detail: "Hooks and components power every AsriUI primitive.",
     x: 112,
     y: 72,
     side: "left",
@@ -422,8 +422,8 @@ function MobileMindMap({ activeId, onActivate, onDeactivate }: MobileMindMapProp
       <Tooltip delayDuration={120} classNames={tooltipClassNames}>
         <Tooltip.Trigger>
           <div className={styles.mobileHub}>
-            <BrandMark size={36} label="AxiomUI" className={styles.hubBrand} />
-            <span className={styles.mobileHubName}>AxiomUI</span>
+            <BrandMark size={36} label="AsriUI" className={styles.hubBrand} />
+            <span className={styles.mobileHubName}>AsriUI</span>
           </div>
         </Tooltip.Trigger>
         <Tooltip.Content placement="top" sideOffset={10}>
@@ -458,7 +458,7 @@ function MobileMindMap({ activeId, onActivate, onDeactivate }: MobileMindMapProp
   );
 }
 
-export function AxiomCircuitSection({ band = "white" }: { band?: LandingBand }) {
+export function AsriUICircuitSection({ band = "white" }: { band?: LandingBand }) {
   const reducedMotion = useReducedMotion();
   const [activeId, setActiveId] = useState<string | null>(null);
   const mapRef = useRef<HTMLDivElement>(null);
@@ -480,7 +480,7 @@ export function AxiomCircuitSection({ band = "white" }: { band?: LandingBand }) 
             Built on the stack. Ship with templates.
           </h2>
           <p className={styles.lead}>
-            Modern libraries branch into AxiomUI — then flow out as pages you can ship.
+            Modern libraries branch into AsriUI — then flow out as pages you can ship.
           </p>
           <div className={styles.actions}>
             <Link to="/docs/getting-started" className={styles.primaryAction}>
@@ -506,7 +506,7 @@ export function AxiomCircuitSection({ band = "white" }: { band?: LandingBand }) 
               viewBox={`0 0 ${VIEWBOX.w} ${VIEWBOX.h}`}
               preserveAspectRatio="xMidYMid meet"
               role="img"
-              aria-label="Mind map: tech stack connects to AxiomUI, templates branch out"
+              aria-label="Mind map: tech stack connects to AsriUI, templates branch out"
             >
               <defs>
                 <filter id="energy-glow-in" x="-80%" y="-80%" width="260%" height="260%">
@@ -576,8 +576,8 @@ export function AxiomCircuitSection({ band = "white" }: { band?: LandingBand }) 
                   <Tooltip delayDuration={120} classNames={tooltipClassNames}>
                     <Tooltip.Trigger>
                       <div className={styles.hubTrigger}>
-                        <BrandMark size={36} label="AxiomUI" className={styles.hubBrand} />
-                        <span className={styles.hubName}>AxiomUI</span>
+                        <BrandMark size={36} label="AsriUI" className={styles.hubBrand} />
+                        <span className={styles.hubName}>AsriUI</span>
                       </div>
                     </Tooltip.Trigger>
                     <Tooltip.Content placement="top" sideOffset={10}>

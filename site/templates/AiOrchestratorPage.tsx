@@ -1,4 +1,4 @@
-import { Badge, Callout, PageLayout, Typography } from "axiom-ui";
+import { Badge, Callout, PageLayout, Typography } from "asriui";
 import { AiOrchestrator } from "../../src/components/AiOrchestrator";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./templates.module.css";

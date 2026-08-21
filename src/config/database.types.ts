@@ -1,4 +1,4 @@
-/** Database / server query configuration for AxiomProvider. */
+/** Database / server query configuration for AsriUIProvider. */
 export type DatabaseNamedQuery = {
   /** SQL sent to the query endpoint. */
   sql?: string;

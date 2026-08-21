@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { Breadcrumb, CodeBlock, ColorPalette } from "axiom-ui";
+import { Breadcrumb, CodeBlock, ColorPalette } from "asriui";
 import { useSiteTheme } from "../useSiteTheme";
 import { DocPageShell } from "./DocPageShell";
 import styles from "./GuidesPage.module.css";
@@ -29,40 +29,40 @@ const TOC = [
   { id: "usage", label: "Using tokens" },
 ] as const;
 
-const IMPORT_CODE = `import "axiom-ui/style.css";
+const IMPORT_CODE = `import "asriui/style.css";
 
 /* Tokens are CSS custom properties on :root and [data-theme]. */`;
 
 const USAGE_CODE = `.panel {
-  padding: var(--axiom-space-4);
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-lg);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
-  box-shadow: var(--axiom-shadow-sm);
-  font-family: var(--axiom-font-family);
-  transition: box-shadow var(--axiom-duration-normal) var(--axiom-easing-standard);
+  padding: var(--asriui-space-4);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-lg);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
+  box-shadow: var(--asriui-shadow-sm);
+  font-family: var(--asriui-font-family);
+  transition: box-shadow var(--asriui-duration-normal) var(--asriui-easing-standard);
 }`;
 
 const OVERRIDE_CODE = `/* Default palette is monochrome zinc — override on :root / [data-theme] to rebrand. */
 :root,
 [data-theme="light"] {
-  --axiom-color-primary: #18181b;
-  --axiom-color-primary-hover: #27272a;
-  --axiom-color-primary-foreground: #ffffff;
-  --axiom-color-ring: #18181b;
+  --asriui-color-primary: #18181b;
+  --asriui-color-primary-hover: #27272a;
+  --asriui-color-primary-foreground: #ffffff;
+  --asriui-color-ring: #18181b;
 }
 
 [data-theme="dark"] {
-  --axiom-color-primary: #fafafa;
-  --axiom-color-primary-hover: #e4e4e7;
-  --axiom-color-primary-foreground: #09090b;
-  --axiom-color-ring: #fafafa;
+  --asriui-color-primary: #fafafa;
+  --asriui-color-primary-hover: #e4e4e7;
+  --asriui-color-primary-foreground: #09090b;
+  --asriui-color-ring: #fafafa;
 }`;
 
 const BREAKPOINT_CODE = `@media (min-width: 768px) {
   .sidebar {
-  /* or: min-width: var(--axiom-breakpoint-md) */
+  /* or: min-width: var(--asriui-breakpoint-md) */
     display: block;
   }
 }`;
@@ -102,8 +102,8 @@ export function TokensPage() {
           <p className={styles.kicker}>Guides</p>
           <h1 className={styles.title}>Tokens</h1>
           <p className={styles.lead}>
-            AxiomUI ships a zinc monochrome palette as CSS custom properties in{" "}
-            <code>src/tokens/</code>. Import <code>axiom-ui/style.css</code> once — components,
+            AsriUI ships a zinc monochrome palette as CSS custom properties in{" "}
+            <code>src/tokens/</code>. Import <code>asriui/style.css</code> once — components,
             templates, and your own CSS Modules all read the same variables.
           </p>
           <div className={styles.metaRow}>
@@ -216,7 +216,7 @@ export function TokensPage() {
           <h2 className={styles.sectionTitle}>Shadows</h2>
           <p className={styles.prose}>
             Light shadows ship in <code>shadows.css</code>; dark theme uses deeper values from{" "}
-            <code>themes.css</code>. <code>--axiom-shadow-focus</code> is the default focus ring glow.
+            <code>themes.css</code>. <code>--asriui-shadow-focus</code> is the default focus ring glow.
           </p>
 
           <div className={tokenStyles.shadowGrid}>
@@ -262,7 +262,7 @@ export function TokensPage() {
           <p className={styles.prose}>
             Families, sizes, weights, leading, and tracking from <code>typography.css</code>. See the{" "}
             <Link to="/docs/typography">Typography guide</Link> for specimens and{" "}
-            <code>AxiomProvider</code> font setup.
+            <code>AsriUIProvider</code> font setup.
           </p>
           <div className={tokenStyles.kvList}>
             {TYPOGRAPHY_TOKENS.map((row) => (
@@ -331,7 +331,7 @@ export function TokensPage() {
         <section className={styles.section} id="usage">
           <h2 className={styles.sectionTitle}>Using tokens</h2>
           <p className={styles.prose}>
-            Reference tokens in CSS Modules so custom UI matches Axiom components. Override on{" "}
+            Reference tokens in CSS Modules so custom UI matches AsriUI components. Override on{" "}
             <code>:root</code> or <code>[data-theme]</code> to rebrand without forking primitives.
           </p>
           <div className={tokenStyles.codeStack}>

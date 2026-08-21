@@ -4,7 +4,7 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(fileURLToPath(new URL("..", import.meta.url)));
-const SITE_URL = (process.env.VITE_SITE_URL || process.env.SITE_URL || "https://axiom-ui.dev").replace(
+const SITE_URL = (process.env.VITE_SITE_URL || process.env.SITE_URL || "https://asriui.dev").replace(
   /\/$/,
   "",
 );

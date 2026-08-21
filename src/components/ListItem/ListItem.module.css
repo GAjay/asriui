@@ -4,8 +4,8 @@
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: var(--axiom-space-1);
-  font-family: var(--axiom-font-family);
+  gap: var(--asriui-space-1);
+  font-family: var(--asriui-font-family);
 }
 
 .item {
@@ -16,14 +16,14 @@
 .row {
   display: flex;
   align-items: center;
-  gap: var(--axiom-space-3);
+  gap: var(--asriui-space-3);
   width: 100%;
   min-height: 48px;
-  padding: var(--axiom-space-2) var(--axiom-space-3);
+  padding: var(--asriui-space-2) var(--asriui-space-3);
   border: 1px solid transparent;
-  border-radius: var(--axiom-radius-md);
+  border-radius: var(--asriui-radius-md);
   background: transparent;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
   text-align: left;
 }
 
@@ -34,22 +34,22 @@
 .interactive {
   cursor: pointer;
   transition:
-    background-color var(--axiom-duration-fast) var(--axiom-easing-standard),
-    border-color var(--axiom-duration-fast) var(--axiom-easing-standard);
+    background-color var(--asriui-duration-fast) var(--asriui-easing-standard),
+    border-color var(--asriui-duration-fast) var(--asriui-easing-standard);
 }
 
 .interactive:hover:not(:disabled) {
-  background-color: var(--axiom-color-muted);
+  background-color: var(--asriui-color-muted);
 }
 
 .interactive:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
 .selected {
-  background-color: var(--axiom-color-muted);
-  border-color: var(--axiom-color-border);
+  background-color: var(--asriui-color-muted);
+  border-color: var(--asriui-color-border);
 }
 
 .disabled {
@@ -64,11 +64,11 @@
   flex-shrink: 0;
   width: 2.25rem;
   height: 2.25rem;
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-muted);
-  color: var(--axiom-color-muted-foreground);
-  font-size: var(--axiom-font-size-sm);
-  font-weight: var(--axiom-font-weight-semibold);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-muted);
+  color: var(--asriui-color-muted-foreground);
+  font-size: var(--asriui-font-size-sm);
+  font-weight: var(--asriui-font-weight-semibold);
 }
 
 .content {
@@ -78,37 +78,37 @@
 
 .title {
   margin: 0;
-  font-size: var(--axiom-font-size-md);
-  font-weight: var(--axiom-font-weight-medium);
-  line-height: var(--axiom-line-height-tight);
-  color: var(--axiom-color-foreground);
+  font-size: var(--asriui-font-size-md);
+  font-weight: var(--asriui-font-weight-medium);
+  line-height: var(--asriui-line-height-tight);
+  color: var(--asriui-color-foreground);
 }
 
 .description {
-  margin: var(--axiom-space-1) 0 0;
-  font-size: var(--axiom-font-size-sm);
-  line-height: var(--axiom-line-height-normal);
-  color: var(--axiom-color-muted-foreground);
+  margin: var(--asriui-space-1) 0 0;
+  font-size: var(--asriui-font-size-sm);
+  line-height: var(--asriui-line-height-normal);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .trailing {
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
-  color: var(--axiom-color-muted-foreground);
-  font-size: var(--axiom-font-size-sm);
+  color: var(--asriui-color-muted-foreground);
+  font-size: var(--asriui-font-size-sm);
 }
 
 .interactiveButton {
   all: unset;
   display: flex;
   align-items: center;
-  gap: var(--axiom-space-3);
+  gap: var(--asriui-space-3);
   width: 100%;
   box-sizing: border-box;
   min-height: 48px;
-  padding: var(--axiom-space-2) var(--axiom-space-3);
+  padding: var(--asriui-space-2) var(--asriui-space-3);
   border: 1px solid transparent;
-  border-radius: var(--axiom-radius-md);
+  border-radius: var(--asriui-radius-md);
   overflow: hidden;
 }

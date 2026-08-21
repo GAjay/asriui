@@ -1,6 +1,6 @@
-# Contributing to AxiomUI
+# Contributing to AsriUI
 
-Thanks for helping improve AxiomUI. This guide covers local setup, how we review work, and what must be true before a pull request is accepted.
+Thanks for helping improve AsriUI. This guide covers local setup, how we review work, and what must be true before a pull request is accepted.
 
 ## Development setup
 
@@ -45,7 +45,7 @@ A PR is ready to merge when:
 - **API consistency** with existing compound components and CSS variable tokens
 - **Accessibility** — focus order, Escape to dismiss overlays, labeled controls
 - **SSR / portals** — overlays that portal to `document.body` should not break SSR
-- **Tree-shaking** — prefer subpath exports (`axiom-ui/button`) over bloating the barrel
+- **Tree-shaking** — prefer subpath exports (`asriui/button`) over bloating the barrel
 - **Theming** — light/dark and band/surface tokens remain readable
 
 ### When we may request changes

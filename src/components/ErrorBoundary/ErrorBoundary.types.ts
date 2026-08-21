@@ -14,7 +14,7 @@ export type ErrorBoundaryFallbackProps = {
  * Props for the {@link ErrorBoundary} component.
  *
  * Catches render errors in child components and displays a fallback UI.
- * When `AxiomProvider` monitoring is enabled, errors are POSTed to the
+ * When `AsriUIProvider` monitoring is enabled, errors are POSTed to the
  * configured `reportUrl` (or per-boundary `monitoringUrl`).
  *
  * @example
@@ -37,7 +37,7 @@ export interface ErrorBoundaryProps {
   onError?: (error: Error, info: ErrorInfo) => void;
   /**
    * Per-boundary monitoring endpoint override.
-   * Falls back to `AxiomProvider` `monitoring.reportUrl` when omitted.
+   * Falls back to `AsriUIProvider` `monitoring.reportUrl` when omitted.
    */
   monitoringUrl?: string;
   /** Child components to protect. */

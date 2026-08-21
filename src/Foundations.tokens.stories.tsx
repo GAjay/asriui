@@ -6,7 +6,7 @@ const meta: Meta = {
     docs: {
       description: {
         component:
-          "AxiomUI design tokens are CSS custom properties. Override them or switch `data-theme` to theme the system.",
+          "AsriUI design tokens are CSS custom properties. Override them or switch `data-theme` to theme the system.",
       },
     },
   },
@@ -16,13 +16,13 @@ export default meta;
 type Story = StoryObj;
 
 const swatches = [
-  ["--axiom-color-primary", "Primary"],
-  ["--axiom-color-secondary", "Secondary"],
-  ["--axiom-color-danger", "Danger"],
-  ["--axiom-color-background", "Background"],
-  ["--axiom-color-foreground", "Foreground"],
-  ["--axiom-color-muted", "Muted"],
-  ["--axiom-color-border", "Border"],
+  ["--asriui-color-primary", "Primary"],
+  ["--asriui-color-secondary", "Secondary"],
+  ["--asriui-color-danger", "Danger"],
+  ["--asriui-color-background", "Background"],
+  ["--asriui-color-foreground", "Foreground"],
+  ["--asriui-color-muted", "Muted"],
+  ["--asriui-color-border", "Border"],
 ] as const;
 
 export const Colors: Story = {
@@ -33,14 +33,14 @@ export const Colors: Story = {
           <div
             style={{
               height: 64,
-              borderRadius: "var(--axiom-radius-md)",
-              border: "1px solid var(--axiom-color-border)",
+              borderRadius: "var(--asriui-radius-md)",
+              border: "1px solid var(--asriui-color-border)",
               background: `var(${token})`,
             }}
           />
           <div style={{ marginTop: 8, fontSize: 12 }}>
             <strong>{label}</strong>
-            <div style={{ color: "var(--axiom-color-muted-foreground)" }}>{token}</div>
+            <div style={{ color: "var(--asriui-color-muted-foreground)" }}>{token}</div>
           </div>
         </div>
       ))}
@@ -53,12 +53,12 @@ export const Spacing: Story = {
     <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
       {[1, 2, 3, 4, 6, 8].map((step) => (
         <div key={step} style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <code style={{ width: 120 }}>--axiom-space-{step}</code>
+          <code style={{ width: 120 }}>--asriui-space-{step}</code>
           <div
             style={{
               height: 12,
-              width: `var(--axiom-space-${step})`,
-              background: "var(--axiom-color-primary)",
+              width: `var(--asriui-space-${step})`,
+              background: "var(--asriui-color-primary)",
               borderRadius: 2,
             }}
           />

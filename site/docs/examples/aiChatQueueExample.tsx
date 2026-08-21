@@ -13,7 +13,7 @@ function delay(ms: number) {
 }
 
 export const AI_CHAT_QUEUE_CODE = `import { useState } from "react";
-import { AiChat, useAiChatQueue } from "axiom-ui/ai-chat";
+import { AiChat, useAiChatQueue } from "asriui/ai-chat";
 
 export function AssistantWithQueue() {
   const [prompt, setPrompt] = useState("");

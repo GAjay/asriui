@@ -63,7 +63,7 @@ export function useWidgetScript({
     const script = document.createElement("script");
     script.src = scriptSrc;
     script.async = true;
-    script.dataset.axiomWidget = scriptSrc;
+    script.dataset.asriuiWidget = scriptSrc;
     script.addEventListener("load", handleLoad, { once: true });
     script.addEventListener("error", handleError, { once: true });
     mount.appendChild(script);

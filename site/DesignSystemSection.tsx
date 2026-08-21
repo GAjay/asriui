@@ -44,49 +44,49 @@ const CATEGORIES: Array<{
 ];
 
 const COLOR_TOKENS = [
-  { token: "--axiom-color-primary", light: "#000000", dark: "#fafafa" },
-  { token: "--axiom-color-background", light: "#ffffff", dark: "#09090b" },
-  { token: "--axiom-color-foreground", light: "#09090b", dark: "#fafafa" },
-  { token: "--axiom-color-muted", light: "#f4f4f5", dark: "#18181b" },
-  { token: "--axiom-color-border", light: "#e4e4e7", dark: "#27272a" },
+  { token: "--asriui-color-primary", light: "#000000", dark: "#fafafa" },
+  { token: "--asriui-color-background", light: "#ffffff", dark: "#09090b" },
+  { token: "--asriui-color-foreground", light: "#09090b", dark: "#fafafa" },
+  { token: "--asriui-color-muted", light: "#f4f4f5", dark: "#18181b" },
+  { token: "--asriui-color-border", light: "#e4e4e7", dark: "#27272a" },
 ] as const;
 
 const SPACE_TOKENS = [
-  { token: "--axiom-space-2", value: "8px" },
-  { token: "--axiom-space-4", value: "16px" },
-  { token: "--axiom-space-6", value: "24px" },
-  { token: "--axiom-space-8", value: "32px" },
-  { token: "--axiom-space-12", value: "48px" },
+  { token: "--asriui-space-2", value: "8px" },
+  { token: "--asriui-space-4", value: "16px" },
+  { token: "--asriui-space-6", value: "24px" },
+  { token: "--asriui-space-8", value: "32px" },
+  { token: "--asriui-space-12", value: "48px" },
 ] as const;
 
 const RADIUS_TOKENS = [
-  { token: "--axiom-radius-sm", value: "4px" },
-  { token: "--axiom-radius-md", value: "8px" },
-  { token: "--axiom-radius-lg", value: "12px" },
-  { token: "--axiom-radius-xl", value: "16px" },
-  { token: "--axiom-radius-full", value: "9999px" },
+  { token: "--asriui-radius-sm", value: "4px" },
+  { token: "--asriui-radius-md", value: "8px" },
+  { token: "--asriui-radius-lg", value: "12px" },
+  { token: "--asriui-radius-xl", value: "16px" },
+  { token: "--asriui-radius-full", value: "9999px" },
 ] as const;
 
 const TYPE_TOKENS = [
-  { token: "--axiom-font-family", sample: "Work Sans" },
-  { token: "--axiom-font-size-sm", sample: "0.875rem" },
-  { token: "--axiom-font-size-md", sample: "1rem" },
-  { token: "--axiom-font-size-lg", sample: "1.125rem" },
-  { token: "--axiom-line-height-normal", sample: "1.5" },
+  { token: "--asriui-font-family", sample: "Work Sans" },
+  { token: "--asriui-font-size-sm", sample: "0.875rem" },
+  { token: "--asriui-font-size-md", sample: "1rem" },
+  { token: "--asriui-font-size-lg", sample: "1.125rem" },
+  { token: "--asriui-line-height-normal", sample: "1.5" },
 ] as const;
 
 const SHADOW_TOKENS = [
-  { token: "--axiom-shadow-sm", label: "sm" },
-  { token: "--axiom-shadow-md", label: "md" },
-  { token: "--axiom-shadow-lg", label: "lg" },
-  { token: "--axiom-shadow-focus", label: "focus" },
+  { token: "--asriui-shadow-sm", label: "sm" },
+  { token: "--asriui-shadow-md", label: "md" },
+  { token: "--asriui-shadow-lg", label: "lg" },
+  { token: "--asriui-shadow-focus", label: "focus" },
 ] as const;
 
 const TYPE_PREVIEW = [
   { label: "H2", node: <Typography.H2 as="p">Section title</Typography.H2> },
   { label: "Lead", node: <Typography.Lead>Lead copy for intros.</Typography.Lead> },
   { label: "Body", node: <Typography.P>Body text for UI and docs.</Typography.P> },
-  { label: "Code", node: <Typography.Code>--axiom-font-size-md</Typography.Code> },
+  { label: "Code", node: <Typography.Code>--asriui-font-size-md</Typography.Code> },
 ] as const;
 
 /**

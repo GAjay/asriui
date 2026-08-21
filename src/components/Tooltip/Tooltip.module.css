@@ -14,14 +14,14 @@
   z-index: 70;
   max-width: min(18rem, calc(100vw - 1.5rem));
   padding: 0.4rem 0.6rem;
-  border-radius: var(--axiom-radius-md);
-  border: 1px solid var(--axiom-color-border);
-  background: var(--axiom-color-foreground);
-  color: var(--axiom-color-background);
+  border-radius: var(--asriui-radius-md);
+  border: 1px solid var(--asriui-color-border);
+  background: var(--asriui-color-foreground);
+  color: var(--asriui-color-background);
   font-size: 0.78rem;
   font-weight: 500;
   line-height: 1.45;
-  box-shadow: var(--axiom-shadow-md, 0 8px 24px color-mix(in srgb, var(--axiom-color-foreground) 18%, transparent));
+  box-shadow: var(--asriui-shadow-md, 0 8px 24px color-mix(in srgb, var(--asriui-color-foreground) 18%, transparent));
   pointer-events: none;
 }
 

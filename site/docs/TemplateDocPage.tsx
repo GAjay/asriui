@@ -1,5 +1,5 @@
 import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
-import { Badge, Breadcrumb, Button, CodeBlock } from "axiom-ui";
+import { Badge, Breadcrumb, Button, CodeBlock } from "asriui";
 import { DocPageShell } from "./DocPageShell";
 import { getTemplateSnippet } from "./templateSnippets";
 import styles from "./GettingStartedPage.module.css";

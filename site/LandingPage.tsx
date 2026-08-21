@@ -27,8 +27,8 @@ const ShipFasterSection = lazy(() =>
 const ExploreSection = lazy(() =>
   import("./ExploreSection").then((m) => ({ default: m.ExploreSection })),
 );
-const AxiomCircuitSection = lazy(() =>
-  import("./AxiomCircuitSection").then((m) => ({ default: m.AxiomCircuitSection })),
+const AsriUICircuitSection = lazy(() =>
+  import("./AsriUICircuitSection").then((m) => ({ default: m.AsriUICircuitSection })),
 );
 const LandingMilestones = lazy(() =>
   import("./LandingMilestones").then((m) => ({ default: m.LandingMilestones })),
@@ -55,7 +55,7 @@ const FEATURES = [
       "Framer Motion preset packs — apple, snappy, soft, playful, and minimal — with stagger, fade-up, and prefers-reduced-motion baked in.",
     tag: "Framer Motion",
     icon: "sparkles" as const,
-    highlight: "motion config on AxiomProvider · useMotionPresets() · MotionProvider for local overrides",
+    highlight: "motion config on AsriUIProvider · useMotionPresets() · MotionProvider for local overrides",
   },
   {
     title: "Installable PWA",
@@ -68,7 +68,7 @@ const FEATURES = [
   {
     title: "Tree-shakable exports",
     description:
-      "Import only what you need via subpath exports like axiom-ui/button. CSS Modules keep styles colocated — zero runtime CSS-in-JS.",
+      "Import only what you need via subpath exports like asriui/button. CSS Modules keep styles colocated — zero runtime CSS-in-JS.",
     tag: "Small bundles",
     icon: "package" as const,
   },
@@ -90,7 +90,7 @@ const FEATURES = [
   {
     title: "Production tooling",
     description:
-      "AxiomProvider bundles theme, GTM analytics, and error monitoring. Optional Monaco editor and React Flow included.",
+      "AsriUIProvider bundles theme, GTM analytics, and error monitoring. Optional Monaco editor and React Flow included.",
     tag: "Enterprise-ready",
     icon: "rocket" as const,
   },
@@ -131,7 +131,7 @@ export function LandingPage() {
 
         <LandingHeroSection
           id="features"
-          kicker="Why AxiomUI"
+          kicker="Why AsriUI"
           accent="emerald"
           title="Everything you need to ship polished interfaces"
           lead="Primitives, layouts, docs tooling, and AI-ready shells — a complete toolkit for teams who care about craft, accessibility, and small bundles."
@@ -189,7 +189,7 @@ export function LandingPage() {
         </LandingHeroSection>
 
         <DeferredSection minHeight="32rem">
-          <AxiomCircuitSection band="white" />
+          <AsriUICircuitSection band="white" />
         </DeferredSection>
 
         <LandingHeroSection
@@ -211,7 +211,7 @@ export function LandingPage() {
           kicker="FAQ"
           accent="emerald"
           title="Frequently asked questions"
-          lead="Straight answers for teams evaluating AxiomUI — install, licensing, frameworks, and accessibility."
+          lead="Straight answers for teams evaluating AsriUI — install, licensing, frameworks, and accessibility."
           tone="white"
           layoutCode={SECTION_LAYOUTS.faq}
         >
@@ -224,7 +224,7 @@ export function LandingPage() {
           id="support"
           kicker="Open source"
           accent="amber"
-          title="Enjoying AxiomUI?"
+          title="Enjoying AsriUI?"
           lead="Your support keeps the library, docs, and templates moving forward."
           tone="black"
           align="start"

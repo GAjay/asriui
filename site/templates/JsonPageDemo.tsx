@@ -1,4 +1,4 @@
-import { toast } from "axiom-ui";
+import { toast } from "asriui";
 import { Page } from "../../src/components/Page";
 import { EXAMPLE_DASHBOARD_PAGE } from "../../src/components/Page/examples";
 import { TemplateDemoShell } from "./TemplateDemoShell";

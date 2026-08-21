@@ -24,7 +24,7 @@ export const Default: Story = {
             Getting started
           </Accordion.Trigger>
           <Accordion.Content>
-            Install the package, wrap your app in AxiomProvider, and import components from subpaths.
+            Install the package, wrap your app in AsriUIProvider, and import components from subpaths.
           </Accordion.Content>
         </Accordion.Item>
         <Accordion.Item value="components">
@@ -67,12 +67,12 @@ export const Multiple: Story = {
     <div style={{ width: 420 }}>
       <Accordion type="multiple" defaultValue={["faq-1"]} variant="ghost">
         <Accordion.Item value="faq-1">
-          <Accordion.Trigger>What is Axiom UI?</Accordion.Trigger>
+          <Accordion.Trigger>What is AsriUI?</Accordion.Trigger>
           <Accordion.Content>A design system and React component library for product teams.</Accordion.Content>
         </Accordion.Item>
         <Accordion.Item value="faq-2">
           <Accordion.Trigger>Can I use subpath imports?</Accordion.Trigger>
-          <Accordion.Content>Yes — import from paths like axiom-ui/button or axiom-ui/accordion.</Accordion.Content>
+          <Accordion.Content>Yes — import from paths like asriui/button or asriui/accordion.</Accordion.Content>
         </Accordion.Item>
       </Accordion>
     </div>

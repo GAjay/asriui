@@ -47,7 +47,7 @@ export function trackButtonClick(
 ): void {
   trackComponentEvent(
     analytics,
-    "axiom_button_click",
+    "asriui_button_click",
     { component: "Button", ...payload },
     options,
   );
@@ -61,7 +61,7 @@ export function trackLinkClick(
 ): void {
   trackComponentEvent(
     analytics,
-    "axiom_link_click",
+    "asriui_link_click",
     { component: "Link", ...payload },
     options,
   );
@@ -69,14 +69,14 @@ export function trackLinkClick(
 
 /** Inject GTM script once when gtmId is configured. */
 export function initGtm(gtmId: string, dataLayerName = "dataLayer"): void {
-  if (typeof window === "undefined" || !gtmId || document.getElementById("axiom-gtm")) return;
+  if (typeof window === "undefined" || !gtmId || document.getElementById("asriui-gtm")) return;
 
   const w = window as unknown as DataLayerWindow;
   w[dataLayerName] = w[dataLayerName] ?? [];
   w[dataLayerName]!.push({ "gtm.start": Date.now(), event: "gtm.js" });
 
   const script = document.createElement("script");
-  script.id = "axiom-gtm";
+  script.id = "asriui-gtm";
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtm.js?id=${gtmId}`;
   document.head.appendChild(script);

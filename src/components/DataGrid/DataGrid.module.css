@@ -1,13 +1,13 @@
 .filterBar {
   padding: 0.65rem 0.75rem;
-  border-bottom: 1px solid var(--axiom-color-border);
-  background: var(--axiom-color-background);
+  border-bottom: 1px solid var(--asriui-color-border);
+  background: var(--asriui-color-background);
 }
 
 .columnFilterCell {
   padding: 0.35rem 0.5rem;
   vertical-align: middle;
-  background: color-mix(in srgb, var(--axiom-color-muted) 35%, var(--axiom-color-background));
+  background: color-mix(in srgb, var(--asriui-color-muted) 35%, var(--asriui-color-background));
 }
 
 .columnFilterInput,
@@ -16,17 +16,17 @@
   min-width: 0;
   height: 1.85rem;
   padding: 0 0.45rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-sm);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-sm);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
   font: inherit;
   font-size: 0.75rem;
 }
 
 .columnFilterInput:focus-visible,
 .columnFilterSelect:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 1px;
 }
 
@@ -36,17 +36,17 @@
   gap: 0.5rem;
   justify-content: flex-end;
   padding: 0.65rem 0.75rem;
-  border-bottom: 1px solid var(--axiom-color-border);
-  background: color-mix(in srgb, var(--axiom-color-muted) 45%, transparent);
+  border-bottom: 1px solid var(--asriui-color-border);
+  background: color-mix(in srgb, var(--asriui-color-muted) 45%, transparent);
 }
 
 .root {
   position: relative;
   width: 100%;
   min-width: 0;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
   overflow: hidden;
 }
 
@@ -77,7 +77,7 @@
 }
 
 .sortButton:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
@@ -98,7 +98,7 @@
   min-height: 8rem;
   padding: 1.5rem;
   font-size: 0.875rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .fallback {
@@ -108,7 +108,7 @@
   min-height: 12rem;
   padding: 1.5rem;
   text-align: center;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .fallback code {
@@ -120,15 +120,15 @@
   height: 100%;
 }
 
-.ag-theme-axiom {
-  --ag-background-color: var(--axiom-color-background);
-  --ag-foreground-color: var(--axiom-color-foreground);
-  --ag-border-color: var(--axiom-color-border);
-  --ag-header-background-color: var(--axiom-color-muted);
-  --ag-header-foreground-color: var(--axiom-color-muted-foreground);
-  --ag-row-hover-color: color-mix(in srgb, var(--axiom-color-muted) 70%, transparent);
-  --ag-selected-row-background-color: color-mix(in srgb, var(--axiom-color-muted) 90%, transparent);
-  --ag-font-family: var(--axiom-font-family, inherit);
+.ag-theme-asriui {
+  --ag-background-color: var(--asriui-color-background);
+  --ag-foreground-color: var(--asriui-color-foreground);
+  --ag-border-color: var(--asriui-color-border);
+  --ag-header-background-color: var(--asriui-color-muted);
+  --ag-header-foreground-color: var(--asriui-color-muted-foreground);
+  --ag-row-hover-color: color-mix(in srgb, var(--asriui-color-muted) 70%, transparent);
+  --ag-selected-row-background-color: color-mix(in srgb, var(--asriui-color-muted) 90%, transparent);
+  --ag-font-family: var(--asriui-font-family, inherit);
   --ag-font-size: 13px;
   --ag-grid-size: 6px;
 }
@@ -156,33 +156,33 @@
   width: 100%;
   min-width: 0;
   padding: 0.35rem 0.45rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-sm);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-sm);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
   font: inherit;
   font-size: 0.84rem;
 }
 
 .cellInput:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 1px;
 }
 
 .cellInputError {
-  border-color: var(--axiom-color-destructive, #dc2626);
+  border-color: var(--asriui-color-destructive, #dc2626);
 }
 
 .cellError {
   font-size: 0.72rem;
   line-height: 1.3;
-  color: var(--axiom-color-destructive, #dc2626);
+  color: var(--asriui-color-destructive, #dc2626);
 }
 
 .cellErrorIcon {
   display: inline-flex;
   flex-shrink: 0;
-  color: var(--axiom-color-destructive, #dc2626);
+  color: var(--asriui-color-destructive, #dc2626);
   cursor: help;
 }
 
@@ -202,19 +202,19 @@
   height: 1.75rem;
   padding: 0;
   border: 0;
-  border-radius: var(--axiom-radius-sm);
+  border-radius: var(--asriui-radius-sm);
   background: transparent;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
   cursor: pointer;
 }
 
 .expandButton:hover {
-  background: var(--axiom-color-muted);
-  color: var(--axiom-color-foreground);
+  background: var(--asriui-color-muted);
+  color: var(--asriui-color-foreground);
 }
 
 .expandButton:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 1px;
 }
 
@@ -228,8 +228,8 @@
 
 .expandedRow td {
   padding: 0;
-  background: color-mix(in srgb, var(--axiom-color-muted) 40%, var(--axiom-color-background));
-  border-bottom: 1px solid var(--axiom-color-border);
+  background: color-mix(in srgb, var(--asriui-color-muted) 40%, var(--asriui-color-background));
+  border-bottom: 1px solid var(--asriui-color-border);
 }
 
 .expandedRow > td > * {
@@ -251,14 +251,14 @@
   justify-content: space-between;
   gap: 0.75rem;
   padding: 0.65rem 0.75rem;
-  border-top: 1px solid var(--axiom-color-border);
-  background: color-mix(in srgb, var(--axiom-color-muted) 35%, transparent);
+  border-top: 1px solid var(--asriui-color-border);
+  background: color-mix(in srgb, var(--asriui-color-muted) 35%, transparent);
 }
 
 .paginationMeta {
   margin: 0;
   font-size: 0.82rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .paginationControls {
@@ -270,7 +270,7 @@
 
 .pageIndicator {
   font-size: 0.82rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .pageSizeLabel {
@@ -278,14 +278,14 @@
   align-items: center;
   gap: 0.35rem;
   font-size: 0.82rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .pageSizeSelect {
   padding: 0.25rem 0.4rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-sm);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-sm);
+  background: var(--asriui-color-background);
   font: inherit;
   font-size: 0.82rem;
 }
@@ -300,13 +300,13 @@
   display: grid;
   gap: 0;
   padding: 0.65rem 0.75rem;
-  border-bottom: 1px solid var(--axiom-color-border);
-  background: var(--axiom-color-muted);
+  border-bottom: 1px solid var(--asriui-color-border);
+  background: var(--asriui-color-muted);
   font-size: 0.78rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .virtualHeadCell {
@@ -333,13 +333,13 @@
   width: 100%;
   height: 100%;
   padding: 0 0.75rem;
-  border-bottom: 1px solid var(--axiom-color-border);
-  background: var(--axiom-color-background);
+  border-bottom: 1px solid var(--asriui-color-border);
+  background: var(--asriui-color-background);
   overflow: hidden;
 }
 
 .virtualRowStriped {
-  background: color-mix(in srgb, var(--axiom-color-muted) 35%, var(--axiom-color-background));
+  background: color-mix(in srgb, var(--asriui-color-muted) 35%, var(--asriui-color-background));
 }
 
 .virtualCell {

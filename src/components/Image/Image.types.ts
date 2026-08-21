@@ -40,7 +40,7 @@ export interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {
    * @default 86400000 (24 hours)
    */
   refetchInterval?: number;
-  /** Cache Storage bucket. @default "axiom-assets-v1" */
+  /** Cache Storage bucket. @default "asriui-assets-v1" */
   cacheName?: string;
   /** Max cached assets before eviction. @default 120 */
   maxEntries?: number;

@@ -118,7 +118,7 @@ export function demoFillForm(prompt: string, fields: FormFieldConfig[]): FormVal
       const nameMatch = prompt.match(/(?:name is|i am|i'm)\s+([A-Za-z][\w\s]{1,40})/i);
       values[field.name] = nameMatch?.[1]?.trim() ?? "Alex Chen";
     } else if (name.includes("company") || name.includes("org")) {
-      values[field.name] = /company\s+(\w+)/i.exec(prompt)?.[1] ?? "Axiom Labs";
+      values[field.name] = /company\s+(\w+)/i.exec(prompt)?.[1] ?? "AsriUI Labs";
     } else if (field.type === "textarea" || name.includes("note") || name.includes("message")) {
       values[field.name] = prompt.trim();
     } else if (field.type === "select" && field.options?.length) {

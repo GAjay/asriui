@@ -10,34 +10,34 @@
   --lp-btn-radius: 8px;
   --lp-header-height: 3.75rem;
 
-  --axiom-color-primary: #000000;
-  --axiom-color-primary-hover: #1a1a1a;
-  --axiom-color-primary-active: #333333;
-  --axiom-color-primary-foreground: #ffffff;
-  --axiom-color-secondary: var(--lp-muted);
-  --axiom-color-secondary-hover: var(--lp-border);
-  --axiom-color-secondary-foreground: var(--lp-fg);
-  --axiom-color-foreground: var(--lp-fg);
-  --axiom-color-background: var(--lp-card);
-  --axiom-color-muted: var(--lp-muted);
-  --axiom-color-muted-foreground: var(--lp-muted-fg);
-  --axiom-color-border: var(--lp-border);
-  --axiom-color-ring: var(--lp-fg);
+  --asriui-color-primary: #000000;
+  --asriui-color-primary-hover: #1a1a1a;
+  --asriui-color-primary-active: #333333;
+  --asriui-color-primary-foreground: #ffffff;
+  --asriui-color-secondary: var(--lp-muted);
+  --asriui-color-secondary-hover: var(--lp-border);
+  --asriui-color-secondary-foreground: var(--lp-fg);
+  --asriui-color-foreground: var(--lp-fg);
+  --asriui-color-background: var(--lp-card);
+  --asriui-color-muted: var(--lp-muted);
+  --asriui-color-muted-foreground: var(--lp-muted-fg);
+  --asriui-color-border: var(--lp-border);
+  --asriui-color-ring: var(--lp-fg);
 }
 
 [data-theme="dark"] .siteShell {
-  --axiom-color-primary: #000000;
-  --axiom-color-primary-hover: #1f1f1f;
-  --axiom-color-primary-active: #333333;
-  --axiom-color-primary-foreground: #ffffff;
-  --axiom-color-secondary: #18181b;
-  --axiom-color-secondary-hover: #27272a;
-  --axiom-color-secondary-foreground: #fafafa;
-  --axiom-color-background: #111113;
-  --axiom-color-muted: #18181b;
-  --axiom-color-muted-foreground: #a1a1aa;
-  --axiom-color-border: #27272a;
-  --axiom-color-foreground: #fafafa;
+  --asriui-color-primary: #000000;
+  --asriui-color-primary-hover: #1f1f1f;
+  --asriui-color-primary-active: #333333;
+  --asriui-color-primary-foreground: #ffffff;
+  --asriui-color-secondary: #18181b;
+  --asriui-color-secondary-hover: #27272a;
+  --asriui-color-secondary-foreground: #fafafa;
+  --asriui-color-background: #111113;
+  --asriui-color-muted: #18181b;
+  --asriui-color-muted-foreground: #a1a1aa;
+  --asriui-color-border: #27272a;
+  --asriui-color-foreground: #fafafa;
 }
 
 .demoMain {
@@ -158,12 +158,12 @@
 }
 
 .demoMain[data-template-demo="true"] :global([class*="sidebarPanel"]) {
-  background: var(--axiom-color-background);
-  border-right: 1px solid var(--axiom-color-border);
+  background: var(--asriui-color-background);
+  border-right: 1px solid var(--asriui-color-border);
 }
 
 .demoMain[data-template-demo="true"] :global([class*="main"]) {
-  background: var(--axiom-color-background);
+  background: var(--asriui-color-background);
 }
 
 @media (max-width: 900px) {
@@ -244,9 +244,9 @@
   display: grid;
   gap: 0.5rem;
   padding: 1.15rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
 }
 
 .valueCard h3 {
@@ -259,7 +259,7 @@
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.55;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .teamGrid {
@@ -272,9 +272,9 @@
   display: grid;
   gap: 0.35rem;
   padding: 1rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
   text-align: center;
 }
 
@@ -283,12 +283,12 @@
   height: 3.25rem;
   margin: 0 auto 0.35rem;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--axiom-color-primary) 18%, var(--axiom-color-muted));
+  background: color-mix(in srgb, var(--asriui-color-primary) 18%, var(--asriui-color-muted));
   display: grid;
   place-items: center;
   font-weight: 700;
   font-size: 0.95rem;
-  color: var(--axiom-color-primary);
+  color: var(--asriui-color-primary);
 }
 
 .teamCard h3 {
@@ -299,7 +299,7 @@
 .teamCard p {
   margin: 0;
   font-size: 0.82rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .contactShell {
@@ -316,9 +316,9 @@
 
 .infoCard {
   padding: 1rem 1.1rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
 }
 
 .infoCard h3 {
@@ -330,7 +330,7 @@
   margin: 0;
   font-size: 0.88rem;
   line-height: 1.5;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .pricingGrid {
@@ -344,14 +344,14 @@
   display: grid;
   gap: 0.75rem;
   padding: 1.25rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
 }
 
 .priceCardFeatured {
-  border-color: var(--axiom-color-primary);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--axiom-color-primary) 35%, transparent);
+  border-color: var(--asriui-color-primary);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--asriui-color-primary) 35%, transparent);
 }
 
 .price {
@@ -364,7 +364,7 @@
 .price span {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .featureList {
@@ -413,16 +413,16 @@
 
 .statCard {
   padding: 1rem 1.1rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
 }
 
 .statLabel {
   margin: 0 0 0.35rem;
   font-size: 0.78rem;
   font-weight: 500;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
@@ -437,7 +437,7 @@
 .statDelta {
   margin: 0.25rem 0 0;
   font-size: 0.78rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .dashboardGrid {
@@ -448,9 +448,9 @@
 
 .panel {
   padding: 1rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
 }
 
 .panelTitle {
@@ -516,35 +516,35 @@
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
 }
 
 .productMedia {
   display: grid;
   place-items: center;
   aspect-ratio: 4 / 3;
-  color: color-mix(in srgb, var(--axiom-color-foreground) 35%, transparent);
+  color: color-mix(in srgb, var(--asriui-color-foreground) 35%, transparent);
 }
 
 .productMedia[data-tone="rose"] {
-  background: color-mix(in srgb, #fb7185 22%, var(--axiom-color-muted));
+  background: color-mix(in srgb, #fb7185 22%, var(--asriui-color-muted));
 }
 .productMedia[data-tone="cyan"] {
-  background: color-mix(in srgb, #22d3ee 22%, var(--axiom-color-muted));
+  background: color-mix(in srgb, #22d3ee 22%, var(--asriui-color-muted));
 }
 .productMedia[data-tone="emerald"] {
-  background: color-mix(in srgb, #34d399 22%, var(--axiom-color-muted));
+  background: color-mix(in srgb, #34d399 22%, var(--asriui-color-muted));
 }
 .productMedia[data-tone="amber"] {
-  background: color-mix(in srgb, #fbbf24 22%, var(--axiom-color-muted));
+  background: color-mix(in srgb, #fbbf24 22%, var(--asriui-color-muted));
 }
 .productMedia[data-tone="violet"] {
-  background: color-mix(in srgb, #a78bfa 22%, var(--axiom-color-muted));
+  background: color-mix(in srgb, #a78bfa 22%, var(--asriui-color-muted));
 }
 .productMedia[data-tone="slate"] {
-  background: color-mix(in srgb, #94a3b8 22%, var(--axiom-color-muted));
+  background: color-mix(in srgb, #94a3b8 22%, var(--asriui-color-muted));
 }
 
 .productBody {
@@ -571,7 +571,7 @@
   margin: 0;
   font-size: 0.84rem;
   line-height: 1.45;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .productFooter {
@@ -606,9 +606,9 @@
   grid-template-columns: 4.5rem 1fr;
   gap: 0.9rem;
   padding: 0.85rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
 }
 
 .cartThumb {
@@ -616,18 +616,18 @@
   place-items: center;
   width: 4.5rem;
   height: 4.5rem;
-  border-radius: calc(var(--axiom-radius-md) - 2px);
-  color: color-mix(in srgb, var(--axiom-color-foreground) 40%, transparent);
+  border-radius: calc(var(--asriui-radius-md) - 2px);
+  color: color-mix(in srgb, var(--asriui-color-foreground) 40%, transparent);
 }
 
 .cartThumb[data-tone="rose"] {
-  background: color-mix(in srgb, #fb7185 22%, var(--axiom-color-muted));
+  background: color-mix(in srgb, #fb7185 22%, var(--asriui-color-muted));
 }
 .cartThumb[data-tone="cyan"] {
-  background: color-mix(in srgb, #22d3ee 22%, var(--axiom-color-muted));
+  background: color-mix(in srgb, #22d3ee 22%, var(--asriui-color-muted));
 }
 .cartThumb[data-tone="amber"] {
-  background: color-mix(in srgb, #fbbf24 22%, var(--axiom-color-muted));
+  background: color-mix(in srgb, #fbbf24 22%, var(--asriui-color-muted));
 }
 
 .cartLineMain {
@@ -672,9 +672,9 @@
   display: grid;
   gap: 0.75rem;
   padding: 1.15rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-muted);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-muted);
 }
 
 .summaryRow {
@@ -687,7 +687,7 @@
 
 .summaryTotal {
   padding-top: 0.55rem;
-  border-top: 1px solid var(--axiom-color-border);
+  border-top: 1px solid var(--asriui-color-border);
   font-size: 1rem;
 }
 
@@ -703,17 +703,17 @@
   gap: 0.65rem;
   justify-items: start;
   padding: 2rem 1.25rem;
-  border: 1px dashed var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
+  border: 1px dashed var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
 }
 
 .checkoutForm {
   display: grid;
   gap: 0.85rem;
   padding: 1.15rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
 }
 
 /* ── Settings ── */
@@ -734,9 +734,9 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 0.9rem 1rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
   cursor: pointer;
 }
 
@@ -750,9 +750,9 @@
   gap: 0.65rem;
   justify-items: start;
   padding: 1.15rem;
-  border: 1px solid color-mix(in srgb, #ef4444 40%, var(--axiom-color-border));
-  border-radius: var(--axiom-radius-md);
-  background: color-mix(in srgb, #ef4444 6%, var(--axiom-color-background));
+  border: 1px solid color-mix(in srgb, #ef4444 40%, var(--asriui-color-border));
+  border-radius: var(--asriui-radius-md);
+  background: color-mix(in srgb, #ef4444 6%, var(--asriui-color-background));
 }
 
 /* ── Inbox ── */
@@ -765,10 +765,10 @@
 }
 
 .inboxList {
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
   overflow: hidden;
-  background: var(--axiom-color-background);
+  background: var(--asriui-color-background);
 }
 
 .inboxAvatar {
@@ -779,8 +779,8 @@
   border-radius: 999px;
   font-size: 0.75rem;
   font-weight: 700;
-  background: var(--axiom-color-muted);
-  color: var(--axiom-color-foreground);
+  background: var(--asriui-color-muted);
+  color: var(--asriui-color-foreground);
 }
 
 .inboxTrailing {
@@ -794,9 +794,9 @@
   display: grid;
   gap: 0.85rem;
   padding: 1.15rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
   min-height: 16rem;
 }
 
@@ -825,17 +825,17 @@
   display: grid;
   gap: 0.65rem;
   padding: 1.15rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
   text-decoration: none;
   color: inherit;
   transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .templateCard:hover {
-  border-color: var(--axiom-color-primary);
-  box-shadow: 0 8px 24px color-mix(in srgb, var(--axiom-color-foreground) 6%, transparent);
+  border-color: var(--asriui-color-primary);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--asriui-color-foreground) 6%, transparent);
 }
 
 .templateCard h2 {
@@ -847,7 +847,7 @@
   margin: 0;
   font-size: 0.88rem;
   line-height: 1.5;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .templateTag {
@@ -856,8 +856,8 @@
   border-radius: 999px;
   font-size: 0.72rem;
   font-weight: 600;
-  background: var(--axiom-color-muted);
-  color: var(--axiom-color-muted-foreground);
+  background: var(--asriui-color-muted);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .billingGrid {
@@ -877,7 +877,7 @@
 .billingRenew {
   margin: 0.75rem 0 0;
   font-size: 0.82rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .teamToolbar {
@@ -895,10 +895,10 @@
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--axiom-color-primary) 14%, var(--axiom-color-muted));
+  background: color-mix(in srgb, var(--asriui-color-primary) 14%, var(--asriui-color-muted));
   font-size: 0.72rem;
   font-weight: 700;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .onboardShell {
@@ -927,19 +927,19 @@
   justify-items: center;
   gap: 0.35rem;
   padding: 0.7rem 0.5rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-muted-foreground);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .onboardStep[data-active="true"] {
-  border-color: var(--axiom-color-foreground);
-  color: var(--axiom-color-foreground);
+  border-color: var(--asriui-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .onboardStep[data-done="true"] {
-  background: var(--axiom-color-muted);
+  background: var(--asriui-color-muted);
 }
 
 .onboardStepIndex {
@@ -994,14 +994,14 @@
   height: 0.45rem;
   overflow: hidden;
   border-radius: 999px;
-  background: var(--axiom-color-muted);
+  background: var(--asriui-color-muted);
 }
 
 .channelFill {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: var(--axiom-color-foreground);
+  background: var(--asriui-color-foreground);
 }
 
 .templateBreadcrumb {

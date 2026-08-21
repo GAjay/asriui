@@ -11,7 +11,7 @@ import styles from "./Page.module.css";
 /**
  * JSON-configured page renderer.
  *
- * Pass a serializable {@link PageConfig} and AxiomUI builds the layout,
+ * Pass a serializable {@link PageConfig} and AsriUI builds the layout,
  * sidebar, header, and content blocks — forms, stats, tables, tabs, and more.
  */
 export function Page({

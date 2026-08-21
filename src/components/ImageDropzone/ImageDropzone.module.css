@@ -12,9 +12,9 @@
   gap: 0.35rem;
   min-height: 8rem;
   padding: 1rem;
-  border: 1px dashed var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: color-mix(in srgb, var(--axiom-color-muted) 40%, transparent);
+  border: 1px dashed var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: color-mix(in srgb, var(--asriui-color-muted) 40%, transparent);
   cursor: pointer;
   transition:
     border-color 140ms ease,
@@ -22,13 +22,13 @@
 }
 
 .zone:hover:not(.zoneDisabled) {
-  border-color: color-mix(in srgb, var(--axiom-color-primary) 35%, var(--axiom-color-border));
-  background: color-mix(in srgb, var(--axiom-color-primary) 6%, var(--axiom-color-muted));
+  border-color: color-mix(in srgb, var(--asriui-color-primary) 35%, var(--asriui-color-border));
+  background: color-mix(in srgb, var(--asriui-color-primary) 6%, var(--asriui-color-muted));
 }
 
 .zoneActive {
-  border-color: var(--axiom-color-primary);
-  background: color-mix(in srgb, var(--axiom-color-primary) 10%, var(--axiom-color-muted));
+  border-color: var(--asriui-color-primary);
+  background: color-mix(in srgb, var(--asriui-color-primary) 10%, var(--asriui-color-muted));
 }
 
 .zoneDisabled {
@@ -37,24 +37,24 @@
 }
 
 .zoneError {
-  border-color: var(--axiom-color-destructive, #dc2626);
+  border-color: var(--asriui-color-destructive, #dc2626);
 }
 
 .icon {
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .label {
   margin: 0;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .hint {
   margin: 0;
   font-size: 0.78rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .input {
@@ -80,8 +80,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: var(--axiom-radius-sm);
-  border: 1px solid var(--axiom-color-border);
+  border-radius: var(--asriui-radius-sm);
+  border: 1px solid var(--asriui-color-border);
 }
 
 .removeButton {
@@ -93,21 +93,21 @@
   justify-content: center;
   width: 1.5rem;
   height: 1.5rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-full);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-full);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
   cursor: pointer;
 }
 
 .helper {
   margin: 0;
   font-size: 0.78rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .error {
   margin: 0;
   font-size: 0.78rem;
-  color: var(--axiom-color-destructive, #dc2626);
+  color: var(--asriui-color-destructive, #dc2626);
 }

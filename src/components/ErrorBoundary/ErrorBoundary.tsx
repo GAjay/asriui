@@ -1,16 +1,16 @@
 import { Component, type ErrorInfo } from "react";
-import type { AxiomConfigContextValue } from "../../config/types";
+import type { AsriUIConfigContextValue } from "../../config/types";
 import { reportError } from "../../config/monitoring";
 import { captureDebugError } from "../../config/debug";
 import { Button } from "../Button";
 import type { ErrorBoundaryProps, ErrorBoundaryFallbackProps } from "./ErrorBoundary.types";
 import styles from "./ErrorBoundary.module.css";
-import { useAxiomConfigOptional } from "../../config/AxiomContext";
+import { useAsriUIConfigOptional } from "../../config/AsriUIContext";
 
 type State = { error: Error | null };
 
 type InnerProps = ErrorBoundaryProps & {
-  axiomConfig: AxiomConfigContextValue | null;
+  asriuiConfig: AsriUIConfigContextValue | null;
 };
 
 function DefaultFallback({
@@ -40,7 +40,7 @@ class ErrorBoundaryInner extends Component<InnerProps, State> {
   componentDidCatch(error: Error, info: ErrorInfo): void {
     this.props.onError?.(error, info);
 
-    const debug = this.props.axiomConfig?.debug;
+    const debug = this.props.asriuiConfig?.debug;
     if (debug?.enabled) {
       captureDebugError(error, {
         source: "error-boundary",
@@ -48,7 +48,7 @@ class ErrorBoundaryInner extends Component<InnerProps, State> {
       });
     }
 
-    const monitoring = this.props.axiomConfig?.monitoring;
+    const monitoring = this.props.asriuiConfig?.monitoring;
     const url = this.props.monitoringUrl ?? monitoring?.reportUrl;
 
     if (monitoring?.enabled && url) {
@@ -80,7 +80,7 @@ class ErrorBoundaryInner extends Component<InnerProps, State> {
     return (
       <DefaultFallback
         {...fallbackProps}
-        showStack={this.props.axiomConfig?.debug.enabled && this.props.axiomConfig.debug.showStack}
+        showStack={this.props.asriuiConfig?.debug.enabled && this.props.asriuiConfig.debug.showStack}
       />
     );
   }
@@ -90,8 +90,8 @@ class ErrorBoundaryInner extends Component<InnerProps, State> {
  * React error boundary with configurable fallback layout and optional remote monitoring.
  */
 export function ErrorBoundary(props: ErrorBoundaryProps) {
-  const axiomConfig = useAxiomConfigOptional();
-  return <ErrorBoundaryInner {...props} axiomConfig={axiomConfig} />;
+  const asriuiConfig = useAsriUIConfigOptional();
+  return <ErrorBoundaryInner {...props} asriuiConfig={asriuiConfig} />;
 }
 
 ErrorBoundary.displayName = "ErrorBoundary";

@@ -1,4 +1,4 @@
-import { Badge, Button, Input } from "axiom-ui";
+import { Badge, Button, Input } from "asriui";
 import { ThemeToggle } from "../ThemeToggle";
 import { useSiteTheme } from "../useSiteTheme";
 import styles from "./ThemeDocPreview.module.css";

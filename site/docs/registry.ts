@@ -6,7 +6,7 @@ export const componentRegistry: ComponentDocMeta[] = [
     name: "Button",
     category: "form",
     description:
-      "Accessible action trigger with variants, sizes, loading state, motion, and automatic GTM click tracking via AxiomProvider.",
+      "Accessible action trigger with variants, sizes, loading state, motion, and automatic GTM click tracking via AsriUIProvider.",
     whenToUse: "Use for primary actions, form submits, and navigation triggers. Prefer ghost or outline for secondary actions.",
     related: ["input", "dialog", "link"],
   },
@@ -17,7 +17,7 @@ export const componentRegistry: ComponentDocMeta[] = [
     description:
       "Accessible anchor with GTM click tracking, external-link detection, and new-tab affordances.",
     whenToUse:
-      "Use for in-app navigation and outbound URLs. Pair with AxiomProvider analytics for per-link GTM events.",
+      "Use for in-app navigation and outbound URLs. Pair with AsriUIProvider analytics for per-link GTM events.",
     related: ["button", "side-nav", "breadcrumb"],
   },
   {

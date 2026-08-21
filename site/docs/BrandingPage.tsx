@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Breadcrumb, CodeBlock } from "axiom-ui";
+import { Breadcrumb, CodeBlock } from "asriui";
 import { BrandMark, markPalette } from "../BrandMark";
 import { DocPageShell } from "./DocPageShell";
 import styles from "./GuidesPage.module.css";
@@ -19,7 +19,7 @@ const TOC = [
 const MARK_CODE = `import { BrandMark } from "./BrandMark";
 
 <BrandMark size={26} />
-<BrandMark size={40} label="AxiomUI" />`;
+<BrandMark size={40} label="AsriUI" />`;
 
 const PALETTE_CODE = `import { markPalette } from "./BrandMark";
 
@@ -77,7 +77,7 @@ export function BrandingPage() {
           <p className={styles.kicker}>Guides</p>
           <h1 className={styles.title}>Branding</h1>
           <p className={styles.lead}>
-            AxiomUI uses a sharp split-plate mark with a geometric “A” letterform. The mark inverts
+            AsriUI uses a sharp split-plate mark with a geometric “A” letterform. The mark inverts
             automatically on dark surfaces and black landing bands so it stays legible everywhere.
           </p>
           <div className={styles.metaRow}>
@@ -91,7 +91,7 @@ export function BrandingPage() {
           <h2 className={styles.sectionTitle}>Overview</h2>
           <p className={styles.prose}>
             The brand is intentionally minimal: zinc neutrals, crisp geometry, and no gradients on
-            the mark itself. Pair the logo with the wordmark <strong>AxiomUI</strong> in semibold
+            the mark itself. Pair the logo with the wordmark <strong>AsriUI</strong> in semibold
             sans — or use the mark alone when space is tight (favicon, app icon, collapsed nav).
           </p>
         </section>
@@ -107,13 +107,13 @@ export function BrandingPage() {
             <div className={brandStyles.specimen}>
               <p className={brandStyles.specimenLabel}>Light surface</p>
               <div className={`${brandStyles.specimenStage} ${brandStyles.stageLight}`}>
-                <BrandMark size={48} label="AxiomUI on light" />
+                <BrandMark size={48} label="AsriUI on light" />
               </div>
             </div>
             <div className={brandStyles.specimen}>
               <p className={brandStyles.specimenLabel}>Dark surface</p>
               <div className={`${brandStyles.specimenStage} ${brandStyles.stageDark}`} data-band="black">
-                <BrandMark size={48} label="AxiomUI on dark" />
+                <BrandMark size={48} label="AsriUI on dark" />
               </div>
             </div>
           </div>
@@ -140,7 +140,7 @@ export function BrandingPage() {
               <div className={`${brandStyles.specimenStage} ${brandStyles.stageMuted}`}>
                 <span className={brandStyles.wordmarkRow}>
                   <BrandMark size={26} />
-                  AxiomUI
+                  AsriUI
                 </span>
               </div>
             </div>
@@ -149,7 +149,7 @@ export function BrandingPage() {
               <div className={`${brandStyles.specimenStage} ${brandStyles.stageDark}`} data-band="black">
                 <span className={`${brandStyles.wordmarkRow} ${brandStyles.wordmarkRowDark}`}>
                   <BrandMark size={26} />
-                  AxiomUI
+                  AsriUI
                 </span>
               </div>
             </div>

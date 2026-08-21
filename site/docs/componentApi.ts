@@ -42,7 +42,7 @@ const analyticsTrackProps: PropDoc[] = [
   {
     name: "trackEvent",
     type: "string",
-    description: "Override the default event name (e.g. axiom_button_click).",
+    description: "Override the default event name (e.g. asriui_button_click).",
   },
   {
     name: "trackLabel",
@@ -62,12 +62,12 @@ export const componentApiDocs: ComponentApiDoc[] = [
     slug: "button",
     summary: "Accessible action trigger with variants, loading state, motion, and GTM analytics.",
     description:
-      "The Button component extends the native `<button>` element with design-system variants, a loading spinner, and optional Framer Motion interactions. When wrapped in `AxiomProvider` with analytics enabled, click events are automatically pushed to the GTM dataLayer as `axiom_button_click`.",
-    importPath: "axiom-ui/button",
+      "The Button component extends the native `<button>` element with design-system variants, a loading spinner, and optional Framer Motion interactions. When wrapped in `AsriUIProvider` with analytics enabled, click events are automatically pushed to the GTM dataLayer as `asriui_button_click`.",
+    importPath: "asriui/button",
     exportName: "Button",
     accessibility:
       "Uses semantic `<button>`. Loading state sets `aria-busy` and `aria-disabled`. Focus ring via `:focus-visible`. Supports keyboard activation (Enter / Space).",
-    usage: `import { Button } from "axiom-ui/button";
+    usage: `import { Button } from "asriui/button";
 
 <Button variant="primary" size="md" onClick={save}>
   Save changes
@@ -88,11 +88,11 @@ export const componentApiDocs: ComponentApiDoc[] = [
     summary: "Accessible anchor with GTM tracking and external-link affordances.",
     description:
       "Link extends the native `<a>` element with design-system variants, automatic external-link detection, and GTM click tracking. When `target=\"_blank\"` or the href is an absolute URL, an external icon is shown and screen readers hear an “opens in new tab” hint.",
-    importPath: "axiom-ui/link",
+    importPath: "asriui/link",
     exportName: "Link",
     accessibility:
       "Uses semantic `<a>`. External links set `rel=\"noopener noreferrer\"`. New-tab links get an accessible name suffix unless `aria-label` is provided.",
-    usage: `import { Link } from "axiom-ui/link";
+    usage: `import { Link } from "asriui/link";
 
 <Link href="/docs">Documentation</Link>
 
@@ -123,7 +123,7 @@ export const componentApiDocs: ComponentApiDoc[] = [
       { name: "children", type: "ReactNode", description: "Link label or content." },
       ...analyticsTrackProps.map((prop) =>
         prop.name === "trackEvent"
-          ? { ...prop, description: "Override the default event name (e.g. axiom_link_click)." }
+          ? { ...prop, description: "Override the default event name (e.g. asriui_link_click)." }
           : prop,
       ),
     ],
@@ -133,11 +133,11 @@ export const componentApiDocs: ComponentApiDoc[] = [
     summary: "Navigation trail with optional back control and current-page semantics.",
     description:
       "Breadcrumb helps users orient themselves in nested views. Use the declarative `items` API or compound `Breadcrumb.List`, `Breadcrumb.Item`, `Breadcrumb.Separator`, and `Breadcrumb.Back` parts. The back control defaults to browser history when no handler is provided.",
-    importPath: "axiom-ui/breadcrumb",
+    importPath: "asriui/breadcrumb",
     exportName: "Breadcrumb",
     accessibility:
       "Renders a `nav` landmark with an ordered list. The current page uses `aria-current=\"page\"`. Separators are hidden from assistive technology.",
-    usage: `import { Breadcrumb } from "axiom-ui/breadcrumb";
+    usage: `import { Breadcrumb } from "asriui/breadcrumb";
 
 <Breadcrumb
   showBack
@@ -185,11 +185,11 @@ export const componentApiDocs: ComponentApiDoc[] = [
     summary: "Dropdown menu with keyboard navigation and grouped items.",
     description:
       "Menu is a compound dropdown for action lists and compact navigation. Combine Menu.Trigger, Menu.Content, Menu.Item, Menu.Group, Menu.Label, and Menu.Separator. Supports controlled open state, placement, and per-slot classNames.",
-    importPath: "axiom-ui/menu",
+    importPath: "asriui/menu",
     exportName: "Menu",
     accessibility:
       "Trigger exposes aria-expanded and aria-controls. Content uses role=\"menu\" with menuitem buttons. Arrow keys, Home, End, and Escape are supported.",
-    usage: `import { Menu } from "axiom-ui/menu";
+    usage: `import { Menu } from "asriui/menu";
 
 <Menu>
   <Menu.Trigger>Options</Menu.Trigger>
@@ -223,11 +223,11 @@ export const componentApiDocs: ComponentApiDoc[] = [
     summary: "Contextual label on hover or keyboard focus.",
     description:
       "Tooltip is a compound component for short help text. Combine Tooltip.Trigger and Tooltip.Content with configurable placement, delay, and per-slot classNames.",
-    importPath: "axiom-ui/tooltip",
+    importPath: "asriui/tooltip",
     exportName: "Tooltip",
     accessibility:
       "Trigger sets aria-describedby when open. Content uses role=\"tooltip\". Shows on hover and focus; hides on blur and pointer leave.",
-    usage: `import { Tooltip } from "axiom-ui/tooltip";
+    usage: `import { Tooltip } from "asriui/tooltip";
 
 <Tooltip>
   <Tooltip.Trigger>
@@ -255,11 +255,11 @@ export const componentApiDocs: ComponentApiDoc[] = [
     summary: "Select-style dropdown for one or many values.",
     description:
       "Dropdown is a listbox-style control for single or multiple selection. Pass an options array for simple usage, or compose Dropdown.Trigger, Dropdown.Content, and Dropdown.Item for grouped layouts. Set multiple to toggle several options. Enable searchable to type and filter options; long lists scroll inside the panel.",
-    importPath: "axiom-ui/dropdown",
+    importPath: "asriui/dropdown",
     exportName: "Dropdown",
     accessibility:
       "Trigger uses aria-haspopup=\"listbox\" and aria-expanded. Searchable mode uses role=\"combobox\". Items use role=\"option\" with aria-selected. Arrow keys, Home, End, and Escape are supported.",
-    usage: `import { Dropdown } from "axiom-ui/dropdown";
+    usage: `import { Dropdown } from "asriui/dropdown";
 
 <Dropdown
   label="Country"
@@ -294,11 +294,11 @@ export const componentApiDocs: ComponentApiDoc[] = [
     summary: "Typeable date, datetime, and range picker.",
     description:
       "DatePicker combines a text input with a calendar popover. Supports single dates, date ranges, datetime precision, disablePast, min/max constraints, and typed input in ISO, US, or EU formats.",
-    importPath: "axiom-ui/date-picker",
+    importPath: "asriui/date-picker",
     exportName: "DatePicker",
     accessibility:
       "Input is labeled and exposes aria-invalid on validation errors. Calendar days are keyboard-focusable buttons with disabled states for blocked dates.",
-    usage: `import { DatePicker } from "axiom-ui/date-picker";
+    usage: `import { DatePicker } from "asriui/date-picker";
 
 <DatePicker
   label="Travel dates"
@@ -325,12 +325,12 @@ export const componentApiDocs: ComponentApiDoc[] = [
     slug: "input",
     summary: "Labeled text field with helper/error messaging and full ARIA wiring.",
     description:
-      "Input wraps a native `<input>` with an optional label, helper text, error message, and prefix/suffix affixes. IDs and ARIA relationships (`aria-describedby`, `aria-invalid`, `aria-required`) are wired automatically via `useAxiomId`.",
-    importPath: "axiom-ui/input",
+      "Input wraps a native `<input>` with an optional label, helper text, error message, and prefix/suffix affixes. IDs and ARIA relationships (`aria-describedby`, `aria-invalid`, `aria-required`) are wired automatically via `useAsriUIId`.",
+    importPath: "asriui/input",
     exportName: "Input",
     accessibility:
       "Label linked via `htmlFor`. Error text replaces helper and sets `aria-invalid`. Required fields show asterisk and `aria-required`.",
-    usage: `import { Input } from "axiom-ui/input";
+    usage: `import { Input } from "asriui/input";
 
 <Input
   label="Email"
@@ -355,10 +355,10 @@ export const componentApiDocs: ComponentApiDoc[] = [
     summary: "Compound layout surface with Header, Title, Content, and Footer.",
     description:
       "Card is a compound component for grouping related content. Use `Card.Header` + `Card.Title` for the heading area, `Card.Content` for the body, and `Card.Footer` for actions. Supports optional entrance and hover elevation motion.",
-    importPath: "axiom-ui/card",
+    importPath: "asriui/card",
     exportName: "Card",
     accessibility: "Card.Title renders a semantic heading (h1–h6 via `as` prop) for document outline.",
-    usage: `import { Card } from "axiom-ui/card";
+    usage: `import { Card } from "asriui/card";
 
 <Card>
   <Card.Header>
@@ -398,11 +398,11 @@ export const componentApiDocs: ComponentApiDoc[] = [
     summary: "Drop-in embed for partner pages, ad scripts, and third-party widgets.",
     description:
       "Widget is an isolated embed surface. Pass `src` for iframe/webview content, `html` for sandboxed inline markup, or `scriptSrc` for ad tags and vendor loaders. Use `mountWidget` when you need a vanilla JS snippet without React.",
-    importPath: "axiom-ui/widget",
+    importPath: "asriui/widget",
     exportName: "Widget, mountWidget",
     accessibility:
       "Iframe embeds require a descriptive `title`. Script mode renders a mount node with optional `slotId` and `data-*` attributes for third-party loaders.",
-    usage: `import { Widget, mountWidget } from "axiom-ui/widget";
+    usage: `import { Widget, mountWidget } from "asriui/widget";
 
 <Widget
   src="https://partner.example/widget"
@@ -453,11 +453,11 @@ mountWidget("widget-host", {
     summary: "Trading metric tiles for quotes, portfolio stats, and market summaries.",
     description:
       "Metric is a compound surface for trading dashboards. Use `variant=\"quote\"` for hero price tiles, `compact` for ticker rows, and the default tile for volume, high/low, and P&L cards. Directional coloring comes from `trend` or signed `Metric.Change` values.",
-    importPath: "axiom-ui/metric",
+    importPath: "asriui/metric",
     exportName: "Metric",
     accessibility:
       "Values use tabular numerals for stable layout. Pair live quotes with `live` on the root and `Metric.Symbol` for a visual streaming indicator.",
-    usage: `import { Metric } from "axiom-ui/metric";
+    usage: `import { Metric } from "asriui/metric";
 
 <Metric variant="quote" trend="up" live>
   <Metric.Symbol>BTC/USD</Metric.Symbol>
@@ -504,27 +504,27 @@ mountWidget("widget-host", {
     slug: "separator",
     summary: "Horizontal or vertical divider.",
     description: "Separator divides sections, menus, and toolbars.",
-    importPath: "axiom-ui/separator",
+    importPath: "asriui/separator",
     exportName: "Separator",
-    usage: `import { Separator } from "axiom-ui/separator";\n\n<Separator />\n<Separator orientation="vertical" />`,
+    usage: `import { Separator } from "asriui/separator";\n\n<Separator />\n<Separator orientation="vertical" />`,
     props: [{ name: "orientation", type: '"horizontal" | "vertical"', defaultValue: '"horizontal"', description: "Divider direction." }, { name: "className", type: "string", description: "Custom class name for the separator element." }],
   },
   {
     slug: "callout",
     summary: "Highlighted notice for info, success, warning, and danger.",
     description: "Callout draws attention to important messages.",
-    importPath: "axiom-ui/callout",
+    importPath: "asriui/callout",
     exportName: "Callout",
-    usage: `import { Callout } from "axiom-ui/callout";\n\n<Callout variant="warning" title="Heads up">Market data may be delayed.</Callout>`,
+    usage: `import { Callout } from "asriui/callout";\n\n<Callout variant="warning" title="Heads up">Market data may be delayed.</Callout>`,
     props: [{ name: "variant", type: "CalloutVariant", defaultValue: '"info"', description: "info | success | warning | danger" }, { name: "className", type: "string", description: "Custom class name for the callout root." }],
   },
   {
     slug: "quote",
     summary: "Styled blockquote for testimonials and citations.",
     description: "Quote renders semantic blockquote content with optional footer attribution.",
-    importPath: "axiom-ui/quote",
+    importPath: "asriui/quote",
     exportName: "Quote",
-    usage: `import { Quote } from "axiom-ui/quote";\n\n<Quote footer="— Ada Lovelace">That brain of mine is something more than merely mortal.</Quote>`,
+    usage: `import { Quote } from "asriui/quote";\n\n<Quote footer="— Ada Lovelace">That brain of mine is something more than merely mortal.</Quote>`,
     props: [{ name: "variant", type: '"default" | "large"', defaultValue: '"default"', description: "Typography scale." }, { name: "className", type: "string", description: "Custom class name for the quote root." }],
   },
   {
@@ -532,9 +532,9 @@ mountWidget("widget-host", {
     summary: "Inline text with a speak-aloud control.",
     description:
       "TextToSpeech wraps content with a speaker button. Clicking it reads the wrapped text (or an explicit `text` prop) using the browser Speech Synthesis API.",
-    importPath: "axiom-ui/text-to-speech",
+    importPath: "asriui/text-to-speech",
     exportName: "TextToSpeech",
-    usage: `import { TextToSpeech } from "axiom-ui/text-to-speech";
+    usage: `import { TextToSpeech } from "asriui/text-to-speech";
 
 <TextToSpeech lang="en-US">
   Market data may be delayed during volatile sessions.
@@ -554,45 +554,45 @@ mountWidget("widget-host", {
     slug: "checkbox",
     summary: "Accessible checkbox with label and description.",
     description: "Checkbox supports controlled and uncontrolled modes plus indeterminate state.",
-    importPath: "axiom-ui/checkbox",
+    importPath: "asriui/checkbox",
     exportName: "Checkbox",
-    usage: `import { Checkbox } from "axiom-ui/checkbox";\n\n<Checkbox label="Email alerts" description="Daily summary at 9am" defaultChecked />`,
+    usage: `import { Checkbox } from "asriui/checkbox";\n\n<Checkbox label="Email alerts" description="Daily summary at 9am" defaultChecked />`,
     props: [{ name: "onCheckedChange", type: "(checked: boolean) => void", description: "Called when toggled." }, { name: "className", type: "string", description: "Custom class name for the checkbox label wrapper." }],
   },
   {
     slug: "radio",
     summary: "Accessible radio input with group support.",
     description: "Use `Radio.Group` for single-select fields.",
-    importPath: "axiom-ui/radio",
+    importPath: "asriui/radio",
     exportName: "Radio, RadioGroup",
-    usage: `import { Radio, RadioGroup } from "axiom-ui/radio";\n\n<Radio.Group defaultValue="pro">\n  <Radio value="starter" label="Starter" />\n  <Radio value="pro" label="Pro" />\n</Radio.Group>`,
+    usage: `import { Radio, RadioGroup } from "asriui/radio";\n\n<Radio.Group defaultValue="pro">\n  <Radio value="starter" label="Starter" />\n  <Radio value="pro" label="Pro" />\n</Radio.Group>`,
     props: [{ name: "value", type: "string", required: true, description: "Option value within the group." }, { name: "className", type: "string", description: "Custom class name for the radio label or group container." }],
   },
   {
     slug: "checkbox-card",
     summary: "Selectable card for multi-select choices.",
     description: "CheckboxCard is ideal for feature toggles, add-ons, and filters.",
-    importPath: "axiom-ui/checkbox-card",
+    importPath: "asriui/checkbox-card",
     exportName: "CheckboxCard",
-    usage: `import { CheckboxCard } from "axiom-ui/checkbox-card";\n\n<CheckboxCard title="Priority support" description="24/7 chat" defaultChecked />`,
+    usage: `import { CheckboxCard } from "asriui/checkbox-card";\n\n<CheckboxCard title="Priority support" description="24/7 chat" defaultChecked />`,
     props: [{ name: "onCheckedChange", type: "(checked: boolean) => void", description: "Called when selected." }, { name: "className", type: "string", description: "Custom class name for the card root." }],
   },
   {
     slug: "radio-card",
     summary: "Selectable card for single-choice settings.",
     description: "RadioCard.Group wraps pricing tiers, shipping methods, and plan pickers.",
-    importPath: "axiom-ui/radio-card",
+    importPath: "asriui/radio-card",
     exportName: "RadioCard, RadioCardGroup",
-    usage: `import { RadioCard, RadioCardGroup } from "axiom-ui/radio-card";\n\n<RadioCard.Group defaultValue="standard">\n  <RadioCard value="standard" title="Standard" description="5–7 days" />\n  <RadioCard value="express" title="Express" description="2 days" />\n</RadioCard.Group>`,
+    usage: `import { RadioCard, RadioCardGroup } from "asriui/radio-card";\n\n<RadioCard.Group defaultValue="standard">\n  <RadioCard value="standard" title="Standard" description="5–7 days" />\n  <RadioCard value="express" title="Express" description="2 days" />\n</RadioCard.Group>`,
     props: [{ name: "value", type: "string", required: true, description: "Option value within the group." }, { name: "className", type: "string", description: "Custom class name for the card or group container." }],
   },
   {
     slug: "reset",
     summary: "Scoped reset for configurable component previews.",
     description: "Reset stores default values and restores them via `Reset.Trigger` or `useReset()`.",
-    importPath: "axiom-ui/reset",
+    importPath: "asriui/reset",
     exportName: "Reset, useReset",
-    usage: `import { Reset } from "axiom-ui/reset";\n\n<Reset.Root defaults={{ size: "md" }}>\n  {({ values, setValue }) => (\n    <>\n      <Button size={values.size}>Preview</Button>\n      <Reset.Trigger />\n    </>\n  )}\n</Reset.Root>`,
+    usage: `import { Reset } from "asriui/reset";\n\n<Reset.Root defaults={{ size: "md" }}>\n  {({ values, setValue }) => (\n    <>\n      <Button size={values.size}>Preview</Button>\n      <Reset.Trigger />\n    </>\n  )}\n</Reset.Root>`,
     props: [
       { name: "className", type: "string", description: "Custom class name for the reset scope wrapper." },
       { name: "defaults", type: "Record<string, unknown>", required: true, description: "Baseline values restored on reset." },
@@ -602,9 +602,9 @@ mountWidget("widget-host", {
     slug: "visible",
     summary: "Conditional show/hide primitives.",
     description: "Visible and Hidden toggle content with optional animation.",
-    importPath: "axiom-ui/visible",
+    importPath: "asriui/visible",
     exportName: "Visible, Hidden",
-    usage: `import { Visible, Hidden } from "axiom-ui/visible";\n\n<Visible when={open}>Panel content</Visible>\n<Hidden when={!open}>Legacy block</Hidden>`,
+    usage: `import { Visible, Hidden } from "asriui/visible";\n\n<Visible when={open}>Panel content</Visible>\n<Hidden when={!open}>Legacy block</Hidden>`,
     props: [{ name: "when", type: "boolean", required: true, description: "Visibility condition." }],
   },
   {
@@ -612,11 +612,11 @@ mountWidget("widget-host", {
     summary: "Semantic list rows with media, descriptions, and interactive selection.",
     description:
       "ListItem renders a single row inside a List container. Supports leading media, trailing metadata, selected/disabled states, and an interactive button mode for navigation-style rows.",
-    importPath: "axiom-ui/list-item",
+    importPath: "asriui/list-item",
     exportName: "List, ListItem",
     accessibility:
       "Interactive rows render as `<button>` inside `<li>`. Use `aria-label` on List for screen reader context. Selected state is visual; add aria-current if needed.",
-    usage: `import { List, ListItem } from "axiom-ui/list-item";
+    usage: `import { List, ListItem } from "asriui/list-item";
 
 <List aria-label="Settings">
   <ListItem
@@ -659,9 +659,9 @@ mountWidget("widget-host", {
     slug: "badge",
     summary: "Compact inline status label for counts, tags, and states.",
     description: "Badge renders an inline `<span>` chip. Use for status indicators, version tags, or count labels. Four variants cover default emphasis through destructive alerts.",
-    importPath: "axiom-ui/badge",
+    importPath: "asriui/badge",
     exportName: "Badge",
-    usage: `import { Badge } from "axiom-ui/badge";
+    usage: `import { Badge } from "asriui/badge";
 
 <Badge variant="secondary">Processing</Badge>
 <Badge variant="destructive">Failed</Badge>`,
@@ -674,10 +674,10 @@ mountWidget("widget-host", {
     slug: "label",
     summary: "Accessible form label with optional required indicator.",
     description: "Label renders a native `<label>` element. Pair with Input, Switch, or any control via matching `htmlFor` / `id` attributes.",
-    importPath: "axiom-ui/label",
+    importPath: "asriui/label",
     exportName: "Label",
     accessibility: "Uses semantic `<label>`. Required asterisk is `aria-hidden` (actual required state lives on the control).",
-    usage: `import { Label } from "axiom-ui/label";
+    usage: `import { Label } from "asriui/label";
 
 <Label htmlFor="email" required>Email address</Label>
 <Input id="email" type="email" />`,
@@ -691,10 +691,10 @@ mountWidget("widget-host", {
     slug: "switch",
     summary: "Toggle control with WAI-ARIA switch semantics.",
     description: "Switch implements the `role=\"switch\"` pattern with `aria-checked`. Supports controlled (`checked` + `onCheckedChange`) and uncontrolled (`defaultChecked`) modes.",
-    importPath: "axiom-ui/switch",
+    importPath: "asriui/switch",
     exportName: "Switch",
     accessibility: "Uses role=switch and aria-checked. Pair with Label via htmlFor/id or aria-labelledby.",
-    usage: `import { Switch } from "axiom-ui/switch";
+    usage: `import { Switch } from "asriui/switch";
 
 const [on, setOn] = useState(false);
 <Switch id="alerts" checked={on} onCheckedChange={setOn} aria-label="Email alerts" />`,
@@ -710,11 +710,11 @@ const [on, setOn] = useState(false);
     summary: "Compound tabbed panels with animated transitions and style variants.",
     description:
       "Tabs manages active panel state and wires ARIA relationships between triggers and panels. Supports controlled (`value`) and uncontrolled (`defaultValue`) modes, smooth panel transitions, and visual variants including underline (bottom line), pills, and ghost.",
-    importPath: "axiom-ui/tabs",
+    importPath: "asriui/tabs",
     exportName: "Tabs",
     accessibility:
       "Tabs.List → role=tablist. Tabs.Trigger → role=tab with aria-selected, aria-controls, tabIndex roving. Tabs.Content → role=tabpanel with aria-labelledby.",
-    usage: `import { Tabs } from "axiom-ui/tabs";
+    usage: `import { Tabs } from "asriui/tabs";
 
 <Tabs defaultValue="account" variant="underline" animated>
   <Tabs.List>
@@ -776,17 +776,17 @@ const [on, setOn] = useState(false);
     summary: "Expandable sections with side content slots and animated panels.",
     description:
       "Accordion reuses the same grid-collapse animation pattern as SideNav groups. Supports single or multiple open sections, leading/trailing trigger content, and default, bordered, and ghost variants.",
-    importPath: "axiom-ui/accordion",
+    importPath: "asriui/accordion",
     exportName: "Accordion",
     accessibility:
       "Trigger buttons expose aria-expanded and aria-controls. Content regions use role=region with aria-labelledby. Closed panels are inert.",
-    usage: `import { Accordion } from "axiom-ui/accordion";
-import { Icon } from "axiom-ui/icon";
+    usage: `import { Accordion } from "asriui/accordion";
+import { Icon } from "asriui/icon";
 
 <Accordion type="single" collapsible defaultValue="faq-1" variant="bordered">
   <Accordion.Item value="faq-1">
     <Accordion.Trigger icon={<Icon name="sparkles" size="sm" />} endContent="New">
-      What is Axiom UI?
+      What is AsriUI?
     </Accordion.Trigger>
     <Accordion.Content>
       A design system and React component library for product teams.
@@ -830,11 +830,11 @@ import { Icon } from "axiom-ui/icon";
     summary: "Modal dialog with React portal, focus trap, escape dismiss, and compound layout.",
     description:
       "Dialog portals content to document.body (or a custom container). Overlay click and Escape close the dialog. Use shorthand title/description on Content, or compose with Header, Title, Description, Footer, and Close slots.",
-    importPath: "axiom-ui/dialog",
+    importPath: "asriui/dialog",
     exportName: "Dialog",
     accessibility:
       "role=dialog, aria-modal=true. Title linked via aria-labelledby, description via aria-describedby. Body scroll locked while open. Focus trapped inside the dialog and returned to the trigger on close.",
-    usage: `import { Dialog } from "axiom-ui/dialog";
+    usage: `import { Dialog } from "asriui/dialog";
 
 <Dialog>
   <Dialog.Trigger>Open</Dialog.Trigger>
@@ -890,10 +890,10 @@ import { Icon } from "axiom-ui/icon";
     summary: "Animated toast notifications with imperative API and config-driven showcase.",
     description:
       "Toast provides a stacked notification viewport with Framer Motion enter/exit, swipe-to-dismiss, auto-dismiss progress bar, and variants for success, error, warning, and info — each with distinct accent color, tinted background, and icon. Override variant appearance globally on ToastProvider or per toast. Use ToastShowcase to build a demo page from a configuration array.",
-    importPath: "axiom-ui/toast",
+    importPath: "asriui/toast",
     exportName: "ToastProvider",
-    usage: `import { ToastProvider, ToastShowcase, toast } from "axiom-ui/toast";
-import "axiom-ui/style.css";
+    usage: `import { ToastProvider, ToastShowcase, toast } from "asriui/toast";
+import "asriui/style.css";
 
 <ToastProvider
   position="bottom-right"
@@ -928,9 +928,9 @@ toast.success("Saved", { description: "Your changes were published." });
     summary: "Login form with Microsoft, Google, GitHub, and Apple OAuth buttons.",
     description:
       "Auth components help you ship sign-in pages quickly. LoginForm combines email/password fields with branded OAuth buttons. Wire onOAuth to your identity provider — Microsoft Entra ID, Google OAuth, GitHub Apps, or Sign in with Apple.",
-    importPath: "axiom-ui/auth",
+    importPath: "asriui/auth",
     exportName: "LoginForm",
-    usage: `import { LoginForm } from "axiom-ui/auth";
+    usage: `import { LoginForm } from "asriui/auth";
 
 <LoginForm
   onSubmit={({ email, password }) => signIn(email, password)}
@@ -949,10 +949,10 @@ toast.success("Saved", { description: "Your changes were published." });
     summary: "Booking calendar with multi-slot selection per day.",
     description:
       "Calendar renders a month grid with a slot picker panel. Users can focus a day and select multiple time slots, across multiple days, with support for booked/unavailable slots, per-day slot overrides, min/max dates, and selection limits.",
-    importPath: "axiom-ui/calendar",
+    importPath: "asriui/calendar",
     exportName: "Calendar",
     usage: `import { useState } from "react";
-import { Calendar, type CalendarSlotSelection } from "axiom-ui/calendar";
+import { Calendar, type CalendarSlotSelection } from "asriui/calendar";
 
 export function BookingCalendar() {
   const [selection, setSelection] = useState<CalendarSlotSelection[]>([]);
@@ -987,10 +987,10 @@ export function BookingCalendar() {
     summary: "High-performance virtualized list with fixed row height and SSR support.",
     description:
       "VirtualList only mounts DOM nodes for visible rows plus an overscan buffer. Ideal for transaction feeds, log viewers, and large selectable lists. SSR renders `ssrCount` items without scroll measurement.",
-    importPath: "axiom-ui/virtual-list",
+    importPath: "asriui/virtual-list",
     exportName: "VirtualList",
     accessibility: "Root has role=list, each row has role=listitem. Provide meaningful renderItem text for screen readers.",
-    usage: `import { VirtualList } from "axiom-ui/virtual-list";
+    usage: `import { VirtualList } from "asriui/virtual-list";
 
 <VirtualList
   items={rows}
@@ -1016,10 +1016,10 @@ export function BookingCalendar() {
     summary: "JSON-configured form with built-in validation — no Formik required.",
     description:
       "Form renders fields from a JSON config object. Supports text, email, password, textarea, select, and switch field types with required, regex pattern, min/max length, numeric bounds, cross-field match/notEqual, uniqueAmong, oneOf/notOneOf rules, and programmatic validate functions. Ideal for CMS-driven or runtime-generated forms.",
-    importPath: "axiom-ui/form",
+    importPath: "asriui/form",
     exportName: "Form",
     accessibility: "Each field gets a Label, error messages use role=alert, invalid fields set aria-invalid on inputs.",
-    usage: `import { Form } from "axiom-ui/form";
+    usage: `import { Form } from "asriui/form";
 
 const config = {
   submitLabel: "Sign up",
@@ -1094,11 +1094,11 @@ const config = {
     summary: "JSON-configured page builder — layout, blocks, and forms from one schema.",
     description:
       "Page renders a full screen from a serializable PageConfig. Choose a PageLayout variant, optional SideNav, header actions, and an ordered list of blocks (typography, form, stats, table, tabs, accordion, timeline, card, grid, markdown, code, and custom slots). Ideal for CMS-driven UIs and admin page builders.",
-    importPath: "axiom-ui/page",
+    importPath: "asriui/page",
     exportName: "Page",
     accessibility:
       "Composes accessible primitives (Form, Tabs, Accordion, Table, SideNav). Provide meaningful header titles and form labels in your JSON.",
-    usage: `import { Page } from "axiom-ui/page";
+    usage: `import { Page } from "asriui/page";
 
 const config = {
   layout: { variant: "centered", contentMaxWidth: "36rem" },
@@ -1161,11 +1161,11 @@ const config = {
     summary: "Payment card fields with Luhn validation, expiry/CVC rules, and brand detection.",
     description:
       "CardValidation collects card number, expiry, CVC/CID, and optional cardholder name. It formats the PAN, detects Visa/Mastercard/Amex/Discover/etc., validates with the Luhn algorithm, checks expiry is not in the past, and enforces 3- or 4-digit security codes by brand. Use client-side before sending to your payment tokenizer — never store raw PANs yourself.",
-    importPath: "axiom-ui/card-validation",
+    importPath: "asriui/card-validation",
     exportName: "CardValidation",
     accessibility:
       "Each field uses Input with labels, autocomplete tokens (cc-number, cc-exp, cc-csc, cc-name), aria-invalid on errors, and a group label for the fieldset.",
-    usage: `import { CardValidation, validateCardValues } from "axiom-ui/card-validation";
+    usage: `import { CardValidation, validateCardValues } from "asriui/card-validation";
 
 <CardValidation
   onChange={(values) => console.log(values)}
@@ -1207,10 +1207,10 @@ const errors = validateCardValues(values, { requireName: true });`,
     slug: "error-boundary",
     summary: "React error boundary with fallback UI and remote monitoring support.",
     description:
-      "ErrorBoundary catches render errors in child components. Displays a default or custom fallback. When AxiomProvider monitoring is enabled, errors are POSTed as JSON to the configured reportUrl.",
-    importPath: "axiom-ui/error-boundary",
+      "ErrorBoundary catches render errors in child components. Displays a default or custom fallback. When AsriUIProvider monitoring is enabled, errors are POSTed as JSON to the configured reportUrl.",
+    importPath: "asriui/error-boundary",
     exportName: "ErrorBoundary",
-    usage: `import { ErrorBoundary } from "axiom-ui/error-boundary";
+    usage: `import { ErrorBoundary } from "asriui/error-boundary";
 
 <ErrorBoundary
   fallback={({ error, reset }) => <ErrorPage message={error.message} onRetry={reset} />}
@@ -1221,7 +1221,7 @@ const errors = validateCardValues(values, { requireName: true });`,
     props: [
       { name: "fallback", type: "ReactNode | (props) => ReactNode", description: "Custom UI or render function receiving { error, reset }." },
       { name: "onError", type: "(error: Error, info: ErrorInfo) => void", description: "Local error logging callback." },
-      { name: "monitoringUrl", type: "string", description: "Override AxiomProvider monitoring.reportUrl for this boundary." },
+      { name: "monitoringUrl", type: "string", description: "Override AsriUIProvider monitoring.reportUrl for this boundary." },
       { name: "children", type: "ReactNode", required: true, description: "Subtree to protect." },
     ],
   },
@@ -1230,9 +1230,9 @@ const errors = validateCardValues(values, { requireName: true });`,
     summary: "Lazy-loaded Monaco code editor for JSON and TypeScript configs.",
     description:
       "MonacoEditor wraps @monaco-editor/react with a loading fallback and sensible defaults (no minimap, 13px font). Peer dependency: @monaco-editor/react.",
-    importPath: "axiom-ui/monaco-editor",
+    importPath: "asriui/monaco-editor",
     exportName: "MonacoEditor",
-    usage: `import { MonacoEditor } from "axiom-ui/monaco-editor";
+    usage: `import { MonacoEditor } from "asriui/monaco-editor";
 
 <MonacoEditor
   language="json"
@@ -1257,9 +1257,9 @@ const errors = validateCardValues(values, { requireName: true });`,
     summary: "React Flow wrapper for drag-and-drop flowchart builders.",
     description:
       "FlowChart provides a ready-to-use node-edge canvas with background grid, zoom controls, and minimap. Lazy-loads @xyflow/react. Peer dependency: @xyflow/react.",
-    importPath: "axiom-ui/flow-chart",
+    importPath: "asriui/flow-chart",
     exportName: "FlowChart",
-    usage: `import { FlowChart } from "axiom-ui/flow-chart";
+    usage: `import { FlowChart } from "asriui/flow-chart";
 
 <FlowChart
   height={500}
@@ -1283,12 +1283,12 @@ const errors = validateCardValues(values, { requireName: true });`,
     summary: "VS Code-style syntax-highlighted code display.",
     description:
       "CodeBlock renders source code with a dark editor background and colored tokens. Includes optional copy button, filename toolbar, and line numbers. Zero dependencies — lightweight alternative to Monaco for read-only snippets.",
-    importPath: "axiom-ui/code-block",
+    importPath: "asriui/code-block",
     exportName: "CodeBlock",
-    usage: `import { CodeBlock } from "axiom-ui/code-block";
+    usage: `import { CodeBlock } from "asriui/code-block";
 
 <CodeBlock
-  code={\`import { Button } from "axiom-ui/button";\`}
+  code={\`import { Button } from "asriui/button";\`}
   language="tsx"
   showCopy
   filename="App.tsx"
@@ -1306,16 +1306,16 @@ const errors = validateCardValues(values, { requireName: true });`,
     summary: "Lightweight Markdown renderer with theme tokens and CodeBlock fences.",
     description:
       "Markdown parses common Markdown into React elements — no remark/react-markdown dependency. Supports headings, emphasis, links, images, lists, blockquotes, tables, horizontal rules, and fenced code via CodeBlock. Raw HTML in the source is rendered as text (not executed).",
-    importPath: "axiom-ui/markdown",
+    importPath: "asriui/markdown",
     exportName: "Markdown",
     accessibility:
       "Renders semantic HTML (article, headings, lists, table). External http(s) links open in a new tab with rel=noopener noreferrer by default.",
-    usage: `import { Markdown } from "axiom-ui/markdown";
+    usage: `import { Markdown } from "asriui/markdown";
 
 <Markdown
   source={\`# Hello
 
-Install with \\\`pnpm add axiom-ui\\\`.
+Install with \\\`pnpm add asriui\\\`.
 
 - Accessible
 - Themeable
@@ -1335,11 +1335,11 @@ Install with \\\`pnpm add axiom-ui\\\`.
     summary: "Sidebar navigation with left-border hover and active states.",
     description:
       "SideNav is a compound navigation component for documentation and dashboard sidebars. Collapsible groups animate open/close with chevrons, the whole sidebar can collapse via SideNav.Toggle (chevron icon rail or animated hamburger that hides the nav), multiple top-level menus switch via an icon rail, nested submenus support deeper menu levels with optional icons, and SideNav.VirtualList optionally virtualizes large link lists.",
-    importPath: "axiom-ui/side-nav",
+    importPath: "asriui/side-nav",
     exportName: "SideNav",
     accessibility:
       "Uses nav landmark. Active links set aria-current=page. Collapsible groups and submenus expose aria-expanded on triggers. Toggle exposes aria-expanded for the whole sidebar. Multi-menu rail uses role=tablist with tab/tabpanel pairing.",
-    usage: `import { SideNav } from "axiom-ui/side-nav";
+    usage: `import { SideNav } from "asriui/side-nav";
 
 {/* Hamburger — hides the sidenav on click */}
 <SideNav collapsible collapseMode="hidden">
@@ -1474,10 +1474,10 @@ Install with \\\`pnpm add axiom-ui\\\`.
     summary: "Configurable page shell with sidebar, docs, centered, and full layouts.",
     description:
       "PageLayout provides a responsive grid shell with compound slots: Sidebar, Main, Content, and Aside. Use variant presets for common app and documentation layouts.",
-    importPath: "axiom-ui/page-layout",
+    importPath: "asriui/page-layout",
     exportName: "PageLayout",
-    usage: `import { PageLayout } from "axiom-ui/page-layout";
-import { SideNav } from "axiom-ui/side-nav";
+    usage: `import { PageLayout } from "asriui/page-layout";
+import { SideNav } from "asriui/side-nav";
 
 <PageLayout variant="docs" sidebarWidth={260}>
   <PageLayout.Sidebar>
@@ -1501,11 +1501,11 @@ import { SideNav } from "axiom-ui/side-nav";
     summary: "Compound hero with full text or split (right/left) copy.",
     description:
       "Hero is composition-only: Copy, Eyebrow, Title, Description, Actions, Media, and Background. variant=\"full\" is a text band. variant=\"split\" with textSide=\"right\" puts copy on the right and media on the left. background presets include dotted, grid, glow, aurora, and mesh — set animated for motion.",
-    importPath: "axiom-ui/hero",
+    importPath: "asriui/hero",
     exportName: "Hero",
-    usage: `import { Hero } from "axiom-ui/hero";
-import { Slider } from "axiom-ui/slider";
-import { Button } from "axiom-ui/button";
+    usage: `import { Hero } from "asriui/hero";
+import { Slider } from "asriui/slider";
+import { Button } from "asriui/button";
 
 <Hero variant="split" textSide="right" background="dotted" animated>
   <Hero.Copy>
@@ -1544,9 +1544,9 @@ import { Button } from "axiom-ui/button";
     summary: "Compound carousel with slides, arrows, and dots.",
     description:
       "Slider is composition-only: Track, Slide, Controls, Prev, Next, and Dots. Supports loop, optional autoplay, pause on hover, and drag/swipe on the track.",
-    importPath: "axiom-ui/slider",
+    importPath: "asriui/slider",
     exportName: "Slider",
-    usage: `import { Slider } from "axiom-ui/slider";
+    usage: `import { Slider } from "asriui/slider";
 
 <Slider loop autoplay={5000}>
   <Slider.Track>
@@ -1572,7 +1572,7 @@ import { Button } from "axiom-ui/button";
     summary: "Responsive CSS grid with fixed and auto-fill variants.",
     description:
       "Grid provides two layout presets: fixed column count for predictable layouts, and auto-fill for responsive card grids. Auto-fill enables layout animations so cards smoothly reposition when the viewport reflows. Gap tokens map to design system spacing.",
-    importPath: "axiom-ui/grid",
+    importPath: "asriui/grid",
     exportName: "Grid",
     usage: `<Grid variant="fixed" columns={2} gap="md">{children}</Grid>
 <Grid variant="auto" minColumnWidth={280} gap="lg">{children}</Grid>`,
@@ -1599,7 +1599,7 @@ import { Button } from "axiom-ui/button";
     summary: "Centered max-width content wrapper.",
     description:
       "Container constrains page content to size tokens (sm–xl or full) with optional horizontal padding. Use it for marketing pages, docs, and dashboard content columns.",
-    importPath: "axiom-ui/container",
+    importPath: "asriui/container",
     exportName: "Container",
     usage: `<Container size="lg" padding="md">
   <h1>Page title</h1>
@@ -1616,7 +1616,7 @@ import { Button } from "axiom-ui/button";
     summary: "Flexbox layout primitive.",
     description:
       "Flex exposes direction, align, justify, gap, and wrap as typed props mapped to design-system spacing. Prefer Flex over ad-hoc display:flex for consistent gaps across the product.",
-    importPath: "axiom-ui/flex",
+    importPath: "asriui/flex",
     exportName: "Flex",
     usage: `<Flex direction="row" align="center" justify="between" gap="md">
   <span>Title</span>
@@ -1636,7 +1636,7 @@ import { Button } from "axiom-ui/button";
     summary: "Animated light/dark theme toggle.",
     description:
       "ThemeSwitch toggles data-theme with View Transition animations (ripple, fade, wipe, blur, slide). Falls back to an instant update when View Transitions are unavailable or prefers-reduced-motion is set.",
-    importPath: "axiom-ui/theme-switch",
+    importPath: "asriui/theme-switch",
     exportName: "ThemeSwitch",
     usage: `<ThemeSwitch
   theme={theme}
@@ -1662,9 +1662,9 @@ import { Button } from "axiom-ui/button";
     summary: "Semantic compound table for manual data markup.",
     description:
       "Table is a styled HTML table with compound subcomponents — Caption, Header, Body, Footer, Row, Head, and Cell. Use it for static reports and custom row layouts. Pair with DataGrid when you need declarative columns and sorting.",
-    importPath: "axiom-ui/table",
+    importPath: "asriui/table",
     exportName: "Table",
-    usage: `import { Table } from "axiom-ui/table";
+    usage: `import { Table } from "asriui/table";
 
 <Table variant="striped" scrollable>
   <Table.Header>
@@ -1691,9 +1691,9 @@ import { Button } from "axiom-ui/button";
     summary: "Sortable data grid with native or AG Grid engines.",
     description:
       "DataGrid renders tabular data from column definitions. The default native engine adds client-side sorting on top of Table. Enable exportable for CSV and Microsoft Excel (.xlsx) export — Excel requires optional peer xlsx. Set engine=\"ag-grid\" for advanced features after installing ag-grid-community and ag-grid-react.",
-    importPath: "axiom-ui/data-grid",
+    importPath: "asriui/data-grid",
     exportName: "DataGrid",
-    usage: `import { DataGrid } from "axiom-ui/data-grid";
+    usage: `import { DataGrid } from "asriui/data-grid";
 
 <DataGrid
   columns={[
@@ -1728,9 +1728,9 @@ import { Button } from "axiom-ui/button";
     slug: "aspect-ratio",
     summary: "Container that preserves a width/height ratio for media.",
     description: "AspectRatio uses the padding-top technique to reserve space before media loads. Wrap Image, video, or custom content.",
-    importPath: "axiom-ui/aspect-ratio",
+    importPath: "asriui/aspect-ratio",
     exportName: "AspectRatio",
-    usage: `import { AspectRatio } from "axiom-ui/aspect-ratio";
+    usage: `import { AspectRatio } from "asriui/aspect-ratio";
 
 <AspectRatio ratio={16 / 9}>
   <Image src="/hero.jpg" alt="Hero" />
@@ -1744,9 +1744,9 @@ import { Button } from "axiom-ui/button";
     summary: "Lazy-loaded image with srcSet generated from one path.",
     description:
       "Image builds responsive sources from a single base path using suffix (-800w) or query (?w=800) patterns. Native lazy loading with optional fade-in on load. Images are stored in Cache Storage so repeat views stay on-device until refetchInterval elapses.",
-    importPath: "axiom-ui/image",
+    importPath: "asriui/image",
     exportName: "Image",
-    usage: `import { Image } from "axiom-ui/image";
+    usage: `import { Image } from "asriui/image";
 
 <Image
   src="/photos/hero.jpg"
@@ -1767,7 +1767,7 @@ import { Button } from "axiom-ui/button";
       { name: "placeholderSrc", type: "string", description: "Low-quality placeholder until load." },
       { name: "cache", type: "boolean", defaultValue: "true", description: "Store the image in Cache Storage so repeat views stay local." },
       { name: "refetchInterval", type: "number", defaultValue: "86400000", description: "Milliseconds before a background refetch. Cached copy still renders." },
-      { name: "cacheName", type: "string", defaultValue: '"axiom-assets-v1"', description: "Cache Storage bucket name." },
+      { name: "cacheName", type: "string", defaultValue: '"asriui-assets-v1"', description: "Cache Storage bucket name." },
       { name: "maxEntries", type: "number", defaultValue: "120", description: "Max cached assets before eviction." },
     ],
   },
@@ -1776,10 +1776,10 @@ import { Button } from "axiom-ui/button";
     summary: "Accessible loading indicator with spinner, dots, and ring variants.",
     description:
       "Loader displays an animated indicator for async operations. Use spinner for general loading, dots for subtle inline states, or ring for overlay contexts. Respects prefers-reduced-motion.",
-    importPath: "axiom-ui/loader",
+    importPath: "asriui/loader",
     exportName: "Loader",
     accessibility: "Uses role=status with aria-busy and aria-label. Pass a descriptive label prop.",
-    usage: `import { Loader } from "axiom-ui/loader";
+    usage: `import { Loader } from "asriui/loader";
 
 <Loader variant="spinner" size="md" label="Saving changes" showLabel />
 <Loader variant="dots" size="sm" />
@@ -1796,9 +1796,9 @@ import { Button } from "axiom-ui/button";
     summary: "Vertical or horizontal timeline for roadmaps, changelogs, and step progress.",
     description:
       "Timeline renders step lists with connector lines and status dots. Switch between vertical and horizontal layouts, pass an items config for automatic rendering, and customize per-status colors for complete, active, and default steps.",
-    importPath: "axiom-ui/timeline",
+    importPath: "asriui/timeline",
     exportName: "Timeline",
-    usage: `import { Timeline } from "axiom-ui/timeline";
+    usage: `import { Timeline } from "asriui/timeline";
 
 // Config-driven horizontal timeline
 <Timeline
@@ -1843,11 +1843,11 @@ import { Button } from "axiom-ui/button";
     summary: "Custom scrollbar for containers and full-page scrolling.",
     description:
       "ScrollArea hides the native scrollbar and renders a styled thumb that stays in sync with scroll position. Use container mode for panels and feeds, or page mode to style document scrolling across your app shell. Pair with ScrollArea.Sentinel or useScrollIntersection for infinite scroll and visibility tracking.",
-    importPath: "axiom-ui/scroll-area",
+    importPath: "asriui/scroll-area",
     exportName: "ScrollArea",
     accessibility:
       "Keeps native scrolling on the viewport for keyboard and touch support. Custom thumbs are aria-hidden; provide label for named scroll regions.",
-    usage: `import { ScrollArea } from "axiom-ui/scroll-area";
+    usage: `import { ScrollArea } from "asriui/scroll-area";
 
 // Container scrolling
 <ScrollArea height={320} type="hover" label="Activity feed">
@@ -1918,11 +1918,11 @@ import { Button } from "axiom-ui/button";
     summary: "Animated loading placeholders with shape variants and layout presets.",
     description:
       "Skeleton displays a pulse animation while content loads. Use text, circular, rounded, or rectangular variants. Presets include Skeleton.Profile and Skeleton.Card for common layouts. Respects prefers-reduced-motion.",
-    importPath: "axiom-ui/skeleton",
+    importPath: "asriui/skeleton",
     exportName: "Skeleton",
     accessibility:
       "Uses role=status with aria-hidden by default. Set aria-hidden=false and provide aria-label when skeleton is the only loading indicator.",
-    usage: `import { Skeleton } from "axiom-ui/skeleton";
+    usage: `import { Skeleton } from "asriui/skeleton";
 
 <Skeleton variant="text" width="60%" />
 <Skeleton variant="circular" width={40} height={40} />
@@ -1940,10 +1940,10 @@ import { Button } from "axiom-ui/button";
     summary: "Accessible icons with built-in glyphs, custom SVG children, or images.",
     description:
       "Icon renders named SVG glyphs from a built-in set, custom SVG children from libraries like lucide-react, or raster images via src. Icons are decorative by default (aria-hidden). Pass label when the icon conveys meaning without adjacent text.",
-    importPath: "axiom-ui/icon",
+    importPath: "asriui/icon",
     exportName: "Icon",
     accessibility: "Decorative by default. Set label to expose an accessible name via role=img.",
-    usage: `import { Icon } from "axiom-ui/icon";
+    usage: `import { Icon } from "asriui/icon";
 import { Rocket } from "lucide-react";
 
 <Icon name="sparkles" size="md" />
@@ -1964,9 +1964,9 @@ import { Rocket } from "lucide-react";
     summary: "Semantic typography presets with token-based styles.",
     description:
       "Typography provides compound text primitives — H1–H4, P, Lead, Small, Muted, and Code — with semantic HTML defaults and optional as override.",
-    importPath: "axiom-ui/typography",
+    importPath: "asriui/typography",
     exportName: "Typography",
-    usage: `import { Typography } from "axiom-ui/typography";
+    usage: `import { Typography } from "asriui/typography";
 
 <Typography.H1>Page title</Typography.H1>
 <Typography.Lead>Supporting intro copy.</Typography.Lead>
@@ -1983,15 +1983,15 @@ import { Rocket } from "lucide-react";
     summary: "Accessible color swatch grid with copy support.",
     description:
       "ColorPalette displays design tokens as interactive swatches. Click to copy token names or hex values. Includes contrast preview text on each swatch.",
-    importPath: "axiom-ui/color-palette",
+    importPath: "asriui/color-palette",
     exportName: "ColorPalette",
     accessibility: "Each swatch is a button with an aria-label describing the color and copy action.",
-    usage: `import { ColorPalette } from "axiom-ui/color-palette";
+    usage: `import { ColorPalette } from "asriui/color-palette";
 
 <ColorPalette />
 <ColorPalette colors={[{ name: "Brand", value: "#000", token: "--brand" }]} columns={3} />`,
     props: [
-      { name: "colors", type: "ColorSwatch[]", description: "Swatches to display. Defaults to Axiom tokens." },
+      { name: "colors", type: "ColorSwatch[]", description: "Swatches to display. Defaults to AsriUI tokens." },
       { name: "copyable", type: "boolean", defaultValue: "true", description: "Copy token/value on click." },
       { name: "columns", type: "number", defaultValue: "4", description: "Grid columns on wide screens." },
     ],
@@ -2001,11 +2001,11 @@ import { Rocket } from "lucide-react";
     summary: "Accessible AI chat shell with message queue and task runner.",
     description:
       "AiChat composes a message log, suggestion chips, task queue window, and prompt form. Use useAiChatQueue to process one task at a time — when a task completes, the next queued message starts automatically. AiChat.Prompt supports queue-when-busy via busy and onQueue.",
-    importPath: "axiom-ui/ai-chat",
+    importPath: "asriui/ai-chat",
     exportName: "AiChat",
     accessibility:
       "Messages use role=log with aria-live=polite. Prompt has a visible label and Enter-to-send. Suggestions are grouped with aria-label. Queue lists task status for screen readers.",
-    usage: `import { AiChat, useAiChatQueue } from "axiom-ui/ai-chat";
+    usage: `import { AiChat, useAiChatQueue } from "asriui/ai-chat";
 
 const { items, isProcessing, enqueue, remove, retry } = useAiChatQueue({
   onProcess: async (task) => {
@@ -2061,10 +2061,10 @@ const { items, isProcessing, enqueue, remove, retry } = useAiChatQueue({
     slug: "ai-workflow-builder",
     summary: "Visual builder for AI agent workflows.",
     description:
-      "AiWorkflowBuilder combines a node palette, React Flow canvas, node inspector, and run/reset toolbar. Model prompt chains with trigger, prompt, model, tool, condition, and output nodes — or drag Axiom UI components and integration blocks (WhatsApp, Slack, email, webhooks) onto the canvas and configure them in the inspector.",
-    importPath: "axiom-ui/ai-workflow-builder",
+      "AiWorkflowBuilder combines a node palette, React Flow canvas, node inspector, and run/reset toolbar. Model prompt chains with trigger, prompt, model, tool, condition, and output nodes — or drag AsriUI components and integration blocks (WhatsApp, Slack, email, webhooks) onto the canvas and configure them in the inspector.",
+    importPath: "asriui/ai-workflow-builder",
     exportName: "AiWorkflowBuilder, useAiWorkflowBuilder",
-    usage: `import { AiWorkflowBuilder } from "axiom-ui/ai-workflow-builder";
+    usage: `import { AiWorkflowBuilder } from "asriui/ai-workflow-builder";
 
 <AiWorkflowBuilder
   className="my-workflow"
@@ -2076,9 +2076,9 @@ const { items, isProcessing, enqueue, remove, retry } = useAiChatQueue({
       { name: "onRun", type: "function", description: "Called with the current graph when Run workflow is clicked." },
       { name: "showPalette / showInspector / showToolbar", type: "boolean", defaultValue: "true", description: "Toggle builder panels." },
       { name: "showMiniMap / showControls", type: "boolean", defaultValue: "true", description: "Toggle the React Flow minimap and zoom controls." },
-      { name: "showComponentPalette / showBlockPalette", type: "boolean", defaultValue: "true", description: "Toggle Axiom UI components and integration blocks in the palette." },
+      { name: "showComponentPalette / showBlockPalette", type: "boolean", defaultValue: "true", description: "Toggle AsriUI components and integration blocks in the palette." },
       { name: "enableDragDrop", type: "boolean", defaultValue: "true", description: "Allow dragging palette items onto the canvas." },
-      { name: "components / customComponents", type: "array", description: "Default or fully custom Axiom UI palette items. `customComponents` are merged into `components`." },
+      { name: "components / customComponents", type: "array", description: "Default or fully custom AsriUI palette items. `customComponents` are merged into `components`." },
       { name: "blocks / customBlocks", type: "array", description: "Built-in and custom integration blocks. Blocks support run-time scripts that transform incoming data." },
       { name: "executeOnRun / runInput", type: "boolean | object", description: "When true, block scripts execute on Run and `onRun` receives a `result` payload." },
       { name: "templates / templateId / showTemplates", type: "array | string | boolean", description: "n8n-style starter templates, active template id, and template gallery visibility." },
@@ -2091,9 +2091,9 @@ const { items, isProcessing, enqueue, remove, retry } = useAiChatQueue({
     summary: "AI text summarizer with bullet or paragraph output.",
     description:
       "AiSummarizer accepts long-form text and produces a condensed summary. Wire onSummarize to your LLM or use the built-in demo for docs and Storybook.",
-    importPath: "axiom-ui/ai-summarizer",
+    importPath: "asriui/ai-summarizer",
     exportName: "AiSummarizer",
-    usage: `import { AiSummarizer } from "axiom-ui/ai-summarizer";
+    usage: `import { AiSummarizer } from "asriui/ai-summarizer";
 
 <AiSummarizer
   source={text}
@@ -2113,9 +2113,9 @@ const { items, isProcessing, enqueue, remove, retry } = useAiChatQueue({
     summary: "Natural language → metrics, charts, and tables.",
     description:
       "AiDataAnalyst turns a plain-language question into KPI cards, a bar chart preview, and a sortable table. Pair onAnalyze with your analytics API.",
-    importPath: "axiom-ui/ai-data-analyst",
+    importPath: "asriui/ai-data-analyst",
     exportName: "AiDataAnalyst",
-    usage: `import { AiDataAnalyst } from "axiom-ui/ai-data-analyst";
+    usage: `import { AiDataAnalyst } from "asriui/ai-data-analyst";
 
 <AiDataAnalyst
   query={query}
@@ -2134,9 +2134,9 @@ const { items, isProcessing, enqueue, remove, retry } = useAiChatQueue({
     summary: "Natural language → structured form values.",
     description:
       "AiFormFiller maps free-form instructions onto a field schema and shows a structured preview. Wire onFill to extraction models.",
-    importPath: "axiom-ui/ai-form-filler",
+    importPath: "asriui/ai-form-filler",
     exportName: "AiFormFiller",
-    usage: `import { AiFormFiller } from "axiom-ui/ai-form-filler";
+    usage: `import { AiFormFiller } from "asriui/ai-form-filler";
 
 <AiFormFiller
   prompt={prompt}
@@ -2156,9 +2156,9 @@ const { items, isProcessing, enqueue, remove, retry } = useAiChatQueue({
     summary: "Semantic / natural-language search UI.",
     description:
       "AiSearch scores corpus items against a natural-language query and shows match percentage, snippets, and tags.",
-    importPath: "axiom-ui/ai-search",
+    importPath: "asriui/ai-search",
     exportName: "AiSearch",
-    usage: `import { AiSearch } from "axiom-ui/ai-search";
+    usage: `import { AiSearch } from "asriui/ai-search";
 
 <AiSearch
   query={query}
@@ -2178,9 +2178,9 @@ const { items, isProcessing, enqueue, remove, retry } = useAiChatQueue({
     summary: "Unified shell for summarizer, analyst, forms, and search.",
     description:
       "AiOrchestrator tabs between AI tools and includes a pipeline mode that runs summarize → analyze → form fill → search in one click.",
-    importPath: "axiom-ui/ai-orchestrator",
+    importPath: "asriui/ai-orchestrator",
     exportName: "AiOrchestrator",
-    usage: `import { AiOrchestrator } from "axiom-ui/ai-orchestrator";
+    usage: `import { AiOrchestrator } from "asriui/ai-orchestrator";
 
 <AiOrchestrator
   searchItems={docsCorpus}
@@ -2198,9 +2198,9 @@ const { items, isProcessing, enqueue, remove, retry } = useAiChatQueue({
     summary: "Custom right-click menu at the cursor.",
     description:
       "ContextMenu replaces the native browser menu. Use Trigger attach=\"parent\" to listen on an existing section, or wrap content with attach=\"self\". Content portals to document.body at the pointer.",
-    importPath: "axiom-ui/context-menu",
+    importPath: "asriui/context-menu",
     exportName: "ContextMenu",
-    usage: `import { ContextMenu } from "axiom-ui/context-menu";
+    usage: `import { ContextMenu } from "asriui/context-menu";
 
 <ContextMenu>
   <ContextMenu.Trigger attach="parent" />
@@ -2222,9 +2222,9 @@ const { items, isProcessing, enqueue, remove, retry } = useAiChatQueue({
     summary: "Intake form for a new product feature.",
     description:
       "FeatureRequest collects title, category, description, and optional email using the shared Form component. Wire onSubmit to your tracker or API.",
-    importPath: "axiom-ui/feature-request",
+    importPath: "asriui/feature-request",
     exportName: "FeatureRequest",
-    usage: `import { FeatureRequest } from "axiom-ui/feature-request";
+    usage: `import { FeatureRequest } from "asriui/feature-request";
 
 <FeatureRequest
   onSubmit={async (values) => {
@@ -2241,9 +2241,9 @@ const { items, isProcessing, enqueue, remove, retry } = useAiChatQueue({
     summary: "Stepped survey with text and choice questions.",
     description:
       "Questionnaire walks through questions one at a time. Supports required text, single (radio), and multiple (checkbox) answers. DEFAULT_QUESTIONNAIRE is a starter set.",
-    importPath: "axiom-ui/questionnaire",
+    importPath: "asriui/questionnaire",
     exportName: "Questionnaire, DEFAULT_QUESTIONNAIRE",
-    usage: `import { Questionnaire, DEFAULT_QUESTIONNAIRE } from "axiom-ui/questionnaire";
+    usage: `import { Questionnaire, DEFAULT_QUESTIONNAIRE } from "asriui/questionnaire";
 
 <Questionnaire
   questions={DEFAULT_QUESTIONNAIRE}
@@ -2259,15 +2259,15 @@ const { items, isProcessing, enqueue, remove, retry } = useAiChatQueue({
     slug: "server-query",
     summary: "Fetch server data with loading, error, retry, and config-level database queries.",
     description:
-      "ServerQuery runs an async query function, URL, named database key, or direct SQL when database is configured on AxiomProvider. Shows Loader while fetching, surfaces errors with retry, and passes typed data to children. useServerQuery and useAxiomDatabase are exported for headless usage.",
-    importPath: "axiom-ui/server-query",
+      "ServerQuery runs an async query function, URL, named database key, or direct SQL when database is configured on AsriUIProvider. Shows Loader while fetching, surfaces errors with retry, and passes typed data to children. useServerQuery and useAsriUIDatabase are exported for headless usage.",
+    importPath: "asriui/server-query",
     exportName: "ServerQuery",
     accessibility:
       "Loading uses Loader role=status. Errors render role=alert with a retry button. Pass custom loading and error slots for branded states.",
-    usage: `import { AxiomProvider } from "axiom-ui";
-import { ServerQuery } from "axiom-ui/server-query";
+    usage: `import { AsriUIProvider } from "asriui";
+import { ServerQuery } from "asriui/server-query";
 
-<AxiomProvider
+<AsriUIProvider
   config={{
     database: {
       baseUrl: "https://api.example.com",
@@ -2282,7 +2282,7 @@ import { ServerQuery } from "axiom-ui/server-query";
   <ServerQuery query="users">
     {(rows) => <UserTable data={rows} />}
   </ServerQuery>
-</AxiomProvider>`,
+</AsriUIProvider>`,
     props: [
       { name: "query", type: "ServerQueryInput<T>", required: true, description: "URL, function, named key, sql: string, or { sql, params }." },
       { name: "queryKey", type: "unknown", description: "Refetch when this value changes." },

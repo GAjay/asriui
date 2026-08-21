@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Badge, Breadcrumb, Tabs } from "axiom-ui";
+import { Badge, Breadcrumb, Tabs } from "asriui";
 import { DocPageShell } from "./DocPageShell";
 import {
   CHANGELOG_CHANGE_LABELS,
@@ -78,7 +78,7 @@ export function ReleasesPage() {
           <p className={styles.kicker}>Guides</p>
           <h1 className={styles.title}>Releases</h1>
           <p className={styles.lead}>
-            Version history for AxiomUI. Releases follow{" "}
+            Version history for AsriUI. Releases follow{" "}
             <a href="https://semver.org/" target="_blank" rel="noreferrer">
               Semantic Versioning
             </a>
@@ -138,7 +138,7 @@ export function ReleasesPage() {
         <section className={styles.section} id="publishing">
           <h2 className={styles.sectionTitle}>How we release</h2>
           <p className={styles.prose}>
-            Contributors add a changeset when opening a PR (<code>.changeset/*.md</code>). On merge to main, CI can
+            Add a changeset when opening a PR (<code>.changeset/*.md</code>). On merge to main, CI can
             version packages and publish to npm. Notes on this page and <code>CHANGELOG.md</code> in the
             repository are updated together.
           </p>

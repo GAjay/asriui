@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence } from "framer-motion";
-import { useAxiomId } from "../../hooks/useAxiomId";
+import { useAsriUIId } from "../../hooks/useAsriUIId";
 import { cn } from "../../utils/cn";
 import { registerToastApi } from "./toast";
 import { ToastContext } from "./ToastContext";
@@ -69,7 +69,7 @@ export function ToastProvider({
   variants: variantOverrides,
   classNames,
 }: ToastProviderProps) {
-  const idPrefix = useAxiomId("toast");
+  const idPrefix = useAsriUIId("toast");
   const [toasts, setToasts] = useState<ToastRecord[]>([]);
   const variants = useMemo(
     () => mergeToastVariants(DEFAULT_TOAST_VARIANTS, variantOverrides),

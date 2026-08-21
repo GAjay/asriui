@@ -145,7 +145,7 @@ export function ShowcaseBlocks() {
         preview: (
           <div className={styles.stack}>
             <CodeBlock
-              code={`import { Button } from "axiom-ui/button";`}
+              code={`import { Button } from "asriui/button";`}
               showCopy
               filename="App.tsx"
             />

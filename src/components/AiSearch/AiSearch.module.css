@@ -11,7 +11,7 @@
 }
 
 .resultLink {
-  color: var(--axiom-color-primary);
+  color: var(--asriui-color-primary);
   text-decoration: none;
   font-weight: 600;
 }
@@ -22,8 +22,8 @@
 
 .snippet {
   margin: 0;
-  font-size: var(--axiom-font-size-sm);
-  color: var(--axiom-color-muted-foreground);
+  font-size: var(--asriui-font-size-sm);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .tags {

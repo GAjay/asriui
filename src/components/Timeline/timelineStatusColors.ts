@@ -3,29 +3,29 @@ import type { TimelineItemStatus, TimelineStatusColor, TimelineStatusColors } fr
 
 export const DEFAULT_TIMELINE_STATUS_COLORS: Record<TimelineItemStatus, TimelineStatusColor> = {
   default: {
-    dot: "var(--axiom-color-background)",
-    dotBorder: "var(--axiom-color-border)",
-    connector: "var(--axiom-color-border)",
-    title: "var(--axiom-color-foreground)",
+    dot: "var(--asriui-color-background)",
+    dotBorder: "var(--asriui-color-border)",
+    connector: "var(--asriui-color-border)",
+    title: "var(--asriui-color-foreground)",
   },
   active: {
-    dot: "var(--axiom-color-foreground)",
-    dotBorder: "var(--axiom-color-foreground)",
-    connector: "var(--axiom-color-border)",
-    title: "var(--axiom-color-foreground)",
-    glow: "color-mix(in srgb, var(--axiom-color-foreground) 15%, transparent)",
+    dot: "var(--asriui-color-foreground)",
+    dotBorder: "var(--asriui-color-foreground)",
+    connector: "var(--asriui-color-border)",
+    title: "var(--asriui-color-foreground)",
+    glow: "color-mix(in srgb, var(--asriui-color-foreground) 15%, transparent)",
   },
   complete: {
-    dot: "var(--axiom-color-foreground)",
-    dotBorder: "var(--axiom-color-foreground)",
-    connector: "var(--axiom-color-foreground)",
-    title: "var(--axiom-color-foreground)",
+    dot: "var(--asriui-color-foreground)",
+    dotBorder: "var(--asriui-color-foreground)",
+    connector: "var(--asriui-color-foreground)",
+    title: "var(--asriui-color-foreground)",
   },
 };
 
 export const DEFAULT_TIMELINE_TRACK_COLORS = {
-  background: "var(--axiom-color-border)",
-  fill: "var(--axiom-color-foreground)",
+  background: "var(--asriui-color-border)",
+  fill: "var(--asriui-color-foreground)",
 };
 
 export function mergeTimelineStatusColors(

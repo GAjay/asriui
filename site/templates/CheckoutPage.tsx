@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Badge, Button, Form, PageLayout, Typography, toast } from "axiom-ui";
+import { Badge, Button, Form, PageLayout, Typography, toast } from "asriui";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./templates.module.css";
 
@@ -66,7 +66,7 @@ export function CheckoutPage() {
               <aside className={styles.cartSummary} aria-label="Payment summary">
                 <Typography variant="h3">Payment</Typography>
                 <div className={styles.summaryRow}>
-                  <span>Axiom Soft Tee × 1</span>
+                  <span>AsriUI Soft Tee × 1</span>
                   <strong>$32</strong>
                 </div>
                 <div className={styles.summaryRow}>

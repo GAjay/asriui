@@ -1,14 +1,14 @@
 import { useEffect, useMemo, type ReactNode } from "react";
 import { MotionProvider } from "../motion/MotionContext";
 import { initGtm } from "./analytics";
-import { AxiomContext } from "./AxiomContext";
+import { AsriUIContext } from "./AsriUIContext";
 import { installDebugGlobalHandlers, setDebugRuntime } from "./debug";
-import { resolveAxiomConfig } from "./defaults";
-import type { AxiomConfig } from "./types";
+import { resolveAsriUIConfig } from "./defaults";
+import type { AsriUIConfig } from "./types";
 
-export type AxiomProviderProps = {
+export type AsriUIProviderProps = {
   /** Plug-and-play global configuration. */
-  config?: AxiomConfig;
+  config?: AsriUIConfig;
   children: ReactNode;
 };
 
@@ -16,8 +16,8 @@ export type AxiomProviderProps = {
  * Root provider for theming, fonts, GTM analytics, and error monitoring.
  * Wrap your app once and configure via the `config` prop.
  */
-export function AxiomProvider({ config, children }: AxiomProviderProps) {
-  const resolved = useMemo(() => resolveAxiomConfig(config), [config]);
+export function AsriUIProvider({ config, children }: AsriUIProviderProps) {
+  const resolved = useMemo(() => resolveAsriUIConfig(config), [config]);
 
   useEffect(() => {
     setDebugRuntime(resolved.debug);
@@ -60,7 +60,7 @@ export function AxiomProvider({ config, children }: AxiomProviderProps) {
   }, [resolved.analytics.dataLayerName, resolved.analytics.gtmId]);
 
   useEffect(() => {
-    document.documentElement.style.setProperty("--axiom-font-family", resolved.fontFamily);
+    document.documentElement.style.setProperty("--asriui-font-family", resolved.fontFamily);
     document.documentElement.style.setProperty("--lp-font-sans", resolved.fontFamily);
   }, [resolved.fontFamily]);
 
@@ -78,10 +78,10 @@ export function AxiomProvider({ config, children }: AxiomProviderProps) {
   }, [resolved.theme]);
 
   return (
-    <AxiomContext.Provider value={resolved}>
+    <AsriUIContext.Provider value={resolved}>
       <MotionProvider preset={resolved.motion.preset} enabled={resolved.motion.enabled}>
         {children}
       </MotionProvider>
-    </AxiomContext.Provider>
+    </AsriUIContext.Provider>
   );
 }

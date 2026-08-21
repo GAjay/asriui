@@ -230,7 +230,7 @@ export const Markdown = forwardRef<HTMLElement, MarkdownProps>(function Markdown
     <article
       ref={ref}
       className={cn(styles.root, className)}
-      data-axiom-markdown=""
+      data-asriui-markdown=""
       {...rest}
     >
       {renderBlocks(blocks, "md", {

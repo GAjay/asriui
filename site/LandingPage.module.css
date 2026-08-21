@@ -11,35 +11,35 @@
   --lp-btn-radius: 8px;
   --lp-header-height: 3.75rem;
 
-  --axiom-color-primary: #000000;
-  --axiom-color-primary-hover: #1a1a1a;
-  --axiom-color-primary-active: #333333;
-  --axiom-color-primary-foreground: #ffffff;
-  --axiom-color-secondary: var(--lp-muted);
-  --axiom-color-secondary-hover: var(--lp-border);
-  --axiom-color-secondary-foreground: var(--lp-fg);
-  --axiom-color-foreground: var(--lp-fg);
-  --axiom-color-background: var(--lp-card);
-  --axiom-color-muted: var(--lp-muted);
-  --axiom-color-muted-foreground: var(--lp-muted-fg);
-  --axiom-color-border: var(--lp-border);
-  --axiom-color-ring: var(--lp-fg);
+  --asriui-color-primary: #000000;
+  --asriui-color-primary-hover: #1a1a1a;
+  --asriui-color-primary-active: #333333;
+  --asriui-color-primary-foreground: #ffffff;
+  --asriui-color-secondary: var(--lp-muted);
+  --asriui-color-secondary-hover: var(--lp-border);
+  --asriui-color-secondary-foreground: var(--lp-fg);
+  --asriui-color-foreground: var(--lp-fg);
+  --asriui-color-background: var(--lp-card);
+  --asriui-color-muted: var(--lp-muted);
+  --asriui-color-muted-foreground: var(--lp-muted-fg);
+  --asriui-color-border: var(--lp-border);
+  --asriui-color-ring: var(--lp-fg);
 }
 
 [data-theme="dark"] .page {
   background: var(--lp-bg);
-  --axiom-color-primary: #000000;
-  --axiom-color-primary-hover: #1f1f1f;
-  --axiom-color-primary-active: #333333;
-  --axiom-color-primary-foreground: #ffffff;
-  --axiom-color-secondary: #18181b;
-  --axiom-color-secondary-hover: #27272a;
-  --axiom-color-secondary-foreground: #fafafa;
-  --axiom-color-background: #111113;
-  --axiom-color-muted: #18181b;
-  --axiom-color-muted-foreground: #a1a1aa;
-  --axiom-color-border: #27272a;
-  --axiom-color-foreground: #fafafa;
+  --asriui-color-primary: #000000;
+  --asriui-color-primary-hover: #1f1f1f;
+  --asriui-color-primary-active: #333333;
+  --asriui-color-primary-foreground: #ffffff;
+  --asriui-color-secondary: #18181b;
+  --asriui-color-secondary-hover: #27272a;
+  --asriui-color-secondary-foreground: #fafafa;
+  --asriui-color-background: #111113;
+  --asriui-color-muted: #18181b;
+  --asriui-color-muted-foreground: #a1a1aa;
+  --asriui-color-border: #27272a;
+  --asriui-color-foreground: #fafafa;
 }
 
 /* Primary buttons: invert with page tokens so they stay readable on every band/theme */

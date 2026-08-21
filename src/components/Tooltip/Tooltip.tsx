@@ -9,7 +9,7 @@ import {
   type CSSProperties,
 } from "react";
 import { createPortal } from "react-dom";
-import { useAxiomId } from "../../hooks/useAxiomId";
+import { useAsriUIId } from "../../hooks/useAsriUIId";
 import { cn } from "../../utils/cn";
 import { createSlotClassNames } from "../../utils/slotClassNames";
 import { TooltipProvider, useTooltipContext } from "./TooltipContext";
@@ -54,7 +54,7 @@ function computePosition(
 
 function TooltipRoot({ delayDuration = 200, skipDelayDuration = 0, classNames, children }: TooltipProps) {
   const reactId = useId();
-  const idPrefix = useAxiomId(`tooltip-${reactId.replace(/:/g, "")}`);
+  const idPrefix = useAsriUIId(`tooltip-${reactId.replace(/:/g, "")}`);
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState<TooltipPlacement>("top");
   const [sideOffset, setSideOffset] = useState(8);

@@ -6,14 +6,14 @@ const SETUP_STEPS = [
     id: "install",
     title: "Install",
     date: "Step 1",
-    description: "pnpm add axiom-ui framer-motion",
+    description: "pnpm add asriui framer-motion",
     status: "complete" as const,
   },
   {
     id: "configure",
     title: "Configure",
     date: "Step 2",
-    description: "Wrap with AxiomProvider + import styles",
+    description: "Wrap with AsriUIProvider + import styles",
     status: "complete" as const,
   },
   {

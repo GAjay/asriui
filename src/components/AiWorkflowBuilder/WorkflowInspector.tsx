@@ -87,7 +87,7 @@ export function WorkflowInspector({ node, components, blocks, onUpdate, onRemove
 
       {node.data.kind === "component" ? (
         <p className={styles.inspectorMeta}>
-          Axiom UI · <code>{node.data.componentSlug}</code>
+          AsriUI · <code>{node.data.componentSlug}</code>
         </p>
       ) : null}
 

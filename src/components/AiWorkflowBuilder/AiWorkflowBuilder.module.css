@@ -2,13 +2,13 @@
   display: grid;
   grid-template-columns: 220px minmax(0, 1fr) 260px;
   min-height: 0;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-lg);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
-  font-family: var(--axiom-font-family);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-lg);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
+  font-family: var(--asriui-font-family);
   overflow: hidden;
-  box-shadow: var(--axiom-shadow-sm);
+  box-shadow: var(--asriui-shadow-sm);
 }
 
 .compact {
@@ -20,22 +20,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--axiom-space-3);
-  padding: var(--axiom-space-3) var(--axiom-space-4);
-  border-bottom: 1px solid var(--axiom-color-border);
-  background: color-mix(in srgb, var(--axiom-color-muted) 35%, var(--axiom-color-background));
+  gap: var(--asriui-space-3);
+  padding: var(--asriui-space-3) var(--asriui-space-4);
+  border-bottom: 1px solid var(--asriui-color-border);
+  background: color-mix(in srgb, var(--asriui-color-muted) 35%, var(--asriui-color-background));
 }
 
 .toolbarTitle {
   margin: 0;
-  font-size: var(--axiom-font-size-sm);
-  font-weight: var(--axiom-font-weight-semibold);
+  font-size: var(--asriui-font-size-sm);
+  font-weight: var(--asriui-font-weight-semibold);
 }
 
 .toolbarMeta {
   margin: 0;
-  font-size: var(--axiom-font-size-xs);
-  color: var(--axiom-color-muted-foreground);
+  font-size: var(--asriui-font-size-xs);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .toolbarActions {
@@ -59,27 +59,27 @@
   justify-content: center;
   gap: 0.35rem;
   padding: 0.45rem 0.8rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
-  font-size: var(--axiom-font-size-xs);
-  font-weight: var(--axiom-font-weight-medium);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
+  font-size: var(--asriui-font-size-xs);
+  font-weight: var(--asriui-font-weight-medium);
   cursor: pointer;
 }
 
 .button:hover {
-  background: var(--axiom-color-muted);
+  background: var(--asriui-color-muted);
 }
 
 .buttonPrimary {
-  border-color: var(--axiom-color-primary);
-  background: var(--axiom-color-primary);
-  color: var(--axiom-color-primary-foreground);
+  border-color: var(--asriui-color-primary);
+  background: var(--asriui-color-primary);
+  color: var(--asriui-color-primary-foreground);
 }
 
 .buttonPrimary:hover {
-  background: var(--axiom-color-primary-hover);
+  background: var(--asriui-color-primary-hover);
 }
 
 .templatePicker {
@@ -92,14 +92,14 @@
 
 .templateGallery {
   display: grid;
-  gap: var(--axiom-space-2);
+  gap: var(--asriui-space-2);
 }
 
 .templateGalleryLead {
   margin: 0;
-  font-size: var(--axiom-font-size-xs);
+  font-size: var(--asriui-font-size-xs);
   line-height: 1.5;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .templateCard {
@@ -107,24 +107,24 @@
   gap: 0.3rem;
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
   text-align: left;
   cursor: pointer;
   transition:
-    border-color var(--axiom-duration-fast) var(--axiom-easing-standard),
-    background-color var(--axiom-duration-fast) var(--axiom-easing-standard);
+    border-color var(--asriui-duration-fast) var(--asriui-easing-standard),
+    background-color var(--asriui-duration-fast) var(--asriui-easing-standard);
 }
 
 .templateCard:hover {
-  border-color: color-mix(in srgb, var(--axiom-color-primary) 35%, var(--axiom-color-border));
-  background: color-mix(in srgb, var(--axiom-color-primary) 5%, var(--axiom-color-background));
+  border-color: color-mix(in srgb, var(--asriui-color-primary) 35%, var(--asriui-color-border));
+  background: color-mix(in srgb, var(--asriui-color-primary) 5%, var(--asriui-color-background));
 }
 
 .templateCardActive {
-  border-color: var(--axiom-color-primary);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--axiom-color-primary) 20%, transparent);
+  border-color: var(--asriui-color-primary);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--asriui-color-primary) 20%, transparent);
 }
 
 .templateCardMeta {
@@ -136,35 +136,35 @@
 
 .templateCardCategory {
   font-size: 0.62rem;
-  font-weight: var(--axiom-font-weight-semibold);
+  font-weight: var(--asriui-font-weight-semibold);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--axiom-color-primary);
+  color: var(--asriui-color-primary);
 }
 
 .templateCardCount {
   font-size: 0.62rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .templateCardTitle {
-  font-size: var(--axiom-font-size-sm);
-  font-weight: var(--axiom-font-weight-semibold);
+  font-size: var(--asriui-font-size-sm);
+  font-weight: var(--asriui-font-weight-semibold);
 }
 
 .templateCardDescription {
-  font-size: var(--axiom-font-size-xs);
+  font-size: var(--asriui-font-size-xs);
   line-height: 1.45;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .palette {
   display: grid;
   align-content: start;
-  gap: var(--axiom-space-2);
-  padding: var(--axiom-space-3);
-  border-right: 1px solid var(--axiom-color-border);
-  background: color-mix(in srgb, var(--axiom-color-muted) 20%, var(--axiom-color-background));
+  gap: var(--asriui-space-2);
+  padding: var(--asriui-space-3);
+  border-right: 1px solid var(--asriui-color-border);
+  background: color-mix(in srgb, var(--asriui-color-muted) 20%, var(--asriui-color-background));
   max-height: 100%;
   overflow: auto;
 }
@@ -178,24 +178,24 @@
 
 .paletteTab {
   padding: 0.4rem 0.5rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-muted-foreground);
-  font-size: var(--axiom-font-size-xs);
-  font-weight: var(--axiom-font-weight-semibold);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-muted-foreground);
+  font-size: var(--asriui-font-size-xs);
+  font-weight: var(--asriui-font-weight-semibold);
   cursor: pointer;
 }
 
 .paletteTabActive {
-  color: var(--axiom-color-foreground);
-  border-color: color-mix(in srgb, var(--axiom-color-primary) 35%, var(--axiom-color-border));
-  background: color-mix(in srgb, var(--axiom-color-primary) 8%, var(--axiom-color-background));
+  color: var(--asriui-color-foreground);
+  border-color: color-mix(in srgb, var(--asriui-color-primary) 35%, var(--asriui-color-border));
+  background: color-mix(in srgb, var(--asriui-color-primary) 8%, var(--asriui-color-background));
 }
 
 .paletteSection {
   display: grid;
-  gap: var(--axiom-space-2);
+  gap: var(--asriui-space-2);
 }
 
 .paletteSearch {
@@ -205,40 +205,40 @@
 
 .paletteEmpty {
   margin: 0;
-  font-size: var(--axiom-font-size-xs);
-  color: var(--axiom-color-muted-foreground);
+  font-size: var(--asriui-font-size-xs);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .paletteMeta {
   font-size: 0.62rem;
-  font-weight: var(--axiom-font-weight-semibold);
+  font-weight: var(--asriui-font-weight-semibold);
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .customBlockForm {
   display: grid;
-  gap: var(--axiom-space-2);
+  gap: var(--asriui-space-2);
   margin-top: 0.5rem;
   padding-top: 0.75rem;
-  border-top: 1px dashed var(--axiom-color-border);
+  border-top: 1px dashed var(--asriui-color-border);
 }
 
 .customBlockTitle {
   margin: 0;
-  font-size: var(--axiom-font-size-xs);
-  font-weight: var(--axiom-font-weight-semibold);
-  color: var(--axiom-color-foreground);
+  font-size: var(--asriui-font-size-xs);
+  font-weight: var(--asriui-font-weight-semibold);
+  color: var(--asriui-color-foreground);
 }
 
 .paletteTitle {
   margin: 0 0 0.25rem;
-  font-size: var(--axiom-font-size-xs);
-  font-weight: var(--axiom-font-weight-semibold);
+  font-size: var(--asriui-font-size-xs);
+  font-weight: var(--asriui-font-weight-semibold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .paletteItem {
@@ -246,14 +246,14 @@
   gap: 0.2rem;
   width: 100%;
   padding: 0.7rem 0.75rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
   text-align: left;
   cursor: grab;
   transition:
-    border-color var(--axiom-duration-fast) var(--axiom-easing-standard),
-    transform var(--axiom-duration-fast) var(--axiom-easing-standard);
+    border-color var(--asriui-duration-fast) var(--asriui-easing-standard),
+    transform var(--asriui-duration-fast) var(--asriui-easing-standard);
 }
 
 .paletteItem:active {
@@ -261,26 +261,26 @@
 }
 
 .paletteItem:hover {
-  border-color: color-mix(in srgb, var(--axiom-color-primary) 35%, var(--axiom-color-border));
+  border-color: color-mix(in srgb, var(--asriui-color-primary) 35%, var(--asriui-color-border));
   transform: translateY(-1px);
 }
 
 .paletteLabel {
-  font-size: var(--axiom-font-size-sm);
-  font-weight: var(--axiom-font-weight-semibold);
+  font-size: var(--asriui-font-size-sm);
+  font-weight: var(--asriui-font-weight-semibold);
 }
 
 .paletteDescription {
-  font-size: var(--axiom-font-size-xs);
+  font-size: var(--asriui-font-size-xs);
   line-height: 1.45;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .canvas {
   min-width: 0;
   min-height: 0;
   background:
-    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--axiom-color-border) 70%, transparent) 1px, transparent 0)
+    radial-gradient(circle at 1px 1px, color-mix(in srgb, var(--asriui-color-border) 70%, transparent) 1px, transparent 0)
     0 0 / 18px 18px;
 }
 
@@ -288,39 +288,39 @@
   display: grid;
   place-items: center;
   height: 100%;
-  color: var(--axiom-color-muted-foreground);
-  font-size: var(--axiom-font-size-sm);
+  color: var(--asriui-color-muted-foreground);
+  font-size: var(--asriui-font-size-sm);
 }
 
 .inspector {
   display: grid;
   align-content: start;
-  gap: var(--axiom-space-3);
-  padding: var(--axiom-space-4);
-  border-left: 1px solid var(--axiom-color-border);
-  background: color-mix(in srgb, var(--axiom-color-muted) 20%, var(--axiom-color-background));
+  gap: var(--asriui-space-3);
+  padding: var(--asriui-space-4);
+  border-left: 1px solid var(--asriui-color-border);
+  background: color-mix(in srgb, var(--asriui-color-muted) 20%, var(--asriui-color-background));
 }
 
 .inspectorTitle {
   margin: 0;
-  font-size: var(--axiom-font-size-xs);
-  font-weight: var(--axiom-font-weight-semibold);
+  font-size: var(--asriui-font-size-xs);
+  font-weight: var(--asriui-font-weight-semibold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .inspectorEmpty {
   margin: 0;
-  font-size: var(--axiom-font-size-sm);
+  font-size: var(--asriui-font-size-sm);
   line-height: 1.5;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .inspectorMeta {
   margin: 0;
-  font-size: var(--axiom-font-size-xs);
-  color: var(--axiom-color-muted-foreground);
+  font-size: var(--asriui-font-size-xs);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .field {
@@ -329,9 +329,9 @@
 }
 
 .fieldLabel {
-  font-size: var(--axiom-font-size-xs);
-  font-weight: var(--axiom-font-weight-medium);
-  color: var(--axiom-color-muted-foreground);
+  font-size: var(--asriui-font-size-xs);
+  font-weight: var(--asriui-font-weight-medium);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .fieldInput,
@@ -339,12 +339,12 @@
 .fieldSelect {
   width: 100%;
   padding: 0.55rem 0.65rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
   font: inherit;
-  font-size: var(--axiom-font-size-sm);
+  font-size: var(--asriui-font-size-sm);
 }
 
 .fieldTextarea {
@@ -364,79 +364,79 @@
   min-width: 11rem;
   max-width: 13rem;
   padding: 0.75rem 0.85rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-lg);
-  background: var(--axiom-color-background);
-  box-shadow: var(--axiom-shadow-sm);
-  font-size: var(--axiom-font-size-xs);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-lg);
+  background: var(--asriui-color-background);
+  box-shadow: var(--asriui-shadow-sm);
+  font-size: var(--asriui-font-size-xs);
 }
 
 .nodeSelected {
-  border-color: var(--axiom-color-primary);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--axiom-color-primary) 25%, transparent);
+  border-color: var(--asriui-color-primary);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--asriui-color-primary) 25%, transparent);
 }
 
 .nodeKind {
   display: inline-flex;
   margin-bottom: 0.35rem;
   padding: 0.1rem 0.45rem;
-  border-radius: var(--axiom-radius-full);
+  border-radius: var(--asriui-radius-full);
   font-size: 0.62rem;
-  font-weight: var(--axiom-font-weight-semibold);
+  font-weight: var(--asriui-font-weight-semibold);
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
 .nodeTitle {
   margin: 0;
-  font-size: var(--axiom-font-size-sm);
-  font-weight: var(--axiom-font-weight-semibold);
+  font-size: var(--asriui-font-size-sm);
+  font-weight: var(--asriui-font-weight-semibold);
 }
 
 .nodeDescription {
   margin: 0.35rem 0 0;
   line-height: 1.45;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .trigger .nodeKind {
-  background: color-mix(in srgb, var(--axiom-color-success) 14%, transparent);
-  color: var(--axiom-color-success);
+  background: color-mix(in srgb, var(--asriui-color-success) 14%, transparent);
+  color: var(--asriui-color-success);
 }
 
 .prompt .nodeKind {
-  background: color-mix(in srgb, var(--axiom-color-primary) 14%, transparent);
-  color: var(--axiom-color-primary);
+  background: color-mix(in srgb, var(--asriui-color-primary) 14%, transparent);
+  color: var(--asriui-color-primary);
 }
 
 .model .nodeKind {
-  background: color-mix(in srgb, var(--axiom-color-warning) 14%, transparent);
-  color: var(--axiom-color-warning);
+  background: color-mix(in srgb, var(--asriui-color-warning) 14%, transparent);
+  color: var(--asriui-color-warning);
 }
 
 .tool .nodeKind {
-  background: color-mix(in srgb, var(--axiom-color-muted) 70%, transparent);
-  color: var(--axiom-color-foreground);
+  background: color-mix(in srgb, var(--asriui-color-muted) 70%, transparent);
+  color: var(--asriui-color-foreground);
 }
 
 .condition .nodeKind {
-  background: color-mix(in srgb, var(--axiom-color-danger) 12%, transparent);
-  color: var(--axiom-color-danger);
+  background: color-mix(in srgb, var(--asriui-color-danger) 12%, transparent);
+  color: var(--asriui-color-danger);
 }
 
 .output .nodeKind {
-  background: color-mix(in srgb, var(--axiom-color-success) 14%, transparent);
-  color: var(--axiom-color-success);
+  background: color-mix(in srgb, var(--asriui-color-success) 14%, transparent);
+  color: var(--asriui-color-success);
 }
 
 .component .nodeKind {
-  background: color-mix(in srgb, var(--axiom-color-primary) 14%, transparent);
-  color: var(--axiom-color-primary);
+  background: color-mix(in srgb, var(--asriui-color-primary) 14%, transparent);
+  color: var(--asriui-color-primary);
 }
 
 .block .nodeKind {
   background: color-mix(in srgb, #25d366 14%, transparent);
-  color: color-mix(in srgb, #128c7e 80%, var(--axiom-color-foreground));
+  color: color-mix(in srgb, #128c7e 80%, var(--asriui-color-foreground));
 }
 
 @media (max-width: 960px) {
@@ -447,6 +447,6 @@
   .palette,
   .inspector {
     border: 0;
-    border-top: 1px solid var(--axiom-color-border);
+    border-top: 1px solid var(--asriui-color-border);
   }
 }

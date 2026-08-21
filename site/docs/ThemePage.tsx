@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Badge, Breadcrumb, Button, CodeBlock, Input } from "axiom-ui";
+import { Badge, Breadcrumb, Button, CodeBlock, Input } from "asriui";
 import {
   ThemeSwitch,
   type ThemeSwitchAnimation,
@@ -14,7 +14,7 @@ const TOC = [
   { id: "modes", label: "Light & dark" },
   { id: "theme-switch", label: "ThemeSwitch" },
   { id: "animations", label: "Switch animations" },
-  { id: "provider", label: "AxiomProvider" },
+  { id: "provider", label: "AsriUIProvider" },
 ] as const;
 
 const ANIMATIONS: Array<{ id: ThemeSwitchAnimation; label: string; body: string }> = [
@@ -25,7 +25,7 @@ const ANIMATIONS: Array<{ id: ThemeSwitchAnimation; label: string; body: string 
   { id: "slide", label: "Slide", body: "Subtle vertical slide with opacity." },
 ];
 
-const SWITCH_CODE = `import { ThemeSwitch } from "axiom-ui/theme-switch";
+const SWITCH_CODE = `import { ThemeSwitch } from "asriui/theme-switch";
 import { useState } from "react";
 
 export function AppChrome() {
@@ -41,11 +41,11 @@ export function AppChrome() {
   );
 }`;
 
-const PROVIDER_CODE = `import { AxiomProvider } from "axiom-ui/config";
+const PROVIDER_CODE = `import { AsriUIProvider } from "asriui/config";
 
-<AxiomProvider config={{ theme: "system" }}>
+<AsriUIProvider config={{ theme: "system" }}>
   <App />
-</AxiomProvider>`;
+</AsriUIProvider>`;
 
 export function ThemePage() {
   const navigate = useNavigate();
@@ -74,7 +74,7 @@ export function ThemePage() {
           <p className={styles.lead}>
             Light and dark modes are driven by <code>data-theme</code> on the document root. Use{" "}
             <code>ThemeSwitch</code> for an animated toggle, or set theme from{" "}
-            <code>AxiomProvider</code>.
+            <code>AsriUIProvider</code>.
           </p>
           <div className={styles.metaRow}>
             <span className={styles.metaBadge}>data-theme</span>
@@ -117,7 +117,7 @@ export function ThemePage() {
           <p className={styles.prose}>
             <code>ThemeSwitch</code> is a library component with ripple (and other) view-transition
             animations. It sets <code>data-theme</code> and calls your <code>onThemeChange</code>{" "}
-            handler. Import from <code>axiom-ui/theme-switch</code>.
+            handler. Import from <code>asriui/theme-switch</code>.
           </p>
           <CodeBlock code={SWITCH_CODE} language="tsx" showCopy filename="AppChrome.tsx" />
         </section>
@@ -161,10 +161,10 @@ export function ThemePage() {
         </section>
 
         <section className={styles.section} id="provider">
-          <h2 className={styles.sectionTitle}>AxiomProvider</h2>
+          <h2 className={styles.sectionTitle}>AsriUIProvider</h2>
           <p className={styles.prose}>
             For app-wide defaults (including <code>system</code>), configure theme on{" "}
-            <code>AxiomProvider</code>. Pair with <code>ThemeSwitch</code> when users should override
+            <code>AsriUIProvider</code>. Pair with <code>ThemeSwitch</code> when users should override
             the preference in the UI.
           </p>
           <CodeBlock code={PROVIDER_CODE} language="tsx" showCopy filename="App.tsx" />

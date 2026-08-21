@@ -32,7 +32,7 @@ describe("AiWorkflowBuilder", () => {
     expect(screen.getByText("AI workflow builder").nextElementSibling).toHaveTextContent("0 nodes · 0 connections");
   });
 
-  it("shows Axiom UI components and integration blocks in the palette", () => {
+  it("shows AsriUI components and integration blocks in the palette", () => {
     render(<AiWorkflowBuilder height={320} />);
 
     fireEvent.click(screen.getByRole("tab", { name: "UI" }));

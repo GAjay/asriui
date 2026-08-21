@@ -12,7 +12,7 @@ import {
   type ForwardedRef,
   type PointerEvent as ReactPointerEvent,
 } from "react";
-import { useAxiomId } from "../../hooks/useAxiomId";
+import { useAsriUIId } from "../../hooks/useAsriUIId";
 import { useReducedMotion } from "../../motion/useReducedMotion";
 import { cn } from "../../utils/cn";
 import { createSlotClassNames } from "../../utils/slotClassNames";
@@ -52,7 +52,7 @@ const SliderRoot = forwardRef<HTMLDivElement, SliderProps>(function Slider(
   ref,
 ) {
   const reactId = useId();
-  const idPrefix = useAxiomId(`slider-${reactId.replace(/:/g, "")}`);
+  const idPrefix = useAsriUIId(`slider-${reactId.replace(/:/g, "")}`);
   const reducedMotion = useReducedMotion();
   const [uncontrolled, setUncontrolled] = useState(defaultIndex);
   const [count, setCount] = useState(0);

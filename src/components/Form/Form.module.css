@@ -1,51 +1,51 @@
 .root {
   display: grid;
-  gap: var(--axiom-space-4);
+  gap: var(--asriui-space-4);
 }
 
 .fields {
   display: grid;
-  gap: var(--axiom-space-4);
+  gap: var(--asriui-space-4);
 }
 
 .field {
   display: flex;
   flex-direction: column;
-  gap: var(--axiom-space-2);
+  gap: var(--asriui-space-2);
   width: 100%;
 }
 
 .message {
   margin: 0;
-  font-size: var(--axiom-font-size-sm);
-  line-height: var(--axiom-line-height-normal);
-  color: var(--axiom-color-error);
+  font-size: var(--asriui-font-size-sm);
+  line-height: var(--asriui-line-height-normal);
+  color: var(--asriui-color-error);
 }
 
 .textarea,
 .select {
   box-sizing: border-box;
   width: 100%;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  font-family: var(--axiom-font-family);
-  font-size: var(--axiom-font-size-md);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  font-family: var(--asriui-font-family);
+  font-size: var(--asriui-font-size-md);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
   transition:
-    border-color var(--axiom-duration-fast) var(--axiom-easing-standard),
-    box-shadow var(--axiom-duration-fast) var(--axiom-easing-standard);
+    border-color var(--asriui-duration-fast) var(--asriui-easing-standard),
+    box-shadow var(--asriui-duration-fast) var(--asriui-easing-standard);
 }
 
 .textarea {
   min-height: 6rem;
-  padding: var(--axiom-space-2) var(--axiom-space-3);
+  padding: var(--asriui-space-2) var(--asriui-space-3);
   resize: vertical;
 }
 
 .select {
   min-height: 2.5rem;
-  padding: var(--axiom-space-2) 2.25rem var(--axiom-space-2) var(--axiom-space-3);
+  padding: var(--asriui-space-2) 2.25rem var(--asriui-space-2) var(--asriui-space-3);
   appearance: none;
   cursor: pointer;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
@@ -59,12 +59,12 @@
 .select:focus,
 .select:focus-visible {
   outline: none;
-  box-shadow: var(--axiom-shadow-focus);
+  box-shadow: var(--asriui-shadow-focus);
 }
 
 .textarea:focus-visible,
 .select:focus-visible {
-  border-color: var(--axiom-color-ring);
+  border-color: var(--asriui-color-ring);
 }
 
 .textarea:focus:not(:focus-visible),
@@ -74,13 +74,13 @@
 
 .textarea[aria-invalid="true"],
 .select[aria-invalid="true"] {
-  border-color: var(--axiom-color-error);
+  border-color: var(--asriui-color-error);
 }
 
 .textarea[aria-invalid="true"]:focus-visible,
 .select[aria-invalid="true"]:focus-visible {
   outline: none;
-  border-color: var(--axiom-color-error);
+  border-color: var(--asriui-color-error);
   box-shadow: 0 0 0 3px rgb(220 38 38 / 0.25);
 }
 
@@ -88,11 +88,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--axiom-space-3);
+  gap: var(--asriui-space-3);
 }
 
 .actions {
   display: flex;
   justify-content: flex-end;
-  gap: var(--axiom-space-2);
+  gap: var(--asriui-space-2);
 }

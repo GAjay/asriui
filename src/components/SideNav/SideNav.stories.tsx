@@ -13,7 +13,7 @@ type Story = StoryObj<typeof SideNav>;
 
 export const Default: Story = {
   render: () => (
-    <div style={{ maxWidth: 240, padding: 16, background: "var(--axiom-color-muted)" }}>
+    <div style={{ maxWidth: 240, padding: 16, background: "var(--asriui-color-muted)" }}>
       <SideNav>
         <SideNav.Header>
           <strong>Docs</strong>
@@ -47,7 +47,7 @@ export const Default: Story = {
 
 export const Collapsible: Story = {
   render: () => (
-    <div style={{ maxWidth: 240, padding: 16, background: "var(--axiom-color-muted)" }}>
+    <div style={{ maxWidth: 240, padding: 16, background: "var(--asriui-color-muted)" }}>
       <SideNav collapsible defaultCollapsed>
         <SideNav.Home href="#" active />
         <SideNav.Toggle />
@@ -85,7 +85,7 @@ export const Collapsible: Story = {
 
 export const RightSide: Story = {
   render: () => (
-    <div style={{ maxWidth: 240, padding: 16, background: "var(--axiom-color-muted)" }}>
+    <div style={{ maxWidth: 240, padding: 16, background: "var(--asriui-color-muted)" }}>
       <SideNav side="right" collapsible>
         <SideNav.Home href="#" />
         <SideNav.Toggle />
@@ -109,7 +109,7 @@ export const HamburgerHidden: Story = {
         gap: 16,
         minHeight: 220,
         padding: 16,
-        background: "var(--axiom-color-muted)",
+        background: "var(--asriui-color-muted)",
         borderRadius: 8,
       }}
     >
@@ -136,7 +136,7 @@ export const HamburgerHidden: Story = {
           </SideNav.List>
         </SideNav.Group>
       </SideNav>
-      <div style={{ flex: 1, padding: "0.5rem 0", color: "var(--axiom-color-muted-foreground)", fontSize: 14 }}>
+      <div style={{ flex: 1, padding: "0.5rem 0", color: "var(--asriui-color-muted-foreground)", fontSize: 14 }}>
         Click the hamburger to hide the sidebar. It animates to an X while open, and back to bars when closed.
       </div>
     </div>
@@ -145,7 +145,7 @@ export const HamburgerHidden: Story = {
 
 export const MultipleMenus: Story = {
   render: () => (
-    <div style={{ maxWidth: 280, padding: 16, background: "var(--axiom-color-muted)" }}>
+    <div style={{ maxWidth: 280, padding: 16, background: "var(--asriui-color-muted)" }}>
       <SideNav collapsible>
         <SideNav.Toggle />
         <SideNav.Menus defaultMenu="docs">
@@ -183,7 +183,7 @@ const virtualNavItems = Array.from({ length: 80 }, (_, index) => ({
 
 export const Virtualized: Story = {
   render: () => (
-    <div style={{ maxWidth: 260, padding: 16, background: "var(--axiom-color-muted)" }}>
+    <div style={{ maxWidth: 260, padding: 16, background: "var(--asriui-color-muted)" }}>
       <SideNav>
         <SideNav.Header>
           <strong>Large nav</strong>

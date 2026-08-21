@@ -8,7 +8,7 @@ import {
   useState,
   type ChangeEvent,
 } from "react";
-import { useAxiomId } from "../../hooks/useAxiomId";
+import { useAsriUIId } from "../../hooks/useAsriUIId";
 import { cn } from "../../utils/cn";
 import { createSlotClassNames } from "../../utils/slotClassNames";
 import { DatePickerCalendar } from "./DatePickerCalendar";
@@ -71,7 +71,7 @@ export const DatePicker = forwardRef<HTMLDivElement, DatePickerProps>(function D
   ref,
 ) {
   const reactId = useId();
-  const inputId = useAxiomId(`datepicker-${reactId.replace(/:/g, "")}`);
+  const inputId = useAsriUIId(`datepicker-${reactId.replace(/:/g, "")}`);
   const popoverRef = useRef<HTMLDivElement | null>(null);
   const fieldRef = useRef<HTMLDivElement | null>(null);
 

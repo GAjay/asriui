@@ -9,7 +9,7 @@
 }
 
 .summary {
-  font-size: var(--axiom-font-size-sm);
-  color: var(--axiom-color-muted-foreground);
+  font-size: var(--asriui-font-size-sm);
+  color: var(--asriui-color-muted-foreground);
   margin: 0;
 }

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Badge, Button, Icon, PageLayout, Typography, toast } from "axiom-ui";
+import { Badge, Button, Icon, PageLayout, Typography, toast } from "asriui";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./templates.module.css";
 
@@ -8,7 +8,7 @@ const CATEGORIES = ["All", "Apparel", "Accessories", "Home"] as const;
 const PRODUCTS = [
   {
     id: "p1",
-    name: "Axiom Soft Tee",
+    name: "AsriUI Soft Tee",
     price: "$32",
     category: "Apparel",
     badge: "Best seller",
@@ -71,7 +71,7 @@ export function ShopPage() {
             <header className={styles.shopHeader}>
               <div>
                 <Badge variant="secondary">Ecommerce</Badge>
-                <h1 className={styles.heroTitle}>Axiom Store</h1>
+                <h1 className={styles.heroTitle}>AsriUI Store</h1>
                 <p className={styles.heroLead}>
                   Product grid built with Card patterns, Badge, Button, and Typography — wire add-to-cart to your
                   cart state.

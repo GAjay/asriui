@@ -242,12 +242,12 @@ export type { FeatureRequestProps, FeatureRequestValues, FeatureRequestClassName
   "questionnaire.d.ts": `export { Questionnaire, DEFAULT_QUESTIONNAIRE } from "./components/Questionnaire/index.js";
 export type { QuestionnaireProps, QuestionnaireQuestion, QuestionnaireQuestionType, QuestionnaireAnswer, QuestionnaireAnswers, QuestionnaireClassNames } from "./components/Questionnaire/index.js";
 `,
-  "config.d.ts": `export { AxiomProvider, useAxiomConfig, useAxiomConfigOptional, useAxiomDebug, pushAnalyticsEvent, trackButtonClick, trackLinkClick, trackComponentEvent, initGtm, reportError, captureDebugError, clearDebugLogs, getDebugLogs } from "./config/index.js";
-export type { AxiomConfig, AxiomConfigContextValue, AnalyticsConfig, MonitoringConfig, DebugConfig, DebugLogEntry, DebugLogSource, ThemeMode, AxiomProviderProps, ErrorReportPayload, AnalyticsTrackProps } from "./config/index.js";
+  "config.d.ts": `export { AsriUIProvider, useAsriUIConfig, useAsriUIConfigOptional, useAsriUIDebug, pushAnalyticsEvent, trackButtonClick, trackLinkClick, trackComponentEvent, initGtm, reportError, captureDebugError, clearDebugLogs, getDebugLogs } from "./config/index.js";
+export type { AsriUIConfig, AsriUIConfigContextValue, AnalyticsConfig, MonitoringConfig, DebugConfig, DebugLogEntry, DebugLogSource, ThemeMode, AsriUIProviderProps, ErrorReportPayload, AnalyticsTrackProps } from "./config/index.js";
 `,
   "utils.d.ts": `export { cn } from "./utils/index.js";
 `,
-  "hooks.d.ts": `export { useAxiomId, useThemeAttribute } from "./hooks/index.js";
+  "hooks.d.ts": `export { useAsriUIId, useThemeAttribute } from "./hooks/index.js";
 `,
   "motion.d.ts": `export * from "./motion/index.js";
 `,

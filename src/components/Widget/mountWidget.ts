@@ -28,7 +28,7 @@ export function mountWidget(host: HTMLElement | string, options: WidgetMountOpti
       : options.mode;
 
   const surface = document.createElement("div");
-  surface.className = "axiom-widget";
+  surface.className = "asriui-widget";
   surface.style.width = toCssSize(options.width) ?? "100%";
   const height = toCssSize(options.height);
   if (height) {
@@ -48,7 +48,7 @@ export function mountWidget(host: HTMLElement | string, options: WidgetMountOpti
     const script = document.createElement("script");
     script.src = options.scriptSrc;
     script.async = true;
-    script.dataset.axiomWidget = options.scriptSrc;
+    script.dataset.asriuiWidget = options.scriptSrc;
     script.addEventListener("load", () => options.onLoad?.(), { once: true });
     script.addEventListener("error", () => {
       options.onError?.(new Error(`Failed to load widget script: ${options.scriptSrc}`));

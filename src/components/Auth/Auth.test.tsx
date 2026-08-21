@@ -15,12 +15,12 @@ describe("Auth", () => {
 
     render(<LoginForm onSubmit={onSubmit} providers={[]} />);
 
-    await user.type(screen.getByRole("textbox", { name: /email/i }), "dev@axiom-ui.dev");
+    await user.type(screen.getByRole("textbox", { name: /email/i }), "dev@asriui.dev");
     await user.type(screen.getByLabelText(/password/i), "secret123");
     await user.click(screen.getByRole("button", { name: "Sign in" }));
 
     expect(onSubmit).toHaveBeenCalledWith({
-      email: "dev@axiom-ui.dev",
+      email: "dev@asriui.dev",
       password: "secret123",
       remember: false,
     });

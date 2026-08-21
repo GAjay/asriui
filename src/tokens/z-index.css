@@ -1,10 +1,10 @@
 :root {
-  --axiom-z-base: 0;
-  --axiom-z-dropdown: 1000;
-  --axiom-z-sticky: 1100;
-  --axiom-z-overlay: 1200;
-  --axiom-z-modal: 1300;
-  --axiom-z-popover: 1400;
-  --axiom-z-toast: 1500;
-  --axiom-z-tooltip: 1600;
+  --asriui-z-base: 0;
+  --asriui-z-dropdown: 1000;
+  --asriui-z-sticky: 1100;
+  --asriui-z-overlay: 1200;
+  --asriui-z-modal: 1300;
+  --asriui-z-popover: 1400;
+  --asriui-z-toast: 1500;
+  --asriui-z-tooltip: 1600;
 }

@@ -1,10 +1,10 @@
 .root {
   display: inline-flex;
   align-items: flex-start;
-  gap: var(--axiom-space-3);
+  gap: var(--asriui-space-3);
   cursor: pointer;
-  font-family: var(--axiom-font-family);
-  color: var(--axiom-color-foreground);
+  font-family: var(--asriui-font-family);
+  color: var(--asriui-color-foreground);
 }
 
 .disabled {
@@ -37,24 +37,24 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-sm);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-primary-foreground);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-sm);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-primary-foreground);
   transition:
-    background-color var(--axiom-duration-fast) var(--axiom-easing-standard),
-    border-color var(--axiom-duration-fast) var(--axiom-easing-standard);
+    background-color var(--asriui-duration-fast) var(--asriui-easing-standard),
+    border-color var(--asriui-duration-fast) var(--asriui-easing-standard);
 }
 
 .input:focus-visible + .box {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
 .input:checked + .box,
 .input:indeterminate + .box {
-  border-color: var(--axiom-color-primary);
-  background: var(--axiom-color-primary);
+  border-color: var(--asriui-color-primary);
+  background: var(--asriui-color-primary);
 }
 
 .mark {
@@ -63,8 +63,8 @@
   opacity: 0;
   transform: scale(0.6);
   transition:
-    opacity var(--axiom-duration-fast) var(--axiom-easing-standard),
-    transform var(--axiom-duration-fast) var(--axiom-easing-standard);
+    opacity var(--asriui-duration-fast) var(--asriui-easing-standard),
+    transform var(--asriui-duration-fast) var(--asriui-easing-standard);
 }
 
 .input:checked + .box .mark,
@@ -104,13 +104,13 @@
 }
 
 .label {
-  font-size: var(--axiom-font-size-sm);
-  font-weight: var(--axiom-font-weight-medium);
+  font-size: var(--asriui-font-size-sm);
+  font-weight: var(--asriui-font-weight-medium);
   line-height: 1.4;
 }
 
 .description {
-  font-size: var(--axiom-font-size-xs);
+  font-size: var(--asriui-font-size-xs);
   line-height: 1.45;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }

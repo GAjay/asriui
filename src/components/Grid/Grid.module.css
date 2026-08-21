@@ -8,15 +8,15 @@
 }
 
 .gapSm {
-  gap: var(--axiom-space-2);
+  gap: var(--asriui-space-2);
 }
 
 .gapMd {
-  gap: var(--axiom-space-4);
+  gap: var(--asriui-space-4);
 }
 
 .gapLg {
-  gap: var(--axiom-space-6);
+  gap: var(--asriui-space-6);
 }
 
 .fixed {

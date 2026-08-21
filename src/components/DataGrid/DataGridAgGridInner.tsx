@@ -14,7 +14,7 @@ export function DataGridAgGridInner<T>({
   columns,
   rows,
   gridOptions,
-  themeClass = "ag-theme-axiom",
+  themeClass = "ag-theme-asriui",
   height = 420,
   className,
   style,

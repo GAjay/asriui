@@ -28,7 +28,7 @@ export type AiWorkflowNodeData = {
   label: string;
   description?: string;
   config?: Record<string, string>;
-  /** Axiom UI component slug when kind is `component`. */
+  /** AsriUI component slug when kind is `component`. */
   componentSlug?: string;
   /** Integration block id when kind is `block`. */
   blockId?: string;
@@ -74,7 +74,7 @@ export interface AiWorkflowBuilderProps
   showControls?: boolean;
   /** Show the node palette. @default true */
   showPalette?: boolean;
-  /** Show Axiom UI components in the palette. @default true */
+  /** Show AsriUI components in the palette. @default true */
   showComponentPalette?: boolean;
   /** Show integration blocks in the palette. @default true */
   showBlockPalette?: boolean;
@@ -84,7 +84,7 @@ export interface AiWorkflowBuilderProps
   showInspector?: boolean;
   /** Show the top toolbar. @default true */
   showToolbar?: boolean;
-  /** Axiom UI components available in the palette. */
+  /** AsriUI components available in the palette. */
   components?: AiWorkflowComponentItem[];
   /** Extra UI components merged into the palette. */
   customComponents?: AiWorkflowComponentItem[];

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { ErrorBoundary, Button, Badge } from "axiom-ui";
-import { useAxiomDebug } from "../../src/config";
+import { ErrorBoundary, Button, Badge } from "asriui";
+import { useAsriUIDebug } from "../../src/config";
 import styles from "./DebugModeDemo.module.css";
 
 function BrokenPreview(): never {
@@ -8,7 +8,7 @@ function BrokenPreview(): never {
 }
 
 export function DebugModeDemo() {
-  const debug = useAxiomDebug();
+  const debug = useAsriUIDebug();
   const [crash, setCrash] = useState(false);
   const [logs, setLogs] = useState(() => debug.getLogs());
 
@@ -18,7 +18,7 @@ export function DebugModeDemo() {
     return (
       <div className={styles.shell}>
         <p className={styles.note}>
-          Debug mode is off. Set <code>debug: true</code> on <code>AxiomProvider</code> (this docs
+          Debug mode is off. Set <code>debug: true</code> on <code>AsriUIProvider</code> (this docs
           site enables it automatically in development).
         </p>
       </div>
@@ -67,10 +67,10 @@ export function DebugModeDemo() {
           <ul className={styles.list}>
             <li>Toast notification with the error message</li>
             <li>
-              Collapsed console group: <code>[AxiomUI Debug] …</code>
+              Collapsed console group: <code>[AsriUI Debug] …</code>
             </li>
             <li>ErrorBoundary fallback with stack trace when debug is on</li>
-            <li>In-memory log entries via <code>useAxiomDebug().getLogs()</code></li>
+            <li>In-memory log entries via <code>useAsriUIDebug().getLogs()</code></li>
           </ul>
         </div>
 

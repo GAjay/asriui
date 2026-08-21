@@ -21,8 +21,8 @@
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
-      "axiom-ui": ["./src/index.ts"],
-      "axiom-ui/*": ["./src/*"]
+      "asriui": ["./src/index.ts"],
+      "asriui/*": ["./src/*"]
     },
     "types": ["vitest/globals", "@testing-library/jest-dom"]
   },

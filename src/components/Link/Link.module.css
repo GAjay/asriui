@@ -4,20 +4,20 @@
   gap: 0.35rem;
   font-weight: 500;
   text-decoration: none;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
   transition: color 140ms ease, opacity 140ms ease;
 }
 
 .root:hover {
-  color: color-mix(in srgb, var(--axiom-color-foreground) 75%, transparent);
+  color: color-mix(in srgb, var(--asriui-color-foreground) 75%, transparent);
 }
 
 .muted {
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .muted:hover {
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .button {
@@ -26,15 +26,15 @@
   justify-content: center;
   min-height: 2.25rem;
   padding: 0 0.85rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
 }
 
 .button:hover {
-  background: var(--axiom-color-muted);
-  color: var(--axiom-color-foreground);
+  background: var(--asriui-color-muted);
+  color: var(--asriui-color-foreground);
 }
 
 .externalIcon {
@@ -56,7 +56,7 @@
 }
 
 .root:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
   border-radius: 2px;
 }

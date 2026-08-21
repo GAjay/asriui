@@ -1,9 +1,9 @@
 .root {
   display: flex;
   flex-direction: column;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-lg);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-lg);
+  background: var(--asriui-color-background);
   overflow: hidden;
   min-height: 280px;
 }
@@ -24,21 +24,21 @@
   gap: 0.25rem;
   max-width: 88%;
   padding: 0.65rem 0.85rem;
-  border-radius: var(--axiom-radius-md);
-  font-size: var(--axiom-font-size-sm);
-  line-height: var(--axiom-line-height-normal);
+  border-radius: var(--asriui-radius-md);
+  font-size: var(--asriui-font-size-sm);
+  line-height: var(--asriui-line-height-normal);
 }
 
 .user {
   align-self: flex-end;
-  background: var(--axiom-color-primary);
-  color: var(--axiom-color-primary-foreground);
+  background: var(--asriui-color-primary);
+  color: var(--asriui-color-primary-foreground);
 }
 
 .assistant {
   align-self: flex-start;
-  background: var(--axiom-color-muted);
-  color: var(--axiom-color-foreground);
+  background: var(--asriui-color-muted);
+  color: var(--asriui-color-foreground);
 }
 
 .system {
@@ -46,9 +46,9 @@
   max-width: 100%;
   padding: 0.35rem 0.65rem;
   font-size: 0.72rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
   background: transparent;
-  border: 1px dashed var(--axiom-color-border);
+  border: 1px dashed var(--asriui-color-border);
 }
 
 .meta {
@@ -65,22 +65,22 @@
 
 .suggestion {
   padding: 0.35rem 0.65rem;
-  border: 1px solid var(--axiom-color-border);
+  border: 1px solid var(--asriui-color-border);
   border-radius: 999px;
-  background: var(--axiom-color-background);
+  background: var(--asriui-color-background);
   font-size: 0.78rem;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
   cursor: pointer;
   transition: background 120ms ease, border-color 120ms ease;
 }
 
 .suggestion:hover {
-  background: var(--axiom-color-muted);
-  border-color: var(--axiom-color-foreground);
+  background: var(--asriui-color-muted);
+  border-color: var(--asriui-color-foreground);
 }
 
 .suggestion:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
@@ -89,8 +89,8 @@
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.75rem 1rem;
-  border-top: 1px solid var(--axiom-color-border);
-  background: color-mix(in srgb, var(--axiom-color-muted) 35%, transparent);
+  border-top: 1px solid var(--asriui-color-border);
+  background: color-mix(in srgb, var(--asriui-color-muted) 35%, transparent);
 }
 
 .promptRow {
@@ -103,7 +103,7 @@
   margin: 0;
   font-size: 0.72rem;
   line-height: 1.4;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .queue {
@@ -111,8 +111,8 @@
   flex-direction: column;
   gap: 0.5rem;
   padding: 0.65rem 1rem;
-  border-top: 1px solid var(--axiom-color-border);
-  background: color-mix(in srgb, var(--axiom-color-muted) 22%, transparent);
+  border-top: 1px solid var(--asriui-color-border);
+  background: color-mix(in srgb, var(--asriui-color-muted) 22%, transparent);
   max-height: 160px;
   overflow-y: auto;
 }
@@ -129,12 +129,12 @@
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .queueCount {
   font-size: 0.68rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .queueList {
@@ -152,9 +152,9 @@
   justify-content: space-between;
   gap: 0.5rem;
   padding: 0.45rem 0.55rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-sm);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-sm);
+  background: var(--asriui-color-background);
 }
 
 .queueQueued {
@@ -162,8 +162,8 @@
 }
 
 .queueRunning {
-  border-color: var(--axiom-color-primary);
-  box-shadow: 0 0 0 1px color-mix(in srgb, var(--axiom-color-primary) 25%, transparent);
+  border-color: var(--asriui-color-primary);
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--asriui-color-primary) 25%, transparent);
   animation: queuePulse 1.4s ease-in-out infinite;
 }
 
@@ -172,17 +172,17 @@
 }
 
 .queueFailed {
-  border-color: var(--axiom-color-destructive, #dc2626);
+  border-color: var(--asriui-color-destructive, #dc2626);
 }
 
 @keyframes queuePulse {
   0%,
   100% {
-    background: var(--axiom-color-background);
+    background: var(--asriui-color-background);
   }
 
   50% {
-    background: color-mix(in srgb, var(--axiom-color-primary) 8%, var(--axiom-color-background));
+    background: color-mix(in srgb, var(--asriui-color-primary) 8%, var(--asriui-color-background));
   }
 }
 
@@ -200,19 +200,19 @@
 }
 
 .statusQueued {
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .statusRunning {
-  color: var(--axiom-color-primary);
+  color: var(--asriui-color-primary);
 }
 
 .statusDone {
-  color: var(--axiom-color-success, #16a34a);
+  color: var(--asriui-color-success, #16a34a);
 }
 
 .statusFailed {
-  color: var(--axiom-color-destructive, #dc2626);
+  color: var(--asriui-color-destructive, #dc2626);
 }
 
 .queueText {
@@ -233,26 +233,26 @@
 .queueAction {
   padding: 0.15rem 0.4rem;
   border: 0;
-  border-radius: var(--axiom-radius-sm);
+  border-radius: var(--asriui-radius-sm);
   background: transparent;
   font-size: 0.68rem;
-  color: var(--axiom-color-primary);
+  color: var(--asriui-color-primary);
   cursor: pointer;
 }
 
 .queueAction:hover {
-  background: var(--axiom-color-muted);
+  background: var(--asriui-color-muted);
 }
 
 .queueAction:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 1px;
 }
 
 .queueEmpty {
   margin: 0;
   font-size: 0.75rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .field {
@@ -279,17 +279,17 @@
   min-height: 2.5rem;
   max-height: 8rem;
   padding: 0.55rem 0.7rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
   font: inherit;
-  font-size: var(--axiom-font-size-sm);
+  font-size: var(--asriui-font-size-sm);
   resize: vertical;
 }
 
 .textarea:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 1px;
 }
 
@@ -306,14 +306,14 @@
   height: 2.5rem;
   flex-shrink: 0;
   border: none;
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-primary);
-  color: var(--axiom-color-primary-foreground);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-primary);
+  color: var(--asriui-color-primary-foreground);
   cursor: pointer;
 }
 
 .send:hover:not(:disabled) {
-  background: var(--axiom-color-primary-hover, var(--axiom-color-primary));
+  background: var(--asriui-color-primary-hover, var(--asriui-color-primary));
 }
 
 .send:disabled {
@@ -322,6 +322,6 @@
 }
 
 .send:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }

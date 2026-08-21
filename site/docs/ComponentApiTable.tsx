@@ -1,4 +1,4 @@
-import { CodeBlock } from "axiom-ui";
+import { CodeBlock } from "asriui";
 import type { ComponentApiDoc } from "./componentApi";
 import styles from "./ComponentApiTable.module.css";
 

@@ -14,7 +14,7 @@ export {
   cloneWorkflowTemplate,
 } from "./workflowDefaults";
 export {
-  AXIOM_UI_COMPONENT_PALETTE,
+  ASRIUI_COMPONENT_PALETTE,
   createCustomBlockDefinition,
   WORKFLOW_DRAG_MIME,
 } from "./workflowCatalog";

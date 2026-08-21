@@ -3,7 +3,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background: var(--axiom-color-muted);
+  background: var(--asriui-color-muted);
 }
 
 .loading {

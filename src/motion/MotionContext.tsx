@@ -30,11 +30,11 @@ export function MotionProvider({ preset = "apple", enabled = true, children }: M
   return <MotionContext.Provider value={value}>{children}</MotionContext.Provider>;
 }
 
-/** Active animation script from `MotionProvider` or `AxiomProvider`. */
+/** Active animation script from `MotionProvider` or `AsriUIProvider`. */
 export function useMotionPresets(): MotionContextValue {
   const context = useContext(MotionContext);
   if (!context) {
-    throw new Error("useMotionPresets must be used within MotionProvider or AxiomProvider.");
+    throw new Error("useMotionPresets must be used within MotionProvider or AsriUIProvider.");
   }
   return context;
 }

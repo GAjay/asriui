@@ -12,7 +12,7 @@ import {
   type ReactNode,
 } from "react";
 import { createPortal } from "react-dom";
-import { useAxiomId } from "../../hooks/useAxiomId";
+import { useAsriUIId } from "../../hooks/useAsriUIId";
 import { cn } from "../../utils/cn";
 import { createSlotClassNames } from "../../utils/slotClassNames";
 import { computeMenuPosition } from "../Menu/menuPosition";
@@ -84,7 +84,7 @@ const DropdownRoot = forwardRef<HTMLDivElement, DropdownProps>(function Dropdown
   ref,
 ) {
   const reactId = useId();
-  const idPrefix = useAxiomId(`dropdown-${reactId.replace(/:/g, "")}`);
+  const idPrefix = useAsriUIId(`dropdown-${reactId.replace(/:/g, "")}`);
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [uncontrolledValue, setUncontrolledValue] = useState<string[]>(() => toValueArray(defaultValue));

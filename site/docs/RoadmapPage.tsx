@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { Badge, Breadcrumb, Timeline } from "axiom-ui";
+import { Badge, Breadcrumb, Timeline } from "asriui";
 import { DocPageShell } from "./DocPageShell";
 import { ROADMAP_MILESTONES, ROADMAP_PHASES, ROADMAP_USE_CASES } from "./roadmapData";
 import styles from "./GuidesPage.module.css";
@@ -33,7 +33,7 @@ export function RoadmapPage() {
           <p className={styles.kicker}>Guides</p>
           <h1 className={styles.title}>Product roadmap</h1>
           <p className={styles.lead}>
-            AxiomUI helps teams ship accessible, tree-shakable React interfaces faster — from dashboards and forms to
+            AsriUI helps teams ship accessible, tree-shakable React interfaces faster — from dashboards and forms to
             docs sites and marketing pages. This roadmap shows what we solve today and what is coming next.
           </p>
           <div className={styles.metaRow}>
@@ -58,7 +58,7 @@ export function RoadmapPage() {
                   <strong>Problem:</strong> {useCase.problem}
                 </p>
                 <p className={styles.useCaseSolution}>
-                  <strong>How AxiomUI helps:</strong> {useCase.solution}
+                  <strong>How AsriUI helps:</strong> {useCase.solution}
                 </p>
                 <div className={styles.chipRow}>
                   {useCase.components.map((name) => (

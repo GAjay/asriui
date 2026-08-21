@@ -1,6 +1,6 @@
 import type { Transition, Variants } from "framer-motion";
 
-/** Named animation script users can select in `AxiomProvider` or `MotionProvider`. */
+/** Named animation script users can select in `AsriUIProvider` or `MotionProvider`. */
 export type MotionPresetName = "apple" | "snappy" | "soft" | "playful" | "minimal";
 
 export type MotionPresetPack = {
@@ -85,7 +85,7 @@ function createPack(name: MotionPresetName, config: PackConfig): MotionPresetPac
 const PACK_CONFIGS: Record<MotionPresetName, PackConfig> = {
   apple: {
     label: "Apple",
-    description: "Snappy springs with subtle scale — the default Axiom feel.",
+    description: "Snappy springs with subtle scale — the default AsriUI feel.",
     spring: { type: "spring", stiffness: 420, damping: 32, mass: 0.8 },
     gentle: { type: "spring", stiffness: 260, damping: 28, mass: 1 },
     reveal: { type: "spring", stiffness: 220, damping: 30, mass: 0.9 },

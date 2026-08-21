@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
-import { Badge, Button, Icon, Input, PageLayout, Typography, toast } from "axiom-ui";
+import { Badge, Button, Icon, Input, PageLayout, Typography, toast } from "asriui";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./templates.module.css";
 
@@ -14,7 +14,7 @@ type CartLine = {
 };
 
 const INITIAL_CART: CartLine[] = [
-  { id: "c1", name: "Axiom Soft Tee", variant: "Black / M", price: 32, qty: 1, tone: "rose" },
+  { id: "c1", name: "AsriUI Soft Tee", variant: "Black / M", price: 32, qty: 1, tone: "rose" },
   { id: "c2", name: "Mono Cap", variant: "Stone", price: 24, qty: 2, tone: "cyan" },
   { id: "c3", name: "Desk Mat", variant: "Charcoal", price: 42, qty: 1, tone: "amber" },
 ];
@@ -28,7 +28,7 @@ export function CartPage() {
     [lines],
   );
   const shipping = lines.length ? 8 : 0;
-  const discount = promo.trim().toUpperCase() === "AXIOM10" ? Math.round(subtotal * 0.1) : 0;
+  const discount = promo.trim().toUpperCase() === "ASRIUI10" ? Math.round(subtotal * 0.1) : 0;
   const total = Math.max(0, subtotal + shipping - discount);
 
   const setQty = (id: string, qty: number) => {
@@ -124,7 +124,7 @@ export function CartPage() {
                   </div>
                   {discount > 0 ? (
                     <div className={styles.summaryRow}>
-                      <span>Promo (AXIOM10)</span>
+                      <span>Promo (ASRIUI10)</span>
                       <strong>−${discount}</strong>
                     </div>
                   ) : null}
@@ -136,17 +136,17 @@ export function CartPage() {
                   <div className={styles.promoRow}>
                     <Input
                       label="Promo code"
-                      placeholder="Try AXIOM10"
+                      placeholder="Try ASRIUI10"
                       value={promo}
                       onChange={(event) => setPromo(event.target.value)}
                     />
                     <Button
                       variant="outline"
                       onClick={() => {
-                        if (promo.trim().toUpperCase() === "AXIOM10") {
+                        if (promo.trim().toUpperCase() === "ASRIUI10") {
                           toast.success("Promo applied", { description: "10% off subtotal." });
                         } else {
-                          toast.error("Invalid code", { description: "Use AXIOM10 for this demo." });
+                          toast.error("Invalid code", { description: "Use ASRIUI10 for this demo." });
                         }
                       }}
                     >

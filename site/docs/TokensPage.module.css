@@ -46,7 +46,7 @@
 .fileScope {
   font-size: 0.72rem;
   color: var(--lp-muted-fg);
-  font-family: var(--axiom-font-family-mono, ui-monospace, monospace);
+  font-family: var(--asriui-font-family-mono, ui-monospace, monospace);
 }
 
 .fileCard p {
@@ -177,7 +177,7 @@
   display: block;
   height: 0.5rem;
   border-radius: 999px;
-  background: var(--axiom-color-primary, var(--lp-fg));
+  background: var(--asriui-color-primary, var(--lp-fg));
   min-width: 0;
 }
 
@@ -295,7 +295,7 @@
   display: block;
   height: 0.45rem;
   border-radius: 999px;
-  background: color-mix(in srgb, var(--axiom-color-primary, var(--lp-fg)) 75%, transparent);
+  background: color-mix(in srgb, var(--asriui-color-primary, var(--lp-fg)) 75%, transparent);
   min-width: 0;
 }
 

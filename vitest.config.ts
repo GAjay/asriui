@@ -13,7 +13,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "axiom-ui": resolve(__dirname, "./src/index.ts"),
+      "asriui": resolve(__dirname, "./src/index.ts"),
     },
   },
 });

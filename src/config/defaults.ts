@@ -1,5 +1,5 @@
 import type { MotionPresetName } from "../motion/presetPacks";
-import type { AxiomConfig, AxiomConfigContextValue, MotionConfig } from "./types";
+import type { AsriUIConfig, AsriUIConfigContextValue, MotionConfig } from "./types";
 import { resolveDebugConfig } from "./debug";
 import {
   DEFAULT_ASSET_CACHE_MAX_ENTRIES,
@@ -7,7 +7,7 @@ import {
   DEFAULT_ASSET_REFETCH_INTERVAL,
 } from "../utils/assetCache";
 
-export const DEFAULT_AXIOM_CONFIG: AxiomConfigContextValue = {
+export const DEFAULT_ASRIUI_CONFIG: AsriUIConfigContextValue = {
   theme: "light",
   fontFamily: '"Work Sans", ui-sans-serif, system-ui, sans-serif',
   motion: {
@@ -47,39 +47,39 @@ function resolveMotionConfig(
   }
 
   return {
-    preset: motion?.preset ?? DEFAULT_AXIOM_CONFIG.motion.preset,
-    enabled: motion?.enabled ?? DEFAULT_AXIOM_CONFIG.motion.enabled,
+    preset: motion?.preset ?? DEFAULT_ASRIUI_CONFIG.motion.preset,
+    enabled: motion?.enabled ?? DEFAULT_ASRIUI_CONFIG.motion.enabled,
   };
 }
 
-export function resolveAxiomConfig(config?: AxiomConfig): AxiomConfigContextValue {
+export function resolveAsriUIConfig(config?: AsriUIConfig): AsriUIConfigContextValue {
   return {
-    theme: config?.theme ?? DEFAULT_AXIOM_CONFIG.theme,
-    fontFamily: config?.fontFamily ?? DEFAULT_AXIOM_CONFIG.fontFamily,
+    theme: config?.theme ?? DEFAULT_ASRIUI_CONFIG.theme,
+    fontFamily: config?.fontFamily ?? DEFAULT_ASRIUI_CONFIG.fontFamily,
     motion: resolveMotionConfig(config?.motion),
     analytics: {
-      enabled: config?.analytics?.enabled ?? DEFAULT_AXIOM_CONFIG.analytics.enabled,
-      gtmId: config?.analytics?.gtmId ?? DEFAULT_AXIOM_CONFIG.analytics.gtmId,
+      enabled: config?.analytics?.enabled ?? DEFAULT_ASRIUI_CONFIG.analytics.enabled,
+      gtmId: config?.analytics?.gtmId ?? DEFAULT_ASRIUI_CONFIG.analytics.gtmId,
       dataLayerName:
-        config?.analytics?.dataLayerName ?? DEFAULT_AXIOM_CONFIG.analytics.dataLayerName,
+        config?.analytics?.dataLayerName ?? DEFAULT_ASRIUI_CONFIG.analytics.dataLayerName,
     },
     monitoring: {
-      enabled: config?.monitoring?.enabled ?? DEFAULT_AXIOM_CONFIG.monitoring.enabled,
-      reportUrl: config?.monitoring?.reportUrl ?? DEFAULT_AXIOM_CONFIG.monitoring.reportUrl,
+      enabled: config?.monitoring?.enabled ?? DEFAULT_ASRIUI_CONFIG.monitoring.enabled,
+      reportUrl: config?.monitoring?.reportUrl ?? DEFAULT_ASRIUI_CONFIG.monitoring.reportUrl,
     },
     debug: resolveDebugConfig(config?.debug),
     assets: {
-      cache: config?.assets?.cache ?? DEFAULT_AXIOM_CONFIG.assets.cache,
-      refetchInterval: config?.assets?.refetchInterval ?? DEFAULT_AXIOM_CONFIG.assets.refetchInterval,
-      cacheName: config?.assets?.cacheName ?? DEFAULT_AXIOM_CONFIG.assets.cacheName,
-      maxEntries: config?.assets?.maxEntries ?? DEFAULT_AXIOM_CONFIG.assets.maxEntries,
+      cache: config?.assets?.cache ?? DEFAULT_ASRIUI_CONFIG.assets.cache,
+      refetchInterval: config?.assets?.refetchInterval ?? DEFAULT_ASRIUI_CONFIG.assets.refetchInterval,
+      cacheName: config?.assets?.cacheName ?? DEFAULT_ASRIUI_CONFIG.assets.cacheName,
+      maxEntries: config?.assets?.maxEntries ?? DEFAULT_ASRIUI_CONFIG.assets.maxEntries,
     },
     database: {
-      baseUrl: config?.database?.baseUrl ?? DEFAULT_AXIOM_CONFIG.database.baseUrl,
-      queryEndpoint: config?.database?.queryEndpoint ?? DEFAULT_AXIOM_CONFIG.database.queryEndpoint,
-      queries: config?.database?.queries ?? DEFAULT_AXIOM_CONFIG.database.queries,
-      headers: config?.database?.headers ?? DEFAULT_AXIOM_CONFIG.database.headers,
-      credentials: config?.database?.credentials ?? DEFAULT_AXIOM_CONFIG.database.credentials,
+      baseUrl: config?.database?.baseUrl ?? DEFAULT_ASRIUI_CONFIG.database.baseUrl,
+      queryEndpoint: config?.database?.queryEndpoint ?? DEFAULT_ASRIUI_CONFIG.database.queryEndpoint,
+      queries: config?.database?.queries ?? DEFAULT_ASRIUI_CONFIG.database.queries,
+      headers: config?.database?.headers ?? DEFAULT_ASRIUI_CONFIG.database.headers,
+      credentials: config?.database?.credentials ?? DEFAULT_ASRIUI_CONFIG.database.credentials,
     },
   };
 }

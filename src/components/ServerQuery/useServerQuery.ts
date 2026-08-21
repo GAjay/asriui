@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useAxiomConfigOptional } from "../../config/AxiomContext";
+import { useAsriUIConfigOptional } from "../../config/AsriUIContext";
 import type { DatabaseConfig, DatabaseQueryRequest } from "../../config/database.types";
 import { executeDatabaseQuery, resolveServerQueryFn } from "./resolveServerQuery";
 import type { ServerQueryResult, ServerQueryStatus, UseServerQueryOptions } from "./ServerQuery.types";
@@ -16,8 +16,8 @@ export function useServerQuery<T>({
   onSuccess,
   onError,
 }: UseServerQueryOptions<T>): ServerQueryResult<T> {
-  const axiomConfig = useAxiomConfigOptional();
-  const database = axiomConfig?.database;
+  const asriuiConfig = useAsriUIConfigOptional();
+  const database = asriuiConfig?.database;
 
   const [status, setStatus] = useState<ServerQueryStatus>(initialData !== undefined ? "success" : "idle");
   const [data, setData] = useState<T | undefined>(initialData);
@@ -78,14 +78,14 @@ export function useServerQuery<T>({
   };
 }
 
-/** Run a one-off SQL query using AxiomProvider database config. */
-export function useAxiomDatabase() {
-  const database = useAxiomConfigOptional()?.database;
+/** Run a one-off SQL query using AsriUIProvider database config. */
+export function useAsriUIDatabase() {
+  const database = useAsriUIConfigOptional()?.database;
 
   const executeQuery = useCallback(
     <T,>(request: DatabaseQueryRequest) => {
       if (!database?.baseUrl) {
-        throw new Error("[axiom-ui] database.baseUrl is required. Set config.database on AxiomProvider.");
+        throw new Error("[asriui] database.baseUrl is required. Set config.database on AsriUIProvider.");
       }
       return executeDatabaseQuery<T>(database, request);
     },

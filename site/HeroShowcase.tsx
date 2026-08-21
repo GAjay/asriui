@@ -35,7 +35,7 @@ export function HeroShowcase() {
 
       <div className={styles.layout}>
         <aside className={styles.sidebar}>
-          <p className={styles.sidebarBrand}>AxiomUI</p>
+          <p className={styles.sidebarBrand}>AsriUI</p>
           {SIDEBAR_SECTIONS.map((section) => (
             <div key={section.label} className={styles.sidebarGroup}>
               <p className={styles.sidebarLabel}>{section.label}</p>

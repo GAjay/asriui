@@ -1,13 +1,13 @@
 .root {
   display: grid;
   grid-template-columns: auto 1fr;
-  gap: var(--axiom-space-3);
-  padding: var(--axiom-space-4);
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-lg);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
-  font-family: var(--axiom-font-family);
+  gap: var(--asriui-space-3);
+  padding: var(--asriui-space-4);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-lg);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
+  font-family: var(--asriui-font-family);
 }
 
 .icon {
@@ -17,8 +17,8 @@
   width: 1.25rem;
   height: 1.25rem;
   margin-top: 0.1rem;
-  font-size: var(--axiom-font-size-sm);
-  font-weight: var(--axiom-font-weight-bold);
+  font-size: var(--asriui-font-size-sm);
+  font-weight: var(--asriui-font-weight-bold);
 }
 
 .body {
@@ -29,50 +29,50 @@
 
 .title {
   margin: 0;
-  font-size: var(--axiom-font-size-sm);
-  font-weight: var(--axiom-font-weight-semibold);
+  font-size: var(--asriui-font-size-sm);
+  font-weight: var(--asriui-font-weight-semibold);
   line-height: 1.4;
 }
 
 .content {
   margin: 0;
-  font-size: var(--axiom-font-size-sm);
+  font-size: var(--asriui-font-size-sm);
   line-height: 1.55;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .info {
-  border-color: color-mix(in srgb, var(--axiom-color-primary) 35%, var(--axiom-color-border));
-  background: color-mix(in srgb, var(--axiom-color-primary) 8%, var(--axiom-color-background));
+  border-color: color-mix(in srgb, var(--asriui-color-primary) 35%, var(--asriui-color-border));
+  background: color-mix(in srgb, var(--asriui-color-primary) 8%, var(--asriui-color-background));
 }
 
 .info .icon {
-  color: var(--axiom-color-primary);
+  color: var(--asriui-color-primary);
 }
 
 .success {
-  border-color: color-mix(in srgb, var(--axiom-color-success) 35%, var(--axiom-color-border));
-  background: color-mix(in srgb, var(--axiom-color-success) 10%, var(--axiom-color-background));
+  border-color: color-mix(in srgb, var(--asriui-color-success) 35%, var(--asriui-color-border));
+  background: color-mix(in srgb, var(--asriui-color-success) 10%, var(--asriui-color-background));
 }
 
 .success .icon {
-  color: var(--axiom-color-success);
+  color: var(--asriui-color-success);
 }
 
 .warning {
-  border-color: color-mix(in srgb, var(--axiom-color-warning) 35%, var(--axiom-color-border));
-  background: color-mix(in srgb, var(--axiom-color-warning) 10%, var(--axiom-color-background));
+  border-color: color-mix(in srgb, var(--asriui-color-warning) 35%, var(--asriui-color-border));
+  background: color-mix(in srgb, var(--asriui-color-warning) 10%, var(--asriui-color-background));
 }
 
 .warning .icon {
-  color: var(--axiom-color-warning);
+  color: var(--asriui-color-warning);
 }
 
 .danger {
-  border-color: color-mix(in srgb, var(--axiom-color-danger) 35%, var(--axiom-color-border));
-  background: color-mix(in srgb, var(--axiom-color-danger) 10%, var(--axiom-color-background));
+  border-color: color-mix(in srgb, var(--asriui-color-danger) 35%, var(--asriui-color-border));
+  background: color-mix(in srgb, var(--asriui-color-danger) 10%, var(--asriui-color-background));
 }
 
 .danger .icon {
-  color: var(--axiom-color-danger);
+  color: var(--asriui-color-danger);
 }

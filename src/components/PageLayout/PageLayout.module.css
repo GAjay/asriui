@@ -1,8 +1,8 @@
 .shell {
   display: grid;
   min-height: 100vh;
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
 }
 
 .sidebarPanel {
@@ -10,8 +10,8 @@
   top: 0;
   height: 100vh;
   overflow-y: auto;
-  border-right: 1px solid var(--axiom-color-border);
-  background: var(--axiom-color-muted);
+  border-right: 1px solid var(--asriui-color-border);
+  background: var(--asriui-color-muted);
   padding: 1.25rem 0.85rem 2rem;
 }
 
@@ -45,7 +45,7 @@
   grid-column: 2;
   grid-row: 1;
   border-right: 0;
-  border-left: 1px solid var(--axiom-color-border);
+  border-left: 1px solid var(--asriui-color-border);
 }
 
 .sidebarRight .main,
@@ -131,7 +131,7 @@
     position: static;
     height: auto;
     border-right: 0;
-    border-bottom: 1px solid var(--axiom-color-border);
+    border-bottom: 1px solid var(--asriui-color-border);
     order: 2;
   }
 
@@ -145,7 +145,7 @@
     grid-column: auto;
     grid-row: auto;
     border-left: 0;
-    border-bottom: 1px solid var(--axiom-color-border);
+    border-bottom: 1px solid var(--asriui-color-border);
   }
 
   .sidebarRight .main,

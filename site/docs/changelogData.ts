@@ -56,8 +56,8 @@ export const CHANGELOG_RELEASES: ChangelogRelease[] = [
         "Table and DataGrid (native engine) with sorting and export",
         "Toast provider with imperative toast() API",
         "LoginForm and OAuthButton (Microsoft, Google, GitHub, Apple)",
-        "AxiomProvider for theme, motion presets, GTM analytics, and error monitoring",
-        "Tree-shakable subpath exports (axiom-ui/button, axiom-ui/data-grid, etc.)",
+        "AsriUIProvider for theme, motion presets, GTM analytics, and error monitoring",
+        "Tree-shakable subpath exports (asriui/button, asriui/data-grid, etc.)",
         "CSS variable theming with light/dark modes",
       ],
       changed: [

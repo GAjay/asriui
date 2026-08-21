@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Badge, Button, Form, PageLayout, Typography, toast } from "axiom-ui";
+import { Badge, Button, Form, PageLayout, Typography, toast } from "asriui";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./templates.module.css";
 

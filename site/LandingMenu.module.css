@@ -52,12 +52,12 @@
   border: 1px solid var(--lp-header-border, var(--lp-border));
   box-sizing: border-box;
   /* Portaled to body — pin theme tokens on the panel itself. */
-  --axiom-color-background: var(--lp-bg);
-  --axiom-color-foreground: var(--lp-fg);
-  --axiom-color-muted: var(--lp-muted);
-  --axiom-color-muted-foreground: var(--lp-muted-fg);
-  --axiom-color-border: var(--lp-border);
-  --axiom-color-ring: var(--lp-fg);
+  --asriui-color-background: var(--lp-bg);
+  --asriui-color-foreground: var(--lp-fg);
+  --asriui-color-muted: var(--lp-muted);
+  --asriui-color-muted-foreground: var(--lp-muted-fg);
+  --asriui-color-border: var(--lp-border);
+  --asriui-color-ring: var(--lp-fg);
 }
 
 /* Invert hover: light → black bg / white text; dark → white bg / black text. */

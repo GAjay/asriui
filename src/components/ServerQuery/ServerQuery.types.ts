@@ -25,7 +25,7 @@ export type ServerQueryResult<T> = {
 export type UseServerQueryOptions<T> = {
   /**
    * Async function, URL, named query key (`"users"`), `sql:SELECT …`,
-   * or `{ sql, params }` / `{ key, params }` when database is configured on AxiomProvider.
+   * or `{ sql, params }` / `{ key, params }` when database is configured on AsriUIProvider.
    */
   query: ServerQueryInput<T>;
   /** Refetch when this key changes. */

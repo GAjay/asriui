@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { motion, useReducedMotion } from "framer-motion";
-import { Badge, Breadcrumb, Button, PageLayout, Typography } from "axiom-ui";
+import { Badge, Breadcrumb, Button, PageLayout, Typography } from "asriui";
 import { PAGE_TEMPLATES } from "./templateMeta";
 import styles from "./TemplateNotFoundPage.module.css";
 

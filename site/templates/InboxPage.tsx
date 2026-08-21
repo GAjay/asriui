@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Badge, Button, Icon, List, ListItem, PageLayout, SideNav, Tabs, Typography } from "axiom-ui";
+import { Badge, Button, Icon, List, ListItem, PageLayout, SideNav, Tabs, Typography } from "asriui";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./templates.module.css";
 

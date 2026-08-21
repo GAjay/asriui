@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { PageLayout } from "axiom-ui";
+import { PageLayout } from "asriui";
 import { cn } from "../../src/utils/cn";
 import { BackToTop } from "./BackToTop";
 import { useTocScrollSpy } from "./useTocScrollSpy";

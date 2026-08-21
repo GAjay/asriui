@@ -47,7 +47,7 @@ export function ComponentPerformanceMetrics({ slug }: Props) {
         </tbody>
       </table>
       <p className={styles.note}>
-        Measured by bundling <code>axiom-ui/{slug}</code> with esbuild (React externalized). Actual
+        Measured by bundling <code>asriui/{slug}</code> with esbuild (React externalized). Actual
         app bundles vary with shared chunks and dependencies such as <code>framer-motion</code>.
       </p>
     </div>

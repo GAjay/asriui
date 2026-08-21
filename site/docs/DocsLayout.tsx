@@ -1,6 +1,6 @@
 import { useEffect, useId, useState } from "react";
 import { NavLink, Outlet, useLocation, useNavigate } from "react-router-dom";
-import { Icon, PageLayout, SideNav } from "axiom-ui";
+import { Icon, PageLayout, SideNav } from "asriui";
 import { BrandMark } from "../BrandMark";
 import { ThemeToggle } from "../ThemeToggle";
 import { useSiteTheme } from "../useSiteTheme";
@@ -73,7 +73,7 @@ export function DocsLayout() {
               <div>
                 <NavLink to="/" className={styles.brand} id={titleId}>
                   <BrandMark size={26} />
-                  AxiomUI
+                  AsriUI
                 </NavLink>
                 <p className={styles.sidebarLabel}>Documentation</p>
               </div>

@@ -35,7 +35,7 @@ export const CustomSlot: Story = {
     },
     slots: {
       widget: (
-        <div style={{ padding: 16, border: "1px solid var(--axiom-color-border)", borderRadius: 8 }}>
+        <div style={{ padding: 16, border: "1px solid var(--asriui-color-border)", borderRadius: 8 }}>
           Your chart / map / editor
         </div>
       ),

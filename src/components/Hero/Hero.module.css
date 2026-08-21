@@ -8,7 +8,7 @@
   width: 100%;
   box-sizing: border-box;
   padding-inline: clamp(1.25rem, 4vw, 2.75rem);
-  color: var(--axiom-color-foreground, #09090b);
+  color: var(--asriui-color-foreground, #09090b);
 }
 
 .full {
@@ -61,7 +61,7 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--axiom-color-muted-foreground, #71717a);
+  color: var(--asriui-color-muted-foreground, #71717a);
 }
 
 .title {
@@ -84,7 +84,7 @@
   max-width: 38rem;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: var(--axiom-color-muted-foreground, #52525b);
+  color: var(--asriui-color-muted-foreground, #52525b);
 }
 
 .alignCenter .description {
@@ -127,52 +127,52 @@
 }
 
 .muted {
-  background: var(--axiom-color-muted, #f4f4f5);
+  background: var(--asriui-color-muted, #f4f4f5);
 }
 
 .dotted {
-  background-color: var(--axiom-color-background, #ffffff);
+  background-color: var(--asriui-color-background, #ffffff);
   background-image: radial-gradient(
     circle,
-    color-mix(in srgb, var(--axiom-color-foreground, #09090b) 18%, transparent) 1.15px,
+    color-mix(in srgb, var(--asriui-color-foreground, #09090b) 18%, transparent) 1.15px,
     transparent 1.2px
   );
   background-size: 22px 22px;
 }
 
 .grid {
-  background-color: var(--axiom-color-background, #ffffff);
+  background-color: var(--asriui-color-background, #ffffff);
   background-image:
-    linear-gradient(color-mix(in srgb, var(--axiom-color-foreground, #09090b) 8%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--axiom-color-foreground, #09090b) 8%, transparent) 1px, transparent 1px);
+    linear-gradient(color-mix(in srgb, var(--asriui-color-foreground, #09090b) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--asriui-color-foreground, #09090b) 8%, transparent) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
 .glow {
   background:
-    radial-gradient(ellipse 70% 55% at 50% -10%, color-mix(in srgb, var(--axiom-color-foreground, #09090b) 12%, transparent), transparent 60%),
-    radial-gradient(ellipse 40% 32% at 8% 22%, color-mix(in srgb, var(--axiom-color-foreground, #09090b) 7%, transparent), transparent 55%),
-    radial-gradient(ellipse 38% 30% at 92% 18%, color-mix(in srgb, var(--axiom-color-foreground, #09090b) 7%, transparent), transparent 55%),
-    var(--axiom-color-background, #ffffff);
+    radial-gradient(ellipse 70% 55% at 50% -10%, color-mix(in srgb, var(--asriui-color-foreground, #09090b) 12%, transparent), transparent 60%),
+    radial-gradient(ellipse 40% 32% at 8% 22%, color-mix(in srgb, var(--asriui-color-foreground, #09090b) 7%, transparent), transparent 55%),
+    radial-gradient(ellipse 38% 30% at 92% 18%, color-mix(in srgb, var(--asriui-color-foreground, #09090b) 7%, transparent), transparent 55%),
+    var(--asriui-color-background, #ffffff);
 }
 
 .aurora {
   background: linear-gradient(
     120deg,
-    color-mix(in srgb, var(--axiom-color-foreground, #09090b) 8%, var(--axiom-color-background, #fff)),
-    color-mix(in srgb, #22c55e 16%, var(--axiom-color-background, #fff)),
-    color-mix(in srgb, #38bdf8 14%, var(--axiom-color-background, #fff)),
-    color-mix(in srgb, var(--axiom-color-foreground, #09090b) 6%, var(--axiom-color-background, #fff))
+    color-mix(in srgb, var(--asriui-color-foreground, #09090b) 8%, var(--asriui-color-background, #fff)),
+    color-mix(in srgb, #22c55e 16%, var(--asriui-color-background, #fff)),
+    color-mix(in srgb, #38bdf8 14%, var(--asriui-color-background, #fff)),
+    color-mix(in srgb, var(--asriui-color-foreground, #09090b) 6%, var(--asriui-color-background, #fff))
   );
   background-size: 220% 220%;
 }
 
 .mesh {
-  background-color: var(--axiom-color-background, #ffffff);
+  background-color: var(--asriui-color-background, #ffffff);
   background-image:
     radial-gradient(at 18% 22%, color-mix(in srgb, #22c55e 22%, transparent) 0, transparent 42%),
     radial-gradient(at 82% 18%, color-mix(in srgb, #38bdf8 20%, transparent) 0, transparent 40%),
-    radial-gradient(at 48% 88%, color-mix(in srgb, var(--axiom-color-foreground, #09090b) 10%, transparent) 0, transparent 46%);
+    radial-gradient(at 48% 88%, color-mix(in srgb, var(--asriui-color-foreground, #09090b) 10%, transparent) 0, transparent 46%);
 }
 
 .animatedBackdrop.dotted {

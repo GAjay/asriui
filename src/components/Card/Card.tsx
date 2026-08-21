@@ -35,7 +35,7 @@ const CardRoot = forwardRef<HTMLDivElement, CardProps>(function Card(
         animate={animate ? "visible" : undefined}
         whileHover={
           animate
-            ? { y: -2, boxShadow: "var(--axiom-shadow-md)", transition: pack.reveal }
+            ? { y: -2, boxShadow: "var(--asriui-shadow-md)", transition: pack.reveal }
             : undefined
         }
         transition={pack.reveal}

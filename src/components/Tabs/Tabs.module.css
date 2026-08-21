@@ -11,26 +11,26 @@
 
 /* Default — segmented control */
 .listDefault {
-  gap: var(--axiom-space-1);
-  padding: var(--axiom-space-1);
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background-color: var(--axiom-color-muted);
+  gap: var(--asriui-space-1);
+  padding: var(--asriui-space-1);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background-color: var(--asriui-color-muted);
 }
 
 /* Underline — bottom line indicator only */
 .listUnderline {
-  gap: var(--axiom-space-4);
+  gap: var(--asriui-space-4);
   padding: 0;
   border: 0;
-  border-bottom: 1px solid var(--axiom-color-border);
+  border-bottom: 1px solid var(--asriui-color-border);
   border-radius: 0;
   background: transparent;
 }
 
 /* Pills — floating pill triggers */
 .listPills {
-  gap: var(--axiom-space-1);
+  gap: var(--asriui-space-1);
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -39,7 +39,7 @@
 
 /* Ghost — minimal text tabs */
 .listGhost {
-  gap: var(--axiom-space-3);
+  gap: var(--asriui-space-3);
   padding: 0;
   border: 0;
   border-radius: 0;
@@ -52,36 +52,36 @@
   align-items: center;
   justify-content: center;
   min-height: 2rem;
-  padding: var(--axiom-space-1) var(--axiom-space-3);
+  padding: var(--asriui-space-1) var(--asriui-space-3);
   border: 1px solid transparent;
   background: transparent;
-  font-family: var(--axiom-font-family);
-  font-size: var(--axiom-font-size-sm);
-  font-weight: var(--axiom-font-weight-medium);
-  color: var(--axiom-color-muted-foreground);
+  font-family: var(--asriui-font-family);
+  font-size: var(--asriui-font-size-sm);
+  font-weight: var(--asriui-font-weight-medium);
+  color: var(--asriui-color-muted-foreground);
   cursor: pointer;
   transition:
-    color var(--axiom-duration-fast) var(--axiom-easing-standard),
-    background-color var(--axiom-duration-fast) var(--axiom-easing-standard),
-    box-shadow var(--axiom-duration-fast) var(--axiom-easing-standard);
+    color var(--asriui-duration-fast) var(--asriui-easing-standard),
+    background-color var(--asriui-duration-fast) var(--asriui-easing-standard),
+    box-shadow var(--asriui-duration-fast) var(--asriui-easing-standard);
 }
 
 .triggerDefault {
-  border-radius: calc(var(--axiom-radius-md) - 2px);
+  border-radius: calc(var(--asriui-radius-md) - 2px);
 }
 
 .triggerUnderline {
-  padding: var(--axiom-space-2) var(--axiom-space-1);
+  padding: var(--asriui-space-2) var(--asriui-space-1);
   border-radius: 0;
 }
 
 .triggerPills {
-  border-radius: var(--axiom-radius-md);
+  border-radius: var(--asriui-radius-md);
 }
 
 .triggerGhost {
-  padding: var(--axiom-space-1) 0.15rem;
-  border-radius: var(--axiom-radius-sm);
+  padding: var(--asriui-space-1) 0.15rem;
+  border-radius: var(--asriui-radius-sm);
 }
 
 .triggerLabel {
@@ -90,11 +90,11 @@
 }
 
 .trigger:hover:not(:disabled) {
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .trigger:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
@@ -104,28 +104,28 @@
 }
 
 .activeDefault {
-  background-color: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
-  box-shadow: var(--axiom-shadow-sm);
+  background-color: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
+  box-shadow: var(--asriui-shadow-sm);
 }
 
 .activeUnderline {
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
   background: transparent;
   box-shadow: none;
 }
 
 .activePills {
-  background-color: var(--axiom-color-muted);
-  color: var(--axiom-color-foreground);
+  background-color: var(--asriui-color-muted);
+  color: var(--asriui-color-foreground);
   box-shadow: none;
 }
 
 .activeGhost {
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
   background: transparent;
   box-shadow: none;
-  font-weight: var(--axiom-font-weight-semibold, 600);
+  font-weight: var(--asriui-font-weight-semibold, 600);
 }
 
 .underlineIndicator {
@@ -135,19 +135,19 @@
   bottom: -1px;
   height: 2px;
   border-radius: 999px;
-  background: var(--axiom-color-foreground);
+  background: var(--asriui-color-foreground);
   pointer-events: none;
 }
 
 .content {
-  margin-top: var(--axiom-space-4);
+  margin-top: var(--asriui-space-4);
   outline: none;
 }
 
 .content:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
-  border-radius: var(--axiom-radius-sm);
+  border-radius: var(--asriui-radius-sm);
 }
 
 @media (prefers-reduced-motion: reduce) {

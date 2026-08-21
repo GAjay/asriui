@@ -74,10 +74,10 @@
   align-items: center;
   gap: 0.55rem;
   padding: 0.5rem 0.65rem;
-  border-radius: var(--axiom-radius-md);
-  border: 1px solid var(--axiom-color-border);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
+  border-radius: var(--asriui-radius-md);
+  border: 1px solid var(--asriui-color-border);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
   font-size: 0.875rem;
   font-weight: 600;
   text-decoration: none;
@@ -88,12 +88,12 @@
 }
 
 .home:hover {
-  background: var(--axiom-color-muted);
-  border-color: color-mix(in srgb, var(--axiom-color-border) 70%, var(--axiom-color-foreground));
+  background: var(--asriui-color-muted);
+  border-color: color-mix(in srgb, var(--asriui-color-border) 70%, var(--asriui-color-foreground));
 }
 
 .home:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
@@ -135,10 +135,10 @@
   height: 2rem;
   margin: -0.25rem 0 0.15rem;
   padding: 0;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-muted-foreground);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-muted-foreground);
   cursor: pointer;
   transition:
     background-color 160ms ease,
@@ -148,14 +148,14 @@
 }
 
 .toggle:hover {
-  color: var(--axiom-color-foreground);
-  background: var(--axiom-color-muted);
-  border-color: color-mix(in srgb, var(--axiom-color-border) 70%, var(--axiom-color-foreground));
+  color: var(--asriui-color-foreground);
+  background: var(--asriui-color-muted);
+  border-color: color-mix(in srgb, var(--asriui-color-border) 70%, var(--asriui-color-foreground));
   transform: translateY(-1px);
 }
 
 .toggle:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
@@ -265,9 +265,9 @@
   min-height: 2.65rem;
   padding: 0.3rem 0.15rem;
   border: 1px solid transparent;
-  border-radius: var(--axiom-radius-md);
+  border-radius: var(--asriui-radius-md);
   background: transparent;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
   cursor: pointer;
   overflow: hidden;
   box-sizing: border-box;
@@ -281,26 +281,26 @@
 }
 
 .menuRailButton:hover {
-  color: var(--axiom-color-foreground);
-  background: var(--axiom-color-muted);
+  color: var(--asriui-color-foreground);
+  background: var(--asriui-color-muted);
 }
 
 .menuRailButton:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
 .menuRailButton[data-active="true"] {
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .menuRailIndicator {
   position: absolute;
   inset: 0;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
-  box-shadow: 0 1px 2px color-mix(in srgb, var(--axiom-color-foreground) 6%, transparent);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
+  box-shadow: 0 1px 2px color-mix(in srgb, var(--asriui-color-foreground) 6%, transparent);
   pointer-events: none;
 }
 
@@ -384,7 +384,7 @@
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .groupLabel {
@@ -402,19 +402,19 @@
   border: 0;
   background: transparent;
   cursor: pointer;
-  border-radius: var(--axiom-radius-sm);
+  border-radius: var(--asriui-radius-sm);
   transition:
     color 140ms ease,
     background-color 140ms ease;
 }
 
 .groupTrigger:hover {
-  color: var(--axiom-color-foreground);
-  background: var(--axiom-color-muted);
+  color: var(--asriui-color-foreground);
+  background: var(--asriui-color-muted);
 }
 
 .groupTrigger:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
@@ -523,7 +523,7 @@
 .nestedList {
   margin-left: 0.35rem;
   padding-left: 0.55rem;
-  border-left: 1px solid var(--axiom-color-border);
+  border-left: 1px solid var(--asriui-color-border);
 }
 
 .virtualList {
@@ -531,7 +531,7 @@
   overflow: auto;
   min-width: 0;
   scrollbar-width: thin;
-  scrollbar-color: color-mix(in srgb, var(--axiom-color-border) 80%, transparent) transparent;
+  scrollbar-color: color-mix(in srgb, var(--asriui-color-border) 80%, transparent) transparent;
 }
 
 .virtualListInner {
@@ -558,7 +558,7 @@
   margin: 0;
   padding: 0.75rem;
   font-size: 0.875rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
   text-align: center;
 }
 
@@ -568,11 +568,11 @@
   align-items: center;
   gap: 0.55rem;
   padding: 0.42rem 0.65rem 0.42rem 0.75rem;
-  border-radius: 0 var(--axiom-radius-sm) var(--axiom-radius-sm) 0;
+  border-radius: 0 var(--asriui-radius-sm) var(--asriui-radius-sm) 0;
   border-left: 2px solid transparent;
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
   text-decoration: none;
   cursor: pointer;
   transition:
@@ -589,25 +589,25 @@
 }
 
 .link:hover {
-  color: var(--axiom-color-foreground);
-  background-color: var(--axiom-color-muted);
-  border-left-color: var(--axiom-color-border);
+  color: var(--asriui-color-foreground);
+  background-color: var(--asriui-color-muted);
+  border-left-color: var(--asriui-color-border);
 }
 
 .link:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 1px;
 }
 
 .active {
-  color: var(--axiom-color-foreground);
-  background-color: var(--axiom-color-background);
-  border-left-color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
+  background-color: var(--asriui-color-background);
+  border-left-color: var(--asriui-color-foreground);
   font-weight: 600;
 }
 
 .active:hover {
-  border-left-color: var(--axiom-color-foreground);
+  border-left-color: var(--asriui-color-foreground);
 }
 
 .linkIconFallback,
@@ -618,12 +618,12 @@
   flex-shrink: 0;
   width: 1.5rem;
   height: 1.5rem;
-  border-radius: var(--axiom-radius-sm);
+  border-radius: var(--asriui-radius-sm);
   font-size: 0.72rem;
   font-weight: 700;
   line-height: 1;
-  background: var(--axiom-color-muted);
-  color: var(--axiom-color-foreground);
+  background: var(--asriui-color-muted);
+  color: var(--asriui-color-foreground);
 }
 
 .linkCollapsed {
@@ -636,21 +636,21 @@
   padding: 0.42rem 0.75rem 0.42rem 0.65rem;
   border-left: 0;
   border-right: 2px solid transparent;
-  border-radius: var(--axiom-radius-sm) 0 0 var(--axiom-radius-sm);
+  border-radius: var(--asriui-radius-sm) 0 0 var(--asriui-radius-sm);
 }
 
 .root[data-side="right"] .link:hover {
-  border-right-color: var(--axiom-color-border);
+  border-right-color: var(--asriui-color-border);
   border-left-color: transparent;
 }
 
 .root[data-side="right"] .active {
-  border-right-color: var(--axiom-color-foreground);
+  border-right-color: var(--asriui-color-foreground);
   border-left-color: transparent;
 }
 
 .root[data-side="right"] .active:hover {
-  border-right-color: var(--axiom-color-foreground);
+  border-right-color: var(--asriui-color-foreground);
 }
 
 .root[data-collapsed="true"] .linkLabel,

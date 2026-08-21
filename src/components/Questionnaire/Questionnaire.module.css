@@ -9,7 +9,7 @@
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .prompt {
@@ -27,7 +27,7 @@
 .error {
   margin: 0;
   font-size: 0.82rem;
-  color: var(--axiom-color-destructive, #dc2626);
+  color: var(--asriui-color-destructive, #dc2626);
 }
 
 .actions {
@@ -38,5 +38,5 @@
 
 .empty {
   margin: 0;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }

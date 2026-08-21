@@ -10,7 +10,7 @@ import {
   type KeyboardEvent as ReactKeyboardEvent,
 } from "react";
 import { createPortal } from "react-dom";
-import { useAxiomId } from "../../hooks/useAxiomId";
+import { useAsriUIId } from "../../hooks/useAsriUIId";
 import { cn } from "../../utils/cn";
 import { createSlotClassNames } from "../../utils/slotClassNames";
 import { MenuProvider, useMenuContext } from "./MenuContext";
@@ -53,7 +53,7 @@ const MenuRoot = forwardRef<HTMLDivElement, MenuProps>(function Menu(
   ref,
 ) {
   const reactId = useId();
-  const idPrefix = useAxiomId(`menu-${reactId.replace(/:/g, "")}`);
+  const idPrefix = useAsriUIId(`menu-${reactId.replace(/:/g, "")}`);
   const [uncontrolledOpen, setUncontrolledOpen] = useState(defaultOpen);
   const isOpen = open ?? uncontrolledOpen;
 

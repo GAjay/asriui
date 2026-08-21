@@ -1,8 +1,8 @@
 :root {
-  --axiom-radius-none: 0;
-  --axiom-radius-sm: 4px;
-  --axiom-radius-md: 8px;
-  --axiom-radius-lg: 12px;
-  --axiom-radius-xl: 16px;
-  --axiom-radius-full: 9999px;
+  --asriui-radius-none: 0;
+  --asriui-radius-sm: 4px;
+  --asriui-radius-md: 8px;
+  --asriui-radius-lg: 12px;
+  --asriui-radius-xl: 16px;
+  --asriui-radius-full: 9999px;
 }

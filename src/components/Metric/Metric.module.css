@@ -1,35 +1,35 @@
 .root {
   display: flex;
   flex-direction: column;
-  gap: var(--axiom-space-2);
+  gap: var(--asriui-space-2);
   min-width: 0;
-  padding: var(--axiom-space-4);
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-lg);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
-  font-family: var(--axiom-font-family);
-  box-shadow: var(--axiom-shadow-sm);
+  padding: var(--asriui-space-4);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-lg);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
+  font-family: var(--asriui-font-family);
+  box-shadow: var(--asriui-shadow-sm);
 }
 
 .compact {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: var(--axiom-space-3);
-  padding: var(--axiom-space-3) var(--axiom-space-4);
+  gap: var(--asriui-space-3);
+  padding: var(--asriui-space-3) var(--asriui-space-4);
 }
 
 .quote {
-  gap: var(--axiom-space-3);
-  padding: var(--axiom-space-5);
+  gap: var(--asriui-space-3);
+  padding: var(--asriui-space-5);
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--axiom-space-2);
+  gap: var(--asriui-space-2);
   min-width: 0;
 }
 
@@ -42,25 +42,25 @@
 
 .symbol {
   margin: 0;
-  font-size: var(--axiom-font-size-xs);
-  font-weight: var(--axiom-font-weight-semibold);
+  font-size: var(--asriui-font-size-xs);
+  font-weight: var(--asriui-font-weight-semibold);
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .live {
   width: 0.45rem;
   height: 0.45rem;
-  border-radius: var(--axiom-radius-full);
-  background: var(--axiom-color-success);
-  box-shadow: 0 0 0 0 color-mix(in srgb, var(--axiom-color-success) 45%, transparent);
+  border-radius: var(--asriui-radius-full);
+  background: var(--asriui-color-success);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--asriui-color-success) 45%, transparent);
   animation: metric-live-pulse 1.8s ease-out infinite;
 }
 
 @keyframes metric-live-pulse {
   0% {
-    box-shadow: 0 0 0 0 color-mix(in srgb, var(--axiom-color-success) 45%, transparent);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--asriui-color-success) 45%, transparent);
   }
 
   70% {
@@ -74,11 +74,11 @@
 
 .label {
   margin: 0;
-  font-size: var(--axiom-font-size-xs);
-  font-weight: var(--axiom-font-weight-medium);
+  font-size: var(--asriui-font-size-xs);
+  font-weight: var(--asriui-font-weight-medium);
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .body {
@@ -101,8 +101,8 @@
 
 .value {
   margin: 0;
-  font-size: var(--axiom-font-size-2xl);
-  font-weight: var(--axiom-font-weight-semibold);
+  font-size: var(--asriui-font-size-2xl);
+  font-weight: var(--asriui-font-weight-semibold);
   line-height: 1.1;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.02em;
@@ -113,22 +113,22 @@
 }
 
 .compact .value {
-  font-size: var(--axiom-font-size-lg);
+  font-size: var(--asriui-font-size-lg);
 }
 
 .change {
   display: inline-flex;
   align-items: center;
   gap: 0.2rem;
-  font-size: var(--axiom-font-size-sm);
-  font-weight: var(--axiom-font-weight-medium);
+  font-size: var(--asriui-font-size-sm);
+  font-weight: var(--asriui-font-weight-medium);
   font-variant-numeric: tabular-nums;
 }
 
 .hint {
   margin: 0;
-  font-size: var(--axiom-font-size-xs);
-  color: var(--axiom-color-muted-foreground);
+  font-size: var(--asriui-font-size-xs);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .extra {
@@ -139,15 +139,15 @@
 }
 
 .trendUp {
-  color: var(--axiom-color-success);
+  color: var(--asriui-color-success);
 }
 
 .trendDown {
-  color: var(--axiom-color-danger);
+  color: var(--asriui-color-danger);
 }
 
 .trendNeutral {
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 @media (prefers-reduced-motion: reduce) {

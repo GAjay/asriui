@@ -1,5 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-import { Button } from "axiom-ui";
+import { Button } from "asriui";
 import { BrandMark } from "./BrandMark";
 import { ThemeToggle } from "./ThemeToggle";
 import { useSiteTheme } from "./useSiteTheme";
@@ -19,7 +19,7 @@ export function SiteHeader() {
       <div className={styles.inner}>
         <Link className={styles.logo} to="/">
           <BrandMark size={26} />
-          AxiomUI
+          AsriUI
         </Link>
 
         <nav className={styles.nav} aria-label="Site">

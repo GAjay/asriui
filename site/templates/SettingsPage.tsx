@@ -1,4 +1,4 @@
-import { Badge, Button, Form, Icon, PageLayout, SideNav, Switch, Tabs, Typography, toast } from "axiom-ui";
+import { Badge, Button, Form, Icon, PageLayout, SideNav, Switch, Tabs, Typography, toast } from "asriui";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./templates.module.css";
 
@@ -88,7 +88,7 @@ export function SettingsPage() {
                   config={PROFILE_FORM}
                   initialValues={{
                     name: "Alex Chen",
-                    email: "alex@axiom-ui.dev",
+                    email: "alex@asriui.dev",
                     timezone: "pt",
                     bio: "Design systems & product engineering.",
                   }}

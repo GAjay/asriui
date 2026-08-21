@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { Button, Card, Input } from "axiom-ui";
-import "axiom-ui/style.css";
+import { Button, Card, Input } from "asriui";
+import "asriui/style.css";
 
 /**
- * Minimal usage example for axiom-ui.
+ * Minimal usage example for asriui.
  * Run Storybook for the full interactive playground.
  */
 export function ExampleApp() {
@@ -11,7 +11,7 @@ export function ExampleApp() {
   const [saving, setSaving] = useState(false);
 
   return (
-    <div data-theme="light" className="axiom-root" style={{ padding: 24, maxWidth: 480 }}>
+    <div data-theme="light" className="asriui-root" style={{ padding: 24, maxWidth: 480 }}>
       <Card>
         <Card.Header>
           <Card.Title>Account</Card.Title>

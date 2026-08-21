@@ -105,7 +105,7 @@ export const Widget = forwardRef<HTMLDivElement, WidgetProps>(function Widget(
   };
 
   return (
-    <div ref={ref} className={cn(styles.root, className)} style={rootStyle} data-axiom-widget={resolvedMode} {...rest}>
+    <div ref={ref} className={cn(styles.root, className)} style={rootStyle} data-asriui-widget={resolvedMode} {...rest}>
       {resolvedMode === "script" ? (
         <div ref={script.mountRef} className={styles.mount} data-widget-slot={slotId ?? true} />
       ) : (

@@ -4,10 +4,10 @@
   align-items: center;
   gap: 0.45rem;
   padding: 0;
-  border: 1px solid var(--axiom-color-border, currentColor);
+  border: 1px solid var(--asriui-color-border, currentColor);
   border-radius: 999px;
-  background: var(--axiom-color-muted, transparent);
-  color: var(--axiom-color-foreground, currentColor);
+  background: var(--asriui-color-muted, transparent);
+  color: var(--asriui-color-foreground, currentColor);
   cursor: pointer;
   overflow: hidden;
   transition:
@@ -21,7 +21,7 @@
 }
 
 .toggle:focus-visible {
-  outline: 2px solid var(--axiom-color-ring, currentColor);
+  outline: 2px solid var(--asriui-color-ring, currentColor);
   outline-offset: 2px;
 }
 

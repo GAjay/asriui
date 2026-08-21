@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LoginForm, PageLayout, toast, type OAuthProvider } from "axiom-ui";
+import { LoginForm, PageLayout, toast, type OAuthProvider } from "asriui";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./templates.module.css";
 
@@ -27,7 +27,7 @@ export function LoginPage() {
                 footer={
                   <>
                     Don&apos;t have an account?{" "}
-                    <Link to="/templates/pricing" style={{ color: "var(--axiom-color-primary)" }}>
+                    <Link to="/templates/pricing" style={{ color: "var(--asriui-color-primary)" }}>
                       View plans
                     </Link>
                   </>

@@ -71,10 +71,10 @@
     0 0 / 14px 14px,
     var(--lp-bg);
 
-  --axiom-color-primary: var(--lp-primary);
-  --axiom-color-primary-hover: #1a1a1a;
-  --axiom-color-primary-foreground: var(--lp-primary-fg);
-  --axiom-color-ring: var(--lp-fg);
+  --asriui-color-primary: var(--lp-primary);
+  --asriui-color-primary-hover: #1a1a1a;
+  --asriui-color-primary-foreground: var(--lp-primary-fg);
+  --asriui-color-ring: var(--lp-fg);
 }
 
 .preview > * {

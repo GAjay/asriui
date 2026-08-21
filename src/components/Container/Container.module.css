@@ -32,23 +32,23 @@
 }
 
 .padSm {
-  padding-inline: var(--axiom-space-3);
+  padding-inline: var(--asriui-space-3);
 }
 
 .padMd {
-  padding-inline: var(--axiom-space-4);
+  padding-inline: var(--asriui-space-4);
 }
 
 .padLg {
-  padding-inline: var(--axiom-space-6);
+  padding-inline: var(--asriui-space-6);
 }
 
 @media (min-width: 768px) {
   .padMd {
-    padding-inline: var(--axiom-space-6);
+    padding-inline: var(--asriui-space-6);
   }
 
   .padLg {
-    padding-inline: var(--axiom-space-8);
+    padding-inline: var(--asriui-space-8);
   }
 }

@@ -139,7 +139,7 @@ const OMNICHANNEL_NODES: AiWorkflowNode[] = [
       label: "Email",
       description: "Send a transactional email from the workflow.",
       blockId: "email",
-      config: { to: "user@example.com", subject: "Workflow update", body: "Hello from Axiom UI." },
+      config: { to: "user@example.com", subject: "Workflow update", body: "Hello from AsriUI." },
     },
   },
   {
@@ -165,7 +165,7 @@ const OMNICHANNEL_EDGES: AiWorkflowEdge[] = [
   edge("e-omni-condition-slack", "condition-channel", "block-slack"),
 ];
 
-/** Compose AI replies into Axiom UI surfaces. */
+/** Compose AI replies into AsriUI surfaces. */
 const UI_COMPOSER_NODES: AiWorkflowNode[] = [
   {
     id: "trigger-chat",

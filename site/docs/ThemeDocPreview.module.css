@@ -33,9 +33,9 @@
   display: grid;
   gap: 0.85rem;
   padding: 1rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
 }
 
 .cardHeader {
@@ -48,7 +48,7 @@
 .themeLabel {
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
   text-transform: capitalize;
 }
 

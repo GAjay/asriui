@@ -6,16 +6,16 @@
   height: 1.5rem;
   padding: 0;
   border: 1px solid transparent;
-  border-radius: var(--axiom-radius-full);
-  background-color: var(--axiom-color-border);
+  border-radius: var(--asriui-radius-full);
+  background-color: var(--asriui-color-border);
   cursor: pointer;
   transition:
-    background-color var(--axiom-duration-fast) var(--axiom-easing-standard),
-    border-color var(--axiom-duration-fast) var(--axiom-easing-standard);
+    background-color var(--asriui-duration-fast) var(--asriui-easing-standard),
+    border-color var(--asriui-duration-fast) var(--asriui-easing-standard);
 }
 
 .switch:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
@@ -25,7 +25,7 @@
 }
 
 .checked {
-  background-color: var(--axiom-color-primary);
+  background-color: var(--asriui-color-primary);
 }
 
 .thumb {
@@ -33,11 +33,11 @@
   display: block;
   width: 1.25rem;
   height: 1.25rem;
-  border-radius: var(--axiom-radius-full);
-  background-color: var(--axiom-color-background);
-  box-shadow: var(--axiom-shadow-sm);
+  border-radius: var(--asriui-radius-full);
+  background-color: var(--asriui-color-background);
+  box-shadow: var(--asriui-shadow-sm);
   transform: translateX(0.125rem);
-  transition: transform var(--axiom-duration-fast) var(--axiom-easing-standard);
+  transition: transform var(--asriui-duration-fast) var(--asriui-easing-standard);
 }
 
 .checked .thumb {

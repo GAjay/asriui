@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it } from "vitest";
-import { AxiomProvider } from "../../config/AxiomProvider";
+import { AsriUIProvider } from "../../config/AsriUIProvider";
 import { Link } from "./Link";
 
 describe("Link", () => {
@@ -28,15 +28,15 @@ describe("Link", () => {
     (window as unknown as { dataLayer: unknown[] }).dataLayer = layer;
 
     render(
-      <AxiomProvider config={{ analytics: { enabled: true, gtmId: "GTM-TEST" } }}>
+      <AsriUIProvider config={{ analytics: { enabled: true, gtmId: "GTM-TEST" } }}>
         <Link href="/pricing" trackLabel="Pricing page">
           Pricing
         </Link>
-      </AxiomProvider>,
+      </AsriUIProvider>,
     );
 
     await user.click(screen.getByRole("link", { name: "Pricing" }));
-    expect(layer.some((entry) => (entry as { event?: string }).event === "axiom_link_click")).toBe(
+    expect(layer.some((entry) => (entry as { event?: string }).event === "asriui_link_click")).toBe(
       true,
     );
   });
@@ -47,11 +47,11 @@ describe("Link", () => {
     (window as unknown as { dataLayer: unknown[] }).dataLayer = layer;
 
     render(
-      <AxiomProvider config={{ analytics: { enabled: true } }}>
+      <AsriUIProvider config={{ analytics: { enabled: true } }}>
         <Link href="/docs" trackEvent="cta_docs_click">
           Docs
         </Link>
-      </AxiomProvider>,
+      </AsriUIProvider>,
     );
 
     await user.click(screen.getByRole("link", { name: "Docs" }));
@@ -66,11 +66,11 @@ describe("Link", () => {
     (window as unknown as { dataLayer: unknown[] }).dataLayer = layer;
 
     render(
-      <AxiomProvider config={{ analytics: { enabled: true } }}>
+      <AsriUIProvider config={{ analytics: { enabled: true } }}>
         <Link href="/private" track={false}>
           Private
         </Link>
-      </AxiomProvider>,
+      </AsriUIProvider>,
     );
 
     await user.click(screen.getByRole("link", { name: "Private" }));

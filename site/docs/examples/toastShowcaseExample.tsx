@@ -46,7 +46,7 @@ export const TOAST_SHOWCASE_ITEMS: ToastShowcaseItem[] = [
   },
 ];
 
-export const TOAST_SHOWCASE_CODE = `import { ToastShowcase } from "axiom-ui/toast";
+export const TOAST_SHOWCASE_CODE = `import { ToastShowcase } from "asriui/toast";
 
 const items = [
   {

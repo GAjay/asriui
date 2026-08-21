@@ -1,4 +1,4 @@
-import { Accordion, Badge, Button, PageLayout, Typography } from "axiom-ui";
+import { Accordion, Badge, Button, PageLayout, Typography } from "asriui";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./templates.module.css";
 
@@ -41,7 +41,7 @@ const FAQ = [
   {
     id: "license",
     title: "What license do templates use?",
-    content: "All page templates ship under the same MIT license as AxiomUI. Copy, modify, and ship in production.",
+    content: "All page templates ship under the same MIT license as AsriUI. Copy, modify, and ship in production.",
   },
   {
     id: "support",

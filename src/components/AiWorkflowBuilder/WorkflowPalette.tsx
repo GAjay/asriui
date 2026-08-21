@@ -4,7 +4,7 @@ import { cn } from "../../utils/cn";
 import type { AiWorkflowNodeKind } from "./AiWorkflowBuilder.types";
 import { AI_WORKFLOW_PALETTE } from "./workflowDefaults";
 import {
-  AXIOM_UI_COMPONENT_PALETTE,
+  ASRIUI_COMPONENT_PALETTE,
   DEFAULT_INTEGRATION_BLOCKS,
   WORKFLOW_DRAG_MIME,
   createCustomBlockDefinition,
@@ -49,7 +49,7 @@ export function WorkflowPalette({
   templates = [],
   activeTemplateId,
   onSelectTemplate,
-  components = AXIOM_UI_COMPONENT_PALETTE,
+  components = ASRIUI_COMPONENT_PALETTE,
   blocks = DEFAULT_INTEGRATION_BLOCKS,
   customBlocks = [],
   onCustomBlocksChange,
@@ -190,7 +190,7 @@ export function WorkflowPalette({
 
       {section === "components" && showComponentPalette ? (
         <div className={styles.paletteSection}>
-          <h3 className={styles.paletteTitle}>Axiom UI components</h3>
+          <h3 className={styles.paletteTitle}>AsriUI components</h3>
           {filteredComponents.length === 0 ? (
             <p className={styles.paletteEmpty}>No components match your search.</p>
           ) : (

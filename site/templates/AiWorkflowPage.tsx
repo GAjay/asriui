@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Badge, Callout, PageLayout, Typography, toast } from "axiom-ui";
+import { Badge, Callout, PageLayout, Typography, toast } from "asriui";
 import { AiWorkflowBuilder } from "../../src/components/AiWorkflowBuilder";
 import type { WorkflowRunResult } from "../../src/components/AiWorkflowBuilder";
 import { TemplateDemoShell } from "./TemplateDemoShell";
@@ -17,7 +17,7 @@ export function AiWorkflowPage() {
               <Badge variant="secondary">Builders</Badge>
               <h1 className={styles.heroTitle}>AI workflow studio</h1>
               <p className={styles.heroLead}>
-                Design n8n-style flows with AI nodes, Axiom UI components, and integration blocks. Pick a base
+                Design n8n-style flows with AI nodes, AsriUI components, and integration blocks. Pick a base
                 template, connect steps on the canvas, add scripts to transform data, then run the workflow.
               </p>
             </header>

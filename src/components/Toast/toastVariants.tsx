@@ -20,28 +20,28 @@ export type ResolvedToastAppearance = {
 
 export const DEFAULT_TOAST_VARIANTS = {
   default: {
-    accent: "var(--axiom-color-primary)",
-    background: "var(--axiom-color-background)",
+    accent: "var(--asriui-color-primary)",
+    background: "var(--asriui-color-background)",
     Icon: ToastDefaultIcon,
   },
   success: {
-    accent: "var(--axiom-color-success, #059669)",
-    background: "color-mix(in srgb, var(--axiom-color-success, #059669) 12%, var(--axiom-color-background))",
+    accent: "var(--asriui-color-success, #059669)",
+    background: "color-mix(in srgb, var(--asriui-color-success, #059669) 12%, var(--asriui-color-background))",
     Icon: ToastSuccessIcon,
   },
   error: {
-    accent: "var(--axiom-color-destructive, #dc2626)",
-    background: "color-mix(in srgb, var(--axiom-color-destructive, #dc2626) 12%, var(--axiom-color-background))",
+    accent: "var(--asriui-color-destructive, #dc2626)",
+    background: "color-mix(in srgb, var(--asriui-color-destructive, #dc2626) 12%, var(--asriui-color-background))",
     Icon: ToastErrorIcon,
   },
   warning: {
-    accent: "var(--axiom-color-warning, #d97706)",
-    background: "color-mix(in srgb, var(--axiom-color-warning, #d97706) 14%, var(--axiom-color-background))",
+    accent: "var(--asriui-color-warning, #d97706)",
+    background: "color-mix(in srgb, var(--asriui-color-warning, #d97706) 14%, var(--asriui-color-background))",
     Icon: ToastWarningIcon,
   },
   info: {
-    accent: "var(--axiom-color-info, #2563eb)",
-    background: "color-mix(in srgb, var(--axiom-color-info, #2563eb) 12%, var(--axiom-color-background))",
+    accent: "var(--asriui-color-info, #2563eb)",
+    background: "color-mix(in srgb, var(--asriui-color-info, #2563eb) 12%, var(--asriui-color-background))",
     Icon: ToastInfoIcon,
   },
 } satisfies Record<ToastVariant, ToastVariantAppearance>;

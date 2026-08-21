@@ -1,4 +1,4 @@
-import { Badge, Button, Icon, List, ListItem, PageLayout, SideNav, Typography, toast } from "axiom-ui";
+import { Badge, Button, Icon, List, ListItem, PageLayout, SideNav, Typography, toast } from "asriui";
 import { TemplateDemoShell } from "./TemplateDemoShell";
 import styles from "./templates.module.css";
 

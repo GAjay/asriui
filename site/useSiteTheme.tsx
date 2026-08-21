@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import type { ThemeMode } from "./ThemeToggle";
 
-const STORAGE_KEY = "axiom-site-theme";
+const STORAGE_KEY = "asriui-site-theme";
 
 type SiteThemeContextValue = {
   theme: ThemeMode;

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .indicator {
@@ -14,8 +14,8 @@
 
 .label {
   margin: 0;
-  font-size: var(--axiom-font-size-sm);
-  color: var(--axiom-color-muted-foreground);
+  font-size: var(--asriui-font-size-sm);
+  color: var(--asriui-color-muted-foreground);
 }
 
 /* Sizes */
@@ -58,11 +58,11 @@
 /* Spinner */
 .spinner,
 .ring {
-  border-radius: var(--axiom-radius-full);
+  border-radius: var(--asriui-radius-full);
   border-style: solid;
   border-color: currentColor;
   border-right-color: transparent;
-  animation: axiom-loader-spin var(--axiom-duration-slow) linear infinite;
+  animation: asriui-loader-spin var(--asriui-duration-slow) linear infinite;
 }
 
 .ring {
@@ -76,9 +76,9 @@
 }
 
 .dot {
-  border-radius: var(--axiom-radius-full);
+  border-radius: var(--asriui-radius-full);
   background: currentColor;
-  animation: axiom-loader-bounce 1s ease-in-out infinite;
+  animation: asriui-loader-bounce 1s ease-in-out infinite;
 }
 
 .dot:nth-child(2) {
@@ -89,13 +89,13 @@
   animation-delay: 0.3s;
 }
 
-@keyframes axiom-loader-spin {
+@keyframes asriui-loader-spin {
   to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes axiom-loader-bounce {
+@keyframes asriui-loader-bounce {
   0%,
   80%,
   100% {

@@ -17,7 +17,7 @@ import { WorkflowPalette } from "./WorkflowPalette";
 import { WorkflowTemplatePicker } from "./WorkflowTemplatePicker";
 import { runWorkflow } from "./workflowRunner";
 import {
-  AXIOM_UI_COMPONENT_PALETTE,
+  ASRIUI_COMPONENT_PALETTE,
   DEFAULT_INTEGRATION_BLOCKS,
   type AiWorkflowBlockDefinition,
 } from "./workflowCatalog";
@@ -47,7 +47,7 @@ export const AiWorkflowBuilder = forwardRef<HTMLDivElement, AiWorkflowBuilderPro
     enableDragDrop = true,
     showInspector = true,
     showToolbar = true,
-    components = AXIOM_UI_COMPONENT_PALETTE,
+    components = ASRIUI_COMPONENT_PALETTE,
     customComponents = [],
     blocks = DEFAULT_INTEGRATION_BLOCKS,
     customBlocks: customBlocksProp,
@@ -300,7 +300,7 @@ export const AiWorkflowBuilder = forwardRef<HTMLDivElement, AiWorkflowBuilderPro
           <aside className={cn(styles.inspector, classNames?.inspector)} aria-label="Workflow node inspector">
             <h3 className={styles.inspectorTitle}>Node inspector</h3>
             <p className={styles.inspectorEmpty}>
-              Select a node to edit AI steps, Axiom UI components, or integration blocks. Drag items from the palette
+              Select a node to edit AI steps, AsriUI components, or integration blocks. Drag items from the palette
               onto the canvas.
             </p>
           </aside>

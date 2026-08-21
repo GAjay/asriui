@@ -9,12 +9,12 @@
 .label {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .required {
   margin-left: 0.15rem;
-  color: var(--axiom-color-destructive, #dc2626);
+  color: var(--asriui-color-destructive, #dc2626);
 }
 
 .trigger {
@@ -25,11 +25,11 @@
   width: 100%;
   min-height: 2.5rem;
   padding: 0.5rem 0.75rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
   font-size: 0.875rem;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
   text-align: left;
   cursor: pointer;
   transition:
@@ -44,9 +44,9 @@
   flex-wrap: wrap;
   width: 100%;
   min-height: 2.5rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
   overflow: hidden;
 }
 
@@ -77,12 +77,12 @@
   gap: 0.15rem;
   max-width: 100%;
   padding: 0.1rem 0.2rem 0.1rem 0.4rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-full);
-  background: var(--axiom-color-muted);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-full);
+  background: var(--asriui-color-muted);
   font-size: 0.75rem;
   line-height: 1.2;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .chipLabel {
@@ -99,16 +99,16 @@
   height: 1.1rem;
   padding: 0;
   border: 0;
-  border-radius: var(--axiom-radius-full);
+  border-radius: var(--asriui-radius-full);
   background: transparent;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
   cursor: pointer;
   font-size: 0.9rem;
   line-height: 1;
 }
 
 .chipRemove:hover:not(:disabled) {
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .triggerMultiple {
@@ -118,12 +118,12 @@
 }
 
 .combobox:focus-within {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
 .comboboxError {
-  border-color: var(--axiom-color-destructive, #dc2626);
+  border-color: var(--asriui-color-destructive, #dc2626);
 }
 
 .comboboxDisabled {
@@ -139,7 +139,7 @@
   background: transparent;
   font-size: 0.875rem;
   line-height: 1.25;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .comboboxInput:focus {
@@ -147,7 +147,7 @@
 }
 
 .comboboxInput::placeholder {
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .comboboxToggle {
@@ -158,22 +158,22 @@
   width: 2.25rem;
   height: 2.5rem;
   border: 0;
-  border-left: 1px solid var(--axiom-color-border);
+  border-left: 1px solid var(--asriui-color-border);
   background: transparent;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
   cursor: pointer;
 }
 
 .comboboxToggle:hover:not(:disabled) {
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .trigger:hover:not(:disabled) {
-  border-color: color-mix(in srgb, var(--axiom-color-foreground) 25%, var(--axiom-color-border));
+  border-color: color-mix(in srgb, var(--asriui-color-foreground) 25%, var(--asriui-color-border));
 }
 
 .trigger:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
@@ -183,11 +183,11 @@
 }
 
 .triggerError {
-  border-color: var(--axiom-color-destructive, #dc2626);
+  border-color: var(--asriui-color-destructive, #dc2626);
 }
 
 .triggerPlaceholder {
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .triggerValue {
@@ -211,11 +211,11 @@
   min-width: 11rem;
   width: max-content;
   max-width: min(24rem, calc(100vw - 1.5rem));
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
-  box-shadow: var(--axiom-shadow-lg, 0 12px 32px color-mix(in srgb, var(--axiom-color-foreground) 12%, transparent));
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
+  box-shadow: var(--asriui-shadow-lg, 0 12px 32px color-mix(in srgb, var(--asriui-color-foreground) 12%, transparent));
   overflow: hidden;
 }
 
@@ -265,7 +265,7 @@
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .item {
@@ -276,21 +276,21 @@
   width: 100%;
   padding: 0.45rem 0.55rem;
   border: 0;
-  border-radius: var(--axiom-radius-sm);
+  border-radius: var(--asriui-radius-sm);
   background: transparent;
   font-size: 0.875rem;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
   text-align: left;
   cursor: pointer;
   transition: background-color 120ms ease;
 }
 
 .item:hover:not(:disabled) {
-  background: var(--axiom-color-muted);
+  background: var(--asriui-color-muted);
 }
 
 .item:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: -2px;
 }
 
@@ -300,7 +300,7 @@
 }
 
 .itemSelected {
-  background: color-mix(in srgb, var(--axiom-color-foreground) 6%, var(--axiom-color-muted));
+  background: color-mix(in srgb, var(--asriui-color-foreground) 6%, var(--asriui-color-muted));
   font-weight: 600;
 }
 
@@ -312,24 +312,24 @@
 .separator {
   margin: 0.35rem 0;
   border: 0;
-  border-top: 1px solid var(--axiom-color-border);
+  border-top: 1px solid var(--asriui-color-border);
 }
 
 .emptyState {
   padding: 0.65rem 0.75rem;
   font-size: 0.82rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .message {
   margin: 0;
   font-size: 0.78rem;
   line-height: 1.4;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .error {
-  color: var(--axiom-color-destructive, #dc2626);
+  color: var(--asriui-color-destructive, #dc2626);
 }
 
 .sizeSm.trigger {

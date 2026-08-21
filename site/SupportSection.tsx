@@ -103,7 +103,7 @@ export function SupportSection() {
             <Icon name="code" size="md" />
             <span className={styles.githubCopy}>
               <strong>Star on GitHub</strong>
-              <span>Track releases and contribute</span>
+              <span>Track releases on GitHub</span>
             </span>
             <Icon name="chevron-right" size="sm" />
           </a>

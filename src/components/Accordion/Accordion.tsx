@@ -1,5 +1,5 @@
 import { forwardRef, useCallback, useId, useMemo, useState, type ReactNode } from "react";
-import { useAxiomId } from "../../hooks/useAxiomId";
+import { useAsriUIId } from "../../hooks/useAsriUIId";
 import { cn } from "../../utils/cn";
 import { createSlotClassNames } from "../../utils/slotClassNames";
 import {
@@ -71,7 +71,7 @@ const AccordionRoot = forwardRef<HTMLDivElement, AccordionProps>(function Accord
   ref,
 ) {
   const reactId = useId();
-  const idPrefix = useAxiomId(`accordion-${reactId.replace(/:/g, "")}`);
+  const idPrefix = useAsriUIId(`accordion-${reactId.replace(/:/g, "")}`);
   const [uncontrolled, setUncontrolled] = useState<string | string[]>(() =>
     getDefaultState(type, defaultValue),
   );

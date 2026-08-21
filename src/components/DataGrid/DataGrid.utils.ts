@@ -53,7 +53,7 @@ export function toCssSize(value: number | string | undefined): string | undefine
   return typeof value === "number" ? `${value}px` : value;
 }
 
-/** Map Axiom columns to AG Grid column definitions. */
+/** Map AsriUI columns to AG Grid column definitions. */
 export function toAgGridColumnDefs<T>(columns: DataGridColumn<T>[]) {
   return columns.map((column) => {
     const def: Record<string, unknown> = {

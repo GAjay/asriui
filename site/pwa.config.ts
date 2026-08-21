@@ -7,7 +7,7 @@ function withBase(path: string, base: string) {
 }
 
 /**
- * PWA settings for the AxiomUI docs site.
+ * PWA settings for the AsriUI docs site.
  * Pass the Vite `base` so GitHub project Pages and custom domains both work.
  */
 export function createPwaOptions(base = "/"): Partial<VitePWAOptions> {
@@ -16,8 +16,8 @@ export function createPwaOptions(base = "/"): Partial<VitePWAOptions> {
     injectRegister: null,
     includeAssets: ["favicon.svg", "favicon-dark.svg", "apple-touch-icon.svg", "mask-icon.svg"],
     manifest: {
-      name: "AxiomUI",
-      short_name: "AxiomUI",
+      name: "AsriUI",
+      short_name: "AsriUI",
       description: "Production-ready React UI components with docs and live demos.",
       theme_color: "#ffffff",
       background_color: "#ffffff",
@@ -81,7 +81,7 @@ export function createPwaOptions(base = "/"): Partial<VitePWAOptions> {
           urlPattern: /\.(?:png|gif|jpg|jpeg|svg|webp|avif|ico)$/i,
           handler: "CacheFirst",
           options: {
-            cacheName: "axiom-images",
+            cacheName: "asriui-images",
             expiration: {
               maxEntries: 100,
               maxAgeSeconds: 60 * 60 * 24 * 7,
@@ -93,7 +93,7 @@ export function createPwaOptions(base = "/"): Partial<VitePWAOptions> {
           urlPattern: /\.(?:woff2?|ttf|otf|eot)$/i,
           handler: "CacheFirst",
           options: {
-            cacheName: "axiom-fonts",
+            cacheName: "asriui-fonts",
             expiration: {
               maxEntries: 20,
               maxAgeSeconds: 60 * 60 * 24 * 365,
@@ -105,7 +105,7 @@ export function createPwaOptions(base = "/"): Partial<VitePWAOptions> {
           urlPattern: /\.(?:js|css)$/i,
           handler: "StaleWhileRevalidate",
           options: {
-            cacheName: "axiom-static",
+            cacheName: "asriui-static",
             expiration: {
               maxEntries: 60,
               maxAgeSeconds: 60 * 60 * 24,

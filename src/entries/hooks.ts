@@ -1,1 +1,1 @@
-export { useAxiomId, useThemeAttribute } from "../hooks";
+export { useAsriUIId, useThemeAttribute } from "../hooks";

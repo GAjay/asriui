@@ -8,12 +8,12 @@
 .label {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .required {
   margin-left: 0.15rem;
-  color: var(--axiom-color-destructive, #dc2626);
+  color: var(--asriui-color-destructive, #dc2626);
 }
 
 .field {
@@ -23,19 +23,19 @@
 .control {
   display: flex;
   align-items: stretch;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
   transition: border-color 140ms ease;
 }
 
 .control:focus-within {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
 .controlError {
-  border-color: var(--axiom-color-destructive, #dc2626);
+  border-color: var(--asriui-color-destructive, #dc2626);
 }
 
 .controlDisabled {
@@ -49,7 +49,7 @@
   border: 0;
   background: transparent;
   font-size: 0.875rem;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
 }
 
 .input:focus {
@@ -57,7 +57,7 @@
 }
 
 .input::placeholder {
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .input:disabled {
@@ -70,14 +70,14 @@
   justify-content: center;
   width: 2.5rem;
   border: 0;
-  border-left: 1px solid var(--axiom-color-border);
-  background: var(--axiom-color-muted);
-  color: var(--axiom-color-foreground);
+  border-left: 1px solid var(--asriui-color-border);
+  background: var(--asriui-color-muted);
+  color: var(--asriui-color-foreground);
   cursor: pointer;
 }
 
 .trigger:hover:not(:disabled) {
-  background: color-mix(in srgb, var(--axiom-color-foreground) 6%, var(--axiom-color-muted));
+  background: color-mix(in srgb, var(--asriui-color-foreground) 6%, var(--asriui-color-muted));
 }
 
 .trigger:disabled {
@@ -91,11 +91,11 @@
   z-index: 60;
   width: min(20rem, calc(100vw - 1.5rem));
   padding: 0.75rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
-  box-shadow: var(--axiom-shadow-lg, 0 12px 32px color-mix(in srgb, var(--axiom-color-foreground) 12%, transparent));
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
+  box-shadow: var(--asriui-shadow-lg, 0 12px 32px color-mix(in srgb, var(--asriui-color-foreground) 12%, transparent));
 }
 
 .calendar {
@@ -121,15 +121,15 @@
   justify-content: center;
   width: 1.75rem;
   height: 1.75rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-sm);
-  background: var(--axiom-color-muted);
-  color: var(--axiom-color-foreground);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-sm);
+  background: var(--asriui-color-muted);
+  color: var(--asriui-color-foreground);
   cursor: pointer;
 }
 
 .navButton:hover {
-  background: color-mix(in srgb, var(--axiom-color-foreground) 6%, var(--axiom-color-muted));
+  background: color-mix(in srgb, var(--asriui-color-foreground) 6%, var(--asriui-color-muted));
 }
 
 .weekdays,
@@ -144,7 +144,7 @@
   font-size: 0.68rem;
   font-weight: 600;
   text-align: center;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .day {
@@ -153,39 +153,39 @@
   justify-content: center;
   min-height: 2rem;
   border: 0;
-  border-radius: var(--axiom-radius-sm);
+  border-radius: var(--asriui-radius-sm);
   background: transparent;
   font-size: 0.82rem;
-  color: var(--axiom-color-foreground);
+  color: var(--asriui-color-foreground);
   cursor: pointer;
 }
 
 .day:hover:not(:disabled) {
-  background: var(--axiom-color-muted);
+  background: var(--asriui-color-muted);
 }
 
 .dayOutside {
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
   opacity: 0.55;
 }
 
 .daySelected {
-  background: var(--axiom-color-foreground);
-  color: var(--axiom-color-background);
+  background: var(--asriui-color-foreground);
+  color: var(--asriui-color-background);
 }
 
 .daySelected:hover:not(:disabled) {
-  background: var(--axiom-color-foreground);
+  background: var(--asriui-color-foreground);
 }
 
 .dayInRange {
-  background: color-mix(in srgb, var(--axiom-color-foreground) 10%, var(--axiom-color-muted));
+  background: color-mix(in srgb, var(--asriui-color-foreground) 10%, var(--asriui-color-muted));
 }
 
 .dayRangeStart,
 .dayRangeEnd {
-  background: var(--axiom-color-foreground);
-  color: var(--axiom-color-background);
+  background: var(--asriui-color-foreground);
+  color: var(--asriui-color-background);
 }
 
 .dayDisabled {
@@ -199,7 +199,7 @@
   gap: 0.5rem;
   margin-top: 0.75rem;
   padding-top: 0.75rem;
-  border-top: 1px solid var(--axiom-color-border);
+  border-top: 1px solid var(--asriui-color-border);
 }
 
 .timeField {
@@ -211,16 +211,16 @@
 .timeLabel {
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .timeInput {
   width: 100%;
   min-height: 2.25rem;
   padding: 0.45rem 0.55rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-sm);
-  background: var(--axiom-color-background);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-sm);
+  background: var(--asriui-color-background);
   font-size: 0.82rem;
 }
 
@@ -228,15 +228,15 @@
   margin: 0;
   font-size: 0.78rem;
   line-height: 1.4;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }
 
 .error {
-  color: var(--axiom-color-destructive, #dc2626);
+  color: var(--asriui-color-destructive, #dc2626);
 }
 
 .hint {
   margin: 0.5rem 0 0;
   font-size: 0.72rem;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }

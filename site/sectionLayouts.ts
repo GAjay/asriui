@@ -1,8 +1,8 @@
-/** Copy-paste section layouts built from AxiomUI primitives. */
+/** Copy-paste section layouts built from AsriUI primitives. */
 
 export const SECTION_LAYOUTS = {
-  hero: `import { Badge, Button, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  hero: `import { Badge, Button, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 export function HeroLayout() {
   return (
@@ -25,8 +25,8 @@ export function HeroLayout() {
   );
 }`,
 
-  marquee: `import { Badge, Flex } from "axiom-ui";
-import "axiom-ui/style.css";
+  marquee: `import { Badge, Flex } from "asriui";
+import "asriui/style.css";
 
 const ITEMS = ["React 18", "TypeScript", "Framer Motion", "Vite", "CSS Modules"];
 
@@ -42,8 +42,8 @@ export function TechMarqueeLayout() {
   );
 }`,
 
-  features: `import { Card, Grid, Icon, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  features: `import { Card, Grid, Icon, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 const FEATURES = [
   { title: "Accessible by default", body: "ARIA roles, keyboard support, and focus management." },
@@ -77,8 +77,8 @@ export function FeaturesLayout() {
   );
 }`,
 
-  "design-system": `import { ColorPalette, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  "design-system": `import { ColorPalette, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 export function DesignTokensLayout() {
   return (
@@ -96,8 +96,8 @@ export function DesignTokensLayout() {
   );
 }`,
 
-  "ship-faster": `import { Card, Grid, LoginForm, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  "ship-faster": `import { Card, Grid, LoginForm, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 export function AuthShellLayout() {
   return (
@@ -124,8 +124,8 @@ export function AuthShellLayout() {
   );
 }`,
 
-  explore: `import { Card, Grid, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  explore: `import { Card, Grid, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 const ITEMS = [
   { title: "Button", href: "/docs/components/button" },
@@ -154,8 +154,8 @@ export function CatalogLayout() {
   );
 }`,
 
-  "powered-by": `import { Badge, Flex, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  "powered-by": `import { Badge, Flex, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 export function StackLayout() {
   return (
@@ -174,8 +174,8 @@ export function StackLayout() {
   );
 }`,
 
-  milestones: `import { PageLayout, Timeline, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  milestones: `import { PageLayout, Timeline, Typography } from "asriui";
+import "asriui/style.css";
 
 export function MilestonesLayout() {
   return (
@@ -193,8 +193,8 @@ export function MilestonesLayout() {
   );
 }`,
 
-  faq: `import { Accordion, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  faq: `import { Accordion, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 export function FaqLayout() {
   return (
@@ -204,7 +204,7 @@ export function FaqLayout() {
           <Typography variant="h2">Frequently asked questions</Typography>
           <Accordion type="single" collapsible style={{ marginTop: "1.25rem" }}>
             <Accordion.Item value="license">
-              <Accordion.Trigger>Is AxiomUI free?</Accordion.Trigger>
+              <Accordion.Trigger>Is AsriUI free?</Accordion.Trigger>
               <Accordion.Content>Yes. It is MIT licensed — use it in commercial products.</Accordion.Content>
             </Accordion.Item>
             <Accordion.Item value="react">
@@ -218,8 +218,8 @@ export function FaqLayout() {
   );
 }`,
 
-  support: `import { Button, Card, Flex, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  support: `import { Button, Card, Flex, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 export function SupportLayout() {
   return (
@@ -244,17 +244,17 @@ export function SupportLayout() {
   );
 }`,
 
-  footer: `import { Flex, Link, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  footer: `import { Flex, Link, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 export function FooterLayout() {
   return (
     <PageLayout variant="centered" contentMaxWidth="64rem">
       <PageLayout.Main>
         <PageLayout.Content>
-          <footer style={{ borderTop: "1px solid var(--axiom-color-border)", paddingTop: "2rem" }}>
+          <footer style={{ borderTop: "1px solid var(--asriui-color-border)", paddingTop: "2rem" }}>
             <Flex justify="between" wrap="wrap" gap="md">
-              <Typography variant="h3">AxiomUI</Typography>
+              <Typography variant="h3">AsriUI</Typography>
               <Flex gap="md">
                 <Link href="/docs">Docs</Link>
                 <Link href="/about">About</Link>
@@ -271,8 +271,8 @@ export function FooterLayout() {
   );
 }`,
 
-  about: `import { Badge, Button, Flex, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  about: `import { Badge, Button, Flex, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 export function AboutHeroLayout() {
   return (
@@ -282,8 +282,8 @@ export function AboutHeroLayout() {
           <Flex gap="xl" align="center" wrap="wrap">
             <div style={{ flex: "1 1 18rem" }}>
               <Badge variant="secondary">Available</Badge>
-              <Typography variant="h1">Ajay Kumar Maheshwari</Typography>
-              <Typography variant="lead">Full Stack Engineer · Creator of AxiomUI</Typography>
+              <Typography variant="h1">gajay</Typography>
+              <Typography variant="lead">Full Stack Engineer · Creator of AsriUI</Typography>
               <Flex gap="sm" style={{ marginTop: "1rem" }}>
                 <Button>LinkedIn</Button>
                 <Button variant="secondary">GitHub</Button>
@@ -303,8 +303,8 @@ export function AboutHeroLayout() {
   );
 }`,
 
-  focus: `import { Card, Grid, Metric, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  focus: `import { Card, Grid, Metric, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 export function BentoStatsLayout() {
   return (
@@ -336,8 +336,8 @@ export function BentoStatsLayout() {
   );
 }`,
 
-  experience: `import { Badge, Card, Grid, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  experience: `import { Badge, Card, Grid, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 const JOBS = [
   { role: "Full Stack Engineer", company: "Publicis Sapient", current: true },
@@ -369,8 +369,8 @@ export function ExperienceLayout() {
   );
 }`,
 
-  skills: `import { Badge, Flex, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  skills: `import { Badge, Flex, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 const SKILLS = ["React", "TypeScript", "Node.js", "GraphQL", "Python", "Django"];
 
@@ -391,8 +391,8 @@ export function SkillsLayout() {
   );
 }`,
 
-  "open-source": `import { Button, Card, Flex, PageLayout, Typography } from "axiom-ui";
-import "axiom-ui/style.css";
+  "open-source": `import { Button, Card, Flex, PageLayout, Typography } from "asriui";
+import "asriui/style.css";
 
 export function OpenSourceCtaLayout() {
   return (
@@ -401,7 +401,7 @@ export function OpenSourceCtaLayout() {
         <PageLayout.Content>
           <Card>
             <Card.Header>
-              <Card.Title>AxiomUI is the public system I maintain</Card.Title>
+              <Card.Title>AsriUI is the public system I maintain</Card.Title>
             </Card.Header>
             <Card.Content>
               <Typography variant="muted">
@@ -419,8 +419,8 @@ export function OpenSourceCtaLayout() {
   );
 }`,
 
-  featureRequest: `import { FeatureRequest } from "axiom-ui";
-import "axiom-ui/style.css";
+  featureRequest: `import { FeatureRequest } from "asriui";
+import "asriui/style.css";
 
 export function FeatureRequestLayout() {
   return (
@@ -432,8 +432,8 @@ export function FeatureRequestLayout() {
   );
 }`,
 
-  questionnaire: `import { Questionnaire, DEFAULT_QUESTIONNAIRE } from "axiom-ui";
-import "axiom-ui/style.css";
+  questionnaire: `import { Questionnaire, DEFAULT_QUESTIONNAIRE } from "asriui";
+import "asriui/style.css";
 
 export function QuestionnaireLayout() {
   return (

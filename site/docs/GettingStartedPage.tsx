@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Badge, Breadcrumb, Button, CodeBlock, Input } from "axiom-ui";
+import { Badge, Breadcrumb, Button, CodeBlock, Input } from "asriui";
 import type { ThemeMode } from "../../src/config";
 import { DocPageShell } from "./DocPageShell";
 import { ThemeDocPreview } from "./ThemeDocPreview";
@@ -17,18 +17,18 @@ const TOC = [
   { id: "theming", label: "Theming" },
 ] as const;
 
-const INSTALL_CODE = `pnpm add axiom-ui framer-motion
+const INSTALL_CODE = `pnpm add asriui framer-motion
 
-import { Button } from "axiom-ui";
-import "axiom-ui/style.css";
+import { Button } from "asriui";
+import "asriui/style.css";
 
 export function App() {
   return <Button>Get Started</Button>;
 }`;
 
-const CONFIG_CODE = `import { AxiomProvider } from "axiom-ui/config";
-import { Button } from "axiom-ui";
-import "axiom-ui/style.css";
+const CONFIG_CODE = `import { AsriUIProvider } from "asriui/config";
+import { Button } from "asriui";
+import "asriui/style.css";
 
 const config = {
   theme: "light", // "light" | "dark" | "system"
@@ -48,14 +48,14 @@ const config = {
 
 export function App() {
   return (
-    <AxiomProvider config={config}>
+    <AsriUIProvider config={config}>
       <Button>Get Started</Button>
-    </AxiomProvider>
+    </AsriUIProvider>
   );
 }`;
 
-const DEBUG_CODE = `import { AxiomProvider, useAxiomDebug } from "axiom-ui/config";
-import { ErrorBoundary, ToastProvider } from "axiom-ui";
+const DEBUG_CODE = `import { AsriUIProvider, useAsriUIDebug } from "asriui/config";
+import { ErrorBoundary, ToastProvider } from "asriui";
 
 const config = {
   debug: {
@@ -68,7 +68,7 @@ const config = {
 };
 
 function ReportPanel() {
-  const debug = useAxiomDebug();
+  const debug = useAsriUIDebug();
 
   return (
     <button type="button" onClick={() => debug.logError(new Error("Demo failure"))}>
@@ -79,22 +79,22 @@ function ReportPanel() {
 
 export function App() {
   return (
-    <AxiomProvider config={config}>
+    <AsriUIProvider config={config}>
       <ToastProvider>
         <ErrorBoundary>
           <ReportPanel />
         </ErrorBoundary>
       </ToastProvider>
-    </AxiomProvider>
+    </AsriUIProvider>
   );
 }`;
 
-const SUBPATH_CODE = `import { Button } from "axiom-ui/button";
-import { Input } from "axiom-ui/input";
-import { Dialog } from "axiom-ui/dialog";
-import { Typography } from "axiom-ui/typography";
-import { cn } from "axiom-ui/utils";
-import "axiom-ui/style.css";`;
+const SUBPATH_CODE = `import { Button } from "asriui/button";
+import { Input } from "asriui/input";
+import { Dialog } from "asriui/dialog";
+import { Typography } from "asriui/typography";
+import { cn } from "asriui/utils";
+import "asriui/style.css";`;
 
 const THEME_CODE = `// Toggle with a root attribute — no provider required
 <div data-theme="dark">
@@ -103,7 +103,7 @@ const THEME_CODE = `// Toggle with a root attribute — no provider required
 
 // Or override tokens in CSS
 :root {
-  --axiom-color-primary: #0ea5e9;
+  --asriui-color-primary: #0ea5e9;
 }`;
 
 const THEME_OPTIONS: Array<{ id: ThemeMode; label: string }> = [
@@ -146,7 +146,7 @@ export function GettingStartedPage() {
           <p className={styles.kicker}>Documentation</p>
           <h1 className={styles.title}>Overview</h1>
           <p className={styles.lead}>
-            Install AxiomUI, wrap your app with <code>AxiomProvider</code>, and configure theme,
+            Install AsriUI, wrap your app with <code>AsriUIProvider</code>, and configure theme,
             fonts, analytics, and monitoring from a single config object.
           </p>
           <div className={styles.metaRow}>
@@ -168,7 +168,7 @@ export function GettingStartedPage() {
         <section id="configuration" className={styles.section}>
           <h2 className={styles.sectionTitle}>Configuration</h2>
           <p className={styles.prose}>
-            <code>AxiomProvider</code> applies theme mode, global font stack, Google Tag Manager
+            <code>AsriUIProvider</code> applies theme mode, global font stack, Google Tag Manager
             analytics, and remote error reporting. Use the preview to see how theme mode affects
             components.
           </p>
@@ -231,11 +231,11 @@ export function GettingStartedPage() {
                 <code>playful</code>, or <code>minimal</code> animation preset pack
               </li>
               <li>
-                <code>fontFamily</code> — sets <code>--axiom-font-family</code> on the document root
+                <code>fontFamily</code> — sets <code>--asriui-font-family</code> on the document root
               </li>
               <li>
                 <code>analytics.gtmId</code> — injects GTM; <code>Button</code> and <code>Link</code>{" "}
-                emit <code>axiom_button_click</code> / <code>axiom_link_click</code> events. Override
+                emit <code>asriui_button_click</code> / <code>asriui_link_click</code> events. Override
                 per instance with <code>trackEvent</code>, <code>trackLabel</code>, and{" "}
                 <code>trackPayload</code>.
               </li>
@@ -253,9 +253,9 @@ export function GettingStartedPage() {
         <section id="debugging" className={styles.section}>
           <h2 className={styles.sectionTitle}>Debug mode</h2>
           <p className={styles.prose}>
-            Enable <code>debug</code> on <code>AxiomProvider</code> to surface errors with toast
+            Enable <code>debug</code> on <code>AsriUIProvider</code> to surface errors with toast
             notifications, structured console logs, and an in-memory log you can inspect via{" "}
-            <code>useAxiomDebug()</code>. Pair with <code>ToastProvider</code> and{" "}
+            <code>useAsriUIDebug()</code>. Pair with <code>ToastProvider</code> and{" "}
             <code>ErrorBoundary</code> for the best experience.
           </p>
           <CodeBlock code={DEBUG_CODE} language="tsx" showCopy filename="App.tsx" />
@@ -304,7 +304,7 @@ export function GettingStartedPage() {
         <section id="theming" className={styles.section}>
           <h2 className={styles.sectionTitle}>Theming</h2>
           <p className={styles.prose}>
-            AxiomUI uses CSS custom properties. Toggle light or dark with a root attribute, or
+            AsriUI uses CSS custom properties. Toggle light or dark with a root attribute, or
             override tokens in your own stylesheet. Use the site theme toggle in the docs sidebar or
             the preview below to see components in each mode.
           </p>

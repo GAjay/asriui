@@ -25,7 +25,7 @@ export type WorkflowPaletteDragPayload =
   | { type: "component"; slug: string }
   | { type: "block"; id: string };
 
-export const WORKFLOW_DRAG_MIME = "application/axiom-workflow-node";
+export const WORKFLOW_DRAG_MIME = "application/asriui-workflow-node";
 
 export function encodeWorkflowDragPayload(payload: WorkflowPaletteDragPayload): string {
   return JSON.stringify(payload);
@@ -53,8 +53,8 @@ const variantField = (key = "variant"): AiWorkflowConfigField => ({
   ],
 });
 
-/** Curated Axiom UI components commonly used in AI-driven UI workflows. */
-export const AXIOM_UI_COMPONENT_PALETTE: AiWorkflowComponentItem[] = [
+/** Curated AsriUI components commonly used in AI-driven UI workflows. */
+export const ASRIUI_COMPONENT_PALETTE: AiWorkflowComponentItem[] = [
   {
     slug: "button",
     name: "Button",
@@ -273,7 +273,7 @@ export const DEFAULT_INTEGRATION_BLOCKS: AiWorkflowBlockDefinition[] = [
     label: "Email",
     category: "messaging",
     description: "Send a transactional email from the workflow.",
-    defaultConfig: { to: "user@example.com", subject: "Workflow update", body: "Hello from Axiom UI." },
+    defaultConfig: { to: "user@example.com", subject: "Workflow update", body: "Hello from AsriUI." },
     configFields: [
       { key: "to", label: "Recipient", type: "text" },
       { key: "subject", label: "Subject", type: "text" },
@@ -321,7 +321,7 @@ export const DEFAULT_INTEGRATION_BLOCKS: AiWorkflowBlockDefinition[] = [
 
 export function findComponentItem(
   slug: string,
-  components: AiWorkflowComponentItem[] = AXIOM_UI_COMPONENT_PALETTE,
+  components: AiWorkflowComponentItem[] = ASRIUI_COMPONENT_PALETTE,
 ): AiWorkflowComponentItem | undefined {
   return components.find((item) => item.slug === slug);
 }

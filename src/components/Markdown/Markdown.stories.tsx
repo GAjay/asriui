@@ -10,7 +10,7 @@ const meta: Meta<typeof Markdown> = {
 export default meta;
 type Story = StoryObj<typeof Markdown>;
 
-const SAMPLE = `# AxiomUI Markdown
+const SAMPLE = `# AsriUI Markdown
 
 Render **docs**, *changelogs*, and README snippets with theme tokens.
 
@@ -21,7 +21,7 @@ Render **docs**, *changelogs*, and README snippets with theme tokens.
 - [External links](https://example.com) open safely
 
 \`\`\`tsx
-import { Markdown } from "axiom-ui/markdown";
+import { Markdown } from "asriui/markdown";
 
 <Markdown source="# Hello" />
 \`\`\`
@@ -42,6 +42,6 @@ export const Default: Story = {
 
 export const CompactSnippet: Story = {
   args: {
-    children: "Install with `pnpm add axiom-ui`, then wrap your app in **AxiomProvider**.",
+    children: "Install with `pnpm add asriui`, then wrap your app in **AsriUIProvider**.",
   },
 };

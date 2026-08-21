@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 import { motion } from "framer-motion";
-import { useAxiomConfigOptional } from "../../config/AxiomContext";
+import { useAsriUIConfigOptional } from "../../config/AsriUIContext";
 import { trackButtonClick } from "../../config/analytics";
 import { resolveMotionProps } from "../../motion/presets";
 import { useMotionPresetsOptional } from "../../motion/MotionContext";
@@ -36,14 +36,14 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button
   const reducedMotion = useReducedMotion();
   const { pack, enabled: globalMotion } = useMotionPresetsOptional();
   const animate = motionEnabled && globalMotion && !reducedMotion && !isDisabled;
-  const axiomConfig = useAxiomConfigOptional();
+  const asriuiConfig = useAsriUIConfigOptional();
 
   const handleClick: ButtonProps["onClick"] = (event) => {
     if (isDisabled) return;
     onClick?.(event);
-    if (!event.defaultPrevented && axiomConfig) {
+    if (!event.defaultPrevented && asriuiConfig) {
       trackButtonClick(
-        axiomConfig.analytics,
+        asriuiConfig.analytics,
         {
           label: trackLabel ?? (typeof children === "string" ? children : undefined),
           variant,

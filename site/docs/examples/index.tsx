@@ -99,7 +99,7 @@ function ThemeSwitchDemo() {
   return (
     <div data-theme={theme} style={{ display: "flex", alignItems: "center", gap: 12 }}>
       <ThemeSwitch theme={theme} onThemeChange={setTheme} animation="ripple" showLabel />
-      <span style={{ fontSize: 13, color: "var(--axiom-color-muted-foreground)" }}>{theme} mode</span>
+      <span style={{ fontSize: 13, color: "var(--asriui-color-muted-foreground)" }}>{theme} mode</span>
     </div>
   );
 }
@@ -159,12 +159,12 @@ export const componentExamples: Record<string, DocExample[]> = {
       id: "button-analytics",
       title: "GTM tracking",
       description:
-        "Wrap the app in AxiomProvider with analytics.gtmId. Override events per button with trackEvent and trackLabel.",
-      code: `<AxiomProvider config={{ analytics: { enabled: true, gtmId: "GTM-XXXX" } }}>
+        "Wrap the app in AsriUIProvider with analytics.gtmId. Override events per button with trackEvent and trackLabel.",
+      code: `<AsriUIProvider config={{ analytics: { enabled: true, gtmId: "GTM-XXXX" } }}>
   <Button trackEvent="cta_save" trackLabel="Save profile">
     Save
   </Button>
-</AxiomProvider>`,
+</AsriUIProvider>`,
       preview: (
         <Button trackEvent="cta_save" trackLabel="Save profile">
           Save
@@ -540,14 +540,14 @@ export const componentExamples: Record<string, DocExample[]> = {
   <Tooltip.Trigger>
     <Button variant="outline">Hover me</Button>
   </Tooltip.Trigger>
-  <Tooltip.Content>Install with pnpm add axiom-ui</Tooltip.Content>
+  <Tooltip.Content>Install with pnpm add asriui</Tooltip.Content>
 </Tooltip>`,
       preview: (
         <Tooltip>
           <Tooltip.Trigger>
             <Button variant="outline">Hover me</Button>
           </Tooltip.Trigger>
-          <Tooltip.Content>Install with pnpm add axiom-ui</Tooltip.Content>
+          <Tooltip.Content>Install with pnpm add asriui</Tooltip.Content>
         </Tooltip>
       ),
     },
@@ -834,12 +834,12 @@ export const componentExamples: Record<string, DocExample[]> = {
       title: "Speak wrapped text",
       description: "Click the speaker icon to read the content aloud.",
       code: `<TextToSpeech lang="en-US">
-  Axiom UI ships accessible components with motion, theming, and builder-ready workflows.
+  AsriUI ships accessible components with motion, theming, and builder-ready workflows.
 </TextToSpeech>`,
       preview: (
         <div style={{ maxWidth: 420 }}>
           <TextToSpeech lang="en-US">
-            Axiom UI ships accessible components with motion, theming, and builder-ready workflows.
+            AsriUI ships accessible components with motion, theming, and builder-ready workflows.
           </TextToSpeech>
         </div>
       ),
@@ -1082,7 +1082,7 @@ export const componentExamples: Record<string, DocExample[]> = {
       code: `<Accordion type="single" collapsible defaultValue="faq-1">
   <Accordion.Item value="faq-1">
     <Accordion.Trigger icon={<Icon name="sparkles" size="sm" />}>
-      What is Axiom UI?
+      What is AsriUI?
     </Accordion.Trigger>
     <Accordion.Content>
       A design system and React component library for product teams.
@@ -1093,7 +1093,7 @@ export const componentExamples: Record<string, DocExample[]> = {
         <Accordion type="single" collapsible defaultValue="faq-1" style={{ width: "100%", maxWidth: 420 }}>
           <Accordion.Item value="faq-1">
             <Accordion.Trigger icon={<Icon name="sparkles" size="sm" aria-hidden />}>
-              What is Axiom UI?
+              What is AsriUI?
             </Accordion.Trigger>
             <Accordion.Content>
               A design system and React component library for product teams.
@@ -1101,7 +1101,7 @@ export const componentExamples: Record<string, DocExample[]> = {
           </Accordion.Item>
           <Accordion.Item value="faq-2">
             <Accordion.Trigger endContent="3 steps">How do I get started?</Accordion.Trigger>
-            <Accordion.Content>Install the package, add AxiomProvider, and import components.</Accordion.Content>
+            <Accordion.Content>Install the package, add AsriUIProvider, and import components.</Accordion.Content>
           </Accordion.Item>
         </Accordion>
       ),
@@ -1564,7 +1564,7 @@ toast.info("Heads up", { showProgress: true });`,
       title: "Multi-slot booking",
       description: "Pick a day, then select multiple time slots. Supports booked slots and per-day overrides.",
       code: `import { useState } from "react";
-import { Calendar, type CalendarSlotSelection } from "axiom-ui/calendar";
+import { Calendar, type CalendarSlotSelection } from "asriui/calendar";
 
 export function BookingCalendar() {
   const [selection, setSelection] = useState<CalendarSlotSelection[]>([]);
@@ -1600,8 +1600,8 @@ export function BookingCalendar() {
       id: "server-query-database",
       title: "Config-level database queries",
       description:
-        "Set database once on AxiomProvider — then use named keys, sql: strings, or { sql, params } in ServerQuery.",
-      code: `<AxiomProvider
+        "Set database once on AsriUIProvider — then use named keys, sql: strings, or { sql, params } in ServerQuery.",
+      code: `<AsriUIProvider
   config={{
     database: {
       baseUrl: "https://api.example.com",
@@ -1618,7 +1618,7 @@ export function BookingCalendar() {
   <ServerQuery query={{ sql: "SELECT * FROM orders WHERE status = :status", params: { status: "open" } }}>
     {(orders) => <OrdersList items={orders} />}
   </ServerQuery>
-</AxiomProvider>`,
+</AsriUIProvider>`,
       preview: (
         <ServerQuery<{ count: number }>
           query={async () => ({ count: 128 })}
@@ -1627,7 +1627,7 @@ export function BookingCalendar() {
           {(data) => (
             <p style={{ margin: 0 }}>
               Named query ready — example count: <strong>{data.count}</strong>. Configure <code>database</code> on
-              AxiomProvider, then use <code>query=&quot;users&quot;</code> or <code>sql:SELECT …</code>.
+              AsriUIProvider, then use <code>query=&quot;users&quot;</code> or <code>sql:SELECT …</code>.
             </p>
           )}
         </ServerQuery>
@@ -1637,8 +1637,8 @@ export function BookingCalendar() {
       id: "server-query-user",
       title: "Fetch and render",
       description: "Pass a URL or async function — ServerQuery handles loading, errors, and retry.",
-      code: `import { ServerQuery } from "axiom-ui/server-query";
-import { Card, Badge } from "axiom-ui";
+      code: `import { ServerQuery } from "asriui/server-query";
+import { Card, Badge } from "asriui";
 
 <ServerQuery query="https://api.example.com/users/1" queryKey="profile">
   {(user, { refetch }) => (
@@ -1708,7 +1708,7 @@ import { Card, Badge } from "axiom-ui";
                 <Card>
                   <Card.Content>
                     <strong>{data?.users}</strong>
-                    <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--axiom-color-muted-foreground)" }}>
+                    <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--asriui-color-muted-foreground)" }}>
                       Active users
                     </p>
                   </Card.Content>
@@ -1716,7 +1716,7 @@ import { Card, Badge } from "axiom-ui";
                 <Card>
                   <Card.Content>
                     <strong>{data?.revenue}</strong>
-                    <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--axiom-color-muted-foreground)" }}>
+                    <p style={{ margin: 0, fontSize: "0.8rem", color: "var(--asriui-color-muted-foreground)" }}>
                       Revenue
                     </p>
                   </Card.Content>
@@ -1817,7 +1817,7 @@ import { Card, Badge } from "axiom-ui";
       id: "page-contact-json",
       title: "Contact page from JSON",
       description: "Pass a PageConfig — layout, header, and form blocks render automatically.",
-      code: `import { Page } from "axiom-ui/page";
+      code: `import { Page } from "asriui/page";
 
 const config = {
   layout: { variant: "centered", contentMaxWidth: "36rem" },
@@ -1875,7 +1875,7 @@ const config = {
       id: "card-validation-basic",
       title: "Checkout card fields",
       description: "Formats the number, detects brand, and validates Luhn + expiry + CVC.",
-      code: `import { CardValidation } from "axiom-ui/card-validation";
+      code: `import { CardValidation } from "asriui/card-validation";
 
 <CardValidation
   helperText="Try 4242 4242 4242 4242 — Visa test card."
@@ -1913,7 +1913,7 @@ const config = {
       preview: (
         <p style={{ margin: 0, fontSize: 14, color: "var(--lp-muted-fg)", lineHeight: 1.6 }}>
           ErrorBoundary catches render errors, displays a fallback, and optionally POSTs
-          error details to your monitoring endpoint via <code>AxiomProvider</code>.
+          error details to your monitoring endpoint via <code>AsriUIProvider</code>.
         </p>
       ),
     },
@@ -1946,7 +1946,7 @@ const config = {
 />`,
       preview: (
         <CodeBlock
-          code={`import { Button } from "axiom-ui/button";
+          code={`import { Button } from "asriui/button";
 
 export function App() {
   return <Button>Get started</Button>;
@@ -1983,13 +1983,13 @@ export function App() {
 - Themeable
 
 \\\`\\\`\\\`tsx
-import { Markdown } from "axiom-ui/markdown";
+import { Markdown } from "asriui/markdown";
 \\\`\\\`\\\`
 \`}
 />`,
       preview: (
         <Markdown
-          source={`# Hello AxiomUI
+          source={`# Hello AsriUI
 
 Render **docs** and *changelogs* with theme tokens.
 
@@ -2002,7 +2002,7 @@ Render **docs** and *changelogs* with theme tokens.
 | showCodeCopy | true |
 
 \`\`\`tsx
-import { Markdown } from "axiom-ui/markdown";
+import { Markdown } from "asriui/markdown";
 \`\`\`
 `}
         />
@@ -2011,8 +2011,8 @@ import { Markdown } from "axiom-ui/markdown";
     {
       id: "markdown-children",
       title: "String children",
-      code: `<Markdown>{"Install with \`pnpm add axiom-ui\`."}</Markdown>`,
-      preview: <Markdown>{"Install with `pnpm add axiom-ui`, then wrap your app in **AxiomProvider**."}</Markdown>,
+      code: `<Markdown>{"Install with \`pnpm add asriui\`."}</Markdown>`,
+      preview: <Markdown>{"Install with `pnpm add asriui`, then wrap your app in **AsriUIProvider**."}</Markdown>,
     },
   ],
   "side-nav": [
@@ -2030,7 +2030,7 @@ import { Markdown } from "axiom-ui/markdown";
   </SideNav.Group>
 </SideNav>`,
       preview: (
-        <div style={{ maxWidth: 220, padding: 12, background: "var(--axiom-color-muted)", borderRadius: 8 }}>
+        <div style={{ maxWidth: 220, padding: 12, background: "var(--asriui-color-muted)", borderRadius: 8 }}>
           <SideNav>
             <SideNav.Group label="Components">
               <SideNav.List>
@@ -2066,7 +2066,7 @@ import { Markdown } from "axiom-ui/markdown";
   </SideNav.Group>
 </SideNav>`,
       preview: (
-        <div style={{ maxWidth: 220, padding: 12, background: "var(--axiom-color-muted)", borderRadius: 8 }}>
+        <div style={{ maxWidth: 220, padding: 12, background: "var(--asriui-color-muted)", borderRadius: 8 }}>
           <SideNav collapsible>
             <SideNav.Toggle />
             <SideNav.Group label="Components" collapsible defaultOpen>
@@ -2121,7 +2121,7 @@ import { Markdown } from "axiom-ui/markdown";
             width: "100%",
             maxWidth: 420,
             padding: 12,
-            background: "var(--axiom-color-muted)",
+            background: "var(--asriui-color-muted)",
             borderRadius: 8,
           }}
         >
@@ -2146,7 +2146,7 @@ import { Markdown } from "axiom-ui/markdown";
               </SideNav.List>
             </SideNav.Group>
           </SideNav>
-          <div style={{ flex: 1, fontSize: 13, color: "var(--axiom-color-muted-foreground)", paddingTop: 4 }}>
+          <div style={{ flex: 1, fontSize: 13, color: "var(--asriui-color-muted-foreground)", paddingTop: 4 }}>
             Click the hamburger to hide the sidenav. Open state shows an X.
           </div>
         </div>
@@ -2179,7 +2179,7 @@ import { Markdown } from "axiom-ui/markdown";
   </SideNav.Menus>
 </SideNav>`,
       preview: (
-        <div style={{ maxWidth: 260, padding: 12, background: "var(--axiom-color-muted)", borderRadius: 8 }}>
+        <div style={{ maxWidth: 260, padding: 12, background: "var(--asriui-color-muted)", borderRadius: 8 }}>
           <SideNav>
             <SideNav.Menus defaultMenu="docs">
               <SideNav.Menu id="docs" label="Docs" icon={<Icon name="sparkles" size="sm" aria-hidden />}>
@@ -2222,7 +2222,7 @@ import { Markdown } from "axiom-ui/markdown";
   </SideNav.List>
 </SideNav>`,
       preview: (
-        <div style={{ maxWidth: 220, padding: 12, background: "var(--axiom-color-muted)", borderRadius: 8 }}>
+        <div style={{ maxWidth: 220, padding: 12, background: "var(--asriui-color-muted)", borderRadius: 8 }}>
           <SideNav>
             <SideNav.List>
               <SideNav.Submenu label="Form" icon={<Icon name="form" size="sm" aria-hidden />} defaultOpen>
@@ -2264,7 +2264,7 @@ import { Markdown } from "axiom-ui/markdown";
   </SideNav.Group>
 </SideNav>`,
       preview: (
-        <div style={{ maxWidth: 220, padding: 12, background: "var(--axiom-color-muted)", borderRadius: 8 }}>
+        <div style={{ maxWidth: 220, padding: 12, background: "var(--asriui-color-muted)", borderRadius: 8 }}>
           <SideNav>
             <SideNav.Group label="Routes" collapsible defaultOpen>
               <SideNav.VirtualList
@@ -2296,7 +2296,7 @@ import { Markdown } from "axiom-ui/markdown";
   </PageLayout.Main>
 </PageLayout>`,
       preview: (
-        <div style={{ border: "1px solid var(--axiom-color-border)", borderRadius: 8, overflow: "hidden" }}>
+        <div style={{ border: "1px solid var(--asriui-color-border)", borderRadius: 8, overflow: "hidden" }}>
           <PageLayout variant="sidebar" style={{ minHeight: 180 }}>
             <PageLayout.Sidebar>
               <SideNav>
@@ -2333,7 +2333,7 @@ import { Markdown } from "axiom-ui/markdown";
   </PageLayout.Main>
 </PageLayout>`,
       preview: (
-        <div style={{ border: "1px solid var(--axiom-color-border)", borderRadius: 8, overflow: "hidden" }}>
+        <div style={{ border: "1px solid var(--asriui-color-border)", borderRadius: 8, overflow: "hidden" }}>
           <PageLayout variant="docs" style={{ minHeight: 180 }}>
             <PageLayout.Sidebar>
               <SideNav>
@@ -2368,7 +2368,7 @@ import { Markdown } from "axiom-ui/markdown";
   </PageLayout.Main>
 </PageLayout>`,
       preview: (
-        <div style={{ border: "1px solid var(--axiom-color-border)", borderRadius: 8, overflow: "hidden" }}>
+        <div style={{ border: "1px solid var(--asriui-color-border)", borderRadius: 8, overflow: "hidden" }}>
           <PageLayout variant="centered" contentMaxWidth="28rem" style={{ minHeight: 120, padding: "1rem 0" }}>
             <PageLayout.Main>
               <PageLayout.Content>
@@ -2387,7 +2387,7 @@ import { Markdown } from "axiom-ui/markdown";
       description: "Centered copy on an animated dotted background.",
       code: `<Hero variant="full" align="center" background="dotted" animated>
   <Hero.Copy>
-    <Hero.Eyebrow>AxiomUI</Hero.Eyebrow>
+    <Hero.Eyebrow>AsriUI</Hero.Eyebrow>
     <Hero.Title>The React kit for product teams</Hero.Title>
     <Hero.Description>Accessible components you own.</Hero.Description>
     <Hero.Actions>
@@ -2398,7 +2398,7 @@ import { Markdown } from "axiom-ui/markdown";
       preview: (
         <Hero variant="full" align="center" size="md" background="dotted" animated>
           <Hero.Copy>
-            <Hero.Eyebrow>AxiomUI</Hero.Eyebrow>
+            <Hero.Eyebrow>AsriUI</Hero.Eyebrow>
             <Hero.Title as="h2">The React kit for product teams</Hero.Title>
             <Hero.Description>Accessible components you own.</Hero.Description>
             <Hero.Actions>
@@ -2510,10 +2510,10 @@ import { Markdown } from "axiom-ui/markdown";
 </Grid>`,
       preview: (
         <Grid variant="fixed" columns={2} gap="md" style={{ width: "100%" }}>
-          <div style={{ padding: 16, background: "var(--axiom-color-muted)", borderRadius: 8 }}>A</div>
-          <div style={{ padding: 16, background: "var(--axiom-color-muted)", borderRadius: 8 }}>B</div>
-          <div style={{ padding: 16, background: "var(--axiom-color-muted)", borderRadius: 8 }}>C</div>
-          <div style={{ padding: 16, background: "var(--axiom-color-muted)", borderRadius: 8 }}>D</div>
+          <div style={{ padding: 16, background: "var(--asriui-color-muted)", borderRadius: 8 }}>A</div>
+          <div style={{ padding: 16, background: "var(--asriui-color-muted)", borderRadius: 8 }}>B</div>
+          <div style={{ padding: 16, background: "var(--asriui-color-muted)", borderRadius: 8 }}>C</div>
+          <div style={{ padding: 16, background: "var(--asriui-color-muted)", borderRadius: 8 }}>D</div>
         </Grid>
       ),
     },
@@ -2532,7 +2532,7 @@ import { Markdown } from "axiom-ui/markdown";
           {["Forms", "Layout", "Data", "Docs"].map((item) => (
             <div
               key={item}
-              style={{ padding: 12, background: "var(--axiom-color-muted)", borderRadius: 8, fontSize: 13 }}
+              style={{ padding: 12, background: "var(--asriui-color-muted)", borderRadius: 8, fontSize: 13 }}
             >
               {item}
             </div>
@@ -2551,7 +2551,7 @@ import { Markdown } from "axiom-ui/markdown";
   <p>Body copy stays within a comfortable measure.</p>
 </Container>`,
       preview: (
-        <Container size="md" padding="sm" style={{ border: "1px dashed var(--axiom-color-border)", borderRadius: 8 }}>
+        <Container size="md" padding="sm" style={{ border: "1px dashed var(--asriui-color-border)", borderRadius: 8 }}>
           <p style={{ margin: 0, fontSize: 14 }}>Container size=&quot;md&quot;</p>
         </Container>
       ),
@@ -2611,11 +2611,11 @@ import { Markdown } from "axiom-ui/markdown";
               style={{
                 width: "100%",
                 height: "100%",
-                background: "linear-gradient(135deg, var(--axiom-color-muted), var(--axiom-color-border))",
+                background: "linear-gradient(135deg, var(--asriui-color-muted), var(--asriui-color-border))",
                 display: "grid",
                 placeItems: "center",
                 fontSize: 13,
-                color: "var(--axiom-color-muted-foreground)",
+                color: "var(--asriui-color-muted-foreground)",
               }}
             >
               16:9
@@ -2640,7 +2640,7 @@ import { Markdown } from "axiom-ui/markdown";
         <div style={{ width: "100%", maxWidth: 320 }}>
           <AspectRatio ratio={4 / 3}>
             <Image
-              src="https://picsum.photos/seed/axiom-docs/1200/900"
+              src="https://picsum.photos/seed/asriui-docs/1200/900"
               alt="Gallery sample"
               widths={[320, 640]}
               srcPattern="query"
@@ -2664,7 +2664,7 @@ import { Markdown } from "axiom-ui/markdown";
         <div style={{ width: "100%", maxWidth: 320 }}>
           <AspectRatio ratio={4 / 3}>
             <Image
-              src="https://picsum.photos/seed/axiom-cache/1200/900"
+              src="https://picsum.photos/seed/asriui-cache/1200/900"
               alt="Cached gallery sample"
               widths={[320, 640]}
               srcPattern="query"
@@ -2770,8 +2770,8 @@ import { Markdown } from "axiom-ui/markdown";
           orientation="horizontal"
           animateOnView={false}
           items={[
-            { id: "1", title: "Install", date: "Step 1", status: "complete", description: "pnpm add axiom-ui" },
-            { id: "2", title: "Configure", date: "Step 2", status: "complete", description: "Wrap with AxiomProvider" },
+            { id: "1", title: "Install", date: "Step 1", status: "complete", description: "pnpm add asriui" },
+            { id: "2", title: "Configure", date: "Step 2", status: "complete", description: "Wrap with AsriUIProvider" },
             { id: "3", title: "Ship", date: "Step 3", status: "active", description: "Deploy to production" },
           ]}
           statusColors={{
@@ -2911,7 +2911,7 @@ import { Markdown } from "axiom-ui/markdown";
       code: `<AiSummarizer source={text} onSourceChange={setText} demo />`,
       preview: (
         <AiSummarizer
-          source="AxiomUI ships accessible React components with tree-shakable subpath imports, live docs, and PWA-ready site templates."
+          source="AsriUI ships accessible React components with tree-shakable subpath imports, live docs, and PWA-ready site templates."
           demo
         />
       ),
@@ -3001,7 +3001,7 @@ import { Markdown } from "axiom-ui/markdown";
             <div
               style={{
                 padding: "1.5rem",
-                border: "1px dashed var(--axiom-color-border, #d4d4d8)",
+                border: "1px dashed var(--asriui-color-border, #d4d4d8)",
                 borderRadius: 12,
                 minWidth: 220,
               }}

@@ -2,8 +2,8 @@
   position: relative;
   display: flex;
   min-width: 0;
-  --scroll-area-thumb: color-mix(in srgb, var(--axiom-color-foreground) 28%, transparent);
-  --scroll-area-thumb-hover: color-mix(in srgb, var(--axiom-color-foreground) 42%, transparent);
+  --scroll-area-thumb: color-mix(in srgb, var(--asriui-color-foreground) 28%, transparent);
+  --scroll-area-thumb-hover: color-mix(in srgb, var(--asriui-color-foreground) 42%, transparent);
   --scroll-area-track: transparent;
 }
 

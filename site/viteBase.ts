@@ -6,7 +6,7 @@ export function normalizeViteBase(value?: string): string {
 }
 
 /** Public origin + optional path, no trailing slash. Used for canonical URLs and the sitemap. */
-export function resolveSiteOrigin(fallback = "https://axiom-ui.dev"): string {
+export function resolveSiteOrigin(fallback = "https://asriui.dev"): string {
   const raw = process.env.VITE_SITE_URL || process.env.SITE_URL || fallback;
   return raw.replace(/\/$/, "");
 }

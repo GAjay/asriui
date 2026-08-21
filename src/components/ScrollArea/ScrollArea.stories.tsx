@@ -18,8 +18,8 @@ const longList = (
         key={index}
         style={{
           padding: "0.65rem 0.75rem",
-          border: "1px solid var(--axiom-color-border)",
-          borderRadius: "var(--axiom-radius-md)",
+          border: "1px solid var(--asriui-color-border)",
+          borderRadius: "var(--asriui-radius-md)",
         }}
       >
         Item {index + 1}

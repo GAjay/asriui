@@ -1,44 +1,44 @@
 .fallback {
   display: grid;
-  gap: var(--axiom-space-4);
-  padding: var(--axiom-space-6);
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-lg);
-  background: var(--axiom-color-muted);
+  gap: var(--asriui-space-4);
+  padding: var(--asriui-space-6);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-lg);
+  background: var(--asriui-color-muted);
   max-width: 32rem;
 }
 
 .title {
   margin: 0;
-  font-size: var(--axiom-font-size-lg);
-  font-weight: var(--axiom-font-weight-semibold);
+  font-size: var(--asriui-font-size-lg);
+  font-weight: var(--asriui-font-weight-semibold);
 }
 
 .message {
   margin: 0;
-  font-size: var(--axiom-font-size-sm);
-  color: var(--axiom-color-muted-foreground);
-  font-family: var(--axiom-font-mono);
+  font-size: var(--asriui-font-size-sm);
+  color: var(--asriui-color-muted-foreground);
+  font-family: var(--asriui-font-mono);
   word-break: break-word;
 }
 
 .actions {
   display: flex;
-  gap: var(--axiom-space-2);
+  gap: var(--asriui-space-2);
 }
 
 .stack {
   margin: 0;
-  padding: var(--axiom-space-3);
+  padding: var(--asriui-space-3);
   max-height: 10rem;
   overflow: auto;
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
-  border: 1px solid var(--axiom-color-border);
-  font-family: var(--axiom-font-mono);
-  font-size: var(--axiom-font-size-xs);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
+  border: 1px solid var(--asriui-color-border);
+  font-family: var(--asriui-font-mono);
+  font-size: var(--asriui-font-size-xs);
   line-height: 1.45;
   white-space: pre-wrap;
   word-break: break-word;
-  color: var(--axiom-color-muted-foreground);
+  color: var(--asriui-color-muted-foreground);
 }

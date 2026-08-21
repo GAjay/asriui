@@ -1,13 +1,13 @@
 :root {
-  --axiom-space-0: 0;
-  --axiom-space-1: 4px;
-  --axiom-space-2: 8px;
-  --axiom-space-3: 12px;
-  --axiom-space-4: 16px;
-  --axiom-space-5: 20px;
-  --axiom-space-6: 24px;
-  --axiom-space-8: 32px;
-  --axiom-space-10: 40px;
-  --axiom-space-12: 48px;
-  --axiom-space-16: 64px;
+  --asriui-space-0: 0;
+  --asriui-space-1: 4px;
+  --asriui-space-2: 8px;
+  --asriui-space-3: 12px;
+  --asriui-space-4: 16px;
+  --asriui-space-5: 20px;
+  --asriui-space-6: 24px;
+  --asriui-space-8: 32px;
+  --asriui-space-10: 40px;
+  --asriui-space-12: 48px;
+  --asriui-space-16: 64px;
 }

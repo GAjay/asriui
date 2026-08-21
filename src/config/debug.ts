@@ -83,7 +83,7 @@ export function captureDebugError(error: unknown, meta: DebugCaptureMeta = {}): 
   pushLog(entry);
 
   if (runtimeConfig.logToConsole) {
-    console.groupCollapsed(`[AxiomUI Debug] ${entry.message}`);
+    console.groupCollapsed(`[AsriUI Debug] ${entry.message}`);
     console.error(normalized);
     if (entry.componentStack) console.info("Component stack:", entry.componentStack);
     if (entry.url) console.info("URL:", entry.url);

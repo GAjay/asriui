@@ -182,12 +182,16 @@ export default defineConfig(({ mode }) => {
       react(),
       ...(isSiteBuild ? [VitePWA(createPwaOptions(siteBase))] : []),
       {
-        name: "axiom-site-origin",
+        name: "asriui-site-origin",
         transformIndexHtml(html) {
-          let next = html.split("https://axiom-ui.dev").join(siteUrl);
+          let next = html.split("https://asriui.dev").join(siteUrl);
           if (siteBase !== "/") {
             const prefix = siteBase.replace(/\/$/, "");
-            next = next.replace(/(href|src)="\/(?!\/|site\/)/g, `$1="${prefix}/`);
+            const skipPrefix = prefix.slice(1).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+            next = next.replace(
+              new RegExp(`(href|src)="/(?!${skipPrefix}/|/|site/)`, "g"),
+              `$1="${prefix}/`,
+            );
           }
           return next;
         },
@@ -195,7 +199,7 @@ export default defineConfig(({ mode }) => {
     ],
     resolve: {
       alias: {
-        "axiom-ui": resolve(__dirname, "src/index.ts"),
+        "asriui": resolve(__dirname, "src/index.ts"),
       },
     },
     server: {

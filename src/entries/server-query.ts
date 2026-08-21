@@ -1,7 +1,7 @@
 export {
   ServerQuery,
   useServerQuery,
-  useAxiomDatabase,
+  useAsriUIDatabase,
   executeDatabaseQuery,
   resolveServerQueryFn,
 } from "../components/ServerQuery";

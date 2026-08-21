@@ -46,7 +46,7 @@ export function FeaturesShowcase({ features }: Props) {
   return (
     <div className={styles.root}>
       <div className={styles.toolbar}>
-        <div className={styles.stats} aria-label="AxiomUI highlights">
+        <div className={styles.stats} aria-label="AsriUI highlights">
           <div className={styles.stat}>
             <strong>
               <AnimatedNumber value={features.length} />

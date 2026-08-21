@@ -1,16 +1,16 @@
 .label {
   display: inline-flex;
   align-items: center;
-  gap: var(--axiom-space-1);
-  font-family: var(--axiom-font-family);
-  font-size: var(--axiom-font-size-sm);
-  font-weight: var(--axiom-font-weight-medium);
-  line-height: var(--axiom-line-height-tight);
-  color: var(--axiom-color-foreground);
+  gap: var(--asriui-space-1);
+  font-family: var(--asriui-font-family);
+  font-size: var(--asriui-font-size-sm);
+  font-weight: var(--asriui-font-weight-medium);
+  line-height: var(--asriui-line-height-tight);
+  color: var(--asriui-color-foreground);
 }
 
 .required {
-  color: var(--axiom-color-error);
+  color: var(--asriui-color-error);
 }
 
 .disabled {

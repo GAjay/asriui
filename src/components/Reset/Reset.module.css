@@ -4,25 +4,25 @@
   justify-content: center;
   gap: 0.35rem;
   padding: 0.45rem 0.8rem;
-  border: 1px solid var(--axiom-color-border);
-  border-radius: var(--axiom-radius-md);
-  background: var(--axiom-color-background);
-  color: var(--axiom-color-foreground);
-  font-family: var(--axiom-font-family);
-  font-size: var(--axiom-font-size-sm);
-  font-weight: var(--axiom-font-weight-medium);
+  border: 1px solid var(--asriui-color-border);
+  border-radius: var(--asriui-radius-md);
+  background: var(--asriui-color-background);
+  color: var(--asriui-color-foreground);
+  font-family: var(--asriui-font-family);
+  font-size: var(--asriui-font-size-sm);
+  font-weight: var(--asriui-font-weight-medium);
   cursor: pointer;
   transition:
-    background-color var(--axiom-duration-fast) var(--axiom-easing-standard),
-    border-color var(--axiom-duration-fast) var(--axiom-easing-standard);
+    background-color var(--asriui-duration-fast) var(--asriui-easing-standard),
+    border-color var(--asriui-duration-fast) var(--asriui-easing-standard);
 }
 
 .trigger:hover {
-  background: var(--axiom-color-muted);
+  background: var(--asriui-color-muted);
 }
 
 .trigger:focus-visible {
-  outline: 2px solid var(--axiom-color-ring);
+  outline: 2px solid var(--asriui-color-ring);
   outline-offset: 2px;
 }
 
@@ -32,5 +32,5 @@
 
 .root {
   display: grid;
-  gap: var(--axiom-space-4);
+  gap: var(--asriui-space-4);
 }
