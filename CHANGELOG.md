@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1
+
+### Patch Changes
+
+- Add `repository` field for npm provenance and refresh package metadata for publish.
+- README focuses on library usage; docs live at [gajay.github.io/asriui](https://gajay.github.io/asriui/).
+
 ## 0.1.0
 
 ### Minor Changes
