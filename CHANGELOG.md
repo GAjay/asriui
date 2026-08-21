@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.0
+
+### Minor Changes
+
+- 0fe1ec5: Initial public release of AsriUI with Button, Input, and Card components, design tokens, and theming.
+
 All notable changes to AsriUI are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/).
 
 ## [Unreleased]

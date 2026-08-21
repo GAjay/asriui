@@ -24,43 +24,43 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   },
   {
     "slug": "ai-data-analyst",
-    "rawKb": 27.26,
-    "gzipKb": 7.01,
+    "rawKb": 27.31,
+    "gzipKb": 7.02,
     "treeShakable": true,
     "ssr": true
   },
   {
     "slug": "ai-form-filler",
-    "rawKb": 18.74,
-    "gzipKb": 5.3,
+    "rawKb": 18.83,
+    "gzipKb": 5.32,
     "treeShakable": true,
     "ssr": true
   },
   {
     "slug": "ai-orchestrator",
-    "rawKb": 61.33,
-    "gzipKb": 13.63,
+    "rawKb": 61.49,
+    "gzipKb": 13.65,
     "treeShakable": true,
     "ssr": true
   },
   {
     "slug": "ai-search",
-    "rawKb": 18.91,
-    "gzipKb": 5.3,
+    "rawKb": 18.93,
+    "gzipKb": 5.31,
     "treeShakable": true,
     "ssr": true
   },
   {
     "slug": "ai-summarizer",
-    "rawKb": 18.17,
-    "gzipKb": 5.12,
+    "rawKb": 18.22,
+    "gzipKb": 5.13,
     "treeShakable": true,
     "ssr": true
   },
   {
     "slug": "ai-workflow-builder",
-    "rawKb": 103.2,
-    "gzipKb": 22.3,
+    "rawKb": 103.18,
+    "gzipKb": 22.29,
     "treeShakable": true,
     "ssr": true
   },
@@ -73,8 +73,8 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   },
   {
     "slug": "auth",
-    "rawKb": 20.72,
-    "gzipKb": 5.92,
+    "rawKb": 20.74,
+    "gzipKb": 5.93,
     "treeShakable": true,
     "ssr": true
   },
@@ -94,7 +94,7 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   },
   {
     "slug": "button",
-    "rawKb": 9.86,
+    "rawKb": 9.87,
     "gzipKb": 2.95,
     "treeShakable": true,
     "ssr": true
@@ -122,8 +122,8 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   },
   {
     "slug": "card-validation",
-    "rawKb": 21.25,
-    "gzipKb": 5.45,
+    "rawKb": 21.26,
+    "gzipKb": 5.46,
     "treeShakable": true,
     "ssr": true
   },
@@ -150,14 +150,21 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   },
   {
     "slug": "color-palette",
-    "rawKb": 3.96,
+    "rawKb": 3.98,
     "gzipKb": 1.26,
     "treeShakable": true,
     "ssr": true
   },
   {
+    "slug": "context-menu",
+    "rawKb": 7.07,
+    "gzipKb": 2.08,
+    "treeShakable": true,
+    "ssr": true
+  },
+  {
     "slug": "data-grid",
-    "rawKb": 79.82,
+    "rawKb": 79.83,
     "gzipKb": 17.79,
     "treeShakable": true,
     "ssr": false
@@ -165,7 +172,7 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   {
     "slug": "date-picker",
     "rawKb": 25.82,
-    "gzipKb": 6.06,
+    "gzipKb": 6.07,
     "treeShakable": true,
     "ssr": true
   },
@@ -185,21 +192,28 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   },
   {
     "slug": "error-boundary",
-    "rawKb": 15.84,
-    "gzipKb": 4.68,
+    "rawKb": 15.86,
+    "gzipKb": 4.69,
+    "treeShakable": true,
+    "ssr": true
+  },
+  {
+    "slug": "feature-request",
+    "rawKb": 47.7,
+    "gzipKb": 11.6,
     "treeShakable": true,
     "ssr": true
   },
   {
     "slug": "flow-chart",
     "rawKb": 5.58,
-    "gzipKb": 1.99,
+    "gzipKb": 1.98,
     "treeShakable": true,
     "ssr": false
   },
   {
     "slug": "form",
-    "rawKb": 45.84,
+    "rawKb": 45.86,
     "gzipKb": 11.08,
     "treeShakable": true,
     "ssr": true
@@ -212,6 +226,13 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
     "ssr": true
   },
   {
+    "slug": "hero",
+    "rawKb": 7.38,
+    "gzipKb": 2.01,
+    "treeShakable": true,
+    "ssr": true
+  },
+  {
     "slug": "icon",
     "rawKb": 6.19,
     "gzipKb": 2.03,
@@ -220,14 +241,14 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   },
   {
     "slug": "image",
-    "rawKb": 10.11,
-    "gzipKb": 2.91,
+    "rawKb": 10.12,
+    "gzipKb": 2.92,
     "treeShakable": true,
     "ssr": true
   },
   {
     "slug": "input",
-    "rawKb": 8.27,
+    "rawKb": 8.28,
     "gzipKb": 2.4,
     "treeShakable": true,
     "ssr": true
@@ -241,8 +262,8 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   },
   {
     "slug": "link",
-    "rawKb": 4.39,
-    "gzipKb": 1.52,
+    "rawKb": 4.4,
+    "gzipKb": 1.53,
     "treeShakable": true,
     "ssr": true
   },
@@ -255,21 +276,21 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   },
   {
     "slug": "loader",
-    "rawKb": 1.97,
-    "gzipKb": 0.72,
+    "rawKb": 1.98,
+    "gzipKb": 0.73,
     "treeShakable": true,
     "ssr": true
   },
   {
     "slug": "markdown",
     "rawKb": 19.9,
-    "gzipKb": 4.76,
+    "gzipKb": 4.77,
     "treeShakable": true,
     "ssr": true
   },
   {
     "slug": "menu",
-    "rawKb": 13.21,
+    "rawKb": 13.22,
     "gzipKb": 3.57,
     "treeShakable": true,
     "ssr": true
@@ -284,14 +305,14 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   {
     "slug": "monaco-editor",
     "rawKb": 3.56,
-    "gzipKb": 1.44,
+    "gzipKb": 1.43,
     "treeShakable": true,
     "ssr": false
   },
   {
     "slug": "page",
-    "rawKb": 167.66,
-    "gzipKb": 36.18,
+    "rawKb": 167.7,
+    "gzipKb": 36.19,
     "treeShakable": true,
     "ssr": true
   },
@@ -299,6 +320,13 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
     "slug": "page-layout",
     "rawKb": 5.3,
     "gzipKb": 1.49,
+    "treeShakable": true,
+    "ssr": true
+  },
+  {
+    "slug": "questionnaire",
+    "rawKb": 24.17,
+    "gzipKb": 6.23,
     "treeShakable": true,
     "ssr": true
   },
@@ -346,7 +374,7 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   },
   {
     "slug": "server-query",
-    "rawKb": 20.61,
+    "rawKb": 20.62,
     "gzipKb": 5.49,
     "treeShakable": true,
     "ssr": true
@@ -366,6 +394,13 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
     "ssr": true
   },
   {
+    "slug": "slider",
+    "rawKb": 18.95,
+    "gzipKb": 5.25,
+    "treeShakable": true,
+    "ssr": true
+  },
+  {
     "slug": "switch",
     "rawKb": 1.46,
     "gzipKb": 0.66,
@@ -381,29 +416,29 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   },
   {
     "slug": "tabs",
-    "rawKb": 12.65,
+    "rawKb": 12.66,
     "gzipKb": 3.39,
     "treeShakable": true,
     "ssr": true
   },
   {
     "slug": "timeline",
-    "rawKb": 18.27,
+    "rawKb": 18.29,
     "gzipKb": 4.5,
     "treeShakable": true,
     "ssr": true
   },
   {
     "slug": "toast",
-    "rawKb": 23.28,
-    "gzipKb": 6.2,
+    "rawKb": 23.31,
+    "gzipKb": 6.21,
     "treeShakable": true,
     "ssr": true
   },
   {
     "slug": "tooltip",
     "rawKb": 8.28,
-    "gzipKb": 2.23,
+    "gzipKb": 2.24,
     "treeShakable": true,
     "ssr": true
   },
@@ -430,8 +465,8 @@ export const componentPerformanceMetrics: ComponentPerformanceMetric[] = [
   },
   {
     "slug": "widget",
-    "rawKb": 16.49,
-    "gzipKb": 4.65,
+    "rawKb": 16.5,
+    "gzipKb": 4.66,
     "treeShakable": true,
     "ssr": true
   }
