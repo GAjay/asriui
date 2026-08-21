@@ -96,9 +96,9 @@ function entryFileName(chunkName: string): string {
   return `${chunkName}.js`;
 }
 
-export default defineConfig(({ mode, command }) => {
+export default defineConfig(({ mode }) => {
   const isPackageBuild = mode === "lib";
-  const isSiteBuild = mode === "site" || (command === "build" && !isPackageBuild);
+  const isSiteBuild = mode === "site";
   const siteBase = normalizeViteBase();
   const siteUrl = resolveSiteOrigin();
 
@@ -180,7 +180,7 @@ export default defineConfig(({ mode, command }) => {
     publicDir: "public",
     plugins: [
       react(),
-      VitePWA(createPwaOptions(siteBase)),
+      ...(isSiteBuild ? [VitePWA(createPwaOptions(siteBase))] : []),
       {
         name: "axiom-site-origin",
         transformIndexHtml(html) {

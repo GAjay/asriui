@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://axiom-ui.dev/about</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://axiom-ui.dev/llms.txt</loc>
     <changefreq>monthly</changefreq>
     <priority>0.3</priority>
@@ -241,6 +246,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://axiom-ui.dev/docs/components/hero</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://axiom-ui.dev/docs/components/slider</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://axiom-ui.dev/docs/components/side-nav</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -372,6 +387,21 @@
   </url>
   <url>
     <loc>https://axiom-ui.dev/docs/components/ai-orchestrator</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://axiom-ui.dev/docs/components/context-menu</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://axiom-ui.dev/docs/components/feature-request</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://axiom-ui.dev/docs/components/questionnaire</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
