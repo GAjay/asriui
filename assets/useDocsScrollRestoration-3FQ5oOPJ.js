@@ -1,0 +1,2 @@
+import{r as s}from"./react-vendor-BqYBd8Oh.js";import{u as c}from"./router-vendor-Des_0oDA.js";function u(){const{pathname:e,hash:o}=c();s.useEffect(()=>{if(o){const r=o.replace("#","");requestAnimationFrame(()=>{var t;(t=document.getElementById(r))==null||t.scrollIntoView({behavior:"auto",block:"start"})});return}window.scrollTo({top:0,left:0,behavior:"auto"}),document.documentElement.scrollTop=0,document.body.scrollTop=0},[e,o])}export{u};
+//# sourceMappingURL=useDocsScrollRestoration-3FQ5oOPJ.js.map

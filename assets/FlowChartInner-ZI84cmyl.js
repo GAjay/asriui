@@ -1,0 +1,2 @@
+import{j as r}from"./react-vendor-BqYBd8Oh.js";import{i as e,B as x,C as l,M as u}from"./style-D-a6uSHZ.js";function p({nodes:n,edges:s,onNodesChange:i,onEdgesChange:o,showMiniMap:t,showControls:a}){return r.jsxs(e,{nodes:n,edges:s,onNodesChange:i,onEdgesChange:o,fitView:!0,children:[r.jsx(x,{}),a?r.jsx(l,{}):null,t?r.jsx(u,{}):null]})}export{p as FlowChartInner};
+//# sourceMappingURL=FlowChartInner-ZI84cmyl.js.map

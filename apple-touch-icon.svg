@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" role="img" aria-label="AsriUI">
+  <rect width="180" height="180" fill="#ffffff" />
+  <g transform="scale(3.75)">
+    <rect width="24" height="48" fill="#09090b" />
+    <rect x="24" width="24" height="48" fill="#18181b" />
+    <path
+      fill="#ffffff"
+      shape-rendering="geometricPrecision"
+      d="M24 11 14.5 37 18.25 37 21 29.5 24 11 27 29.5 29.75 37 33.5 37Z"
+    />
+  </g>
+</svg>

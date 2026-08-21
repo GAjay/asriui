@@ -1,0 +1,2 @@
+import{r as d,j as n}from"./react-vendor-BqYBd8Oh.js";import{a as c}from"./index-CMvYutQe.js";const _="_badge_v6fp1_1",f="_secondary_v6fp1_23",p="_outline_v6fp1_28",u="_destructive_v6fp1_34",e={badge:_,default:"_default_v6fp1_18",secondary:f,outline:p,destructive:u},i=d.forwardRef(function({variant:t="default",className:s,children:a,...o},r){return n.jsx("span",{ref:r,className:c(e.badge,e[t],s),...o,children:a})});i.displayName="Badge";export{i as B};
+//# sourceMappingURL=Badge-BNdCUAYL.js.map
